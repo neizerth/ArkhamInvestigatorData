@@ -1,0 +1,24 @@
+{
+  "name": "arkhaminvestigatordata",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome lint --write ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neizerth/ArkhamInvestigatorData.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neizerth/ArkhamInvestigatorData/issues"
+  },
+  "homepage": "https://github.com/neizerth/ArkhamInvestigatorData#readme",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "http-server": "^14.1.1"
+  }
+}
