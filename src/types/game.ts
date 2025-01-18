@@ -3,15 +3,28 @@ import type { Box } from "./dimensions"
 
 export type Investigator = {
   code: string
-  image?: Box
+  image?: InvestigatorImage
   variants?: InvestigatorVariant[]
   skins?: InvestigatorSkin[]
+}
+
+export type InvestigatorImageMedia = Box & {
+  source?: Box & {
+    type: 'mini' | 'full'
+    id: string
+  }
+  top: number
+  left: number
+}
+
+export type InvestigatorImage = Box & {
+  media?: InvestigatorImageMedia[]
 }
 
 export type InvestigatorSkin = {
   id: string;
   name: string
-  image: Box
+  image: InvestigatorImage
 }
 
 export type InvestigatorVariant = InvestigatorVariantIdentity & {
@@ -21,7 +34,7 @@ export type InvestigatorVariant = InvestigatorVariantIdentity & {
 export type InvestigatorVariantIdentity = InvestigatorCodeTypeWithPack |
   {
     type: 'custom'
-    image?: Box
+    image?: InvestigatorImage
   }
 
 export type InvestigatorCodeTypeWithPack = 
@@ -33,6 +46,6 @@ export type InvestigatorCodeTypeWithPack =
       type: 'parallel'
     } | {
       type: 'book'
-      image: Box
+      image?: InvestigatorImage
     }
   )

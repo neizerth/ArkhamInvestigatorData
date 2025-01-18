@@ -3,12 +3,16 @@ import type { Investigator } from "@/types/game";
 export const AgnesBaker: Investigator = {
   code: '01004',
   image: {
-    width: 0,
-    height: 0,
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0
+    width: 2289,
+    height: 2500,
+    media: [
+      {
+        width: 1629,
+        height: 2503,
+        left: 674,
+        top: -19
+      }
+    ]
   },
   variants: [
     {
@@ -23,12 +27,22 @@ export const AgnesBaker: Investigator = {
       id: '01004_revised',
       name: 'Revised Core Set',
       image: {
-        width: 0,
-        height: 0,
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0
+        width: 1600,
+        height: 1574,
+        media: [
+          {
+            width: 664,
+            height: 1019,
+            left: 268,
+            top: 324
+          },
+          {
+            width: 814,
+            height: 1179,
+            left: 150,
+            top: 324
+          }
+        ]
       }
     },
   ]
