@@ -8,13 +8,18 @@ export type Investigator = {
   skins?: InvestigatorSkin[]
 }
 
-export type InvestigatorImageMedia = Box & {
-  source?: Box & {
-    type: 'mini' | 'full'
-    id: string
-  }
+export type InvestigatorImageBox = Box & {
   top: number
   left: number
+}
+
+export type InvestigatorImageSource = Box & {
+  type: 'mini' | 'full'
+  id: string
+}
+
+export type InvestigatorImageMedia = InvestigatorImageBox & {
+  source?: InvestigatorImageSource
 }
 
 export type InvestigatorImage = Box & {

@@ -1,4 +1,23 @@
-import type { Investigator } from "@/types/game";
+import type { Investigator, InvestigatorImage } from "@/types/game";
+
+const revisedImage: InvestigatorImage = {
+  width: 1200,
+  height: 1180,
+  media: [
+    {
+      width: 508,
+      height: 781,
+      left: 312,
+      top: 229
+    },
+    {
+      width: 846,
+      height: 781,
+      left: 0,
+      top: 180
+    }
+  ]
+}
 
 export const DaisyWalker: Investigator = {
   code: '01002',
@@ -32,24 +51,12 @@ export const DaisyWalker: Investigator = {
     {
       id: '01002_revised',
       name: 'Revised Core Set',
-      image: {
-        width: 1200,
-        height: 1180,
-        media: [
-          {
-            width: 508,
-            height: 781,
-            left: 312,
-            top: 229
-          },
-          {
-            width: 846,
-            height: 781,
-            left: 0,
-            top: 180
-          }
-        ]
-      }
+      image: revisedImage
     },
+    {
+      id: '01002_revised_white',
+      name: 'Revised Core (Blue)',
+      image: revisedImage
+    }
   ]
 }
