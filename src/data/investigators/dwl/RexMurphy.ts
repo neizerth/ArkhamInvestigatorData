@@ -6,7 +6,18 @@ export const RexMurphy: Investigator = {
     width: 1600,
     height: 1600,
     media: [
-
+      {
+        width: 818,
+        height: 1258,
+        left: 639,
+        top: 172
+      },
+      {
+        width: 890,
+        height: 1428,
+        left: 600,
+        top: 172
+      }
     ]
   }
 }
