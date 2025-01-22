@@ -1,4 +1,11 @@
-import type { Investigator } from "@/types/game";
+import type { Investigator, InvestigatorImageSource } from "@/types/game";
+
+const largeImage: InvestigatorImageSource = {
+  id: '02005_large',
+  type: 'full',
+  width: 2560,
+  height: 2560
+};
 
 export const AshcanPete: Investigator = {
   code: '02005',
@@ -19,15 +26,17 @@ export const AshcanPete: Investigator = {
         top: 35
       },
       {
-        source: {
-          id: '02005_large',
-          type: 'full',
-          width: 2560,
-          height: 2560
-        },
+        source: largeImage,
         width: 1371,
         height: 2107,
         left: 231,
+        top: 453
+      },
+      {
+        source: largeImage,
+        width: 2390,
+        height: 2107,
+        left: 0,
         top: 453
       }
     ]
