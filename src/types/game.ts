@@ -3,6 +3,7 @@ import type { Box } from "./dimensions"
 
 export type Investigator = {
   code: string
+  previewId?: string
   image?: InvestigatorImage
   variants?: InvestigatorVariant[]
   skins?: InvestigatorSkin[]
