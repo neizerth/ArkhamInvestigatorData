@@ -19,5 +19,13 @@ export const RexMurphy: Investigator = {
         top: 172
       }
     ]
-  }
+  },
+  variants: [
+    {
+      type: 'parallel',
+      code: '90078',
+      pack_code: 'ptr',
+      name: 'Hunting for Answers'
+    }
+  ]
 }

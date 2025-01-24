@@ -19,5 +19,13 @@ export const ZoeySamaras: Investigator = {
         top: 50
       }
     ]
-  }
+  },
+  variants: [
+    {
+      type: 'parallel',
+      code: '90059',
+      pack_code: 'ptr',
+      name: 'Path of the Righteous'
+    }
+  ]
 }
