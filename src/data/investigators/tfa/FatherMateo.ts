@@ -19,5 +19,13 @@ export const FatherMateo: Investigator = {
         top: 391
       }
     ] 
-  }
+  },
+  variants: [
+    {
+      code: '90081',
+      type: 'parallel',
+      pack_code: 'aof',
+      name: 'Aura of Faith'
+    }
+  ]
 }
