@@ -24,7 +24,6 @@ export const CarolynFern: Investigator = {
     {
       code: '98010',
       type: 'book',
-      pack_code: 'tftbw',
       name: 'To Fight the Black Wind',
       image: {
         width: 2792,

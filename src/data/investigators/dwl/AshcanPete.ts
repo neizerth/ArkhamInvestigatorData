@@ -45,7 +45,6 @@ export const AshcanPete: Investigator = {
     {
       type: 'parallel',
       code: '90046',
-      pack_code: 'otr',
       name: 'On the Road Again'
     }
   ]

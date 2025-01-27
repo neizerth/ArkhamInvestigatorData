@@ -24,7 +24,6 @@ export const RexMurphy: Investigator = {
     {
       type: 'parallel',
       code: '90078',
-      pack_code: 'ptr',
       name: 'Hunting for Answers'
     }
   ]

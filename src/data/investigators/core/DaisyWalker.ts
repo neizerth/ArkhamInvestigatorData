@@ -43,7 +43,6 @@ export const DaisyWalker: Investigator = {
     {
       type: 'parallel',
       code: '90001',
-      pack_code: 'rod',
       name: 'Read or Die'
     }
   ],

@@ -36,13 +36,11 @@ export const JennyBarnes: Investigator = {
     {
       type: 'parallel',
       code: '90084',
-      pack_code: 'pap',
       name: 'Pistols and Pearls'
     },
     {
       type: 'book',
       code: '98006',
-      pack_code: 'tdor',
       name: 'Hour of the Huntress',
       image: {
         width: 2596,

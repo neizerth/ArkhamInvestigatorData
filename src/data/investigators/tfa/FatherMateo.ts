@@ -24,7 +24,6 @@ export const FatherMateo: Investigator = {
     {
       code: '90081',
       type: 'parallel',
-      pack_code: 'aof',
       name: 'Aura of Faith'
     }
   ]

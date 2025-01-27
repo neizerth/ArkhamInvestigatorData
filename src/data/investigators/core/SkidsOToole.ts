@@ -24,7 +24,6 @@ export const SkidsOToole: Investigator = {
     {
       type: 'parallel',
       code: '90008',
-      pack_code: 'all_or_nothing',
       name: 'All or Nothing'
     }
   ],

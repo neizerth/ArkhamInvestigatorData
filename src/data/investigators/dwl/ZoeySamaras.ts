@@ -24,7 +24,6 @@ export const ZoeySamaras: Investigator = {
     {
       type: 'parallel',
       code: '90059',
-      pack_code: 'ptr',
       name: 'Path of the Righteous'
     }
   ]

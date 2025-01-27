@@ -46,7 +46,6 @@ export type InvestigatorVariantIdentity = InvestigatorCodeTypeWithPack |
 export type InvestigatorCodeTypeWithPack = 
   {
     code: string
-    pack_code: string
   } & (
     {
       type: 'parallel'

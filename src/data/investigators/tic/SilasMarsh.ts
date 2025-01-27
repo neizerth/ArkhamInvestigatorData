@@ -24,7 +24,6 @@ export const SilasMarsh: Investigator = {
     {
       code: '98013',
       type: 'book',
-      pack_code: 'bob',
       name: 'The Shadows of the Mind',
       image: {
         width: 2474,

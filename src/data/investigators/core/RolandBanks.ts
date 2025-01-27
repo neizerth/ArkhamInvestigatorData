@@ -24,7 +24,6 @@ export const RolandBanks: Investigator = {
     {
       type: 'book',
       code: '98004',
-      pack_code: 'tdor',
       name: 'The Dirge of Reason',
       image: {
         width: 2792,
@@ -54,7 +53,6 @@ export const RolandBanks: Investigator = {
     {
       type: 'parallel',
       code: '90024',
-      pack_code: 'btb',
       name: 'By the Book'
     }
   ],

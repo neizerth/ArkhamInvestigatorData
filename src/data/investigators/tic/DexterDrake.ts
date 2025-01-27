@@ -18,7 +18,6 @@ export const DexterDrake: Investigator = {
     {
       code: '98016',
       type: 'book',
-      pack_code: 'bob',
       name: 'Blood of Baalshandor',
       image: {
         width: 1620,

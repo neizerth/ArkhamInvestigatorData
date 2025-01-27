@@ -18,7 +18,6 @@ export const AgnesBaker: Investigator = {
     {
       type: 'parallel',
       code: '90017',
-      pack_code: 'bad',
       name: 'Bad Blood'
     }
   ],

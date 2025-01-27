@@ -24,7 +24,6 @@ export const WendyAdams: Investigator = {
     {
       type: 'parallel',
       code: '90037',
-      pack_code: 'bad',
       name: 'Red Tide Rising'
     }
   ],
