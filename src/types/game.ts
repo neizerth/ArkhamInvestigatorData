@@ -37,13 +37,25 @@ export type InvestigatorVariant = InvestigatorVariantIdentity & {
   name: string
 }
 
-export type InvestigatorVariantIdentity = InvestigatorCodeTypeWithPack |
-  {
-    type: 'custom'
-    image?: InvestigatorImage
-  }
+export type InvestigatorVariantIdentity = InvestigatorVariantWithPack | InvestigatorCustomVariant;
 
-export type InvestigatorCodeTypeWithPack = 
+export type InvestigatorCustomVariant = {
+  type: 'custom'
+} & (
+  {
+    code: string
+    image?: InvestigatorImage
+  } | 
+  {
+    id: string
+    image: InvestigatorImage
+  } | 
+  {
+    image: InvestigatorImage
+  }
+)
+
+export type InvestigatorVariantWithPack = 
   {
     code: string
   } & (
