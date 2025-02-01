@@ -4,19 +4,19 @@ export const SkidsOToole: Investigator = {
   code: '01003',
   image: {
     width: 2917,
-    height: 2083,
+    height: 2374,
     media: [
       {
         width: 1355,
-        height: 2084,
+        height: 2083,
         left: 715,
-        top: 0
+        top: 291
       },
       {
         width: 2050,
         height: 2084,
         left: 400,
-        top: 0
+        top: 291
       }
     ]
   },

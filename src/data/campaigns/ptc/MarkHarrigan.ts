@@ -10,14 +10,20 @@ const wideImage: InvestigatorImageSource = {
 export const MarkHarrigan: Investigator = {
   code: '03001',
   image: {
-    width: 524,
-    height: 739,
+    width: 1774,
+    height: 1774,
     media: [
       {
-        width: 410,
-        height: 630,
-        left: 25,
-        top: 16
+        width: 863,
+        height: 1326,
+        left: 65,
+        top: 327
+      },
+      {
+        width: 1050,
+        height: 1447,
+        left: 0,
+        top: 327
       },
       {
         source: wideImage,

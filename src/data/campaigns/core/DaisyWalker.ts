@@ -22,20 +22,20 @@ const revisedImage: InvestigatorImage = {
 export const DaisyWalker: Investigator = {
   code: '01002',
   image: {
-    width: 1366,
-    height: 746,
+    width: 2000,
+    height: 1300,
     media: [
       {
-        width: 453,
-        height: 696,
-        left: 318,
-        top: 50
+        width: 686,
+        height: 1054,
+        left: 462,
+        top: 246
       },
       {
-        width: 660,
-        height: 696,
-        left: 290,
-        top: 50
+        width: 990,
+        height: 1054,
+        left: 410,
+        top: 246
       }
     ]
   },

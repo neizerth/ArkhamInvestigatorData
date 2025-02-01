@@ -1,30 +1,39 @@
-import type { Investigator } from "@/types/game";
+import type { Investigator, InvestigatorImageSource } from "@/types/game";
+
+const wideImage: InvestigatorImageSource = {
+  id: '02003_wide',
+  type: 'full',
+  width: 1200,
+  height: 545
+}
 
 export const JennyBarnes: Investigator = {
   code: '02003',
   image: {
-    width: 700,
-    height: 550,
+    width: 1400,
+    height: 1100,
     media: [
       {
-        width: 352,
-        height: 352,
-        left: 228,
-        top: 84
+        width: 702,
+        height: 1078,
+        left: 459,
+        top: 165
       },
       {
-        width: 520,
-        height: 352,
-        left: 100,
-        top: 84
+        width: 1060,
+        height: 930,
+        left: 190,
+        top: 170
       },
       {
-        source: {
-          id: '02003_wide',
-          type: 'full',
-          width: 1200,
-          height: 545
-        },
+        source: wideImage,
+        width: 570,
+        height: 529,
+        left: 450,
+        top: 30
+      },
+      {
+        source: wideImage,
         width: 1170,
         height: 515,
         left: 240,

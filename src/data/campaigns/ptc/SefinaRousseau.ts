@@ -3,20 +3,20 @@ import type { Investigator } from "@/types/game";
 export const SefinaRousseau: Investigator ={
   code: '03003',
   image: {
-    width: 1024,
-    height: 1024,
+    width: 2048,
+    height: 2048,
     media: [
       {
-        width: 468,
-        height: 718,
-        left: 131,
-        top: 233
+        width: 936,
+        height: 1436,
+        left: 262,
+        top: 466
       },
       {
-        width: 468,
-        height: 791,
-        left: 131,
-        top: 233
+        width: 936,
+        height: 1582,
+        left: 262,
+        top: 466
       }
     ]
   }
