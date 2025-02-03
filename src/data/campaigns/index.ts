@@ -8,6 +8,7 @@ import tic from './tic';
 import eoe from './eoe';
 import tsk from './tsk';
 import fhv from './fhv';
+import tdc from './tdc';
 
 export default [
   ...core,
@@ -19,5 +20,6 @@ export default [
   ...tic,
   ...eoe,
   ...tsk,
-  ...fhv
+  ...fhv,
+  ...tdc
 ]

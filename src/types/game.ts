@@ -4,7 +4,8 @@ import type { Box } from "./dimensions"
 export type Investigator = {
   code: string
   previewId?: string
-  image: InvestigatorImage
+  variantName?: string
+  image?: InvestigatorImage
   variants?: InvestigatorVariant[]
   skins?: InvestigatorSkin[]
 }
@@ -24,6 +25,7 @@ export type InvestigatorImageMedia = InvestigatorImageBox & {
 }
 
 export type InvestigatorImage = Box & {
+  id?: string
   media?: InvestigatorImageMedia[]
 }
 
@@ -63,6 +65,6 @@ export type InvestigatorVariantWithPack =
       type: 'parallel'
     } | {
       type: 'book'
-      image?: InvestigatorImage
+      image: InvestigatorImage
     }
   )
