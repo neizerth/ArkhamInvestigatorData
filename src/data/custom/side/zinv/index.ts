@@ -1,5 +1,9 @@
-import { TheInsane } from "./TheInsane";
+import zci from "./zci";
+import zoc from "./zoc";
+import zsti from "./zsti";
 
 export default [
-  TheInsane
+  ...zci,
+  ...zoc,
+  ...zsti
 ]

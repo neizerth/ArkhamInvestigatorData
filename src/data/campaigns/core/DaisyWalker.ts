@@ -56,6 +56,28 @@ export const DaisyWalker: Investigator = {
       id: '01002_revised_white',
       name: 'Revised Core (Blue)',
       image: revisedImage
+    },
+    {
+      id: '01002_invocation-2017',
+      name: 'Invocation 2 ',
+      image: {
+        width: 3448,
+        height: 2600,
+        media: [
+          {
+            width: 1297,
+            height: 1994,
+            left: 477,
+            top: 559
+          },
+          {
+            width: 3012,
+            height: 2177,
+            left: 0,
+            top: 423
+          }
+        ]
+      }
     }
   ]
 }
