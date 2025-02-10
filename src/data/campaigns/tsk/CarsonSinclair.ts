@@ -1,4 +1,4 @@
-import type { Investigator } from "@/types/game";
+import type { Investigator } from "@/model";
 
 export const CarsonSinclair: Investigator = {
   code: '09001',

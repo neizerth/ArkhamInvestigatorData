@@ -1,4 +1,4 @@
-import type { Investigator, InvestigatorImage } from "@/types/game";
+import type { Investigator, InvestigatorImage } from "@/model";
 
 const revisedImage: InvestigatorImage = {
   width: 1200,

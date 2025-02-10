@@ -1,4 +1,4 @@
-import type { Investigator, InvestigatorImageSource } from "@/types/game";
+import type { Investigator, InvestigatorImageSource } from "@/model";
 
 const largeImage: InvestigatorImageSource = {
   id: '02005_large',
