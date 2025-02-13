@@ -1,0 +1,6 @@
+src
+cache
+dist
+templates
+.github
+.env.example
