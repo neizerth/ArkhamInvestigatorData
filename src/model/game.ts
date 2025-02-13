@@ -63,6 +63,7 @@ export type InvestigatorVariantWithPack =
   } & (
     {
       type: 'parallel'
+      image?: InvestigatorImage
     } | {
       type: 'book'
       image: InvestigatorImage

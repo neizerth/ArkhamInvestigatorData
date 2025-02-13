@@ -45,7 +45,25 @@ export const JennyBarnes: Investigator = {
     {
       type: 'parallel',
       code: '90084',
-      name: 'Pistols and Pearls'
+      name: 'Pistols and Pearls',
+      image: {
+        width: 1920,
+        height: 1920,
+        media: [
+          {
+            width: 825,
+            height: 1268,
+            left: 209,
+            top: 260
+          },
+          {
+            width: 1340,
+            height: 1630,
+            left: 0,
+            top: 290
+          },
+        ]
+      }
     },
     {
       type: 'book',
