@@ -28,7 +28,7 @@ export const HankSamson: Investigator = {
     },
     {
       type: 'custom',
-      code: '10016a',
+      code: '10016b',
       name: 'Warden. Resolute.'
     }
   ]
