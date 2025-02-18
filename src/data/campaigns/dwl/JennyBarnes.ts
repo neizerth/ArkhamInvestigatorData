@@ -67,7 +67,7 @@ export const JennyBarnes: Investigator = {
     },
     {
       type: 'book',
-      code: '98006',
+      code: '98001',
       name: 'Hour of the Huntress',
       image: {
         width: 2596,
