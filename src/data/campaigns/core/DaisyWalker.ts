@@ -59,7 +59,7 @@ export const DaisyWalker: Investigator = {
     },
     {
       id: '01002_invocation-2017',
-      name: 'Invocation 2 ',
+      name: 'Invocation 2017',
       image: {
         width: 3448,
         height: 2600,
