@@ -54,7 +54,7 @@ export const DaisyWalker: Investigator = {
     },
     {
       id: '01002_revised_white',
-      name: 'Revised Core (Blue)',
+      name: 'Revised Core (White)',
       image: revisedImage
     },
     {
