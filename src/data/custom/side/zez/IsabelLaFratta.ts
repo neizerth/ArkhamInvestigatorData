@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const IsabelLaFratta: Investigator = {
   code: 'zez_00046',
+  additionalAction: true,
   image: {
     width: 1080,
     height: 1080,

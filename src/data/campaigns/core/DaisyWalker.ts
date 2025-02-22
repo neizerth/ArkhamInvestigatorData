@@ -21,6 +21,7 @@ const revisedImage: InvestigatorImage = {
 
 export const DaisyWalker: Investigator = {
   code: '01002',
+  additionalAction: true,
   image: {
     width: 2000,
     height: 1300,

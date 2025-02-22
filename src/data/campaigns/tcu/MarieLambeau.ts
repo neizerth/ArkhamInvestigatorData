@@ -9,6 +9,7 @@ const wideImage: InvestigatorImageSource = {
 
 export const MarieLambeau: Investigator = {
   code: '05006',
+  additionalAction: true,
   image: {
     width: 3956,
     height: 3956,

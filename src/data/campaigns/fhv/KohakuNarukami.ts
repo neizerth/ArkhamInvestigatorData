@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const KohakuNarukami: Investigator = {
   code: '10012',
+  additionalAction: true,
   image: {
     width: 5056,
     height: 2536,

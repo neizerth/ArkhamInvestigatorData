@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const SkidsOToole: Investigator = {
   code: '01003',
+  additionalAction: true,
   image: {
     width: 2917,
     height: 2374,
