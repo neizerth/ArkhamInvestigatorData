@@ -6,7 +6,7 @@ export type Investigator = {
   previewId?: string
   variantName?: string
   additionalAction?: boolean
-  image?: InvestigatorImage
+  image: InvestigatorImage
   variants?: InvestigatorVariant[]
   skins?: InvestigatorSkin[]
 }
@@ -52,9 +52,6 @@ export type InvestigatorCustomVariant = {
   } | 
   {
     id: string
-    image: InvestigatorImage
-  } | 
-  {
     image: InvestigatorImage
   }
 )

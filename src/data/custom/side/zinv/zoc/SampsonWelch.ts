@@ -1,22 +1,22 @@
 import type { Investigator } from "@/model";
 
 export const SampsonWelch: Investigator = {
-  code: 'zoc_31020',
+  code: 'zoc_31001',
   image: {
-    width: 2160,
-    height: 2160,
+    width: 3904,
+    height: 3904,
     media: [
       {
-        width: 1003,
-        height: 1540,
-        left: 203,
-        top: 565
+        width: 1541,
+        height: 2369,
+        left: 0,
+        top: 1535
       },
       {
-        width: 1812,
-        height: 1586,
+        width: 2700,
+        height: 2364,
         left: 0,
-        top: 574
+        top: 1540
       }
     ]
   }
