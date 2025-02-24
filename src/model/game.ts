@@ -27,7 +27,7 @@ export type InvestigatorImageMedia = InvestigatorImageBox & {
 
 export type InvestigatorImage = Box & {
   id?: string
-  media?: InvestigatorImageMedia[]
+  media: InvestigatorImageMedia[]
 }
 
 export type InvestigatorSkin = {
