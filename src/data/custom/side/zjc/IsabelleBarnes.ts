@@ -10,7 +10,8 @@ export const IsabelleBarnes: Investigator = {
         width: 1283,
         height: 1971,
         left: 435,
-        top: 723
+        top: 723,
+        primary: true
       },
       {
         width: 1377,

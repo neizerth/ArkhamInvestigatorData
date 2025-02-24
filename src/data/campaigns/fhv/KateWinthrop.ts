@@ -10,7 +10,8 @@ export const KateWinthrop: Investigator = {
         width: 678,
         height: 1041,
         left: 434,
-        top: 142
+        top: 142,
+        primary: true
       },
       {
         width: 1144,

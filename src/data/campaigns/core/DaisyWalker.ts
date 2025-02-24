@@ -8,7 +8,8 @@ const revisedImage: InvestigatorImage = {
       width: 508,
       height: 781,
       left: 312,
-      top: 229
+      top: 229,
+      primary: true
     },
     {
       width: 846,
@@ -30,7 +31,8 @@ export const DaisyWalker: Investigator = {
         width: 686,
         height: 1054,
         left: 462,
-        top: 246
+        top: 246,
+        primary: true
       },
       {
         width: 990,
@@ -69,7 +71,8 @@ export const DaisyWalker: Investigator = {
             width: 1297,
             height: 1994,
             left: 477,
-            top: 559
+            top: 559,
+            primary: true
           },
           {
             width: 3012,

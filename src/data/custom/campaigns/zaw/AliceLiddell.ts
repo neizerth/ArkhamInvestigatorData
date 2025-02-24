@@ -9,7 +9,8 @@ const image: InvestigatorImage = {
       width: 1378,
       height: 2117,
       left: 0,
-      top: 775
+      top: 775,
+      primary: true
     },
     {
       width: 2570,

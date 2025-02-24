@@ -10,7 +10,8 @@ export const MelissaSwanson: Investigator = {
         width: 552,
         height: 848,
         left: 228,
-        top: 770
+        top: 770,
+        primary: true
       },
       {
         width: 960,

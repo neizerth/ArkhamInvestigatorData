@@ -10,7 +10,8 @@ export const NormanWithers: Investigator = {
         width: 750,
         height: 1152,
         left: 192,
-        top: 213
+        top: 213,
+        primary: true
       },
       {
         width: 900,
@@ -33,7 +34,8 @@ export const NormanWithers: Investigator = {
             width: 721,
             height: 1107,
             left: 616,
-            top: 417
+            top: 417,
+            primary: true
           },
           {
             width: 1260,

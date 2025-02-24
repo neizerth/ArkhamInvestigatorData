@@ -10,7 +10,8 @@ export const LilyChen: Investigator = {
         width: 587,
         height: 901,
         left: 200,
-        top: 245
+        top: 245,
+        primary: true
       },
       {
         width: 900,

@@ -17,7 +17,8 @@ export const MarkHarrigan: Investigator = {
         width: 863,
         height: 1326,
         left: 65,
-        top: 327
+        top: 327,
+        primary: true
       },
       {
         width: 1050,
@@ -30,7 +31,8 @@ export const MarkHarrigan: Investigator = {
         width: 352,
         height: 538,
         left: 228,
-        top: 48
+        top: 48,
+        primary: true
       },
       {
         source: wideImage,

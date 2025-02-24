@@ -10,7 +10,8 @@ export const AminaZidane: Investigator = {
         width: 1790,
         height: 2751,
         left: 1120,
-        top: 702
+        top: 702,
+        primary: true
       },
       {
         width: 3310,

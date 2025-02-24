@@ -11,7 +11,8 @@ export const SkidsOToole: Investigator = {
         width: 1355,
         height: 2083,
         left: 715,
-        top: 291
+        top: 291,
+        primary: true
       },
       {
         width: 2050,
@@ -40,7 +41,8 @@ export const SkidsOToole: Investigator = {
             width: 549,
             height: 843,
             left: 120,
-            top: 154
+            top: 154,
+            primary: true
           },
           {
             width: 900,

@@ -10,7 +10,8 @@ export const JoeDiamond: Investigator = {
         width: 754,
         height: 1159,
         left: 205,
-        top: 233
+        top: 233,
+        primary: true
       }
     ]
   }

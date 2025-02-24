@@ -10,7 +10,8 @@ export const TheInsane: Investigator = {
         width: 848,
         height: 1304,
         left: 122,
-        top: 319
+        top: 319,
+        primary: true
       },
       {
         width: 1032,

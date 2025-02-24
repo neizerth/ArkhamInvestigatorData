@@ -10,7 +10,8 @@ export const SilasMarsh: Investigator = {
         width: 2595,
         height: 3988,
         left: 1307,
-        top: 227
+        top: 227,
+        primary: true
       },
       {
         width: 2902,
@@ -33,7 +34,8 @@ export const SilasMarsh: Investigator = {
             width: 826,
             height: 1268,
             left: 368,
-            top: 350
+            top: 350,
+            primary: true
           },
           {
             width: 1180,

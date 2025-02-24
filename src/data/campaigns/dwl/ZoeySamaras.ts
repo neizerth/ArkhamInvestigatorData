@@ -10,7 +10,8 @@ export const ZoeySamaras: Investigator = {
         width: 750,
         height: 1153,
         left: 494,
-        top: 73
+        top: 73,
+        primary: true
       },
       {
         width: 814,

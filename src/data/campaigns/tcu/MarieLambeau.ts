@@ -25,7 +25,8 @@ export const MarieLambeau: Investigator = {
         width: 1464,
         height: 2250,
         left: 646,
-        top: 639
+        top: 639,
+        primary: true
       },
       {
         source: wideImage,

@@ -10,7 +10,8 @@ export const WendyAdams: Investigator = {
         width: 1692,
         height: 2600,
         left: 366,
-        top: 116
+        top: 116,
+        primary: true
       },
       {
         width: 1800,
@@ -39,7 +40,8 @@ export const WendyAdams: Investigator = {
             width: 581,
             height: 894,
             left: 252,
-            top: 388
+            top: 388,
+            primary: true
           },
           {
             width: 581,

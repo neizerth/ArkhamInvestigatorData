@@ -11,7 +11,8 @@ export const FatherMateo: Investigator = {
         width: 1155,
         height: 1777,
         left: 345,
-        top: 391
+        top: 391,
+        primary: true
       },
       {
         width: 1996,

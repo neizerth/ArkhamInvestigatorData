@@ -10,7 +10,8 @@ export const YukiYagami: Investigator = {
         width: 565,
         height: 853,
         left: 1488,
-        top: 481
+        top: 481,
+        primary: true
       },
       {
         width: 6000,

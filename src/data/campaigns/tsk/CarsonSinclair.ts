@@ -11,7 +11,8 @@ export const CarsonSinclair: Investigator = {
         width: 1104,
         height: 1696,
         left: 473,
-        top: 258
+        top: 258,
+        primary: true
       },
       {
         width: 1430,

@@ -10,7 +10,8 @@ export const NathanielCho: Investigator = {
         width: 926,
         height: 1422,
         left: 360,
-        top: 259
+        top: 259,
+        primary: true
       },
       {
         width: 1360,

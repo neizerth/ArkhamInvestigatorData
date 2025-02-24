@@ -10,7 +10,8 @@ export const SefinaRousseau: Investigator ={
         width: 936,
         height: 1436,
         left: 262,
-        top: 466
+        top: 466,
+        primary: true
       },
       {
         width: 936,

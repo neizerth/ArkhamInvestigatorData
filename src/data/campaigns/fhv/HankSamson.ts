@@ -11,7 +11,8 @@ export const HankSamson: Investigator = {
         width: 730,
         height: 1122,
         left: 316,
-        top: 338
+        top: 338,
+        primary: true
       },
       {
         width: 1260,

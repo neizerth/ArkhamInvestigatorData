@@ -11,7 +11,8 @@ export const FinnEdwards: Investigator = {
         width: 436,
         height: 670,
         left: 76,
-        top: 107
+        top: 107,
+        primary: true
       },
       {
         width: 720,

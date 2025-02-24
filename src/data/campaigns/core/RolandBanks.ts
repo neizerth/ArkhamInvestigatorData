@@ -36,12 +36,6 @@ export const RolandBanks: Investigator = {
             top: 341
           },
           {
-            width: 1107,
-            height: 1363,
-            left: 852,
-            top: 341
-          },
-          {
             width: 1400,
             height: 2275,
             left: 600,
@@ -68,13 +62,14 @@ export const RolandBanks: Investigator = {
             width: 385,
             height: 592,
             left: 274,
-            top: 196
+            top: 196,
+            primary: true
           },
           {
             width: 680,
             height: 592,
             left: 50,
-            top: 196,
+            top: 196
           }
         ]
       }

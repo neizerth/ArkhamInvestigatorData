@@ -10,7 +10,8 @@ export const MakotoMiyazaki: Investigator = {
         width: 1414,
         height: 2172,
         left: 552,
-        top: 723
+        top: 723,
+        primary: true
       },
       {
         width: 3768,

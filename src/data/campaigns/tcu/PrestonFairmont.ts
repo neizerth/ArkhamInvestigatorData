@@ -10,7 +10,8 @@ export const PrestonFairmont: Investigator = {
         width: 1543,
         height: 2371,
         left: 523,
-        top: 400
+        top: 400,
+        primary: true
       },
       {
         width: 1934,

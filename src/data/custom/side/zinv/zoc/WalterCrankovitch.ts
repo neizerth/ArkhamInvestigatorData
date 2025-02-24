@@ -10,7 +10,8 @@ export const WalterCrankovitch: Investigator = {
         width: 1003,
         height: 1540,
         left: 203,
-        top: 565
+        top: 565,
+        primary: true
       },
       {
         width: 1812,

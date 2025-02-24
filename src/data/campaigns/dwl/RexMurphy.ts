@@ -10,7 +10,8 @@ export const RexMurphy: Investigator = {
         width: 818,
         height: 1258,
         left: 639,
-        top: 172
+        top: 172,
+        primary: true
       },
       {
         width: 890,

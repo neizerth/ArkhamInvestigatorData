@@ -10,7 +10,8 @@ export const AnnaAnderson: Investigator = {
         width: 941,
         height: 1446,
         left: 183,
-        top: 838
+        top: 838,
+        primary: true
       },
       {
         width: 1247,

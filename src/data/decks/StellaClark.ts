@@ -11,7 +11,8 @@ export const StellaClark: Investigator = {
         width: 1014,
         height: 1557,
         left: 388,
-        top: 261
+        top: 261,
+        primary: true
       },
       {
         width: 1720,

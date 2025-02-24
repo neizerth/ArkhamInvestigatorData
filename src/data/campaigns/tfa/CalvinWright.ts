@@ -17,7 +17,8 @@ export const CalvinWright: Investigator = {
         width: 1204,
         height: 1850,
         left: 446,
-        top: 80
+        top: 80,
+        primary: true
       },
       {
         width: 2050,

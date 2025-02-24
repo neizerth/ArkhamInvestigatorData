@@ -17,14 +17,16 @@ export const YithianBody: Investigator = {
         width: 1270,
         height: 1952,
         left: 365,
-        top: 0
+        top: 0,
+        primary: true
       },
       {
         source: wideImage,
         width: 513,
         height: 788,
         left: 292,
-        top: 158
+        top: 158,
+        primary: true
       },
       {
         source: wideImage,

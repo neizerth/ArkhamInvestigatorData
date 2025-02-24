@@ -17,7 +17,8 @@ export const JimCulver: Investigator = {
         width: 2197,
         height: 2197,
         left: 220,
-        top: 191
+        top: 191,
+        primary: true
       },
       {
         width: 2400,
@@ -30,7 +31,8 @@ export const JimCulver: Investigator = {
         width: 816,
         height: 1254,
         left: 102,
-        top: 118
+        top: 118,
+        primary: true
       },
       {
         source: wideImage,

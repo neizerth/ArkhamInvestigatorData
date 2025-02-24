@@ -11,7 +11,8 @@ export const BobJenkins: Investigator = {
         width: 649,
         height: 996,
         left: 205,
-        top: 258
+        top: 258,
+        primary: true
       }
     ]
   }

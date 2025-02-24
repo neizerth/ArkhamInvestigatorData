@@ -10,7 +10,8 @@ export const WilliamYorick: Investigator = {
         width: 540,
         height: 831,
         left: 239,
-        top: 102
+        top: 102,
+        primary: true
       },
       {
         width: 1000,

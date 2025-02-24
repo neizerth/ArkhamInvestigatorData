@@ -17,7 +17,8 @@ export const RitaYoung: Investigator = {
         width: 774,
         height: 1190,
         left: 237,
-        top: 182
+        top: 182,
+        primary: true
       },
       {
         width: 1232,
@@ -30,7 +31,8 @@ export const RitaYoung: Investigator = {
         width: 571,
         height: 877,
         left: 217,
-        top: 190
+        top: 190,
+        primary: true
       },
       {
         source: wideImage,

@@ -10,7 +10,8 @@ export const RichardCarlisle: Investigator = {
         width: 2119,
         height: 3256,
         left: 259,
-        top: 3063
+        top: 3063,
+        primary: true
       },
       {
         width: 2648,

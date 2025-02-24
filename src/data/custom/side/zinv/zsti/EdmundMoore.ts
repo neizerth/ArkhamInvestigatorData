@@ -10,7 +10,8 @@ export const EdmundMoore: Investigator = {
         width: 1328,
         height: 2040,
         left: 332,
-        top: 1800
+        top: 1800,
+        primary: true
       },
       {
         width: 1660,

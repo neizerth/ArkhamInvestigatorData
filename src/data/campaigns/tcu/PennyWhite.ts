@@ -11,7 +11,8 @@ export const PennyWhite: Investigator = {
         width: 492,
         height: 755,
         left: 165,
-        top: 162
+        top: 162,
+        primary: true
       },
       {
         width: 600,

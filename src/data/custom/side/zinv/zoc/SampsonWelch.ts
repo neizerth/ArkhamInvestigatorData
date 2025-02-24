@@ -10,7 +10,8 @@ export const SampsonWelch: Investigator = {
         width: 1541,
         height: 2369,
         left: 0,
-        top: 1535
+        top: 1535,
+        primary: true
       },
       {
         width: 2700,

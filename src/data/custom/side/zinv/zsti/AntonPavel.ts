@@ -10,7 +10,8 @@ export const AntonPavel: Investigator = {
         width: 758,
         height: 1165,
         left: 183,
-        top: 538
+        top: 538,
+        primary: true
       },
       {
         width: 1090,

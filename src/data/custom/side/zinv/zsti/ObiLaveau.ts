@@ -10,7 +10,8 @@ export const ObiLaveau: Investigator = {
         width: 931,
         height: 1430,
         left: 0,
-        top: 2006
+        top: 2006,
+        primary: true
       },
       {
         width: 1770,

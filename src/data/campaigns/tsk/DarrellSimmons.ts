@@ -10,7 +10,8 @@ export const DarrellSimmons: Investigator = {
         width: 663,
         height: 1019,
         left: 552,
-        top: 85
+        top: 85,
+        primary: true
       },
       {
         width: 940,

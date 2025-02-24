@@ -11,7 +11,8 @@ export const TonyMorgan: Investigator = {
         width: 941,
         height: 1444,
         left: 33,
-        top: 134
+        top: 134,
+        primary: true
       },
       {
         width: 941,

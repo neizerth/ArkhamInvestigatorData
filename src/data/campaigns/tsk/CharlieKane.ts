@@ -10,7 +10,8 @@ export const CharlieKane: Investigator = {
         width: 1150,
         height: 1767,
         left: 298,
-        top: 310
+        top: 310,
+        primary: true
       },
       {
         width: 1890,

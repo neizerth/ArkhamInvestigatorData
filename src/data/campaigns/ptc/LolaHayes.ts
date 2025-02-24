@@ -10,7 +10,8 @@ export const LolaHayes: Investigator = {
         width: 832,
         height: 1276,
         left: 152,
-        top: 120
+        top: 120,
+        primary: true
       },
       {
         width: 1200,

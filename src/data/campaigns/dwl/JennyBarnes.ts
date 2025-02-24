@@ -17,7 +17,8 @@ export const JennyBarnes: Investigator = {
         width: 702,
         height: 1078,
         left: 459,
-        top: 165
+        top: 165,
+        primary: true
       },
       {
         width: 1060,
@@ -30,7 +31,8 @@ export const JennyBarnes: Investigator = {
         width: 570,
         height: 529,
         left: 450,
-        top: 30
+        top: 30,
+        primary: true
       },
       {
         source: wideImage,
@@ -54,7 +56,8 @@ export const JennyBarnes: Investigator = {
             width: 825,
             height: 1268,
             left: 209,
-            top: 260
+            top: 260,
+            primary: true
           },
           {
             width: 1340,
@@ -77,7 +80,8 @@ export const JennyBarnes: Investigator = {
             width: 1116,
             height: 1715,
             left: 590,
-            top: 835
+            top: 835,
+            primary: true
           },
           {
             width: 1116,

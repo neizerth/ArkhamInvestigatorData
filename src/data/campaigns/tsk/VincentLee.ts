@@ -10,7 +10,8 @@ export const VincentLee: Investigator = {
         width: 586,
         height: 900,
         left: 334,
-        top: 211
+        top: 211,
+        primary: true
       },
       {
         width: 1300,

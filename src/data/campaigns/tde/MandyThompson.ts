@@ -10,7 +10,8 @@ export const MandyThompson: Investigator = {
         width: 1063,
         height: 1641,
         left: 600,
-        top: 133
+        top: 133,
+        primary: true
       },
       {
         width: 1800,

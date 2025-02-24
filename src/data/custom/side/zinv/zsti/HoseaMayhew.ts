@@ -10,7 +10,8 @@ export const HoseaMayhew: Investigator = {
         width: 1267,
         height: 1947,
         left: 614,
-        top: 438
+        top: 438,
+        primary: true
       },
       {
         width: 1267,

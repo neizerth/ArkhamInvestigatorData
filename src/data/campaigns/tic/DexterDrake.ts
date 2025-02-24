@@ -27,7 +27,8 @@ export const DexterDrake: Investigator = {
             width: 750,
             height: 1152,
             left: 420,
-            top: 226
+            top: 226,
+            primary: true
           },
           {
             width: 1620,

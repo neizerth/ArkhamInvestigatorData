@@ -10,7 +10,8 @@ export const DianaStanley: Investigator = {
         width: 1226,
         height: 1883,
         left: 579,
-        top: 155
+        top: 155,
+        primary: true
       },
       {
         width: 2000,

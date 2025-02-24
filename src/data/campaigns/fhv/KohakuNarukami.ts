@@ -11,7 +11,8 @@ export const KohakuNarukami: Investigator = {
         width: 1111,
         height: 1707,
         left: 2039,
-        top: 144
+        top: 144,
+        primary: true
       },
       {
         width: 1970,

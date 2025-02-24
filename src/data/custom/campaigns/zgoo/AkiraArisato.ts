@@ -17,7 +17,8 @@ export const AkiraArisato: Investigator = {
         width: 1069,
         height: 1643,
         left: 462,
-        top: 171
+        top: 171,
+        primary: true
       },
       {
         width: 1320,
@@ -30,7 +31,8 @@ export const AkiraArisato: Investigator = {
         width: 1299,
         height: 1996,
         left: 419,
-        top: 670
+        top: 670,
+        primary: true
       },
       {
         source: wideImage,

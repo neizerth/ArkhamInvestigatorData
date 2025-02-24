@@ -23,6 +23,7 @@ export type InvestigatorImageSource = Box & {
 
 export type InvestigatorImageMedia = InvestigatorImageBox & {
   source?: InvestigatorImageSource
+  primary?: boolean
 }
 
 export type InvestigatorImage = Box & {

@@ -10,7 +10,8 @@ export const UrsulaDowns: Investigator = {
         width: 932,
         height: 1431,
         left: 193,
-        top: 142
+        top: 142,
+        primary: true
       },
       {
         width: 1276,

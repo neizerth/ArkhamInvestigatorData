@@ -10,7 +10,8 @@ export const SadieGodfrey: Investigator = {
         width: 923,
         height: 1419,
         left: 274,
-        top: 972
+        top: 972,
+        primary: true
       },
       {
         width: 1739,

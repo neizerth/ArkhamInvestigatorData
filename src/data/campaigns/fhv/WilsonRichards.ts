@@ -10,7 +10,8 @@ export const WilsonRichards: Investigator = {
         width: 835,
         height: 1282,
         left: 435,
-        top: 271
+        top: 271,
+        primary: true
       },
       {
         width: 1260,

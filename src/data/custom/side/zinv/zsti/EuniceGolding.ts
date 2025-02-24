@@ -10,7 +10,8 @@ export const EuniceGolding: Investigator = {
         width: 744,
         height: 1142,
         left: 61,
-        top: 942
+        top: 942,
+        primary: true
       },
       {
         width: 1228,

@@ -10,7 +10,8 @@ export const CarolynFern: Investigator = {
         width: 657,
         height: 1010,
         left: 240,
-        top: 78
+        top: 78,
+        primary: true
       },
       {
         width: 657,
@@ -33,7 +34,8 @@ export const CarolynFern: Investigator = {
             width: 888,
             height: 1364,
             left: 1047,
-            top: 875
+            top: 875,
+            primary: true
           },
           {
             width: 1350,

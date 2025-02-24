@@ -10,7 +10,8 @@ export const WinifredHabbamock: Investigator = {
         width: 1037,
         height: 1593,
         left: 256,
-        top: 170
+        top: 170,
+        primary: true
       },
       {
         width: 1188,

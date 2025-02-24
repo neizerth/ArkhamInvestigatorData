@@ -10,7 +10,8 @@ export const AstridLee: Investigator = {
         width: 899,
         height: 1381,
         left: 136,
-        top: 726
+        top: 726,
+        primary: true
       },
       {
         width: 1678,

@@ -10,7 +10,8 @@ export const JacquelineFine: Investigator = {
         width: 2002,
         height: 3076,
         left: 1321,
-        top: 337
+        top: 337,
+        primary: true
       },
       {
         width: 2370,

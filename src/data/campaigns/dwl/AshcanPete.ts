@@ -17,7 +17,8 @@ export const AshcanPete: Investigator = {
         width: 490,
         height: 753,
         left: 45,
-        top: 35
+        top: 35,
+        primary: true
       },
       {
         width: 535,
@@ -30,7 +31,8 @@ export const AshcanPete: Investigator = {
         width: 1371,
         height: 2107,
         left: 231,
-        top: 453
+        top: 453,
+        primary: true
       },
       {
         source: largeImage,

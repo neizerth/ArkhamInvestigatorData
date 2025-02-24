@@ -11,7 +11,8 @@ export const AlessandraZorzi: Investigator = {
         width: 718,
         height: 1103,
         left: 638,
-        top: 104
+        top: 104,
+        primary: true
       },
       {
         width: 850,

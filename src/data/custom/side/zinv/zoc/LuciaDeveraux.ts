@@ -11,7 +11,8 @@ export const LuciaDeveraux: Investigator = {
         width: 484,
         height: 744,
         left: 212,
-        top: 362
+        top: 362,
+        primary: true
       },
       {
         width: 808,

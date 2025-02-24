@@ -10,7 +10,8 @@ export const RodneyDorman: Investigator = {
         width: 684,
         height: 1051,
         left: 840,
-        top: 1135
+        top: 1135,
+        primary: true
       },
       {
         width: 1936,

@@ -10,7 +10,8 @@ export const SakuraSanada: Investigator = {
         width: 1319,
         height: 2027,
         left: 647,
-        top: 770
+        top: 770,
+        primary: true
       },
       {
         width: 2240,

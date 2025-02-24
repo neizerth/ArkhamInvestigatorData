@@ -10,7 +10,8 @@ export const AgnesBaker: Investigator = {
         width: 1629,
         height: 2503,
         left: 674,
-        top: -19
+        top: 0,
+        primary: true
       }
     ]
   },
@@ -33,7 +34,8 @@ export const AgnesBaker: Investigator = {
             width: 664,
             height: 1019,
             left: 268,
-            top: 324
+            top: 324,
+            primary: true
           },
           {
             width: 814,
