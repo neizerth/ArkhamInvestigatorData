@@ -4,6 +4,12 @@ const image: InvestigatorImage = {
   id: 'zaw_02228',
   width: 3672,
   height: 4896,
+  face: {
+    width: 609,
+    height: 562,
+    left: 408,
+    top: 1157
+  },
   media: [
     {
       width: 1378,

@@ -5,6 +5,12 @@ export const UrsulaDowns: Investigator = {
   image: {
     width: 1276,
     height: 1778,
+    face: {
+      width: 326,
+      height: 395,
+      left: 356,
+      top: 305
+    },
     media: [
       {
         width: 932,

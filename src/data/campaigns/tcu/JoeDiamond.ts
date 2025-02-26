@@ -5,6 +5,12 @@ export const JoeDiamond: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 208,
+      height: 236,
+      left: 397,
+      top: 391
+    },
     media: [
       {
         width: 754,

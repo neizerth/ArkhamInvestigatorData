@@ -5,6 +5,12 @@ export const KateWinthpup: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 246,
+      height: 286,
+      left: 699,
+      top: 319
+    },
     media: [
       {
         width: 699,

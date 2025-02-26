@@ -5,6 +5,12 @@ export const NormanWithers: Investigator = {
   image: {
     width: 1232,
     height: 1654,
+    face: {
+      width: 258,
+      height: 295,
+      left: 462,
+      top: 301
+    },
     media: [
       {
         width: 750,
@@ -29,6 +35,12 @@ export const NormanWithers: Investigator = {
       image: {
         width: 1616,
         height: 2146,
+        face: {
+          width: 266,
+          height: 288,
+          left: 847,
+          top: 503
+        },
         media: [
           {
             width: 721,

@@ -5,6 +5,12 @@ export const HarveyWalters: Investigator = {
   image: {
     width: 2400,
     height: 1736,
+    face: {
+      width: 363,
+      height: 457,
+      left: 525,
+      top: 539
+    },
     media: [
       {
         width: 995,

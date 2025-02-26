@@ -5,6 +5,12 @@ export const RexMurphy: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 258,
+      height: 341,
+      left: 816,
+      top: 320
+    },
     media: [
       {
         width: 818,

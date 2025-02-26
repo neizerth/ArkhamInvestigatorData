@@ -3,6 +3,12 @@ import type { Investigator, InvestigatorImage } from "@/model";
 const revisedImage: InvestigatorImage = {
   width: 1200,
   height: 1180,
+  face: {
+    width: 190,
+    height: 230,
+    left: 475,
+    top: 254
+  },
   media: [
     {
       width: 508,
@@ -26,6 +32,12 @@ export const DaisyWalker: Investigator = {
   image: {
     width: 2000,
     height: 1300,
+    face: {
+      width: 324,
+      height: 490,
+      left: 594,
+      top: 299
+    },
     media: [
       {
         width: 686,
@@ -66,6 +78,12 @@ export const DaisyWalker: Investigator = {
       image: {
         width: 3448,
         height: 2600,
+        face: {
+          width: 620,
+          height: 829,
+          left: 1152,
+          top: 671
+        },
         media: [
           {
             width: 1297,

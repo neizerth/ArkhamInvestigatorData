@@ -6,6 +6,12 @@ export const LuciaDeveraux: Investigator = {
   image: {
     width: 1500,
     height: 2000,
+    face: {
+      width: 215,
+      height: 240,
+      left: 344,
+      top: 515
+    },
     media: [
       {
         width: 484,

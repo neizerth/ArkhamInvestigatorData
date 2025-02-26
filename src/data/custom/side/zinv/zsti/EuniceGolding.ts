@@ -5,6 +5,12 @@ export const EuniceGolding: Investigator = {
   image: {
     width: 1786,
     height: 2382,
+    face: {
+      width: 264,
+      height: 289,
+      left: 416,
+      top: 1157
+    },
     media: [
       {
         width: 744,
