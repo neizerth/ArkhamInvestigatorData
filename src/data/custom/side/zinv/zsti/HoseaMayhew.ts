@@ -5,6 +5,12 @@ export const HoseaMayhew: Investigator = {
   image: {
     width: 3600,
     height: 4800,
+    face: {
+      width: 346,
+      height: 433,
+      left: 1022,
+      top: 627,
+    },
     media: [
       {
         width: 1267,

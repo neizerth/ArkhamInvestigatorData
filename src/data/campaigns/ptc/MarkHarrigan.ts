@@ -5,6 +5,12 @@ const wideImage: InvestigatorImageSource = {
   type: 'full',
   width: 792,
   height: 648,
+  face: {
+    width: 109,
+    height: 121,
+    left: 313,
+    top: 85
+  }
 }
 
 export const MarkHarrigan: Investigator = {
@@ -12,6 +18,12 @@ export const MarkHarrigan: Investigator = {
   image: {
     width: 1774,
     height: 1774,
+    face: {
+      width: 300,
+      height: 318,
+      left: 306,
+      top: 454
+    },
     media: [
       {
         width: 863,

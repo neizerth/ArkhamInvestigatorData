@@ -4,7 +4,13 @@ export const LeoAnderson: Investigator = {
   code: '04001',
   image: {
     width: 1258,
-    height: 1706,
+    height: 2000,
+    face: {
+      width: 242,
+      height: 292,
+      left: 452,
+      top: 612
+    },
     media: [
       {
         width: 493,

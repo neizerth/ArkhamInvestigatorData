@@ -6,6 +6,12 @@ export const CarsonSinclair: Investigator = {
   image: {
     width: 2476,
     height: 3216,
+    face: {
+      width: 588,
+      height: 667,
+      left: 744,
+      top: 290
+    },
     media: [
       {
         width: 1104,

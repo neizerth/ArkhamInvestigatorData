@@ -5,12 +5,19 @@ export const RolandBanks: Investigator = {
   image: {
     width: 3000,
     height: 1875,
+    face: {
+      width: 663,
+      height: 640,
+      left: 660,
+      top: 455
+    },
     media: [
       {
         width: 1418,
         height: 2182,
         left: 294,
-        top: 64
+        top: 64,
+        primary: true
       },
       {
         width: 1600,
@@ -28,12 +35,19 @@ export const RolandBanks: Investigator = {
       image: {
         width: 2792,
         height: 2616,
+        face: {
+          width: 370,
+          height: 389,
+          left: 1142,
+          top: 533
+        },
         media: [
           {
             width: 807,
             height: 1240,
             left: 866,
-            top: 341
+            top: 341,
+            primary: true
           },
           {
             width: 1400,
@@ -57,6 +71,12 @@ export const RolandBanks: Investigator = {
       image: {
         width: 1050,
         height: 981,
+        face: {
+          width: 147,
+          height: 134,
+          left: 396,
+          top: 304
+        },
         media: [
           {
             width: 385,

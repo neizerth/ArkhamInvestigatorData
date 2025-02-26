@@ -19,15 +19,18 @@ export type InvestigatorImageBox = Box & {
 export type InvestigatorImageSource = Box & {
   type: 'mini' | 'full'
   id: string
+  face?: InvestigatorImageBox
 }
 
 export type InvestigatorImageMedia = InvestigatorImageBox & {
   source?: InvestigatorImageSource
   primary?: boolean
+  type?: 'face' | 'body'
 }
 
 export type InvestigatorImage = Box & {
   id?: string
+  face?: InvestigatorImageBox
   media: InvestigatorImageMedia[]
 }
 

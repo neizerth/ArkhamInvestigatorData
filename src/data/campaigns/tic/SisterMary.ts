@@ -5,6 +5,12 @@ export const SisterMary: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 216,
+      height: 319,
+      left: 949,
+      top: 325
+    },
     media: [
       {
         width: 724,

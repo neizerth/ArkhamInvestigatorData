@@ -5,6 +5,12 @@ export const CarolynFern: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 220,
+      height: 280,
+      left: 479,
+      top: 207
+    },
     media: [
       {
         width: 657,
@@ -29,6 +35,12 @@ export const CarolynFern: Investigator = {
       image: {
         width: 2792,
         height: 3917,
+        face: {
+          width: 368,
+          height: 427,
+          left: 1200,
+          top: 1059
+        },
         media: [
           {
             width: 888,

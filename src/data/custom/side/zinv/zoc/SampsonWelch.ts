@@ -5,6 +5,12 @@ export const SampsonWelch: Investigator = {
   image: {
     width: 3904,
     height: 3904,
+    face: {
+      width: 460,
+      height: 559,
+      left: 1000,
+      top: 1603,
+    },
     media: [
       {
         width: 1541,

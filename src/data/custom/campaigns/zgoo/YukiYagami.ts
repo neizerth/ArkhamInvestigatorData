@@ -5,6 +5,12 @@ export const YukiYagami: Investigator = {
   image: {
     width: 6000,
     height: 2592,
+    face: {
+      width: 386,
+      height: 451,
+      left: 2210,
+      top: 797,
+    },
     media: [
       {
         width: 565,

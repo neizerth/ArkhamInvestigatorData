@@ -1,12 +1,13 @@
 {
   "name": "arkham-investigator-data",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "types": "build/types.d.ts",
   "scripts": {
     "start": "tsx ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx @biomejs/biome format --write ./src",
+    "serve": "http-server ./dist --cors",
     "build": "tsc && tsc-alias"
   },
   "repository": {
