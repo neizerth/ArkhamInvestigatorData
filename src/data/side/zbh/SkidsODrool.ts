@@ -5,6 +5,12 @@ export const SkidsODrool: Investigator = {
   image: {
     width: 1200,
     height: 976,
+    face: {
+      width: 242,
+      height: 275,
+      left: 471,
+      top: 204
+    },
     media: [
       {
         width: 705,

@@ -6,6 +6,12 @@ export const SkidsOToole: Investigator = {
   image: {
     width: 2917,
     height: 2374,
+    face: {
+      width: 612,
+      height: 694,
+      left: 1167,
+      top: 533
+    },
     media: [
       {
         width: 1355,
@@ -36,6 +42,12 @@ export const SkidsOToole: Investigator = {
       image: {
         width: 1200,
         height: 1124,
+        face: {
+          width: 219,
+          height: 259,
+          left: 300,
+          top: 250
+        },
         media: [
           {
             width: 549,

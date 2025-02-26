@@ -5,6 +5,12 @@ export const MontereyJack: Investigator = {
   image: {
     width: 2112,
     height: 1790,
+    face: {
+      width: 288,
+      height: 315,
+      left: 622,
+      top: 539
+    },
     media: [
       {
         width: 989,

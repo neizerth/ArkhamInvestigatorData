@@ -6,6 +6,12 @@ export const AlessandraZorzi: Investigator = {
   image: {
     width: 2306,
     height: 1354,
+    face: {
+      width: 224,
+      height: 262,
+      left: 922,
+      top: 236
+    },
     media: [
       {
         width: 718,

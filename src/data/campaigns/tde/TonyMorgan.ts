@@ -6,6 +6,12 @@ export const TonyMorgan: Investigator = {
   image: {
     width: 1400,
     height: 1708,
+    face: {
+      width: 338,
+      height: 313,
+      left: 106,
+      top: 465
+    },
     media: [
       {
         width: 941,

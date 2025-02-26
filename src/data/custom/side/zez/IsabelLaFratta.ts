@@ -6,6 +6,12 @@ export const IsabelLaFratta: Investigator = {
   image: {
     width: 1080,
     height: 1080,
+    face: {
+      width: 123,
+      height: 142,
+      left: 313,
+      top: 210
+    },
     media: [
       {
         width: 593,

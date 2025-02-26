@@ -5,6 +5,12 @@ export const HidekiHonda: Investigator = {
   image: {
     width: 2160,
     height: 1080,
+    face: {
+      width: 118,
+      height: 129,
+      left: 497,
+      top: 216
+    },
     media: [
       {
         width: 703,

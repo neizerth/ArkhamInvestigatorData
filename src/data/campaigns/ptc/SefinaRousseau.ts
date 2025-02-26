@@ -5,6 +5,12 @@ export const SefinaRousseau: Investigator ={
   image: {
     width: 2048,
     height: 2048,
+    face: {
+      width: 223,
+      height: 377,
+      left: 646,
+      top: 556
+    },
     media: [
       {
         width: 936,

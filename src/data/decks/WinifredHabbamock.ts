@@ -5,6 +5,12 @@ export const WinifredHabbamock: Investigator = {
   image: {
     width: 2600,
     height: 1880,
+    face: {
+      width: 318,
+      height: 377,
+      left: 674,
+      top: 469
+    },
     media: [
       {
         width: 1037,
