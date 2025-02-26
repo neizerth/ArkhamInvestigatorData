@@ -35,6 +35,12 @@ export const JennyBarnes: Investigator = {
       image: {
         width: 1920,
         height: 1920,
+        face: {
+          width: 178,
+          height: 185,
+          left: 535,
+          top: 620
+        },
         media: [
           {
             width: 825,
@@ -59,6 +65,12 @@ export const JennyBarnes: Investigator = {
       image: {
         width: 2596,
         height: 3500,
+        face: {
+          width: 202,
+          height: 232,
+          left: 1080,
+          top: 1180
+        },
         media: [
           {
             width: 1116,
