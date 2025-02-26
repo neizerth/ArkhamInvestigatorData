@@ -5,6 +5,12 @@ export const LilyChen: Investigator = {
   image: {
     width: 2160,
     height: 1416,
+    face: {
+      width: 145,
+      height: 197,
+      left: 433,
+      top: 395
+    },
     media: [
       {
         width: 587,

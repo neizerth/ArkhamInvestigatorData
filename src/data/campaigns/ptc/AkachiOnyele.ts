@@ -5,6 +5,12 @@ export const AkachiOnyele: Investigator = {
   image: {
     width: 2497,
     height: 3326,
+    face: {
+      width: 390,
+      height: 547,
+      left: 531,
+      top: 641
+    },
     media: [
       {
         width: 1642,

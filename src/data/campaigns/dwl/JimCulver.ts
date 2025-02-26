@@ -12,6 +12,12 @@ export const JimCulver: Investigator = {
   image: {
     width: 2820,
     height: 3446,
+    face: {
+      width: 736,
+      height: 841,
+      left: 812,
+      top: 719
+    },
     media: [
       {
         width: 2197,

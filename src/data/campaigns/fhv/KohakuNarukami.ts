@@ -5,7 +5,13 @@ export const KohakuNarukami: Investigator = {
   additionalAction: true,
   image: {
     width: 5056,
-    height: 2536,
+    height: 2891,
+    face: {
+      width: 430,
+      height: 599,
+      left: 2238,
+      top: 605
+    },
     media: [
       {
         width: 1111,

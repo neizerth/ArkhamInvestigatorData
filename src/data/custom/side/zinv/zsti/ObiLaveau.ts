@@ -5,6 +5,12 @@ export const ObiLaveau: Investigator = {
   image: {
     width: 3888,
     height: 5184,
+    face: {
+      width: 711,
+      height: 832,
+      left: 153,
+      top: 2174
+    },
     media: [
       {
         width: 931,

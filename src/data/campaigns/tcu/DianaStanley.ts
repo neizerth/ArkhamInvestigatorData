@@ -5,6 +5,12 @@ export const DianaStanley: Investigator = {
   image: {
     width: 3020,
     height: 2240,
+    face: {
+      width: 334,
+      height: 455,
+      left: 1102,
+      top: 401
+    },
     media: [
       {
         width: 1226,

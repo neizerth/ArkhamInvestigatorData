@@ -5,6 +5,12 @@ export const JacquelineCanine: Investigator = {
   image: {
     width: 2000,
     height: 2000,
+    face: {
+      width: 483,
+      height: 679,
+      left: 462,
+      top: 398
+    },
     media: [
       {
         width: 1427,

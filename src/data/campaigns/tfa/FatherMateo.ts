@@ -6,6 +6,12 @@ export const FatherMateo: Investigator = {
   image: {
     width: 2441,
     height: 3216,
+    face: {
+      width: 690,
+      height: 748,
+      left: 462,
+      top: 452
+    },
     media: [
       {
         width: 1155,
