@@ -3,8 +3,14 @@ import type { Investigator } from "@/model";
 export const Duke: Investigator = {
   code: 'zbh_00013',
   image: {
-    width: 3000,
-    height: 2316,
+    width: 3520,
+    height: 4331,
+    face: {
+      width: 1072,
+      height: 1021,
+      left: 1252,
+      top: 2011
+    },
     media: [
       {
         width: 1267,

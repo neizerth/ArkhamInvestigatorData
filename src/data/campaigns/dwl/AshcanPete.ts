@@ -1,17 +1,16 @@
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
-const largeImage: InvestigatorImageSource = {
-  id: '02005_large',
-  type: 'full',
-  width: 2560,
-  height: 2560
-};
-
 export const AshcanPete: Investigator = {
   code: '02005',
   image: {
-    width: 747,
-    height: 790,
+    width: 2560,
+    height: 2560,
+    face: {
+      width: 346,
+      height: 349,
+      left: 618,
+      top: 683
+    },
     media: [
       {
         width: 490,
@@ -25,21 +24,6 @@ export const AshcanPete: Investigator = {
         height: 753,
         left: 0,
         top: 35
-      },
-      {
-        source: largeImage,
-        width: 1371,
-        height: 2107,
-        left: 231,
-        top: 453,
-        primary: true
-      },
-      {
-        source: largeImage,
-        width: 2390,
-        height: 2107,
-        left: 0,
-        top: 453
       }
     ]
   },

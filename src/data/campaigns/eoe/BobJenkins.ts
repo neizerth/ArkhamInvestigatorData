@@ -6,6 +6,12 @@ export const BobJenkins: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 222,
+      height: 313,
+      left: 429,
+      top: 335
+    },
     media: [
       {
         width: 649,

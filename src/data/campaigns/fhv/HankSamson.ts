@@ -6,6 +6,12 @@ export const HankSamson: Investigator = {
   image: {
     width: 2000,
     height: 1500,
+    face: {
+      width: 268,
+      height: 365,
+      left: 488,
+      top: 487
+    },
     media: [
       {
         width: 730,

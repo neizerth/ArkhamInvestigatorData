@@ -4,7 +4,13 @@ export const SilasMarsh: Investigator = {
   code: '07005',
   image: {
     width: 4664,
-    height: 4258,
+    height: 5103,
+    face: {
+      width: 711,
+      height: 883,
+      left: 1992,
+      top: 1325
+    },
     media: [
       {
         width: 2595,
@@ -29,6 +35,12 @@ export const SilasMarsh: Investigator = {
       image: {
         width: 2474,
         height: 2232,
+        face: {
+          width: 202,
+          height: 239,
+          left: 601,
+          top: 658
+        },
         media: [
           {
             width: 826,

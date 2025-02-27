@@ -6,6 +6,12 @@ export const StellaClark: Investigator = {
   image: {
     width: 3032,
     height: 2160,
+    face: {
+      width: 302,
+      height: 377,
+      left: 758,
+      top: 553
+    },
     media: [
       {
         width: 1014,

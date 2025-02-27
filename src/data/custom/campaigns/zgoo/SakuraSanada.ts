@@ -5,6 +5,12 @@ export const SakuraSanada: Investigator = {
   image: {
     width: 4320,
     height: 2880,
+    face: {
+      width: 264,
+      height: 364,
+      left: 1248,
+      top: 962
+    },
     media: [
       {
         width: 1319,

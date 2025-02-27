@@ -1,10 +1,19 @@
+
+
+
 import type { Investigator } from "@/model";
 
 export const WendyAdams: Investigator = {
   code: '01005',
   image: {
     width: 2267,
-    height: 3000,
+    height: 3850,
+    face: {
+      width: 554,
+      height: 651,
+      left: 820,
+      top: 1341
+    },
     media: [
       {
         width: 1692,
@@ -35,6 +44,12 @@ export const WendyAdams: Investigator = {
       image: {
         width: 1600,
         height: 1573,
+        face: {
+          width: 169,
+          height: 162,
+          left: 481,
+          top: 509
+        },
         media: [
           {
             width: 581,
