@@ -4,12 +4,12 @@ export const LolaHayes: Investigator = {
   code: '03006',
   image: {
     width: 1200,
-    height: 1600,
+    height: 2000,
     face: {
-      width: 222,
-      height: 284,
-      left: 420,
-      top: 226
+      width: 206,
+      height: 269,
+      left: 620,
+      top: 623
     },
     media: [
       {

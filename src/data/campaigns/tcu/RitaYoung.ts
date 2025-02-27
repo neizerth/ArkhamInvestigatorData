@@ -3,13 +3,13 @@ import type { Investigator, InvestigatorImageSource } from "@/model";
 export const RitaYoung: Investigator = {
   code: '05005',
   image: {
-    width: 1232,
-    height: 1588,
+    width: 2004,
+    height: 1684,
     face: {
-      width: 294,
-      height: 375,
-      left: 675,
-      top: 407
+      width: 248,
+      height: 303,
+      left: 722,
+      top: 759
     },
     media: [
       {
