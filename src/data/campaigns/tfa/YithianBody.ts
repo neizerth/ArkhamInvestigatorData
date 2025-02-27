@@ -1,17 +1,17 @@
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
-const wideImage: InvestigatorImageSource = {
-  id: '04244_wide',
-  type: 'full',
-  width: 2160,
-  height: 1080,
-} 
 
 export const YithianBody: Investigator = {
   code: '04244',
   image: {
-    width: 2000,
-    height: 1952,
+    width: 2160,
+    height: 1080,
+    face: {
+      width: 377,
+      height: 437,
+      left: 187,
+      top: 283
+    },
     media: [
       {
         width: 1270,
@@ -19,21 +19,6 @@ export const YithianBody: Investigator = {
         left: 365,
         top: 0,
         primary: true
-      },
-      {
-        source: wideImage,
-        width: 513,
-        height: 788,
-        left: 292,
-        top: 158,
-        primary: true
-      },
-      {
-        source: wideImage,
-        width: 805,
-        height: 788,
-        left: 0,
-        top: 158
       }
     ] 
   }

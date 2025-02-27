@@ -3,8 +3,14 @@ import type { Investigator } from "@/model";
 export const CharlieKane: Investigator = {
   code: '09018',
   image: {
-    width: 4310,
-    height: 2790,
+    width: 4590,
+    height: 3330,
+    face: {
+      width: 656,
+      height: 697,
+      left: 820,
+      top: 887
+    },
     media: [
       {
         width: 1150,

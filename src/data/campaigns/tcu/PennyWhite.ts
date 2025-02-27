@@ -6,6 +6,12 @@ export const PennyWhite: Investigator = {
   image: {
     width: 1000,
     height: 1000,
+    face: {
+      width: 164,
+      height: 221,
+      left: 316,
+      top: 279
+    },
     media: [
       {
         width: 492,

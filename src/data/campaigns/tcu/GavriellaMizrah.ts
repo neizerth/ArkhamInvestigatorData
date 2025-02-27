@@ -5,6 +5,12 @@ export const GavriellaMizrah: Investigator = {
   image: {
     width: 4000,
     height: 2238,
+    face: {
+      width: 322,
+      height: 407,
+      left: 424,
+      top: 643
+    },
     media: [
       {
         width: 1126,
