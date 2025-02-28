@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const BarkHarrigan: Investigator = {
   code: 'zbh_00001',
   image: {
-    width: 1258,
-    height: 1774,
+    width: 1808,
+    height: 2149,
     face: {
-      width: 340,
-      height: 347,
-      left: 392,
-      top: 237
+      width: 318,
+      height: 439,
+      left: 686,
+      top: 543
     },
     media: [
       {
