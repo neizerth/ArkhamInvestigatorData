@@ -6,9 +6,9 @@ export class App {
     await prepareDirectories();
 
     switch (command) {
-      case 'cache:images':
+      case 'images':
         return await createImageCache();
-      case 'cache:investigators':
+      case 'cache':
         return await createInvestigatorsCache();
       default:
         return await this.start();

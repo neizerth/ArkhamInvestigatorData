@@ -4,13 +4,13 @@ export const TonyMorgan: Investigator = {
   code: '06003',
   additionalAction: true,
   image: {
-    width: 1400,
-    height: 1708,
+    width: 2320,
+    height: 2403,
     face: {
       width: 338,
-      height: 313,
-      left: 106,
-      top: 465
+      height: 328,
+      left: 738,
+      top: 1145
     },
     media: [
       {

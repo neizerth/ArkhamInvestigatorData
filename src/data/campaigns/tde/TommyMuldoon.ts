@@ -6,10 +6,10 @@ export const TommyMuldoon: Investigator = {
     width: 1802,
     height: 1638,
     face: {
-      width: 290,
-      height: 373,
-      left: 457,
-      top: 239
+      width: 249,
+      height: 367,
+      left: 663,
+      top: 608
     },
     media: [
       {
