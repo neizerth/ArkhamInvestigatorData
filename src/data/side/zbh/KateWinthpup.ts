@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const KateWinthpup: Investigator = {
   code: 'zbh_00004',
   image: {
-    width: 1600,
-    height: 1600,
+    width: 2120,
+    height: 1890,
     face: {
-      width: 246,
-      height: 286,
-      left: 699,
-      top: 319
+      width: 366,
+      height: 319,
+      left: 878,
+      top: 583
     },
     media: [
       {
