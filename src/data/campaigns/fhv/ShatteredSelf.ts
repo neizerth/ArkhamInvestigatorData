@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const ShatteredSelf: Investigator = {
   code: '10661',
+  multiselect: true,
   image: {
     width: 1736,
     height: 1334,

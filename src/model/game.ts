@@ -9,6 +9,7 @@ export type Investigator = {
   image: InvestigatorImage
   variants?: InvestigatorVariant[]
   skins?: InvestigatorSkin[]
+  multiselect?: boolean
 }
 
 export type InvestigatorImageBox = Box & {
