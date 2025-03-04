@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const SilasMarsh: Investigator = {
   code: '07005',
   image: {
-    width: 4664,
-    height: 5103,
+    width: 2685,
+    height: 2758,
     face: {
-      width: 711,
-      height: 883,
-      left: 1992,
-      top: 1325
+      width: 312,
+      height: 418,
+      left: 1188,
+      top: 1094
     },
     media: [
       {
