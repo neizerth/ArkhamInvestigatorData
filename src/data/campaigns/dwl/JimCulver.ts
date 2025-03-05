@@ -1,12 +1,5 @@
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
-const wideImage: InvestigatorImageSource = {
-  id: '02004_wide',
-  type: 'full',
-  width: 1671,
-  height: 1392
-};
-
 export const JimCulver: Investigator = {
   code: '02004',
   image: {
@@ -31,21 +24,6 @@ export const JimCulver: Investigator = {
         height: 2197,
         left: 0,
         top: 191
-      },
-      {
-        source: wideImage,
-        width: 816,
-        height: 1254,
-        left: 102,
-        top: 118,
-        primary: true
-      },
-      {
-        source: wideImage,
-        width: 918,
-        height: 1254,
-        left: 0,
-        top: 118
       }
     ]
   }

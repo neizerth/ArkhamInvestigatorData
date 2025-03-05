@@ -20,7 +20,7 @@ export type InvestigatorImageBox = Box & {
 export type InvestigatorImageSource = Box & {
   type: 'mini' | 'full'
   id: string
-  face?: InvestigatorImageBox
+  face: InvestigatorImageBox
 }
 
 export type InvestigatorImageMedia = InvestigatorImageBox & {

@@ -1,12 +1,5 @@
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
-export const wideImage: InvestigatorImageSource = {
-  id: 'zgoo_00010_wide',
-  type: 'full',
-  width: 4000,
-  height: 2668
-}
-
 export const AkiraArisato: Investigator = {
   code: 'zgoo_00010',
   image: {
@@ -31,21 +24,6 @@ export const AkiraArisato: Investigator = {
         height: 3136,
         left: 340,
         top: 171
-      },
-      {
-        source: wideImage,
-        width: 1299,
-        height: 1996,
-        left: 419,
-        top: 670,
-        primary: true
-      },
-      {
-        source: wideImage,
-        width: 4000,
-        height: 1996,
-        left: 0,
-        top: 670
       }
     ]
   }
