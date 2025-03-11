@@ -5,12 +5,12 @@ export const AlessandraZorzi: Investigator = {
   additionalAction: true,
   image: {
     width: 2306,
-    height: 1354,
+    height: 2014,
     face: {
-      width: 224,
-      height: 262,
-      left: 922,
-      top: 236
+      width: 294,
+      height: 277,
+      left: 870,
+      top: 871
     },
     media: [
       {

@@ -6,10 +6,10 @@ export const WilsonRichards: Investigator = {
     width: 2000,
     height: 1523,
     face: {
-      width: 301,
-      height: 332,
-      left: 790,
-      top: 352
+      width: 312,
+      height: 401,
+      left: 778,
+      top: 811
     },
     media: [
       {
