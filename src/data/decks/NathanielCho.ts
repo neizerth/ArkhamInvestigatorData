@@ -6,10 +6,10 @@ export const NathanielCho: Investigator = {
     width: 3165,
     height: 2440,
     face: {
-      width: 356,
-      height: 519,
-      left: 986,
-      top: 883
+      width: 345,
+      height: 442,
+      left: 981,
+      top: 947
     },
     media: [
       {
