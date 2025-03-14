@@ -5,6 +5,12 @@ export const GloriaGoldberg: Investigator = {
   image: {
     width: 1600,
     height: 1600,
+    face: {
+      width: 488,
+      height: 513,
+      left: 694,
+      top: 619
+    },
     media: [
       {
         width: 956,
@@ -29,6 +35,12 @@ export const GloriaGoldberg: Investigator = {
       image: {
         width: 1600,
         height: 1600,
+        face: {
+          width: 339,
+          height: 424,
+          left: 774,
+          top: 1127
+        },
         media: [
           {
             width: 747,
