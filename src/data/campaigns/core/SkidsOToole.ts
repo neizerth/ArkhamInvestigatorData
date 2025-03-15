@@ -4,29 +4,14 @@ export const SkidsOToole: Investigator = {
   code: '01003',
   additionalAction: true,
   image: {
-    width: 2917,
-    height: 2374,
+    width: 2207,
+    height: 2200,
     face: {
-      width: 612,
-      height: 694,
-      left: 1167,
-      top: 533
-    },
-    media: [
-      {
-        width: 1355,
-        height: 2083,
-        left: 715,
-        top: 291,
-        primary: true
-      },
-      {
-        width: 2050,
-        height: 2084,
-        left: 400,
-        top: 291
-      }
-    ]
+      width: 392,
+      height: 448,
+      left: 857,
+      top: 1048
+    }
   },
   variants: [
     {
