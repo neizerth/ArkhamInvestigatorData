@@ -4,28 +4,13 @@ export const KohakuNarukami: Investigator = {
   code: '10012',
   additionalAction: true,
   image: {
-    width: 5056,
-    height: 2891,
+    width: 2500,
+    height: 2109,
     face: {
-      width: 430,
-      height: 599,
-      left: 2238,
-      top: 605
-    },
-    media: [
-      {
-        width: 1111,
-        height: 1707,
-        left: 2039,
-        top: 144,
-        primary: true
-      },
-      {
-        width: 1970,
-        height: 2396,
-        left: 1770,
-        top: 140
-      }
-    ]
+      width: 238,
+      height: 321,
+      left: 1110,
+      top: 933
+    }
   }
 }
