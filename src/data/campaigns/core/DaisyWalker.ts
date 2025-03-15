@@ -15,29 +15,14 @@ export const DaisyWalker: Investigator = {
   code: '01002',
   additionalAction: true,
   image: {
-    width: 2000,
-    height: 1300,
+    width: 2215,
+    height: 2015,
     face: {
-      width: 324,
-      height: 490,
-      left: 594,
-      top: 299
-    },
-    media: [
-      {
-        width: 686,
-        height: 1054,
-        left: 462,
-        top: 246,
-        primary: true
-      },
-      {
-        width: 990,
-        height: 1054,
-        left: 410,
-        top: 246
-      }
-    ]
+      width: 312,
+      height: 517,
+      left: 822,
+      top: 1007
+    }
   },
   variants: [
     {
