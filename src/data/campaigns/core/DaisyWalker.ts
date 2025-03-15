@@ -8,22 +8,7 @@ const revisedImage: InvestigatorImage = {
     height: 230,
     left: 475,
     top: 254
-  },
-  media: [
-    {
-      width: 508,
-      height: 781,
-      left: 312,
-      top: 229,
-      primary: true
-    },
-    {
-      width: 846,
-      height: 781,
-      left: 0,
-      top: 180
-    }
-  ]
+  }
 }
 
 export const DaisyWalker: Investigator = {
@@ -65,12 +50,30 @@ export const DaisyWalker: Investigator = {
     {
       id: '01002_revised',
       name: 'Revised Core Set',
-      image: revisedImage
+      image: {
+        width: 1880,
+        height: 1825,
+        face: {
+          width: 240,
+          height: 265,
+          left: 807,
+          top: 902
+        }
+      }
     },
     {
       id: '01002_revised_white',
       name: 'Revised Core (White)',
-      image: revisedImage
+      image: {
+        width: 2190,
+        height: 2105,
+        face: {
+          width: 198,
+          height: 259,
+          left: 867,
+          top: 1190
+        }
+      }
     },
     {
       id: '01002_invocation-2017',

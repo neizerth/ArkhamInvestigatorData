@@ -3,8 +3,8 @@ import type { Investigator } from "@/model";
 export const GloriaGoldberg: Investigator = {
   code: '11014',
   image: {
-    width: 1600,
-    height: 1600,
+    width: 2000,
+    height: 2000,
     face: {
       width: 488,
       height: 513,
