@@ -1,14 +1,15 @@
 {
   "name": "arkham-investigator-data",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "index.js",
-  "types": "build/types.d.ts",
+  "types": "build/src/types.d.ts",
   "scripts": {
     "start": "tsx ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx @biomejs/biome format --write ./src",
     "serve": "http-server ./dist --cors",
-    "build": "tsc && tsc-alias"
+    "build:clean": "rimraf ./build",
+    "build": "npm run build:clean && tsc && tsc-alias"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "@types/decompress": "^4.2.7",
     "@types/node": "^22.13.1",
     "http-server": "^14.1.1",
+    "rimraf": "^6.0.1",
     "tsx": "^4.19.2"
   },
   "dependencies": {
