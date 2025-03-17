@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const UrsulaDowns: Investigator = {
   code: '04002',
   image: {
-    width: 1276,
-    height: 1778,
+    width: 2000,
+    height: 2000,
     face: {
-      width: 326,
-      height: 395,
-      left: 356,
-      top: 305
+      width: 212,
+      height: 385,
+      left: 894,
+      top: 779
     },
     media: [
       {

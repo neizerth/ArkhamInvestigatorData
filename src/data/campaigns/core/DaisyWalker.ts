@@ -1,15 +1,5 @@
 import type { Investigator, InvestigatorImage } from "@/model";
 
-const revisedImage: InvestigatorImage = {
-  width: 1200,
-  height: 1180,
-  face: {
-    width: 190,
-    height: 230,
-    left: 475,
-    top: 254
-  }
-}
 
 export const DaisyWalker: Investigator = {
   code: '01002',
@@ -18,9 +8,9 @@ export const DaisyWalker: Investigator = {
     width: 2215,
     height: 2015,
     face: {
-      width: 312,
+      width: 327,
       height: 517,
-      left: 822,
+      left: 780,
       top: 1007
     }
   },
