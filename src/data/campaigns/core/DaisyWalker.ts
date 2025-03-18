@@ -5,13 +5,13 @@ export const DaisyWalker: Investigator = {
   code: '01002',
   additionalAction: true,
   image: {
-    width: 2215,
-    height: 2015,
+    width: 1866,
+    height: 1931,
     face: {
-      width: 327,
-      height: 517,
-      left: 780,
-      top: 1007
+      width: 248,
+      height: 363,
+      left: 740,
+      top: 777
     }
   },
   variants: [
