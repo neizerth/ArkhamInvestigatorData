@@ -24,29 +24,14 @@ export const AgnesBaker: Investigator = {
       id: '01004_revised',
       name: 'Revised Core Set',
       image: {
-        width: 1600,
-        height: 1574,
+        width: 2130,
+        height: 2184,
         face: {
-          width: 207,
-          height: 270,
-          left: 563,
-          top: 483
-        },
-        media: [
-          {
-            width: 664,
-            height: 1019,
-            left: 268,
-            top: 324,
-            primary: true
-          },
-          {
-            width: 814,
-            height: 1179,
-            left: 150,
-            top: 324
-          }
-        ]
+          width: 236,
+          height: 303,
+          left: 1074,
+          top: 1055
+        }
       }
     },
   ]

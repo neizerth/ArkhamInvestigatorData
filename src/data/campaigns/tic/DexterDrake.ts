@@ -3,22 +3,14 @@ import type { Investigator } from "@/model";
 export const DexterDrake: Investigator = {
   code: '07004',
   image: {
-    width: 2116,
-    height: 1860,
+    width: 3066,
+    height: 1860 ,
     face: {
-      width: 308,
-      height: 355,
-      left: 236,
-      top: 813
-    },
-    media: [
-      {
-        width: 774,
-        height: 1189,
-        left: 0,
-        top: 671
-      }
-    ]
+      width: 294,
+      height: 345,
+      left: 1184,
+      top: 799
+    }
   },
   variants: [
     {

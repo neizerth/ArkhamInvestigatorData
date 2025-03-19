@@ -3,13 +3,13 @@ import type { Investigator, InvestigatorImageSource } from "@/model";
 export const JimCulver: Investigator = {
   code: '02004',
   image: {
-    width: 2820,
-    height: 3446,
+    width: 3545,
+    height: 3705,
     face: {
-      width: 736,
-      height: 841,
-      left: 812,
-      top: 719
+      width: 532,
+      height: 725,
+      left: 1628,
+      top: 1511
     },
     media: [
       {

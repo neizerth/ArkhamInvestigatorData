@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const KymaniJones: Investigator = {
   code: '09008',
   image: {
-    width: 3308,
-    height: 3252,
+    width: 2130,
+    height: 2000,
     face: {
-      width: 699,
-      height: 721,
-      left: 870,
-      top: 1049
+      width: 306,
+      height: 364,
+      left: 987,
+      top: 929 
     },
     media: [
       {

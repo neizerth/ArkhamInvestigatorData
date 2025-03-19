@@ -5,22 +5,13 @@ export const YithianBody: Investigator = {
   code: '04244',
   multiselect: true,
   image: {
-    width: 2160,
-    height: 1080,
+    width: 2395,
+    height: 1725,
     face: {
-      width: 377,
-      height: 437,
-      left: 187,
-      top: 283
-    },
-    media: [
-      {
-        width: 1270,
-        height: 1952,
-        left: 365,
-        top: 0,
-        primary: true
-      }
-    ] 
+      width: 389,
+      height: 416,
+      left: 720,
+      top: 862
+    }
   }
 }

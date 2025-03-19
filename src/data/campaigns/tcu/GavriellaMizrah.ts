@@ -3,21 +3,13 @@ import type { Investigator } from "@/model";
 export const GavriellaMizrah: Investigator = {
   code: '05046',
   image: {
-    width: 4000,
-    height: 2238,
+    width: 2523,
+    height: 2860,
     face: {
-      width: 322,
-      height: 407,
-      left: 424,
-      top: 643
-    },
-    media: [
-      {
-        width: 1126,
-        height: 1732,
-        left: 0,
-        top: 507
-      }
-    ]
+      width: 252,
+      height: 322,
+      left: 909,
+      top: 1373
+    }
   }
 }
