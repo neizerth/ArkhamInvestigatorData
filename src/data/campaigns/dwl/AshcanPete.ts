@@ -9,7 +9,7 @@ export const AshcanPete: Investigator = {
       width: 340,
       height: 465,
       left: 1488,
-      top: 14431443
+      top: 1443
     }
   },
   variants: [
