@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const LilyChen: Investigator = {
   code: '08010',
   image: {
-    width: 2160,
-    height: 1416,
+    width: 2985,
+    height: 2156,
     face: {
-      width: 145,
-      height: 197,
-      left: 433,
-      top: 395
+      width: 197,
+      height: 272,
+      left: 1215,
+      top: 1060
     },
     media: [
       {

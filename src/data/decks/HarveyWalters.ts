@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const HarveyWalters: Investigator = {
   code: '60201',
   image: {
-    width: 2400,
-    height: 1736,
+    width: 3170,
+    height: 2991,
     face: {
-      width: 363,
-      height: 457,
-      left: 525,
-      top: 539
+      width: 372,
+      height: 532,
+      left: 1266,
+      top: 1208
     },
     media: [
       {

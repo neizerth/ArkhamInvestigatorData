@@ -4,7 +4,7 @@ export const WilsonRichards: Investigator = {
   code: '10001',
   image: {
     width: 2000,
-    height: 1523,
+    height: 2048,
     face: {
       width: 312,
       height: 401,
