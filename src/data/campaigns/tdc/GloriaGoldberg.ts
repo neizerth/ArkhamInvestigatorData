@@ -6,10 +6,10 @@ export const GloriaGoldberg: Investigator = {
     width: 3284,
     height: 3276,
     face: {
-      width: 429,
-      height: 493,
-      left: 1425,
-      top: 1694
+      width: 375,
+      height: 439,
+      left: 1446,
+      top: 1733
     }
   },
   variants: [
