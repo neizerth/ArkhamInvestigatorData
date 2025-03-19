@@ -5,13 +5,13 @@ export const DaisyWalker: Investigator = {
   code: '01002',
   additionalAction: true,
   image: {
-    width: 1866,
-    height: 1931,
+    width: 2229,
+    height: 2237,
     face: {
-      width: 248,
-      height: 363,
-      left: 740,
-      top: 777
+      width: 280,
+      height: 370,
+      left: 724,
+      top: 1094
     }
   },
   variants: [
@@ -54,29 +54,14 @@ export const DaisyWalker: Investigator = {
       id: '01002_invocation-2017',
       name: 'Invocation 2017',
       image: {
-        width: 3448,
-        height: 2600,
+        width: 3913,
+        height: 4000,
         face: {
-          width: 620,
-          height: 829,
-          left: 1152,
-          top: 671
-        },
-        media: [
-          {
-            width: 1297,
-            height: 1994,
-            left: 477,
-            top: 559,
-            primary: true
-          },
-          {
-            width: 3012,
-            height: 2177,
-            left: 0,
-            top: 423
-          }
-        ]
+          width: 744,
+          height: 977,
+          left: 1588,
+          top: 1451
+        }
       }
     }
   ]
