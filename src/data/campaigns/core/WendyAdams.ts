@@ -6,29 +6,14 @@ import type { Investigator } from "@/model";
 export const WendyAdams: Investigator = {
   code: '01005',
   image: {
-    width: 2267,
-    height: 3850,
+    width: 3656,
+    height: 3435,
     face: {
-      width: 554,
-      height: 651,
-      left: 820,
-      top: 1341
-    },
-    media: [
-      {
-        width: 1692,
-        height: 2600,
-        left: 366,
-        top: 116,
-        primary: true
-      },
-      {
-        width: 1800,
-        height: 2890,
-        left: 320,
-        top: 110
-      }
-    ]
+      width: 444,
+      height: 685,
+      left: 1413,
+      top: 1265
+    }
   },
   variants: [
     {

@@ -3,23 +3,14 @@ import type { Investigator } from "@/model";
 export const AgnesBaker: Investigator = {
   code: '01004',
   image: {
-    width: 2289,
-    height: 3135,
+    width: 2705,
+    height: 3074,
     face: {
-      width: 564,
-      height: 661,
-      left: 1272,
-      top: 1067
-    },
-    media: [
-      {
-        width: 1629,
-        height: 2503,
-        left: 674,
-        top: 0,
-        primary: true
-      }
-    ]
+      width: 400,
+      height: 561,
+      left: 1216,
+      top: 1439
+    }
   },
   variants: [
     {

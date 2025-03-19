@@ -4,13 +4,13 @@ export const BobJenkins: Investigator = {
   code: '08016',
   additionalAction: true,
   image: {
-    width: 1600,
-    height: 1600,
+    width: 2200,
+    height: 2385,
     face: {
-      width: 222,
-      height: 313,
-      left: 429,
-      top: 335
+      width: 284,
+      height: 379,
+      left: 978,
+      top: 1059
     },
     media: [
       {
