@@ -8,10 +8,10 @@ export const DaisyWalker: Investigator = {
     width: 2229,
     height: 2237,
     face: {
-      width: 280,
-      height: 370,
-      left: 724,
-      top: 1094
+      width: 218,
+      height: 326,
+      left: 758,
+      top: 1118
     }
   },
   variants: [
