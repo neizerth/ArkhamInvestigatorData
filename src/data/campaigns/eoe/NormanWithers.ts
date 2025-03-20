@@ -33,29 +33,14 @@ export const NormanWithers: Investigator = {
       type: 'book',
       name: 'Ire of the Void',
       image: {
-        width: 1616,
-        height: 2146,
+        width: 2346,
+        height: 2936,
         face: {
-          width: 266,
-          height: 288,
-          left: 847,
-          top: 503
-        },
-        media: [
-          {
-            width: 721,
-            height: 1107,
-            left: 616,
-            top: 417,
-            primary: true
-          },
-          {
-            width: 1260,
-            height: 1513,
-            left: 280,
-            top: 417
-          }
-        ]
+          width: 211,
+          height: 281,
+          left: 1173,
+          top: 1295
+        }
       }
     }
   ]
