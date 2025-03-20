@@ -12,6 +12,12 @@ export const AgnesBaker: Investigator = {
       top: 1439
     }
   },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'phase'
+    }
+  ],
   variants: [
     {
       type: 'parallel',

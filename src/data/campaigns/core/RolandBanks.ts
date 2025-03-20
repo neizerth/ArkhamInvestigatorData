@@ -10,22 +10,7 @@ export const RolandBanks: Investigator = {
       height: 437,
       left: 543,
       top: 837
-    },
-    media: [
-      {
-        width: 1418,
-        height: 2182,
-        left: 294,
-        top: 64,
-        primary: true
-      },
-      {
-        width: 1600,
-        height: 1875,
-        left: 150,
-        top: 65
-      }
-    ]
+    }
   },
   variants: [
     {
@@ -40,23 +25,14 @@ export const RolandBanks: Investigator = {
           height: 389,
           left: 1142,
           top: 533
-        },
-        media: [
-          {
-            width: 807,
-            height: 1240,
-            left: 866,
-            top: 341,
-            primary: true
-          },
-          {
-            width: 1400,
-            height: 2275,
-            left: 600,
-            top: 341
-          }
-        ]
-      }
+        }
+      },
+      abilities: [
+        {
+          type: 'reaction',
+          limitPer: 'round'
+        }
+      ]
     },
     {
       type: 'parallel',
@@ -76,23 +52,14 @@ export const RolandBanks: Investigator = {
           height: 134,
           left: 396,
           top: 304
-        },
-        media: [
-          {
-            width: 385,
-            height: 592,
-            left: 274,
-            top: 196,
-            primary: true
-          },
-          {
-            width: 680,
-            height: 592,
-            left: 50,
-            top: 196
-          }
-        ]
+        }
       }
     },
+  ],
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
   ]
 }

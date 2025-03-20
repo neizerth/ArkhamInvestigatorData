@@ -13,11 +13,23 @@ export const SkidsOToole: Investigator = {
       top: 1048
     }
   },
+  abilities: [
+    {
+      type: 'fast',
+      limitPer: 'turn'
+    }
+  ],
   variants: [
     {
       type: 'parallel',
       code: '90008',
-      name: 'All or Nothing'
+      name: 'All or Nothing',
+      abilities: [
+        {
+          type: 'fast',
+          limitPer: 'round'
+        }
+      ]
     }
   ],
   skins: [

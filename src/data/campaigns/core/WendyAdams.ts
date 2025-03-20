@@ -15,11 +15,22 @@ export const WendyAdams: Investigator = {
       top: 1265
     }
   },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: ['ability', 'test']
+    }
+  ],
   variants: [
     {
       type: 'parallel',
       code: '90037',
-      name: 'Red Tide Rising'
+      name: 'Red Tide Rising',
+      abilities: [
+        {
+          type: 'reaction'
+        }
+      ]
     }
   ],
   skins: [
