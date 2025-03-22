@@ -10,14 +10,6 @@ export const AkachiOnyele: Investigator = {
       height: 631,
       left: 1290,
       top: 1467
-    },
-    media: [
-      {
-        width: 1642,
-        height: 2523,
-        left: 161,
-        top: 444
-      }
-    ]
+    }
   }
 }

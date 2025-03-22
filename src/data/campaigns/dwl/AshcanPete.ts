@@ -1,4 +1,4 @@
-import type { Investigator, InvestigatorImageSource } from "@/model";
+import type { Investigator } from "@/model";
 
 export const AshcanPete: Investigator = {
   code: '02005',
@@ -12,6 +12,12 @@ export const AshcanPete: Investigator = {
       top: 1443
     }
   },
+  abilities: [
+    {
+      type: 'fast',
+      limitPer: 'round'
+    }
+  ],
   variants: [
     {
       type: 'parallel',

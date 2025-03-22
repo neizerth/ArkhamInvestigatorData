@@ -10,21 +10,14 @@ export const LolaHayes: Investigator = {
       height: 295,
       left: 1105,
       top: 1150
-    },
-    media: [
-      {
-        width: 832,
-        height: 1276,
-        left: 152,
-        top: 120,
-        primary: true
-      },
-      {
-        width: 1200,
-        height: 1276,
-        left: 152,
-        top: 120
-      }
-    ]
-  }
+    }
+  },
+  roles: [
+    'guardian',
+    'seeker',
+    'rogue',
+    'mystic',
+    'survivor',
+    'neutral'
+  ]
 }

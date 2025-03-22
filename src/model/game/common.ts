@@ -12,12 +12,16 @@ export type Investigator = {
   skins?: InvestigatorSkin[]
   multiselect?: boolean
   abilities?: InvestigatorAbility[]
+  roles?: InvestigatorFaction[]
 }
 
-export type LimitType = 'round' | 'investigator' | 'turn' | 'phase' | 'ability' | 'test';
+export type InvestigatorFaction = 'guardian' | 'rogue' | 'seeker' | 'mystic' | 'survivor' | 'neutral';
+
+export type LimitType = 'round' | 'turn' | 'phase' | 'ability' | 'test' | 'game';
 
 export type InvestigatorAbility = {
   type: 'reaction' | 'fast'
-  limitPer?: LimitType | LimitType[],
+  limitPer?: LimitType | LimitType[]
+  perInvestigator?: boolean
   limitCount?: number
 }

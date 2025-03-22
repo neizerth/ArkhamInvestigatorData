@@ -19,5 +19,11 @@ export const FatherMateo: Investigator = {
       type: 'parallel',
       name: 'Aura of Faith'
     }
+  ],
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'game'
+    }
   ]
 }

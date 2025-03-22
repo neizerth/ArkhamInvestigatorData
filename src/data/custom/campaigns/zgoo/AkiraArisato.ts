@@ -1,4 +1,4 @@
-import type { Investigator, InvestigatorImageSource } from "@/model";
+import type { Investigator } from "@/model";
 
 export const AkiraArisato: Investigator = {
   code: 'zgoo_00010',

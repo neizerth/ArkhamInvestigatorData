@@ -11,5 +11,12 @@ export const MinhThiPhan: Investigator = {
       left: 830,
       top: 883
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round',
+      perInvestigator: true
+    }
+  ]
 }
