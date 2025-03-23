@@ -4,13 +4,13 @@ export const SkidsOToole: Investigator = {
   code: '01003',
   additionalAction: true,
   image: {
-    width: 2207,
-    height: 2200,
+    width: 2772,
+    height: 3015,
     face: {
-      width: 392,
-      height: 448,
-      left: 857,
-      top: 1048
+      width: 366,
+      height: 478,
+      left: 1149,
+      top: 1406
     }
   },
   abilities: [
