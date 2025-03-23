@@ -5,13 +5,13 @@ export const MarieLambeau: Investigator = {
   code: '05006',
   additionalAction: true,
   image: {
-    width: 4056,
-    height: 3040,
+    width: 3227,
+    height: 2500,
     face: {
-      width: 520,
-      height: 789,
-      left: 1404,
-      top: 867
+      width: 396,
+      height: 547,
+      left: 1500,
+      top: 1025
     },
     media: [
       {

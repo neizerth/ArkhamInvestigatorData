@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const JacquelineCanine: Investigator = {
   code: 'zbh_00010',
   image: {
-    width: 2420,
-    height: 2465,
+    width: 2995,
+    height: 2995,
     face: {
-      width: 488,
-      height: 625,
-      left: 676,
-      top: 907
+      width: 546,
+      height: 685,
+      left: 1260,
+      top: 1235
     },
     media: [
       {

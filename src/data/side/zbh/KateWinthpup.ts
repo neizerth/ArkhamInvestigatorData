@@ -4,12 +4,12 @@ export const KateWinthpup: Investigator = {
   code: 'zbh_00004',
   image: {
     width: 2120,
-    height: 1890,
+    height: 2360,
     face: {
-      width: 366,
-      height: 319,
-      left: 878,
-      top: 583
+      width: 291,
+      height: 322,
+      left: 894,
+      top: 1052
     },
     media: [
       {

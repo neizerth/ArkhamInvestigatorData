@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const SkidsODrool: Investigator = {
   code: 'zbh_00007',
   image: {
-    width: 1580,
-    height: 1201,
+    width: 1910,
+    height: 1931,
     face: {
-      width: 425,
-      height: 329,
-      left: 586,
-      top: 401
+      width: 236,
+      height: 293,
+      left: 860,
+      top: 843
     },
     media: [
       {

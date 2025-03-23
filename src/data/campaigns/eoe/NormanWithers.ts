@@ -3,29 +3,14 @@ import type { Investigator } from "@/model";
 export const NormanWithers: Investigator = {
   code: '08004',
   image: {
-    width: 1232,
-    height: 1654,
+    width: 2242,
+    height: 2489,
     face: {
-      width: 258,
-      height: 295,
-      left: 462,
-      top: 301
-    },
-    media: [
-      {
-        width: 750,
-        height: 1152,
-        left: 192,
-        top: 213,
-        primary: true
-      },
-      {
-        width: 900,
-        height: 1152,
-        left: 100,
-        top: 213
-      }
-    ]
+      width: 308,
+      height: 375,
+      left: 958,
+      top: 1071
+    }
   },
   variants: [
     {

@@ -3,21 +3,13 @@ import type { Investigator } from "@/model";
 export const AmandaSharpe: Investigator = {
   code: '07002',
   image: {
-    width: 5461,
-    height: 3072,
+    width: 2354,
+    height: 2500,
     face: {
-      width: 465,
-      height: 601,
-      left: 1371,
-      top: 935
-    },
-    media: [
-      {
-        width: 1609,
-        height: 2472,
-        left: 720,
-        top: 600
-      }
-    ]
+      width: 380,
+      height: 457,
+      left: 1096,
+      top: 1023
+    }
   }
 }
