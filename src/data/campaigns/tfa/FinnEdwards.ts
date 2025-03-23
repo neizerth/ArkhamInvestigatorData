@@ -4,13 +4,13 @@ export const FinnEdwards: Investigator = {
   code: '04003',
   additionalAction: true,
   image: {
-    width: 1080,
-    height: 1355,
+    width: 1625,
+    height: 1980,
     face: {
-      width: 172,
-      height: 234,
-      left: 236,
-      top: 443
+      width: 219,
+      height: 287,
+      left: 743,
+      top: 805
     }
   }
 }
