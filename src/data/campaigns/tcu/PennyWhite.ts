@@ -4,13 +4,13 @@ export const PennyWhite: Investigator = {
   code: '05049',
   additionalAction: true,
   image: {
-    width: 2965,
-    height: 2500,
+    width: 1470,
+    height: 1690,
     face: {
-      width: 378,
-      height: 583,
-      left: 1071,
-      top: 1037
+      width: 248,
+      height: 301,
+      left: 555,
+      top: 709
     }
   }
 }
