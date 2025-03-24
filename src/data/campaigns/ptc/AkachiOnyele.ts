@@ -1,5 +1,7 @@
 import type { Investigator } from "@/model";
 
+const shiftX = 488;
+
 export const AkachiOnyele: Investigator = {
   code: '03004',
   image: {
@@ -8,7 +10,7 @@ export const AkachiOnyele: Investigator = {
     face: {
       width: 438,
       height: 631,
-      left: 1290,
+      left: 1290 + shiftX,
       top: 1467
     }
   }
