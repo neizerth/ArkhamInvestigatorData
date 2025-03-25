@@ -1,6 +1,6 @@
 import type { Investigator } from "@/model";
 
-const shiftX = 488;
+const shiftX = 400;
 
 export const AkachiOnyele: Investigator = {
   code: '03004',
