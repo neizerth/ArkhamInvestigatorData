@@ -13,6 +13,7 @@ export type Investigator = {
   multiselect?: boolean
   abilities?: InvestigatorAbility[]
   roles?: InvestigatorFaction[]
+  spoiler?: boolean
 }
 
 export type InvestigatorFaction = 'guardian' | 'rogue' | 'seeker' | 'mystic' | 'survivor' | 'neutral';

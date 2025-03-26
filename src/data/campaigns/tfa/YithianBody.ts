@@ -4,6 +4,7 @@ import type { Investigator, InvestigatorImageSource } from "@/model";
 export const YithianBody: Investigator = {
   code: '04244',
   multiselect: true,
+  spoiler: true,
   image: {
     width: 1650,
     height: 1517,
