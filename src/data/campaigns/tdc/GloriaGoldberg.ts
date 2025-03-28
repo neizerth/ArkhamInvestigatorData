@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const GloriaGoldberg: Investigator = {
   code: '11014',
   image: {
-    width: 3284,
-    height: 3276,
+    width: 2989,
+    height: 3048,
     face: {
-      width: 375,
-      height: 439,
-      left: 1446,
-      top: 1733
+      width: 390,
+      height: 433,
+      left: 1292,
+      top: 1169
     }
   },
   variants: [
