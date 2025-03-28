@@ -18,29 +18,14 @@ export const DexterDrake: Investigator = {
       type: 'book',
       name: 'Blood of Baalshandor',
       image: {
-        width: 1620,
-        height: 2154,
+        width: 2550,
+        height: 2954,
         face: {
-          width: 188,
-          height: 203,
-          left: 675,
-          top: 480
-        },
-        media: [
-          {
-            width: 750,
-            height: 1152,
-            left: 420,
-            top: 226,
-            primary: true
-          },
-          {
-            width: 1620,
-            height: 1152,
-            left: 0,
-            top: 226
-          }
-        ]
+          width: 196,
+          height: 225,
+          left: 1202,
+          top: 1261
+        }
       }
     },
   ]
