@@ -4,12 +4,12 @@ export const JacquelineFine: Investigator = {
   code: '60401',
   image: {
     width: 2000,
-    height: 1589,
+    height: 2319,
     face: {
-      width: 190,
-      height: 274,
-      left: 673,
-      top: 337
+      width: 192,
+      height: 295,
+      left: 680,
+      top: 1049
     },
     media: [
       {
