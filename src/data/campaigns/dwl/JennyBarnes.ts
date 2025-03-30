@@ -40,22 +40,7 @@ export const JennyBarnes: Investigator = {
           height: 185,
           left: 535,
           top: 620
-        },
-        media: [
-          {
-            width: 825,
-            height: 1268,
-            left: 209,
-            top: 260,
-            primary: true
-          },
-          {
-            width: 1340,
-            height: 1630,
-            left: 0,
-            top: 290
-          },
-        ]
+        }
       }
     },
     {
@@ -70,22 +55,7 @@ export const JennyBarnes: Investigator = {
           height: 232,
           left: 1080,
           top: 1180
-        },
-        media: [
-          {
-            width: 1116,
-            height: 1715,
-            left: 590,
-            top: 835,
-            primary: true
-          },
-          {
-            width: 1116,
-            height: 2045,
-            left: 590,
-            top: 835
-          },
-        ]
+        }
       }
     }
   ]
