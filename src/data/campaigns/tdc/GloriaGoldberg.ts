@@ -18,13 +18,13 @@ export const GloriaGoldberg: Investigator = {
       type: 'book',
       name: 'Dark Revelations',
       image: {
-        width: 1920,
-        height: 2675,
+        width: 3734,
+        height: 4332,
         face: {
-          width: 393,
-          height: 517,
-          left: 726,
-          top: 983
+          width: 284,
+          height: 359,
+          left: 1702,
+          top: 1986
         }
       }
     }
