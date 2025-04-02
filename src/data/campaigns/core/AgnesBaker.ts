@@ -52,19 +52,19 @@ export const AgnesBaker: Investigator = {
           left: 1251,
           top: 1097
         }
-      },
-      {
-        id: '01004_dark-memory2',
-        name: 'Dark Memory',
-        image: {
-          width: 2012,
-          height: 2008,
-          face: {
-            width: 160,
-            height: 219,
-            left: 919,
-            top: 897
-          }
+      }
+    },
+    {
+      id: '01004_dark-memory2',
+      name: 'Dark Memory',
+      image: {
+        width: 2012,
+        height: 2008,
+        face: {
+          width: 160,
+          height: 219,
+          left: 919,
+          top: 897
         }
       }
     }
