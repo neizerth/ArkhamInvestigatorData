@@ -40,5 +40,33 @@ export const AgnesBaker: Investigator = {
         }
       }
     },
+    {
+      id: '01004_dark-memory',
+      name: 'Dark Memory',
+      image: {
+        width: 2502,
+        height: 2294,
+        face: {
+          width: 221,
+          height: 363,
+          left: 1251,
+          top: 1097
+        }
+      },
+      {
+        id: '01004_dark-memory2',
+        name: 'Dark Memory',
+        image: {
+          width: 2012,
+          height: 2008,
+          face: {
+            width: 160,
+            height: 219,
+            left: 919,
+            top: 897
+          }
+        }
+      }
+    }
   ]
 }
