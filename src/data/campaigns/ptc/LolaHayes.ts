@@ -25,13 +25,13 @@ export const LolaHayes: Investigator = {
       id: '03006_improvisation',
       name: 'Improvisation',
       image: {
-        width: 2290,
-        height: 2048,
+        width: 4580,
+        height: 4096,
         face: {
-          width: 177,
-          height: 229,
-          left: 1110,
-          top: 872
+          width: 512,
+          height: 489,
+          left: 2142,
+          top: 1715
         }
       } 
     }
