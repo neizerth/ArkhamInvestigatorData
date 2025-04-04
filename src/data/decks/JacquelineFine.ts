@@ -11,5 +11,21 @@ export const JacquelineFine: Investigator = {
       left: 680,
       top: 1049
     }
-  }
+  },
+  skins: [
+    {
+      id: '60401_prescient',
+      name: 'Prescient',
+      image: {
+        width: 3236,
+        height: 3340,
+        face: {
+          width: 388,
+          height: 589,
+          left: 1420,
+          top: 1495
+        }
+      }
+    }
+  ]
 }
