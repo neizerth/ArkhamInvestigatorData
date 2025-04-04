@@ -19,5 +19,21 @@ export const LolaHayes: Investigator = {
     'mystic',
     'survivor',
     'neutral'
+  ],
+  skins: [
+    {
+      id: '03006_improvisation',
+      name: 'Improvisation',
+      image: {
+        width: 2290,
+        height: 2048,
+        face: {
+          width: 177,
+          height: 229,
+          left: 1110,
+          top: 872
+        }
+      } 
+    }
   ]
 }
