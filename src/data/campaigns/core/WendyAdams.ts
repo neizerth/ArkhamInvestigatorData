@@ -45,22 +45,49 @@ export const WendyAdams: Investigator = {
           height: 162,
           left: 481,
           top: 509
-        },
-        media: [
-          {
-            width: 581,
-            height: 894,
-            left: 252,
-            top: 388,
-            primary: true
-          },
-          {
-            width: 581,
-            height: 1185,
-            left: 252,
-            top: 388
-          }
-        ]
+        }
+      }
+    },
+    {
+      id: '01005_abandoned',
+      name: 'Abandoned and Alone',
+      image: {
+        width: 3032,
+        height: 3145,
+        face: {
+          width: 348,
+          height: 328,
+          left: 1440,
+          top: 1259
+        }
+      }
+    },
+    {
+      id: '01005_amulet',
+      name: "Wendy's Amulet",
+      image: {
+        width: 2652,
+        height: 2952,
+        face: {
+          width: 225,
+          height: 343,
+          left: 1236,
+          top: 1079
+        }
+      }
+    },
+    {
+      id: '01005_amulet_revised',
+      name: "Wendy's Amulet (Revised)",
+      image: {
+        width: 3354,
+        height: 2596,
+        face: {
+          width: 315,
+          height: 345,
+          left: 1428,
+          top: 1001
+        }
       }
     },
   ]
