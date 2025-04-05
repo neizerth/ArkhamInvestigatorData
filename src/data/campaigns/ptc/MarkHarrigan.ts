@@ -18,5 +18,21 @@ export const MarkHarrigan: Investigator = {
       type: 'reaction',
       limitPer: 'phase'
     }
+  ],
+  skins: [
+    {
+      id: '03001_overpower',
+      name: 'Overpower',
+      image: {
+        width: 3408,
+        height: 3272,
+        face: {
+          width: 192,
+          height: 282,
+          left: 1471,
+          top: 1295
+        }
+      }
+    }
   ]
 }
