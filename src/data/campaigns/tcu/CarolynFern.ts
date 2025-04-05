@@ -11,21 +11,6 @@ export const CarolynFern: Investigator = {
       left: 648,
       top: 730
     },
-    media: [
-      {
-        width: 657,
-        height: 1010,
-        left: 240,
-        top: 78,
-        primary: true
-      },
-      {
-        width: 657,
-        height: 1522,
-        left: 240,
-        top: 78
-      }
-    ]
   },
   variants: [
     {
@@ -33,29 +18,14 @@ export const CarolynFern: Investigator = {
       type: 'book',
       name: 'To Fight the Black Wind',
       image: {
-        width: 2792,
-        height: 3917,
+        width: 3516,
+        height: 4000,
         face: {
-          width: 368,
-          height: 427,
-          left: 1200,
-          top: 1059
+          width: 228,
+          height: 333,
+          left: 1640,
+          top: 1779
         },
-        media: [
-          {
-            width: 888,
-            height: 1364,
-            left: 1047,
-            top: 875,
-            primary: true
-          },
-          {
-            width: 1350,
-            height: 2615,
-            left: 870,
-            top: 875
-          }
-        ]
       }
     }
   ]
