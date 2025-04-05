@@ -63,7 +63,7 @@ export const AgnesBaker: Investigator = {
         face: {
           width: 160,
           height: 219,
-          left: 919,
+          left: 919 - 150,
           top: 897
         }
       }
