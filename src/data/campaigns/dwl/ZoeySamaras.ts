@@ -12,11 +12,52 @@ export const ZoeySamaras: Investigator = {
       top: 1095
     }
   },
+  abilities: [
+    {
+      type: 'reaction',
+      onUse: [
+        {
+          script: {
+            resources: 'resources + 1'
+          }
+        }
+      ]
+    }
+  ],
   variants: [
     {
       type: 'parallel',
       code: '90059',
-      name: 'Path of the Righteous'
+      name: 'Path of the Righteous',
+      abilities: [
+        {
+          type: 'reaction',
+          limitPer: 'round',
+          onUse: [
+            {
+              script: {
+                chaosBag: {
+                  bless: 'bless + 1'
+                }
+              }
+            }
+          ]
+        },
+        {
+          type: 'fast',
+          limitPer: 'round',
+          enabledIf: 'bless > 2',
+          onUse: [
+            {
+              script: {
+                chaosBag: {
+                  bless: 'bless - 3'
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

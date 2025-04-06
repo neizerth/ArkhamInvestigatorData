@@ -1,4 +1,5 @@
 
+import type { InvestigatorAbility } from "./abilities"
 import type { InvestigatorImage } from "./image"
 import type { InvestigatorSkin, InvestigatorVariant } from "./options"
 
@@ -17,12 +18,3 @@ export type Investigator = {
 }
 
 export type InvestigatorFaction = 'guardian' | 'rogue' | 'seeker' | 'mystic' | 'survivor' | 'neutral';
-
-export type LimitType = 'round' | 'turn' | 'phase' | 'ability' | 'test' | 'game';
-
-export type InvestigatorAbility = {
-  type: 'reaction' | 'fast'
-  limitPer?: LimitType | LimitType[]
-  perInvestigator?: boolean
-  limitCount?: number
-}

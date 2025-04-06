@@ -37,7 +37,13 @@ export const RolandBanks: Investigator = {
     {
       type: 'parallel',
       code: '90024',
-      name: 'By the Book'
+      name: 'By the Book',
+      abilities: [
+        {
+          type: 'fast',
+          limitPer: 'game'
+        }
+      ]
     }
   ],
   skins: [

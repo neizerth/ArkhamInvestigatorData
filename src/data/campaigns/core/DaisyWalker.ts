@@ -18,8 +18,14 @@ export const DaisyWalker: Investigator = {
     {
       type: 'parallel',
       code: '90001',
-      name: 'Read or Die'
-    }
+      name: 'Read or Die',
+      abilities: [
+        {
+          type: 'fast',
+          limitPer: 'game'
+        }
+      ]
+    },
   ],
   skins: [
     {

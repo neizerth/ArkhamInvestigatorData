@@ -1,4 +1,4 @@
-import type { InvestigatorAbility } from "./common";
+import type { InvestigatorAbility } from "./abilities";
 import type { InvestigatorImage } from "./image";
 
 export type InvestigatorSkin = {
