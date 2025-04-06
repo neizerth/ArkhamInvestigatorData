@@ -12,11 +12,15 @@ export const RexMurphy: Investigator = {
       top: 1173
     }
   },
+  // Rex hasn't abilities those can be scripted
+  abilities: [],
   variants: [
     {
       type: 'parallel',
       code: '90078',
-      name: 'Hunting for Answers'
+      name: 'Hunting for Answers',
+      // Rex hasn't abilities those can be scripted
+      abilities: []
     }
   ]
 }

@@ -4,7 +4,7 @@ import type { Stat } from "./entities";
 export type LimitType = 'round' | 'turn' | 'phase' | 'ability' | 'test' | 'game';
 
 export type InvestigatorAbility = {
-  type: 'reaction' | 'fast'
+  type: 'reaction' | 'fast' | 'permanent'
   limitPer?: LimitType | LimitType[]
   perInvestigator?: boolean
   limitCount?: number
@@ -13,7 +13,7 @@ export type InvestigatorAbility = {
 }
 
 export type InvestigatorAbilityUse = {
-  on?: 'instant'
+  phase?: 'upkeep'
   script: InvestigatorAbilityScript
 }
 

@@ -11,22 +11,20 @@ export const JennyBarnes: Investigator = {
       left: 1629,
       top: 1864
     },
-    media: [
-      {
-        width: 702,
-        height: 1078,
-        left: 459,
-        top: 165,
-        primary: true
-      },
-      {
-        width: 1060,
-        height: 930,
-        left: 190,
-        top: 170
-      }
-    ]
   },
+  abilities: [
+    {
+      type: 'permanent',
+      onUse: [
+        {
+          phase: 'upkeep',
+          script: {
+            resources: 'resources + 1'
+          }
+        }
+      ]
+    }
+  ],
   variants: [
     {
       type: 'parallel',
@@ -41,7 +39,13 @@ export const JennyBarnes: Investigator = {
           left: 535,
           top: 620
         }
-      }
+      },
+      abilities: [
+        {
+          type: 'reaction',
+          limitPer: 'turn'
+        }
+      ]
     },
     {
       type: 'book',

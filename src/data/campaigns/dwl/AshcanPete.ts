@@ -22,7 +22,13 @@ export const AshcanPete: Investigator = {
     {
       type: 'parallel',
       code: '90046',
-      name: 'On the Road Again'
+      name: 'On the Road Again',
+      abilities: [
+        {
+          type: 'fast',
+          limitPer: 'round'
+        }
+      ],
     }
   ]
 }
