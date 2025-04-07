@@ -11,5 +11,11 @@ export const LuciusGalloway: Investigator = {
       left: 1002,
       top: 867
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

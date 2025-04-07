@@ -11,5 +11,11 @@ export const DarrellSimmons: Investigator = {
       left: 1096,
       top: 1211
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'fast',
+      limitPer: 'test'
+    }
+  ]
 }

@@ -11,5 +11,11 @@ export const AminaZidane: Investigator = {
       left: 711,
       top: 1247
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

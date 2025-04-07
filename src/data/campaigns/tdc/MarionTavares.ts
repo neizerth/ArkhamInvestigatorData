@@ -11,5 +11,11 @@ export const MarionTavares: Investigator = {
       left: 1056,
       top: 1147
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

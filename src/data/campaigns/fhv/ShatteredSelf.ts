@@ -13,5 +13,11 @@ export const ShatteredSelf: Investigator = {
       left: 638,
       top: 465
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'test'
+    }
+  ]
 }
