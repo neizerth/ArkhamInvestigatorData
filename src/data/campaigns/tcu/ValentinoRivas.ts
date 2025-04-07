@@ -12,5 +12,11 @@ export const ValentinoRivas: Investigator = {
       left: 1488,
       top: 1411
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'fast',
+      limitPer: 'round'
+    }
+  ]
 }

@@ -28,5 +28,12 @@ export const NormanWithers: Investigator = {
         }
       }
     }
+  ],
+  abilities: [
+    {
+      type: 'action',
+      icon: 'card-outline',
+      limitPer: 'round'
+    }
   ]
 }

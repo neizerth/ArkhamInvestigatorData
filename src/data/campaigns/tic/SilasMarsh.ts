@@ -10,22 +10,7 @@ export const SilasMarsh: Investigator = {
       height: 418,
       left: 1188,
       top: 1094
-    },
-    media: [
-      {
-        width: 2595,
-        height: 3988,
-        left: 1307,
-        top: 227,
-        primary: true
-      },
-      {
-        width: 2902,
-        height: 3988,
-        left: 1000,
-        top: 227
-      }
-    ]
+    }
   },
   variants: [
     {
@@ -41,22 +26,13 @@ export const SilasMarsh: Investigator = {
           left: 601,
           top: 658
         },
-        media: [
-          {
-            width: 826,
-            height: 1268,
-            left: 368,
-            top: 350,
-            primary: true
-          },
-          {
-            width: 1180,
-            height: 1268,
-            left: 230,
-            top: 350
-          }
-        ]
       }
+    }
+  ],
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
     }
   ]
 }

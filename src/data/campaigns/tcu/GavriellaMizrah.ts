@@ -12,5 +12,11 @@ export const GavriellaMizrah: Investigator = {
       left: 909,
       top: 1373
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

@@ -28,5 +28,11 @@ export const DexterDrake: Investigator = {
         }
       }
     },
+  ],
+  abilities: [
+    {
+      type: 'fast',
+      limitPer: 'round'
+    }
   ]
 }

@@ -12,5 +12,11 @@ export const JeromeDavids: Investigator = {
       left: 711,
       top: 757
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

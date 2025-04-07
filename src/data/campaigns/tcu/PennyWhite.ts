@@ -13,5 +13,11 @@ export const PennyWhite: Investigator = {
       left: 555,
       top: 709
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

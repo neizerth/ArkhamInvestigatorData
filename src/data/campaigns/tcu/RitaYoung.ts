@@ -11,5 +11,11 @@ export const RitaYoung: Investigator = {
       left: 722,
       top: 759
     }
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }

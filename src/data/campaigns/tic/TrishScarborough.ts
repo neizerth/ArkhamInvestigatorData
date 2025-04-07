@@ -19,5 +19,11 @@ export const TrishScarborough: Investigator = {
         top: 270
       }
     ]
-  }
+  },
+  abilities: [
+    {
+      type: 'reaction',
+      limitPer: 'round'
+    }
+  ]
 }
