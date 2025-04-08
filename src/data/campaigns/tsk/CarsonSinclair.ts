@@ -15,7 +15,9 @@ export const CarsonSinclair: Investigator = {
   },
   abilities: [
     {
-      type: 'reaction',
+      id: 'give-action',
+      icon: 'investigator',
+      type: 'action',
       limitPer: 'round',
       perInvestigator: true
     }

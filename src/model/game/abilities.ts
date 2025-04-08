@@ -6,6 +6,7 @@ export type LimitType = 'round' | 'turn' | 'phase' | 'ability' | 'test' | 'game'
 export type InvestigatorAbilityType = {
    type: 'reaction' | 'fast' | 'permanent'
 } | {
+  id: string
   type: 'action'
   icon: string
 }

@@ -29,6 +29,7 @@ export const NormanWithers: Investigator = {
       },
       abilities: [
         {
+          id: 'top-card',
           type: 'action',
           icon: 'card-outline',
           limitPer: 'round'
@@ -38,6 +39,7 @@ export const NormanWithers: Investigator = {
   ],
   abilities: [
     {
+      id: 'top-card',
       type: 'action',
       icon: 'card-outline',
       limitPer: 'round'
