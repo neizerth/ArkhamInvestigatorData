@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const WinifredHabbamock: Investigator = {
-  code: '60301',
+  code: "60301",
   image: {
     width: 3430,
     height: 2880,
@@ -9,7 +9,14 @@ export const WinifredHabbamock: Investigator = {
       width: 382,
       height: 505,
       left: 1444,
-      top: 1403
-    }
-  }
-}
+      top: 1403,
+    },
+  },
+  abilities: [
+    {
+      id: "free",
+      type: "fast",
+      limitPer: "test",
+    },
+  ],
+};

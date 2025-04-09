@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const MandyThompson: Investigator = {
-  code: '06002',
+  code: "06002",
   image: {
     width: 2465,
     height: 2645,
@@ -9,7 +9,14 @@ export const MandyThompson: Investigator = {
       width: 284,
       height: 367,
       left: 1176,
-      top: 1141
-    }
-  }
-}
+      top: 1141,
+    },
+  },
+  abilities: [
+    {
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};
