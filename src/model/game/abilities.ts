@@ -14,7 +14,7 @@ export type InvestigatorAbilityType =
       type: "reaction" | "fast" | "permanent";
     }
   | {
-      type: "action";
+      type: "action" | "special-action";
       icon: string;
     };
 
