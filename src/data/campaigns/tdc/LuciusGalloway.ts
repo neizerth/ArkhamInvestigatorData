@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const LuciusGalloway: Investigator = {
-  code: '11004',
+  code: "11004",
   image: {
     width: 2610,
     height: 2380,
@@ -9,13 +9,14 @@ export const LuciusGalloway: Investigator = {
       width: 352,
       height: 491,
       left: 1002,
-      top: 867
-    }
+      top: 867,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'round'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};

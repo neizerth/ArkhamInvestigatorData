@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const GavriellaMizrah: Investigator = {
-  code: '05046',
+  code: "05046",
   spoiler: true,
   image: {
     width: 2523,
@@ -10,13 +10,14 @@ export const GavriellaMizrah: Investigator = {
       width: 252,
       height: 322,
       left: 909,
-      top: 1373
-    }
+      top: 1373,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'round'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};

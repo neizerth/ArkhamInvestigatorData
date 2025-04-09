@@ -1,8 +1,7 @@
 import type { Investigator } from "@/model";
 
-
 export const MarkHarrigan: Investigator = {
-  code: '03001',
+  code: "03001",
   image: {
     width: 1968,
     height: 2138,
@@ -10,19 +9,20 @@ export const MarkHarrigan: Investigator = {
       width: 258,
       height: 301,
       left: 800,
-      top: 797
-    }
+      top: 797,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'phase'
-    }
+      id: "reaction",
+      type: "reaction",
+      limitPer: "phase",
+    },
   ],
   skins: [
     {
-      id: '03001_overpower',
-      name: 'Overpower',
+      id: "03001_overpower",
+      name: "Overpower",
       image: {
         width: 3408,
         height: 3272,
@@ -30,9 +30,9 @@ export const MarkHarrigan: Investigator = {
           width: 192,
           height: 282,
           left: 1471,
-          top: 1295
-        }
-      }
-    }
-  ]
-}
+          top: 1295,
+        },
+      },
+    },
+  ],
+};

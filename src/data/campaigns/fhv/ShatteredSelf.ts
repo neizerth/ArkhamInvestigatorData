@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const ShatteredSelf: Investigator = {
-  code: '10661',
+  code: "10661",
   multiselect: true,
   spoiler: true,
   image: {
@@ -11,13 +11,14 @@ export const ShatteredSelf: Investigator = {
       width: 376,
       height: 427,
       left: 638,
-      top: 465
-    }
+      top: 465,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'test'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "test",
+    },
+  ],
+};

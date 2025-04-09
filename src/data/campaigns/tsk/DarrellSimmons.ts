@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const DarrellSimmons: Investigator = {
-  code: '09015',
+  code: "09015",
   image: {
     width: 2380,
     height: 2910,
@@ -9,13 +9,14 @@ export const DarrellSimmons: Investigator = {
       width: 236,
       height: 265,
       left: 1096,
-      top: 1211
-    }
+      top: 1211,
+    },
   },
   abilities: [
     {
-      type: 'fast',
-      limitPer: 'test'
-    }
-  ]
-}
+      id: "fast",
+      type: "fast",
+      limitPer: "test",
+    },
+  ],
+};

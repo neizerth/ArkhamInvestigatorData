@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const RolandBanks: Investigator = {
-  code: '01001',
+  code: "01001",
   image: {
     width: 2000,
     height: 2000,
@@ -9,14 +9,14 @@ export const RolandBanks: Investigator = {
       width: 339,
       height: 437,
       left: 543,
-      top: 837
-    }
+      top: 837,
+    },
   },
   variants: [
     {
-      type: 'book',
-      code: '98004',
-      name: 'The Dirge of Reason',
+      type: "book",
+      code: "98004",
+      name: "The Dirge of Reason",
       image: {
         width: 2792,
         height: 2616,
@@ -24,32 +24,34 @@ export const RolandBanks: Investigator = {
           width: 370,
           height: 389,
           left: 1142,
-          top: 533
-        }
+          top: 533,
+        },
       },
       abilities: [
         {
-          type: 'reaction',
-          limitPer: 'round'
-        }
-      ]
+          id: "reaction",
+          type: "reaction",
+          limitPer: "round",
+        },
+      ],
     },
     {
-      type: 'parallel',
-      code: '90024',
-      name: 'By the Book',
+      type: "parallel",
+      code: "90024",
+      name: "By the Book",
       abilities: [
         {
-          type: 'fast',
-          limitPer: 'game'
-        }
-      ]
-    }
+          id: "fast",
+          type: "fast",
+          limitPer: "game",
+        },
+      ],
+    },
   ],
   skins: [
     {
-      id: '01001_revised',
-      name: 'Revised Core Set',
+      id: "01001_revised",
+      name: "Revised Core Set",
       image: {
         width: 1050,
         height: 981,
@@ -57,15 +59,16 @@ export const RolandBanks: Investigator = {
           width: 147,
           height: 134,
           left: 396,
-          top: 304
-        }
-      }
+          top: 304,
+        },
+      },
     },
   ],
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'round'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};

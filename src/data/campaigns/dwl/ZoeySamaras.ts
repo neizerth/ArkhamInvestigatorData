@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const ZoeySamaras: Investigator = {
-  code: '02001',
+  code: "02001",
   image: {
     width: 1817,
     height: 2240,
@@ -9,55 +9,58 @@ export const ZoeySamaras: Investigator = {
       width: 218,
       height: 285,
       left: 768,
-      top: 1095
-    }
+      top: 1095,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
+      id: "reaction",
+      type: "reaction",
       onUse: [
         {
           script: {
-            resources: 'resources + 1'
-          }
-        }
-      ]
-    }
+            resources: "resources + 1",
+          },
+        },
+      ],
+    },
   ],
   variants: [
     {
-      type: 'parallel',
-      code: '90059',
-      name: 'Path of the Righteous',
+      type: "parallel",
+      code: "90059",
+      name: "Path of the Righteous",
       abilities: [
         {
-          type: 'reaction',
-          limitPer: 'round',
+          id: "reaction",
+          type: "reaction",
+          limitPer: "round",
           onUse: [
             {
               script: {
                 chaosBag: {
-                  bless: 'bless + 1'
-                }
-              }
-            }
-          ]
+                  bless: "bless + 1",
+                },
+              },
+            },
+          ],
         },
         {
-          type: 'fast',
-          limitPer: 'round',
-          enabledIf: 'bless > 2',
+          id: "fast",
+          type: "fast",
+          limitPer: "round",
+          enabledIf: "bless > 2",
           onUse: [
             {
               script: {
                 chaosBag: {
-                  bless: 'bless - 3'
-                }
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+                  bless: "bless - 3",
+                },
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};

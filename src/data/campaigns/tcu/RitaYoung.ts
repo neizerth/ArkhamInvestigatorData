@@ -1,7 +1,7 @@
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
 export const RitaYoung: Investigator = {
-  code: '05005',
+  code: "05005",
   image: {
     width: 2004,
     height: 1684,
@@ -9,13 +9,14 @@ export const RitaYoung: Investigator = {
       width: 248,
       height: 303,
       left: 722,
-      top: 759
-    }
+      top: 759,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'round'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};

@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const PennyWhite: Investigator = {
-  code: '05049',
+  code: "05049",
   additionalAction: true,
   spoiler: true,
   image: {
@@ -11,13 +11,14 @@ export const PennyWhite: Investigator = {
       width: 248,
       height: 301,
       left: 555,
-      top: 709
-    }
+      top: 709,
+    },
   },
   abilities: [
     {
-      type: 'reaction',
-      limitPer: 'round'
-    }
-  ]
-}
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
+};
