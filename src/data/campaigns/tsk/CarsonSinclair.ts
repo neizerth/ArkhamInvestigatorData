@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const CarsonSinclair: Investigator = {
-  code: '09001',
+  code: "09001",
   additionalAction: true,
   image: {
     width: 1760,
@@ -10,16 +10,16 @@ export const CarsonSinclair: Investigator = {
       width: 318,
       height: 340,
       left: 663,
-      top: 686
-    }
+      top: 686,
+    },
   },
   abilities: [
     {
-      id: 'give-action',
-      icon: 'investigator',
-      type: 'action',
-      limitPer: 'round',
-      perInvestigator: true
-    }
-  ]
-}
+      id: "give-action",
+      icon: "plus",
+      type: "action",
+      limitPer: "round",
+      perInvestigator: true,
+    },
+  ],
+};
