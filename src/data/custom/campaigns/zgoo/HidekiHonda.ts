@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const HidekiHonda: Investigator = {
-  code: 'zgoo_00007',
+  code: "zgoo_00007",
   image: {
     width: 2160,
     height: 1080,
@@ -9,15 +9,14 @@ export const HidekiHonda: Investigator = {
       width: 118,
       height: 129,
       left: 497,
-      top: 216
+      top: 216,
     },
-    media: [
-      {
-        width: 703,
-        height: 1080,
-        left: 225,
-        top: 0
-      }
-    ]
-  }
-}
+  },
+  abilities: [
+    {
+      id: "fast",
+      type: "fast",
+      limitPer: "round",
+    },
+  ],
+};

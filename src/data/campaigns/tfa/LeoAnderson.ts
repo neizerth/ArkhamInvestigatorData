@@ -11,5 +11,13 @@ export const LeoAnderson: Investigator = {
       left: 964,
       top: 817
     }
-  }
+  },
+  abilities: [
+    {
+      id: "reaction",
+      type: "reaction",
+      // works when turn start
+      limitPer: "turn",
+    },
+  ],
 }

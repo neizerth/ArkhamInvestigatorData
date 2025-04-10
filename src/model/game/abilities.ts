@@ -12,6 +12,7 @@ export type LimitType =
 export type InvestigatorAbilityType =
   | {
       type: "reaction" | "fast" | "permanent";
+      icon?: string;
     }
   | {
       type: "action" | "special-action";

@@ -17,6 +17,13 @@ export const FatherMateo: Investigator = {
       code: "90081",
       type: "parallel",
       name: "Aura of Faith",
+      abilities: [
+        {
+          id: "fast",
+          type: "fast",
+          limitPer: "round",
+        },
+      ],
     },
   ],
   abilities: [
