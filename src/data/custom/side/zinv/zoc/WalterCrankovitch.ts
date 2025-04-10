@@ -12,4 +12,11 @@ export const WalterCrankovitch: Investigator = {
       top: 715,
     },
   },
+  abilities: [
+    {
+      id: "reaction",
+      type: "reaction",
+      limitPer: "phase",
+    },
+  ],
 };
