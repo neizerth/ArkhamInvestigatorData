@@ -1,0 +1,1 @@
+export const ARKHAM_CARDS_GRAPHQL_URL = process.env.ARKHAM_CARDS_GRAPHQL_URL;

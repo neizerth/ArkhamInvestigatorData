@@ -1,5 +1,3 @@
 import { IsabelLaFratta } from "./IsabelLaFratta";
 
-export default [
-  IsabelLaFratta
-]
+export default [IsabelLaFratta];

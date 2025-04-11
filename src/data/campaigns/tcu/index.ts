@@ -10,15 +10,15 @@ import { RitaYoung } from "./RitaYoung";
 import { ValentinoRivas } from "./ValentinoRivas";
 
 export default [
-  CarolynFern,
-  JoeDiamond,
-  PrestonFairmont,
-  DianaStanley,
-  RitaYoung,
-  MarieLambeau,
-  
-  GavriellaMizrah,
-  JeromeDavids,
-  ValentinoRivas,
-  PennyWhite
+	CarolynFern,
+	JoeDiamond,
+	PrestonFairmont,
+	DianaStanley,
+	RitaYoung,
+	MarieLambeau,
+
+	GavriellaMizrah,
+	JeromeDavids,
+	ValentinoRivas,
+	PennyWhite,
 ];

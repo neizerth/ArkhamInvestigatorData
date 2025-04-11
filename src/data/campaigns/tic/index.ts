@@ -5,9 +5,9 @@ import { SisterMary } from "./SisterMary";
 import { TrishScarborough } from "./TrishScarborough";
 
 export default [
-  SisterMary,
-  AmandaSharpe,
-  TrishScarborough,
-  DexterDrake,
-  SilasMarsh
-]
+	SisterMary,
+	AmandaSharpe,
+	TrishScarborough,
+	DexterDrake,
+	SilasMarsh,
+];

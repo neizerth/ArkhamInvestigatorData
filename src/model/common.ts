@@ -1,9 +1,9 @@
 export type Nullable<T> = T | null;
 
 export type WithCode = {
-  code: string;
-}
+	code: string;
+};
 
 export type WithId = {
-  id: string;
-}
+	id: string;
+};

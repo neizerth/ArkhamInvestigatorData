@@ -1,5 +1,3 @@
 import { TheInsane } from "./TheInsane";
 
-export default [
-  TheInsane
-]
+export default [TheInsane];

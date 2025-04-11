@@ -5,12 +5,11 @@ import { KohakuNarukami } from "./KohakuNarukami";
 import { ShatteredSelf } from "./ShatteredSelf";
 import { WilsonRichards } from "./WilsonRichards";
 
-
 export default [
-  WilsonRichards,
-  KateWinthrop,
-  AlessandraZorzi,
-  KohakuNarukami,
-  HankSamson,
-  ShatteredSelf
-]
+	WilsonRichards,
+	KateWinthrop,
+	AlessandraZorzi,
+	KohakuNarukami,
+	HankSamson,
+	ShatteredSelf,
+];

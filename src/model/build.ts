@@ -1,6 +1,9 @@
-import type { Investigator } from "./game"
+import type { Investigator, SignatureCollection } from "./game";
 
 export type Build = {
-  version: string
-  data: Investigator[]
-}
+	version: string;
+	minClientVersion: string;
+	data: Investigator[];
+};
+
+export type SignatureBuild = SignatureCollection;

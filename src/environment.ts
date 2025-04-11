@@ -1,8 +1,5 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
 dotenv.config({
-  path: [
-    '.env.local',
-    '.env'
-  ]
+	path: [".env.local", ".env"],
 });

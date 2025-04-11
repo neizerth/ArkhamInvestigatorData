@@ -1,25 +1,25 @@
-import core from './core';
-import dwl from './dwl';
-import ptc from './ptc';
-import tfa from './tfa';
-import tcu from './tcu';
-import tde from './tde';
-import tic from './tic';
-import eoe from './eoe';
-import tsk from './tsk';
-import fhv from './fhv';
-import tdc from './tdc';
+import core from "./core";
+import dwl from "./dwl";
+import eoe from "./eoe";
+import fhv from "./fhv";
+import ptc from "./ptc";
+import tcu from "./tcu";
+import tdc from "./tdc";
+import tde from "./tde";
+import tfa from "./tfa";
+import tic from "./tic";
+import tsk from "./tsk";
 
 export default [
-  ...core,
-  ...dwl,
-  ...ptc,
-  ...tfa,
-  ...tcu,
-  ...tde,
-  ...tic,
-  ...eoe,
-  ...tsk,
-  ...fhv,
-  ...tdc
-]
+	...core,
+	...dwl,
+	...ptc,
+	...tfa,
+	...tcu,
+	...tde,
+	...tic,
+	...eoe,
+	...tsk,
+	...fhv,
+	...tdc,
+];

@@ -6,10 +6,10 @@ import { UrsulaDowns } from "./UrsulaDowns";
 import { YithianBody } from "./YithianBody";
 
 export default [
-  LeoAnderson,
-  UrsulaDowns,
-  FinnEdwards,
-  FatherMateo,
-  CalvinWright,
-  YithianBody
+	LeoAnderson,
+	UrsulaDowns,
+	FinnEdwards,
+	FatherMateo,
+	CalvinWright,
+	YithianBody,
 ];

@@ -1,113 +1,116 @@
-import { DEVELOPMENT_MODE } from '@/config';
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from "node:fs";
+import path from "node:path";
+import { DEVELOPMENT_MODE } from "@/config";
 
 export const createExistsChecker = ({
-  dir,
-  extension = '',
+	dir,
+	extension = "",
 }: {
-  dir: string,
-  extension?: string
+	dir: string;
+	extension?: string;
 }) => {
-  const getFilename = createFilenameResolver(dir, extension);
-  return (name: string) => fs.existsSync(getFilename(name));
-}
+	const getFilename = createFilenameResolver(dir, extension);
+	return (name: string) => fs.existsSync(getFilename(name));
+};
 
 export const createWriter = <T = string, D = string>({
-  dir,
-  extension = '',
-  serialize = f => f as string
+	dir,
+	extension = "",
+	serialize = (f) => f as string,
 }: {
-  dir: string,
-  extension?: string
-  serialize?: (data: D) => string 
+	dir: string;
+	extension?: string;
+	serialize?: (data: D) => string;
 }) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+	if (!fs.existsSync(dir)) {
+		fs.mkdirSync(dir, { recursive: true });
+	}
 
-  const getFilename = createFilenameResolver(dir, extension);
+	const getFilename = createFilenameResolver(dir, extension);
 
-  return (name: T, data: D) => {
-  
-    const contents = serialize(data);
-  
-    const filename = getFilename(name as string);
-  
-    fs.writeFileSync(filename, contents);
-  }
-}
+	return (name: T, data: D) => {
+		const contents = serialize(data);
 
-export const createJSONWriter = (dir: string) => createWriter<string, object>({
-  dir,
-  extension: 'json',
-  serialize: data => JSON.stringify(data, null, DEVELOPMENT_MODE ? 2 : 0)
-});
+		const filename = getFilename(name as string);
+
+		fs.writeFileSync(filename, contents);
+	};
+};
+
+export const createJSONWriter = (dir: string) =>
+	createWriter<string, object>({
+		dir,
+		extension: "json",
+		serialize: (data) => JSON.stringify(data, null, DEVELOPMENT_MODE ? 2 : 0),
+	});
 
 export const createReader = <T = string, D = string>({
-  dir,
-  extension = '',
-  unserialize = f => f as D
+	dir,
+	extension = "",
+	unserialize = (f) => f as D,
 }: {
-  dir: string,
-  extension: string,
-  unserialize?: (data: string) => D
+	dir: string;
+	extension: string;
+	unserialize?: (data: string) => D;
 }) => {
-  const getFilename = createFilenameResolver(dir, extension);
-  return <R extends D>(name: T, defaultValue?: R): R => {
-    if (!fs.existsSync(dir)) {
-      return defaultValue as R;
-    }
-  
-    const filename = getFilename(name as string);
-  
-    if (!fs.existsSync(filename)) {
-      return defaultValue as R;
-    }
-  
-    const data = fs.readFileSync(filename);
-    return unserialize(data.toString()) as R;
-  }
-}
+	const getFilename = createFilenameResolver(dir, extension);
+	return <R extends D>(name: T, defaultValue?: R): R => {
+		if (!fs.existsSync(dir)) {
+			return defaultValue as R;
+		}
 
-export const createJSONReader = (dir: string) => createReader({
-  dir,
-  extension: 'json',
-  unserialize: JSON.parse
-});
+		const filename = getFilename(name as string);
 
-export const createFilenameResolver = (dir: string, extension: string) => 
-  (name: string) => 
-    path.join(`${dir}/${name}.${extension}`);
+		if (!fs.existsSync(filename)) {
+			return defaultValue as R;
+		}
 
-export const createJSONResolver = (dir: string) => createFilenameResolver(dir, 'json');
+		const data = fs.readFileSync(filename);
+		return unserialize(data.toString()) as R;
+	};
+};
 
-export const mkDir = (dir: string) => !fs.existsSync(dir) && fs.mkdirSync(dir); 
+export const createJSONReader = (dir: string) =>
+	createReader({
+		dir,
+		extension: "json",
+		unserialize: JSON.parse,
+	});
 
-export const rmDir = (dir: string) => fs.existsSync(dir) && fs.rmSync(dir, { recursive: true }); 
+export const createFilenameResolver =
+	(dir: string, extension: string) => (name: string) =>
+		path.join(`${dir}/${name}.${extension}`);
+
+export const createJSONResolver = (dir: string) =>
+	createFilenameResolver(dir, "json");
+
+export const mkDir = (dir: string) => !fs.existsSync(dir) && fs.mkdirSync(dir);
+
+export const rmDir = (dir: string) =>
+	fs.existsSync(dir) && fs.rmSync(dir, { recursive: true });
 
 export const flattenDir = (dir: string, moveToDir?: string) => {
-  const contents = fs.readdirSync(dir);
+	const contents = fs.readdirSync(dir);
 
-  for (const name of contents) {
-    const item = path.join(dir, name);
-    const stat = fs.lstatSync(item);
+	for (const name of contents) {
+		const item = path.join(dir, name);
+		const stat = fs.lstatSync(item);
 
-    if (stat.isDirectory()) {
-      flattenDir(item, moveToDir || dir);
-      continue;
-    }
+		if (stat.isDirectory()) {
+			flattenDir(item, moveToDir || dir);
+			continue;
+		}
 
-    if (!moveToDir) {
-      continue;
-    }
-    const movePath = path.join(moveToDir, name);
-    fs.renameSync(item, movePath);
-  }
+		if (!moveToDir) {
+			continue;
+		}
+		const movePath = path.join(moveToDir, name);
+		fs.renameSync(item, movePath);
+	}
 
-  if (!moveToDir) {
-    return;
-  }
+	if (!moveToDir) {
+		return;
+	}
 
-  fs.rmdirSync(dir);
-}
+	fs.rmdirSync(dir);
+};

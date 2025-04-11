@@ -5,9 +5,9 @@ import { KateWinthpup } from "./KateWinthpup";
 import { SkidsODrool } from "./SkidsODrool";
 
 export default [
-  BarkHarrigan,
-  KateWinthpup,
-  SkidsODrool,
-  JacquelineCanine,
-  Duke
+	BarkHarrigan,
+	KateWinthpup,
+	SkidsODrool,
+	JacquelineCanine,
+	Duke,
 ];

@@ -1,7 +1,7 @@
-import './environment';
+import "./environment";
 
 import { App } from "@/App";
-const app = new App;
+const app = new App();
 
 const type = process.argv[2];
 

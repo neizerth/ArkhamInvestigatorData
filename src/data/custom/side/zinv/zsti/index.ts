@@ -8,12 +8,12 @@ import { ObiLaveau } from "./ObiLaveau";
 import { SadieGodfrey } from "./SadieGodfrey";
 
 export default [
-  AnnaAnderson,
-  AntonPavel,
-  AstridLee,
-  EdmundMoore,
-  EuniceGolding,
-  HoseaMayhew,
-  ObiLaveau,
-  SadieGodfrey
-]
+	AnnaAnderson,
+	AntonPavel,
+	AstridLee,
+	EdmundMoore,
+	EuniceGolding,
+	HoseaMayhew,
+	ObiLaveau,
+	SadieGodfrey,
+];

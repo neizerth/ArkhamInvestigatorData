@@ -5,9 +5,9 @@ import { MontereyJack } from "./MontereyJack";
 import { NormanWithers } from "./NormanWithers";
 
 export default [
-  DanielaReyes,
-  NormanWithers,
-  MontereyJack,
-  LilyChen,
-  BobJenkins
-]
+	DanielaReyes,
+	NormanWithers,
+	MontereyJack,
+	LilyChen,
+	BobJenkins,
+];

@@ -6,10 +6,10 @@ import { KymaniJones } from "./KymaniJones";
 import { VincentLee } from "./VincentLee";
 
 export default [
-  CarsonSinclair,
-  VincentLee,
-  KymaniJones,
-  AminaZidane,
-  DarrellSimmons,
-  CharlieKane
-]
+	CarsonSinclair,
+	VincentLee,
+	KymaniJones,
+	AminaZidane,
+	DarrellSimmons,
+	CharlieKane,
+];

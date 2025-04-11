@@ -5,9 +5,9 @@ import { TommyMuldoon } from "./TommyMuldoon";
 import { TonyMorgan } from "./TonyMorgan";
 
 export default [
-  TommyMuldoon,
-  MandyThompson,
-  TonyMorgan,
-  LukeRobinson,
-  PatriceHathaway
-]
+	TommyMuldoon,
+	MandyThompson,
+	TonyMorgan,
+	LukeRobinson,
+	PatriceHathaway,
+];

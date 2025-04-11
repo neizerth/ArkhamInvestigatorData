@@ -5,9 +5,9 @@ import { StellaClark } from "./StellaClark";
 import { WinifredHabbamock } from "./WinifredHabbamock";
 
 export default [
-  NathanielCho,
-  HarveyWalters,
-  WinifredHabbamock,
-  JacquelineFine,
-  StellaClark
-]
+	NathanielCho,
+	HarveyWalters,
+	WinifredHabbamock,
+	JacquelineFine,
+	StellaClark,
+];

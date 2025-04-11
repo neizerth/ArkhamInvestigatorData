@@ -1,2 +1,2 @@
-export * from './createImageCache'
-export * from './createInvestigatorsCache'
+export * from "./createImageCache";
+export * from "./createInvestigatorsCache";

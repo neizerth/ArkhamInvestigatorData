@@ -1,2 +1,2 @@
-export * from './getGoogleDriveFile'
-export * from './getGoogleDriveFolderContents'
+export * from "./getGoogleDriveFile";
+export * from "./getGoogleDriveFolderContents";

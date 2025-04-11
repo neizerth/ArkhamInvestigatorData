@@ -5,9 +5,9 @@ import { SakuraSanada } from "./SakuraSanada";
 import { YukiYagami } from "./YukiYagami";
 
 export default [
-  YukiYagami,
-  MakotoMiyazaki,
-  HidekiHonda,
-  AkiraArisato,
-  SakuraSanada
-]
+	YukiYagami,
+	MakotoMiyazaki,
+	HidekiHonda,
+	AkiraArisato,
+	SakuraSanada,
+];

@@ -1,5 +1,3 @@
 import { JulianHerbert } from "./JulianHerbert";
 
-export default [
-  JulianHerbert
-]
+export default [JulianHerbert];

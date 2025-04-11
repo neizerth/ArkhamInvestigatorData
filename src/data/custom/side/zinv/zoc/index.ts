@@ -6,10 +6,10 @@ import { SampsonWelch } from "./SampsonWelch";
 import { WalterCrankovitch } from "./WalterCrankovitch";
 
 export default [
-  SampsonWelch,
-  RodneyDorman,
-  LuciaDeveraux,
-  RichardCarlisle,
-  MelissaSwanson,
-  WalterCrankovitch
-]
+	SampsonWelch,
+	RodneyDorman,
+	LuciaDeveraux,
+	RichardCarlisle,
+	MelissaSwanson,
+	WalterCrankovitch,
+];
