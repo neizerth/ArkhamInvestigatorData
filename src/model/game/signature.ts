@@ -1,6 +1,7 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
+import type { Investigator } from "./common";
 
-export type InvestigatorTabooSignature = Omit<
+export type InvestigatorSignature = Omit<
 	ArkhamCardsInvestigator,
 	| "real_name"
 	| "real_subname"
@@ -10,23 +11,19 @@ export type InvestigatorTabooSignature = Omit<
 	| "real_taboo_original_text"
 	| "real_taboo_text_change"
 	| "translations"
-> & {
-	locale: string;
-	text: string;
-	name: string;
-	subname: string;
-	flavor: string;
-	traits: string;
-	taboo_original_text: string | null;
-	taboo_text_change: string | null;
-};
-
-export type InvestigatorSignature = Omit<
-	InvestigatorTabooSignature,
-	"taboo_original_text" | "taboo_text_change" | "taboo_set"
->;
+> &
+	Investigator & {
+		locale: string;
+		text: string;
+		name: string;
+		subname: string;
+		flavor: string;
+		traits: string;
+		taboo_original_text: string | null;
+		taboo_text_change: string | null;
+	};
 
 export type SignatureCollection = {
 	cards: InvestigatorSignature[];
-	taboo: InvestigatorTabooSignature[];
+	taboo: InvestigatorSignature[];
 };

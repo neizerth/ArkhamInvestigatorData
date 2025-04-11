@@ -1,19 +1,22 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
-import type { InvestigatorTabooSignature } from "@/model";
-import { omit } from "ramda";
+import type { InvestigatorSignature } from "@/model";
 import { getSignatureBase } from "./getSignatureBase";
 
 export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
-	const translations = new Map<string, InvestigatorTabooSignature[]>();
+	const translations = new Map<string, InvestigatorSignature[]>();
 
 	for (const card of data) {
 		const base = getSignatureBase(card);
+		if (!base) {
+			continue;
+		}
+
 		for (const cardTranslation of card.translations) {
 			const { locale } = cardTranslation;
 			if (!translations.has(locale)) {
 				translations.set(locale, []);
 			}
-			const translatedCard: InvestigatorTabooSignature = {
+			const translatedCard: InvestigatorSignature = {
 				...base,
 				...cardTranslation,
 			};

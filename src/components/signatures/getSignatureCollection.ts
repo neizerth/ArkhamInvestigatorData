@@ -1,16 +1,13 @@
-import type { InvestigatorTabooSignature, SignatureCollection } from "@/model";
+import type { InvestigatorSignature, SignatureCollection } from "@/model";
 import { omit, reject } from "ramda";
 
-const hasTaboo = ({ taboo_set }: InvestigatorTabooSignature) =>
-	taboo_set !== null;
+const hasTaboo = ({ taboo_set }: InvestigatorSignature) => taboo_set !== null;
 
 export const getSignatureCollection = (
-	data: InvestigatorTabooSignature[],
+	data: InvestigatorSignature[],
 ): SignatureCollection => {
 	const taboo = data.filter(hasTaboo);
-	const cards = reject(hasTaboo, data).map((card) =>
-		omit(["taboo_original_text", "taboo_text_change", "taboo_set"], card),
-	);
+	const cards = reject(hasTaboo, data);
 
 	return {
 		cards,
