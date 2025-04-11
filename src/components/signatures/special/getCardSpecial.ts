@@ -26,7 +26,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
     };
   }
 
-  const { variants = [] } = base;
+  const { variants = [] } = special;
   const variant = variants.find(propEq(card.code, "code"));
 
   if (!variant) {
