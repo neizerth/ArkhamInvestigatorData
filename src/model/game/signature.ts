@@ -40,6 +40,7 @@ export type InvestigatorSignaturePack = {
   code: string;
   name: string;
   position: number;
+  icon: string;
 };
 
 export type InvestigatorSignatureCycle = {
@@ -47,6 +48,7 @@ export type InvestigatorSignatureCycle = {
   code: string;
   name: string;
   position: number;
+  icon: string;
 };
 
 export type InvestigatorSignatureGroup = {

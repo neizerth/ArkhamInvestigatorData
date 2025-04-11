@@ -3,16 +3,7 @@ import type {
   InvestigatorSignature,
   SignatureCollection,
 } from "@/model";
-import {
-  ascend,
-  groupBy,
-  omit,
-  prop,
-  reject,
-  sortBy,
-  sortWith,
-  toPairs,
-} from "ramda";
+import { ascend, groupBy, sortBy, sortWith, toPairs } from "ramda";
 import { getCollectionSkins } from "./getCollectionSkins";
 
 const hasTaboo = ({ taboo_set }: InvestigatorSignature) => taboo_set !== null;
