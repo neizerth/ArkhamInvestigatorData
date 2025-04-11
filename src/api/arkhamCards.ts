@@ -3,48 +3,61 @@ import type { InvestigatorFaction } from "@/model";
 import { gql, request } from "graphql-request";
 
 export type ArkhamCardsInvestigator = {
-	id: string;
-	code: string;
-	real_text: string;
-	real_name: string;
-	real_subname: string;
-	real_flavor: string;
-	real_traits: string;
-	real_taboo_original_text: string | null;
-	real_taboo_text_change: string | null;
-	faction_code: InvestigatorFaction;
-	sanity: number;
-	health: number;
-	skill_agility: number;
-	skill_combat: number;
-	skill_intellect: number;
-	skill_willpower: number;
-	translations: ArkhamCardsInvestigatorTranslation[];
-	taboo_set: ArkhamCardsTabooSet | null;
-	spoiler: boolean;
+  id: string;
+  code: string;
+  real_text: string;
+  real_name: string;
+  real_subname: string;
+  real_flavor: string;
+  real_traits: string;
+  real_taboo_original_text: string | null;
+  real_taboo_text_change: string | null;
+  faction_code: InvestigatorFaction;
+  sanity: number;
+  health: number;
+  skill_agility: number;
+  skill_combat: number;
+  skill_intellect: number;
+  skill_willpower: number;
+  translations: ArkhamCardsInvestigatorTranslation[];
+  taboo_set: ArkhamCardsTabooSet | null;
+  pack: ArkhamCardsPack;
+  spoiler: boolean;
+};
+
+export type ArkhamCardsPack = {
+  code: string;
+  real_name: string;
+  official: boolean;
+  translations: ArkhamCardsPackTranslation[];
+};
+
+export type ArkhamCardsPackTranslation = {
+  locale: string;
+  name: string;
 };
 
 export type ArkhamCardsInvestigatorTranslation = {
-	locale: string;
-	name: string;
-	subname: string;
-	text: string;
-	traits: string;
-	flavor: string;
+  locale: string;
+  name: string;
+  subname: string;
+  text: string;
+  traits: string;
+  flavor: string;
 
-	taboo_original_text: string;
-	taboo_text_change: string;
+  taboo_original_text: string;
+  taboo_text_change: string;
 };
 
 export type ArkhamCardsTabooSet = {
-	id: number;
-	date: string;
-	code: string;
-	name: string;
+  id: number;
+  date: string;
+  code: string;
+  name: string;
 };
 
 export const loadArkhamCardsInvestigators = async () => {
-	const document = gql`
+  const document = gql`
     {
       all_card(
         where: {
@@ -79,27 +92,37 @@ export const loadArkhamCardsInvestigators = async () => {
           subname
           name
           locale
+          taboo_original_back_text
           taboo_original_text
           taboo_text_change
           text
         }
         taboo_set {
-          id
-          code
           name
           date
+          id
+          code
         }
         real_taboo_original_text
         real_taboo_text_change
+        pack {
+          official
+          real_name
+          code
+          translations {
+            locale
+            name
+          }
+        }
       }
     }
   `;
 
-	type Response = {
-		all_card: ArkhamCardsInvestigator[];
-	};
+  type Response = {
+    all_card: ArkhamCardsInvestigator[];
+  };
 
-	const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
+  const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
 
-	return data.all_card;
+  return data.all_card;
 };
