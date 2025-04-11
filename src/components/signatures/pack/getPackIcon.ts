@@ -17,21 +17,21 @@ export const getPackIcon = (code: string) => {
     return fromStoryCode?.icon;
   }
 
+  const fromStoryInvestigators = getStories().filter(({ investigators }) =>
+    investigators.some(propEq(code, "pack_code"))
+  );
+
+  if (fromStoryInvestigators.length === 1 && fromStoryInvestigators[0]?.icon) {
+    return fromStoryInvestigators[0]?.icon;
+  }
+
   const icon = getIcons().find(propEq(code, "icon"));
 
   if (icon) {
     return code;
   }
 
-  const fromStoryInvestigators = getStories().find(({ investigators }) =>
-    investigators.some(propEq(code, "pack_code"))
-  );
-
-  if (fromStoryInvestigators?.icon) {
-    return fromStoryInvestigators.icon;
-  }
-
   console.log(`pack icon ${code} not found`);
 
-  return code;
+  return "investigator";
 };

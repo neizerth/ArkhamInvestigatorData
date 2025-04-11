@@ -13,7 +13,7 @@ export const getPackTranslation = ({ item, locale }: Options) => {
   const name = translation?.name;
 
   return {
-    locale,
+    locale: name ? locale : "en",
     code,
     name: name || real_name,
     position,

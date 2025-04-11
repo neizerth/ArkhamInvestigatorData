@@ -58,6 +58,7 @@ export type InvestigatorSignatureGroup = {
   subname: string;
   signatures: InvestigatorSignature[];
   skins: InvestigatorSkin[];
+  official: boolean;
 };
 
 export type SignatureCollection = {
