@@ -1,7 +1,8 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { InvestigatorSignature } from "@/model";
 import { getSignatureBase } from "./getSignatureBase";
-import { getPackTranslation } from "./packs";
+import { getPackTranslation } from "./pack";
+import { getCycleTranslation } from "./cycle";
 
 export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
   const translations = new Map<string, InvestigatorSignature[]>();
@@ -22,7 +23,11 @@ export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
         ...cardTranslation,
         official: base.official,
         pack: getPackTranslation({
-          pack: card.pack,
+          item: card.pack,
+          locale,
+        }),
+        cycle: getCycleTranslation({
+          item: card.pack.cycle,
           locale,
         }),
       };

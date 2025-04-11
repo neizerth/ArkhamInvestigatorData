@@ -2,7 +2,8 @@ import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { InvestigatorSignature } from "@/model";
 import { isNotNil } from "ramda";
 import { getSignatureBase } from "./getSignatureBase";
-import { getEnglishPack } from "./packs";
+import { getEnglishPack } from "./pack";
+import { getEnglishCycle } from "./cycle";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
   data
@@ -23,6 +24,7 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
         taboo_original_text: card.real_taboo_original_text,
         taboo_text_change: card.real_taboo_text_change,
         pack: getEnglishPack(card.pack),
+        cycle: getEnglishCycle(card.pack.cycle),
       };
     })
     .filter(isNotNil);

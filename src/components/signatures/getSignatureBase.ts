@@ -1,6 +1,6 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
-import data from "@/data";
-import { omit, propEq } from "ramda";
+import { omit } from "ramda";
+import { getCardSpecial } from "./special";
 
 export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
   const base = omit(
@@ -18,7 +18,7 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
     card
   );
 
-  const special = data.find(propEq(card.code, "code"));
+  const special = getCardSpecial(card);
 
   if (!special) {
     return;

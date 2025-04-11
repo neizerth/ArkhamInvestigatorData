@@ -1,60 +1,6 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
-import type { InvestigatorFaction } from "@/model";
 import { gql, request } from "graphql-request";
-
-export type ArkhamCardsInvestigator = {
-  id: string;
-  code: string;
-  real_text: string;
-  real_name: string;
-  real_subname: string;
-  real_flavor: string;
-  real_traits: string;
-  real_taboo_original_text: string | null;
-  real_taboo_text_change: string | null;
-  faction_code: InvestigatorFaction;
-  sanity: number;
-  health: number;
-  skill_agility: number;
-  skill_combat: number;
-  skill_intellect: number;
-  skill_willpower: number;
-  translations: ArkhamCardsInvestigatorTranslation[];
-  taboo_set: ArkhamCardsTabooSet | null;
-  pack: ArkhamCardsPack;
-  spoiler: boolean;
-};
-
-export type ArkhamCardsPack = {
-  code: string;
-  real_name: string;
-  official: boolean;
-  translations: ArkhamCardsPackTranslation[];
-};
-
-export type ArkhamCardsPackTranslation = {
-  locale: string;
-  name: string;
-};
-
-export type ArkhamCardsInvestigatorTranslation = {
-  locale: string;
-  name: string;
-  subname: string;
-  text: string;
-  traits: string;
-  flavor: string;
-
-  taboo_original_text: string;
-  taboo_text_change: string;
-};
-
-export type ArkhamCardsTabooSet = {
-  id: number;
-  date: string;
-  code: string;
-  name: string;
-};
+import type { ArkhamCardsInvestigator } from "./arkhamCards.types";
 
 export const loadArkhamCardsInvestigators = async () => {
   const document = gql`
@@ -73,6 +19,7 @@ export const loadArkhamCardsInvestigators = async () => {
         }
       ) {
         id
+        alternate_of_code
         real_text
         code
         real_name
@@ -106,12 +53,23 @@ export const loadArkhamCardsInvestigators = async () => {
         real_taboo_original_text
         real_taboo_text_change
         pack {
-          official
           real_name
           code
+          position
+          official
           translations {
             locale
             name
+          }
+          cycle {
+            official
+            real_name
+            code
+            position
+            translations {
+              locale
+              name
+            }
           }
         }
       }
