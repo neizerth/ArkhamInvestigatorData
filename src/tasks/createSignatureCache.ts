@@ -12,4 +12,10 @@ export const createSignatureCache = async () => {
   for (const [locale, data] of signatures) {
     writeJSON(locale, data);
   }
+
+  const locales = [...signatures.keys()];
+
+  console.log("availble locales", locales);
+
+  return locales;
 };

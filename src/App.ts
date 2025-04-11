@@ -23,7 +23,7 @@ export class App {
   async start() {
     await loadMetadata();
     await createImageCache();
-    await createInvestigatorsCache();
-    await createSignatureCache();
+    const languages = await createSignatureCache();
+    await createInvestigatorsCache(languages);
   }
 }

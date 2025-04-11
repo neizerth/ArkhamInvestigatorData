@@ -6,6 +6,7 @@ export type Build = {
   minClientVersion: string;
   data: Investigator[];
   icons: ArkhamDivider.Core["icons"];
+  languages: string[];
 };
 
 export type SignatureBuild = SignatureCollection;

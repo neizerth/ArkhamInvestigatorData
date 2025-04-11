@@ -6,7 +6,7 @@ import type { ArkhamDivider } from "arkham-divider-data";
 
 const readCache = createJSONReader(CACHE_DIR);
 
-export const createInvestigatorsCache = async () => {
+export const createInvestigatorsCache = async (languages: string[] = []) => {
   console.log("creating investigators cache");
 
   const writeJSON = createJSONWriter(DIST_DIR);
@@ -15,6 +15,7 @@ export const createInvestigatorsCache = async () => {
   const build: Build = {
     version: APP_VERSION,
     minClientVersion: MIN_CLIENT_VERSION,
+    languages,
     data,
     icons,
   };
