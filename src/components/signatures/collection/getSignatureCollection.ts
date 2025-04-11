@@ -32,9 +32,8 @@ export const getSignatureCollection = (
   data: InvestigatorSignature[]
 ): SignatureCollection => {
   const taboo = data.filter(hasTaboo);
-  const cards = reject(hasTaboo, data);
 
-  const groupPairs = toPairs(groupBy(getGroupKey, cards));
+  const groupPairs = toPairs(groupBy(getGroupKey, data));
   const unsortedGroups = groupPairs.map(([code, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;

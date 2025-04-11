@@ -14,12 +14,14 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
     return;
   }
 
+  const isTaboo = Boolean(card.taboo_set);
+
   const base = omit(["skins", "variants"], special);
   const { image } = base;
 
   const type: InvestigatorSignatureType = "original";
 
-  if (card.code === code) {
+  if (card.code === code && !isTaboo) {
     return {
       ...base,
       type,
@@ -27,7 +29,9 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
   }
 
   const { variants = [] } = special;
-  const variant = variants.find(propEq(card.code, "code"));
+  const variant = variants.find(
+    ({ code, taboo = false }) => code === card.code && isTaboo === taboo
+  );
 
   if (!variant) {
     return;

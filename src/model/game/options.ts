@@ -11,6 +11,7 @@ export type InvestigatorVariant = InvestigatorVariantIdentity & {
   name: string;
   additionalAction?: boolean;
   abilities?: InvestigatorAbility[];
+  taboo?: boolean;
 };
 
 export type InvestigatorVariantIdentity =
