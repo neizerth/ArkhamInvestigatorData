@@ -28,10 +28,11 @@ export const getSignatureCollection = (
   const unsortedGroups = groupPairs.map(([code, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;
-    const { name, subname, locale, official } = firstSignature;
+    const { id, name, subname, locale, official } = firstSignature;
     const skins = getCollectionSkins(code);
 
     return {
+      id,
       locale,
       code,
       name,

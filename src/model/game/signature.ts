@@ -52,6 +52,7 @@ export type InvestigatorSignatureCycle = {
 };
 
 export type InvestigatorSignatureGroup = {
+  id: string;
   locale: string;
   code: string;
   name: string;
