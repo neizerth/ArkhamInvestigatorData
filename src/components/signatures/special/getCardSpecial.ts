@@ -17,7 +17,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
     return;
   }
 
-  const isTaboo = Boolean(card.taboo_set);
+  const isTaboo = Boolean(card.taboo_set) && card.taboo_set.id !== 0;
 
   const base = omit(["skins", "variants"], special);
   const { image } = base;

@@ -22,9 +22,11 @@ export type InvestigatorSignature = Omit<
     subname: string;
     flavor: string;
     traits: string;
+    taboo: boolean;
     taboo_original_text: string | null;
     taboo_text_change: string | null;
     official: boolean;
+    canonical: boolean;
     pack: InvestigatorSignaturePack;
     cycle: InvestigatorSignatureCycle;
   };
@@ -60,6 +62,7 @@ export type InvestigatorSignatureGroup = {
   signatures: InvestigatorSignature[];
   skins: InvestigatorSkin[];
   official: boolean;
+  canonical: boolean;
   spoiler: boolean;
   faction_code: InvestigatorFaction;
   multiselect: boolean;

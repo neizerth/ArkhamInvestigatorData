@@ -23,10 +23,13 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
   if (!special) {
     return;
   }
-
+  const canonical = card.pack.official;
+  const official = card.pack.cycle.code === "zffg" || canonical;
   return {
     ...base,
     ...special,
-    official: card.pack.official,
+    taboo: card.taboo_set?.id !== 0,
+    canonical,
+    official,
   };
 };
