@@ -7,6 +7,8 @@ import { ascend, groupBy, prop, sortBy, sortWith, toPairs } from "ramda";
 import { getCollectionSkins } from "./getCollectionSkins";
 
 const hasTaboo = ({ taboo_set }: InvestigatorSignature) => taboo_set !== null;
+const getGroupProp = ({ linked_code, code }: InvestigatorSignature) =>
+  linked_code || code;
 
 export const FACTION_ORDER: Record<InvestigatorFaction, number> = {
   guardian: 1,
@@ -22,7 +24,7 @@ export const getSignatureCollection = (
 ): SignatureCollection => {
   const taboo = data.filter(hasTaboo);
 
-  const groupPairs = toPairs(groupBy(prop("name"), data));
+  const groupPairs = toPairs(groupBy(getGroupProp, data));
   const unsortedGroups = groupPairs.map(([_, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;
