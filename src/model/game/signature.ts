@@ -1,5 +1,5 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
-import type { Investigator } from "./common";
+import type { Investigator, InvestigatorFaction } from "./common";
 import type { InvestigatorSkin } from "./options";
 
 export type InvestigatorSignature = Omit<
@@ -60,6 +60,8 @@ export type InvestigatorSignatureGroup = {
   signatures: InvestigatorSignature[];
   skins: InvestigatorSkin[];
   official: boolean;
+  spoiler: boolean;
+  faction_code: InvestigatorFaction;
 };
 
 export type SignatureCollection = {
