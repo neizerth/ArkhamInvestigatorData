@@ -3,12 +3,10 @@ import type {
   InvestigatorSignature,
   SignatureCollection,
 } from "@/model";
-import { ascend, groupBy, sortBy, sortWith, toPairs } from "ramda";
+import { ascend, groupBy, prop, sortBy, sortWith, toPairs } from "ramda";
 import { getCollectionSkins } from "./getCollectionSkins";
 
 const hasTaboo = ({ taboo_set }: InvestigatorSignature) => taboo_set !== null;
-const getGroupKey = ({ code, alternate_of_code }: InvestigatorSignature) =>
-  alternate_of_code || code;
 
 export const FACTION_ORDER: Record<InvestigatorFaction, number> = {
   guardian: 1,
@@ -24,7 +22,7 @@ export const getSignatureCollection = (
 ): SignatureCollection => {
   const taboo = data.filter(hasTaboo);
 
-  const groupPairs = toPairs(groupBy(getGroupKey, data));
+  const groupPairs = toPairs(groupBy(prop("name"), data));
   const unsortedGroups = groupPairs.map(([code, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;

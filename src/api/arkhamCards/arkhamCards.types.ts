@@ -3,6 +3,7 @@ import type { InvestigatorFaction } from "@/model";
 export type ArkhamCardsInvestigator = {
   id: string;
   alternate_of_code: string | null;
+  linked_code: string | null;
   code: string;
   real_text: string;
   real_name: string;

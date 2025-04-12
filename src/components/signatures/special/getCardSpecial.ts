@@ -3,8 +3,11 @@ import data from "@/data";
 import type { InvestigatorSignatureType } from "@/model";
 import { omit, propEq } from "ramda";
 
-const getCode = ({ code, alternate_of_code }: ArkhamCardsInvestigator) =>
-  alternate_of_code || code;
+const getCode = ({
+  code,
+  alternate_of_code,
+  linked_code,
+}: ArkhamCardsInvestigator) => linked_code || alternate_of_code || code;
 
 export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
   const code = getCode(card);
