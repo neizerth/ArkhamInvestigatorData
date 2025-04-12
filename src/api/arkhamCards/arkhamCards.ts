@@ -14,6 +14,7 @@ export const loadArkhamCardsInvestigators = async () => {
               _or: [
                 { taboo_set: { current: { _eq: true } } }
                 { taboo_set_id: { _is_null: true } }
+                { taboo_set_id: { _eq: 0 } }
               ]
             }
           ]
