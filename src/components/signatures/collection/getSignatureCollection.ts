@@ -23,12 +23,13 @@ export const getSignatureCollection = (
   const taboo = data.filter(hasTaboo);
 
   const groupPairs = toPairs(groupBy(prop("name"), data));
-  const unsortedGroups = groupPairs.map(([code, values]) => {
+  const unsortedGroups = groupPairs.map(([_, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;
     const {
       id,
       name,
+      code,
       subname,
       locale,
       official,
