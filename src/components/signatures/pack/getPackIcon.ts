@@ -1,4 +1,4 @@
-import { getIcons, getPacks, getStories } from "@/components/meta";
+import { getIcons, getStories } from "@/components/meta";
 import { propEq } from "ramda";
 
 export const getPackIcon = (code: string) => {
