@@ -10,7 +10,7 @@ export const mapLinkedCode = (
 
   return {
     ...card,
-    linked_code,
+    linked_code: linked_code === card.code ? null : linked_code,
   };
 };
 
