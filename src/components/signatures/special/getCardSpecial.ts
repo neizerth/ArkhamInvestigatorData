@@ -19,7 +19,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
   const base = omit(["skins", "variants"], special);
   const { image } = base;
 
-  const type: InvestigatorSignatureType = "original";
+  const type: InvestigatorSignatureType = "default";
 
   if (card.code === code && !isTaboo) {
     return {

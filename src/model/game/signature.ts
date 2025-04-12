@@ -30,7 +30,7 @@ export type InvestigatorSignature = Omit<
   };
 
 export type InvestigatorSignatureType =
-  | "original"
+  | "default"
   | "custom"
   | "parallel"
   | "book";
@@ -62,6 +62,7 @@ export type InvestigatorSignatureGroup = {
   official: boolean;
   spoiler: boolean;
   faction_code: InvestigatorFaction;
+  multiselect: boolean;
 };
 
 export type SignatureCollection = {

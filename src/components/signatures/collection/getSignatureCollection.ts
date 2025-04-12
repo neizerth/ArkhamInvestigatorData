@@ -28,8 +28,16 @@ export const getSignatureCollection = (
   const unsortedGroups = groupPairs.map(([code, values]) => {
     const signatures = sortBy(({ pack }) => pack.position, values);
     const [firstSignature] = signatures;
-    const { id, name, subname, locale, official, spoiler, faction_code } =
-      firstSignature;
+    const {
+      id,
+      name,
+      subname,
+      locale,
+      official,
+      spoiler,
+      faction_code,
+      multiselect,
+    } = firstSignature;
     const skins = getCollectionSkins(code);
 
     return {
@@ -43,6 +51,7 @@ export const getSignatureCollection = (
       official,
       spoiler,
       faction_code,
+      multiselect: Boolean(multiselect),
     };
   });
 
