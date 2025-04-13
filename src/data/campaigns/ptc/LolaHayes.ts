@@ -41,6 +41,13 @@ export const LolaHayes: Investigator = {
       type: "taboo",
       code: "03006",
       name: "Taboo",
+      abilities: [
+        {
+          id: "role-switch",
+          type: "fast",
+          limitPer: "round",
+        },
+      ],
     },
   ],
 };

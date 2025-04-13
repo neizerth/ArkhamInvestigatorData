@@ -16,13 +16,17 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
       const pack = getEnglishPack(card.pack);
       const cycle = getEnglishCycle(card.pack.cycle);
 
-      const icon = base.type === "taboo" ? "taboo" : pack.icon;
+      const isTaboo = base.type === "taboo";
+
+      const icon = isTaboo ? "taboo" : pack.icon;
+
+      const name = card.real_name;
 
       return {
         ...base,
         locale: "en",
         text: card.real_text,
-        name: card.real_name,
+        name,
         subname: card.real_subname,
         flavor: card.real_flavor,
         traits: card.real_traits,
