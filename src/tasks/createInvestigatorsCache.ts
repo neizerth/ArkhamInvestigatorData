@@ -7,18 +7,18 @@ import type { ArkhamDivider } from "arkham-divider-data";
 const readCache = createJSONReader(CACHE_DIR);
 
 export const createInvestigatorsCache = async (languages: string[] = []) => {
-  console.log("creating investigators cache");
+	console.log("creating investigators cache");
 
-  const writeJSON = createJSONWriter(DIST_DIR);
-  const icons = readCache<ArkhamDivider.Core["icons"]>("icons");
+	const writeJSON = createJSONWriter(DIST_DIR);
+	const icons = readCache<ArkhamDivider.Core["icons"]>("icons");
 
-  const build: Build = {
-    version: APP_VERSION,
-    minClientVersion: MIN_CLIENT_VERSION,
-    languages,
-    data,
-    icons,
-  };
-  writeJSON("investigators", data);
-  writeJSON("build", build);
+	const build: Build = {
+		version: APP_VERSION,
+		minClientVersion: MIN_CLIENT_VERSION,
+		languages,
+		data,
+		icons,
+	};
+	writeJSON("investigators", data);
+	writeJSON("build", build);
 };

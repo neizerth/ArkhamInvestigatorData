@@ -32,9 +32,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
   }
 
   const { variants = [] } = special;
-  const variant = variants.find(
-    ({ code, taboo = false }) => code === card.code && isTaboo === taboo
-  );
+  const variant = variants.find(({ code }) => code === card.code);
 
   if (!variant) {
     return;

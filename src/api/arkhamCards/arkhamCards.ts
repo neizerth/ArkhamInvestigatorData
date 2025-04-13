@@ -1,7 +1,7 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
 import type { ArkhamCardsInvestigator } from "./arkhamCards.types";
-import { mapLinkedCode } from "./mapLinkedCode";
+import { keepLastTabooSignature, mapLinkedCode } from "./format";
 
 export const loadArkhamCardsInvestigators = async () => {
   const document = gql`
@@ -84,5 +84,7 @@ export const loadArkhamCardsInvestigators = async () => {
 
   const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
 
-  return data.all_card.map(mapLinkedCode);
+  const linked = data.all_card.map(mapLinkedCode);
+
+  return linked;
 };

@@ -8,21 +8,21 @@ let stories: ArkhamDivider.Core["stories"];
 let icons: ArkhamDivider.Core["icons"];
 
 export const getStories = () => {
-  if (stories) {
-    return stories;
-  }
+	if (stories) {
+		return stories;
+	}
 
-  stories = read("stories");
+	stories = read("stories");
 
-  return stories;
+	return stories;
 };
 
 export const getIcons = () => {
-  if (icons) {
-    return icons;
-  }
+	if (icons) {
+		return icons;
+	}
 
-  icons = read("icons");
+	icons = read("icons");
 
-  return icons;
+	return icons;
 };

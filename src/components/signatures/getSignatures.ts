@@ -1,30 +1,30 @@
 import { loadArkhamCardsInvestigators } from "@/api/arkhamCards";
 import type { SignatureCollection } from "@/model";
 import { propEq } from "ramda";
-import { getEnglishSignatures } from "./getEnglishSignatures";
 import { getSignatureCollection } from "./collection";
+import { getEnglishSignatures } from "./getEnglishSignatures";
 import { getSignatureTranslations } from "./getSignatureTranslations";
 
 export const getSignatures = async () => {
-  const data = await loadArkhamCardsInvestigators();
+	const data = await loadArkhamCardsInvestigators();
 
-  const en = getEnglishSignatures(data);
-  const signatures = getSignatureTranslations(data);
+	const en = getEnglishSignatures(data);
+	const signatures = getSignatureTranslations(data);
 
-  signatures.set("en", en);
+	signatures.set("en", en);
 
-  const collections = new Map<string, SignatureCollection>();
+	const collections = new Map<string, SignatureCollection>();
 
-  for (const [locale, cards] of signatures) {
-    const allCards = en.map((sourceCard) => {
-      const translatedCard = cards.find(propEq(sourceCard.id, "id"));
-      return translatedCard || sourceCard;
-    });
+	for (const [locale, cards] of signatures) {
+		const allCards = en.map((sourceCard) => {
+			const translatedCard = cards.find(propEq(sourceCard.id, "id"));
+			return translatedCard || sourceCard;
+		});
 
-    const collection = getSignatureCollection(allCards);
+		const collection = getSignatureCollection(allCards);
 
-    collections.set(locale, collection);
-  }
+		collections.set(locale, collection);
+	}
 
-  return collections;
+	return collections;
 };

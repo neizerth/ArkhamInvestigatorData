@@ -15,6 +15,7 @@ export type InvestigatorSignature = Omit<
   | "pack"
 > &
   Omit<Investigator, "variants" | "skins"> & {
+    icon: string;
     type: InvestigatorSignatureType;
     locale: string;
     text: string;
@@ -35,7 +36,8 @@ export type InvestigatorSignatureType =
   | "default"
   | "custom"
   | "parallel"
-  | "book";
+  | "book"
+  | "taboo";
 
 export type InvestigatorSignaturePack = {
   locale: string;

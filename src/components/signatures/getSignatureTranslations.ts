@@ -1,8 +1,8 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { InvestigatorSignature } from "@/model";
+import { getCycleTranslation } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getPackTranslation } from "./pack";
-import { getCycleTranslation } from "./cycle";
 
 export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
   const translations = new Map<string, InvestigatorSignature[]>();
@@ -18,18 +18,25 @@ export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
       if (!translations.has(locale)) {
         translations.set(locale, []);
       }
+
+      const pack = getPackTranslation({
+        item: card.pack,
+        locale,
+      });
+
+      const cycle = getCycleTranslation({
+        item: card.pack.cycle,
+        locale,
+      });
+
+      const icon = base.type === "taboo" ? "taboo" : pack.icon;
       const translatedCard: InvestigatorSignature = {
         ...base,
         ...cardTranslation,
         official: base.official,
-        pack: getPackTranslation({
-          item: card.pack,
-          locale,
-        }),
-        cycle: getCycleTranslation({
-          item: card.pack.cycle,
-          locale,
-        }),
+        pack,
+        cycle,
+        icon,
       };
 
       translations.get(locale).push(translatedCard);

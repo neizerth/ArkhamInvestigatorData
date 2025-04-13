@@ -6,7 +6,9 @@ import type {
 import { ascend, groupBy, prop, sortBy, sortWith, toPairs } from "ramda";
 import { getCollectionSkins } from "./getCollectionSkins";
 
-const hasTaboo = ({ taboo_set }: InvestigatorSignature) => taboo_set !== null;
+const hasTaboo = ({ taboo_set }: InvestigatorSignature) =>
+  taboo_set !== null && taboo_set.id !== 0;
+
 const getGroupProp = ({ linked_code, code }: InvestigatorSignature) =>
   linked_code || code;
 
@@ -38,6 +40,7 @@ export const getSignatureCollection = (
       spoiler,
       faction_code,
       multiselect,
+      canonical,
     } = firstSignature;
     const skins = getCollectionSkins(code);
 
@@ -48,6 +51,7 @@ export const getSignatureCollection = (
       name,
       subname,
       signatures,
+      canonical,
       skins,
       official,
       spoiler,

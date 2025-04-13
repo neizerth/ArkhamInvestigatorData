@@ -1,9 +1,9 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { InvestigatorSignature } from "@/model";
 import { isNotNil } from "ramda";
+import { getEnglishCycle } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getEnglishPack } from "./pack";
-import { getEnglishCycle } from "./cycle";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
   data
@@ -13,6 +13,11 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
       if (!base) {
         return;
       }
+      const pack = getEnglishPack(card.pack);
+      const cycle = getEnglishCycle(card.pack.cycle);
+
+      const icon = base.type === "taboo" ? "taboo" : pack.icon;
+
       return {
         ...base,
         locale: "en",
@@ -23,8 +28,9 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
         traits: card.real_traits,
         taboo_original_text: card.real_taboo_original_text,
         taboo_text_change: card.real_taboo_text_change,
-        pack: getEnglishPack(card.pack),
-        cycle: getEnglishCycle(card.pack.cycle),
+        pack,
+        cycle,
+        icon,
       };
     })
     .filter(isNotNil);

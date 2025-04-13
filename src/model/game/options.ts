@@ -11,12 +11,18 @@ export type InvestigatorVariant = InvestigatorVariantIdentity & {
   name: string;
   additionalAction?: boolean;
   abilities?: InvestigatorAbility[];
-  taboo?: boolean;
 };
 
 export type InvestigatorVariantIdentity =
   | InvestigatorVariantWithPack
-  | InvestigatorCustomVariant;
+  | InvestigatorCustomVariant
+  | InvestigatorDefaultVariant;
+
+export type InvestigatorDefaultVariant = {
+  type: "taboo";
+  code: string;
+  image?: InvestigatorImage;
+};
 
 export type InvestigatorCustomVariant = {
   type: "custom";

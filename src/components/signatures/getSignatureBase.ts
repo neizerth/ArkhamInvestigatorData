@@ -28,7 +28,7 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
   return {
     ...base,
     ...special,
-    taboo: card.taboo_set?.id !== 0,
+    taboo: card.taboo_set?.id !== 0 && card.taboo_set !== null,
     canonical,
     official,
   };
