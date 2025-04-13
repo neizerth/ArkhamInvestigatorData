@@ -28,7 +28,13 @@ export const getSignatureCollection = (
 
   const groupPairs = toPairs(groupBy(getGroupProp, data));
   const unsortedGroups = groupPairs.map(([_, values]) => {
-    const signatures = sortBy(({ cycle }) => cycle.position, values);
+    const signatures = sortWith(
+      [
+        ascend(({ cycle }) => cycle.position),
+        ascend(({ taboo }) => Number(taboo)),
+      ],
+      values
+    );
     const [firstSignature] = signatures;
     const {
       id,
