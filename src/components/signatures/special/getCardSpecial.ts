@@ -27,6 +27,10 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
   if (card.code === code && !isTaboo) {
     return {
       ...base,
+      image: {
+        ...image,
+        id: image.id || code,
+      },
       type,
     };
   }
@@ -38,8 +42,15 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
     return;
   }
 
+  const variantImage = variant?.image
+    ? {
+        ...variant.image,
+        id: variant.code,
+      }
+    : image;
+
   return {
     ...variant,
-    image: variant?.image || image,
+    image: variantImage,
   };
 };
