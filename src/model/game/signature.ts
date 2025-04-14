@@ -14,9 +14,12 @@ export type InvestigatorSignature = Omit<
   | "translations"
   | "pack"
 > &
-  Omit<Investigator, "variants" | "skins"> & {
+  Omit<Investigator, "variants" | "skins" | "image"> & {
     icon: string;
     type: InvestigatorSignatureType;
+    image: Omit<Investigator["image"], "id"> & {
+      id: string;
+    };
     locale: string;
     text: string;
     name: string;

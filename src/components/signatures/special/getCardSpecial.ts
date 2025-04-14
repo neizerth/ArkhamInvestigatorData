@@ -24,13 +24,15 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 
   const type: InvestigatorSignatureType = "default";
 
+  const defaultImage = {
+    ...image,
+    id: image.id || code,
+  };
+
   if (card.code === code && !isTaboo) {
     return {
       ...base,
-      image: {
-        ...image,
-        id: image.id || code,
-      },
+      image: defaultImage,
       type,
     };
   }
@@ -47,7 +49,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
         ...variant.image,
         id: variant.code,
       }
-    : image;
+    : defaultImage;
 
   return {
     ...variant,
