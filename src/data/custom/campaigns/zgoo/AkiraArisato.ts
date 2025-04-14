@@ -1,22 +1,22 @@
 import type { Investigator } from "@/model";
 
 export const AkiraArisato: Investigator = {
-	code: "zgoo_00010",
-	image: {
-		width: 1920,
-		height: 3307,
-		face: {
-			width: 214,
-			height: 280,
-			left: 879,
-			top: 434,
-		},
-	},
-	abilities: [
-		{
-			id: "reaction",
-			type: "reaction",
-			limitPer: "round",
-		},
-	],
+  code: "zgoo_00010",
+  image: {
+    width: 3869,
+    height: 3936,
+    face: {
+      width: 203,
+      height: 316,
+      left: 1731,
+      top: 1613,
+    },
+  },
+  abilities: [
+    {
+      id: "reaction",
+      type: "reaction",
+      limitPer: "round",
+    },
+  ],
 };
