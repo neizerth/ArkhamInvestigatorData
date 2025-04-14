@@ -7,12 +7,12 @@ import { MarionTavares } from "./MarionTavares";
 import { MichaelMcGlen } from "./MichaelMcGlen";
 
 export default [
-	MarionTavares,
-	LuciusGalloway,
-	AgathaCrane.Seeker,
-	AgathaCrane.Mystic,
-	MichaelMcGlen,
-	GloriaGoldberg,
-	GeorgeBarnaby,
-	// LostHomunculus
+  MarionTavares,
+  LuciusGalloway,
+  AgathaCrane.Seeker,
+  AgathaCrane.Mystic,
+  MichaelMcGlen,
+  GloriaGoldberg,
+  GeorgeBarnaby,
+  LostHomunculus,
 ];
