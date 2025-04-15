@@ -23,7 +23,7 @@ export const BobJenkins: Investigator = {
         face: {
           width: 229,
           height: 294,
-          left: 976 - 100,
+          left: 976,
           top: 725,
         },
       },
