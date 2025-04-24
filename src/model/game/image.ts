@@ -1,24 +1,24 @@
 import type { Box } from "../dimensions";
 
 export type InvestigatorImageBox = Box & {
-  top: number;
-  left: number;
+	top: number;
+	left: number;
 };
 
 export type InvestigatorImageSource = Box & {
-  type: "mini" | "full";
-  id: string;
-  face: InvestigatorImageBox;
+	type: "mini" | "full";
+	id: string;
+	face: InvestigatorImageBox;
 };
 
 export type InvestigatorImageMedia = InvestigatorImageBox & {
-  source?: InvestigatorImageSource;
-  primary?: boolean;
-  type?: "face" | "body";
+	source?: InvestigatorImageSource;
+	primary?: boolean;
+	type?: "face" | "body";
 };
 
 export type InvestigatorImage = Box & {
-  id?: string;
-  face: InvestigatorImageBox;
-  media?: InvestigatorImageMedia[];
+	id?: string;
+	face: InvestigatorImageBox;
+	media?: InvestigatorImageMedia[];
 };

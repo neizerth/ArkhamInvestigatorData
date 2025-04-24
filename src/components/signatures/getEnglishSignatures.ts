@@ -6,35 +6,35 @@ import { getSignatureBase } from "./getSignatureBase";
 import { getEnglishPack } from "./pack";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
-  data
-    .map((card): InvestigatorSignature => {
-      const base = getSignatureBase(card);
+	data
+		.map((card): InvestigatorSignature => {
+			const base = getSignatureBase(card);
 
-      if (!base) {
-        return;
-      }
-      const pack = getEnglishPack(card.pack);
-      const cycle = getEnglishCycle(card.pack.cycle);
+			if (!base) {
+				return;
+			}
+			const pack = getEnglishPack(card.pack);
+			const cycle = getEnglishCycle(card.pack.cycle);
 
-      const isTaboo = base.type === "taboo";
+			const isTaboo = base.type === "taboo";
 
-      const icon = isTaboo ? "taboo" : pack.icon;
+			const icon = isTaboo ? "taboo" : pack.icon;
 
-      const name = card.real_name;
+			const name = card.real_name;
 
-      return {
-        ...base,
-        locale: "en",
-        text: card.real_text,
-        name,
-        subname: card.real_subname,
-        flavor: card.real_flavor,
-        traits: card.real_traits,
-        taboo_original_text: card.real_taboo_original_text,
-        taboo_text_change: card.real_taboo_text_change,
-        pack,
-        cycle,
-        icon,
-      };
-    })
-    .filter(isNotNil);
+			return {
+				...base,
+				locale: "en",
+				text: card.real_text,
+				name,
+				subname: card.real_subname,
+				flavor: card.real_flavor,
+				traits: card.real_traits,
+				taboo_original_text: card.real_taboo_original_text,
+				taboo_text_change: card.real_taboo_text_change,
+				pack,
+				cycle,
+				icon,
+			};
+		})
+		.filter(isNotNil);

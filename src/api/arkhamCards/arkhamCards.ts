@@ -4,7 +4,7 @@ import type { ArkhamCardsInvestigator } from "./arkhamCards.types";
 import { keepLastTabooSignature, mapLinkedCode } from "./format";
 
 export const loadArkhamCardsInvestigators = async () => {
-  const document = gql`
+	const document = gql`
     {
       all_card(
         where: {
@@ -78,13 +78,13 @@ export const loadArkhamCardsInvestigators = async () => {
     }
   `;
 
-  type Response = {
-    all_card: ArkhamCardsInvestigator[];
-  };
+	type Response = {
+		all_card: ArkhamCardsInvestigator[];
+	};
 
-  const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
+	const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
 
-  const linked = data.all_card.map(mapLinkedCode);
+	const linked = data.all_card.map(mapLinkedCode);
 
-  return linked;
+	return linked;
 };
