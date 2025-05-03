@@ -18,6 +18,7 @@ export const CarsonSinclair: Investigator = {
       icon: "investigator",
       type: "special-action",
       limitPer: "round",
+      personalUse: false,
       additionalAction: true,
       perInvestigator: true,
     },

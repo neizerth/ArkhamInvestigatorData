@@ -24,6 +24,7 @@ export type InvestigatorAbility = InvestigatorAbilityType & {
   limitPer?: LimitType | LimitType[];
   perInvestigator?: boolean;
   additionalAction?: boolean;
+  personalUse?: boolean;
   limitCount?: number;
   enabledIf?: string;
   onUse?: InvestigatorAbilityUse[];
