@@ -8,7 +8,7 @@ export const Sarmentus: Investigator = {
     face: {
       width: 199,
       height: 223,
-      left: 745,
+      left: 745 - 200,
       top: 812,
     },
   },

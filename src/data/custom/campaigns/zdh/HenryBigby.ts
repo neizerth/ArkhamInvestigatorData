@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const HenryBigby: Investigator = {
   code: "zdh_00012",
+  variantName: "Henry Bigby",
   image: {
     width: 1351,
     height: 1499,

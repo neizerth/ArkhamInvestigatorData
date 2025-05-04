@@ -2,6 +2,7 @@ import type { Investigator } from "@/model";
 
 export const BeastWithin: Investigator = {
   code: "zdh_00013",
+  variantName: "Beast Within",
   image: {
     width: 2000,
     height: 2000,
