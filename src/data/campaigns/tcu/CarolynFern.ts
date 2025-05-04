@@ -50,12 +50,12 @@ export const CarolynFern: Investigator = {
       name: "Hypnotic Therapy",
       image: {
         width: 2436,
-        height: 3328,
+        height: 4188,
         face: {
-          width: 195,
-          height: 340,
-          left: 1197,
-          top: 1514,
+          width: 174,
+          height: 223,
+          left: 1206,
+          top: 1601,
         },
       },
     },
