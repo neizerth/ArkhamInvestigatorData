@@ -22,8 +22,8 @@ export const PatriceHathaway: Investigator = {
         face: {
           width: 86,
           height: 136,
-          left: 1171 + 200,
-          top: 1328 - 300,
+          left: 1171 + 150,
+          top: 1328 + 300,
         },
       },
     },
