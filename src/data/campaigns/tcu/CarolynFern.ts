@@ -4,13 +4,13 @@ import { image } from "../tdc/AgathaCrane";
 export const CarolynFern: Investigator = {
   code: "05001",
   image: {
-    width: 1770,
-    height: 2130,
+    width: 3160,
+    height: 3510,
     face: {
-      width: 201,
-      height: 296,
-      left: 648,
-      top: 730,
+      width: 208,
+      height: 273,
+      left: 1464,
+      top: 1547,
     },
   },
   variants: [
