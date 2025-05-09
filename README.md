@@ -4,13 +4,17 @@
 
 Create base versions:
 
+1. full
+2. mini
+3. square
+
 ### full
 
-1. Recommended size: 2000x2000
+1. Minimum size: 2000x2000
 2. It's good if investigator face will be in center of the image
 3. Make the face height as minimum 10-15% of the image height
 
-### mimi, square
+### mini, square
 
 1. Mini size: 484x744
 2. Square size: 484x484
