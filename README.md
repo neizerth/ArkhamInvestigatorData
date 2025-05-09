@@ -22,3 +22,7 @@ Create base versions:
 ### grayscale
 
 Make grayscale version of all sizes
+
+### Publish
+
+Next, open issue and link those images
