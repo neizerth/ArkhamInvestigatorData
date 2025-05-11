@@ -1,6 +1,6 @@
 # Arkham Investigator Data Repository
 
-## How to add new image
+## How to add a new image
 
 Create base versions:
 
