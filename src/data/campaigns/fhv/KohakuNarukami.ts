@@ -3,13 +3,13 @@ import type { Investigator } from "@/model";
 export const KohakuNarukami: Investigator = {
   code: "10012",
   image: {
-    width: 2500,
-    height: 2109,
+    width: 2874,
+    height: 2800,
     face: {
-      width: 238,
-      height: 321,
-      left: 1110,
-      top: 933,
+      width: 208,
+      height: 285,
+      left: 1351,
+      top: 1115,
     },
   },
   abilities: [
