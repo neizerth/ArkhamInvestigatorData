@@ -1,5 +1,5 @@
 import { APP_VERSION, CACHE_DIR, DIST_DIR, MIN_CLIENT_VERSION } from "@/config";
-import data from "@/data";
+import { signatures as data } from "@/data";
 import { createJSONReader, createJSONWriter } from "@/features";
 import type { Build } from "@/model";
 import type { ArkhamDivider } from "arkham-divider-data";
