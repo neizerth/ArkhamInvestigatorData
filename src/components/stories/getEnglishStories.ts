@@ -4,31 +4,32 @@ import { getStories } from "../meta";
 import { getReferenceCards } from "./getReferenceCards";
 
 export const getEnglishStories = () => {
-	const data = getStories();
+  const data = getStories();
 
-	return data
-		.map((story): Story | null => {
-			const { scenarios = [], scenario } = story;
+  return data
+    .map((story): Story | null => {
+      const { scenarios = [], scenario } = story;
 
-			const storyScenarios = [...scenarios, scenario].filter(isNotNil);
+      const storyScenarios = [...scenarios, scenario].filter(isNotNil);
 
-			if (storyScenarios.length === 0) {
-				return null;
-			}
+      if (storyScenarios.length === 0) {
+        return null;
+      }
 
-			const props = pick(["code", "name", "type", "icon"], story);
+      const props = pick(["code", "name", "type", "icon"], story);
 
-			const referenceCards = getReferenceCards(story);
+      const referenceCards = getReferenceCards(story);
 
-			if (referenceCards.length === 0) {
-				return null;
-			}
+      if (referenceCards.length === 0) {
+        return null;
+      }
 
-			return {
-				...props,
-				official: story.is_official,
-				referenceCards,
-			};
-		})
-		.filter(isNotNil);
+      return {
+        ...props,
+        locale: "en",
+        official: story.is_official,
+        referenceCards,
+      };
+    })
+    .filter(isNotNil);
 };

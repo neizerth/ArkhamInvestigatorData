@@ -1,62 +1,69 @@
 import type { Story } from "@/model/game/story";
 import { propEq } from "ramda";
 import {
-	getArkhamCardsCycles,
-	getArkhamCardsPacks,
-	getArkhamCardsReferenceCards,
+  getArkhamCardsCycles,
+  getArkhamCardsPacks,
+  getArkhamCardsReferenceCards,
 } from "../meta";
 
 type Options = {
-	locale: string;
-	stories: Story[];
+  locale: string;
+  stories: Story[];
 };
 export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
-	const references = getArkhamCardsReferenceCards();
-	const packs = getArkhamCardsPacks();
-	const cycles = getArkhamCardsCycles();
+  const references = getArkhamCardsReferenceCards();
+  const packs = getArkhamCardsPacks();
+  const cycles = getArkhamCardsCycles();
 
-	const translateName = (story: Story) => {
-		const cycle = cycles.find(propEq(story.name, "real_name"));
+  const translateName = (story: Story) => {
+    const cycle = cycles.find(propEq(story.name, "real_name"));
 
-		if (cycle) {
-			return cycle.translations.find(propEq(locale, "locale"))?.name;
-		}
+    if (cycle) {
+      return cycle.translations.find(propEq(locale, "locale"))?.name;
+    }
 
-		const pack = packs.find(propEq(story.name, "real_name"));
+    const pack = packs.find(propEq(story.name, "real_name"));
 
-		if (pack) {
-			return pack.translations.find(propEq(locale, "locale"))?.name;
-		}
+    if (pack) {
+      return pack.translations.find(propEq(locale, "locale"))?.name;
+    }
 
-		const codeCycle = cycles.find(propEq(story.code, "code"));
+    const codeCycle = cycles.find(propEq(story.code, "code"));
 
-		if (codeCycle) {
-			return codeCycle.translations.find(propEq(locale, "locale"))?.name;
-		}
+    if (codeCycle) {
+      return codeCycle.translations.find(propEq(locale, "locale"))?.name;
+    }
 
-		console.log("pack not found", story.name);
-	};
+    console.log("pack not found", story.name);
+  };
 
-	const translateReferences = (story: Story) => {
-		return story.referenceCards.map((ref) => {
-			const sourceRef = references.find(propEq(ref.code, "code"));
-			const translation =
-				sourceRef?.translations?.find(propEq(locale, "locale")) || {};
+  const translateReferences = (story: Story) => {
+    return story.referenceCards.map((ref) => {
+      const sourceRef = references.find(propEq(ref.code, "code"));
+      const translation = sourceRef?.translations?.find(
+        propEq(locale, "locale")
+      );
 
-			return {
-				...ref,
-				...translation,
-			};
-		});
-	};
+      if (!translation) {
+        return ref;
+      }
 
-	return stories.map((story): Story => {
-		const name = translateName(story) || story.name;
-		const referenceCards = translateReferences(story);
-		return {
-			...story,
-			name,
-			referenceCards,
-		};
-	});
+      return {
+        ...ref,
+        ...translation,
+        locale: translation.name === ref.name ? "en" : locale,
+      };
+    });
+  };
+
+  return stories.map((story): Story => {
+    const name = translateName(story) || story.name;
+    const referenceCards = translateReferences(story);
+    return {
+      ...story,
+      name,
+      referenceCards,
+      locale: name === story.name ? "en" : locale,
+    };
+  });
 };
