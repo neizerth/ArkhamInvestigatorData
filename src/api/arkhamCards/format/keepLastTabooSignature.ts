@@ -1,5 +1,5 @@
 import { groupBy, init, last, prop, sortBy, toPairs } from "ramda";
-import type { ArkhamCardsInvestigator } from "../arkhamCards.types";
+import type { ArkhamCardsInvestigator } from "../model";
 
 export const keepLastTabooSignature = (data: ArkhamCardsInvestigator[]) => {
 	const tabooCards = data.filter(({ taboo_set }) => taboo_set?.id !== 0);

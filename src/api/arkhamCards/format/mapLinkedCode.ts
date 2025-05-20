@@ -1,5 +1,5 @@
 import { ascend, prop, propEq, sortBy, sortWith } from "ramda";
-import type { ArkhamCardsInvestigator } from "../arkhamCards.types";
+import type { ArkhamCardsInvestigator } from "../model";
 
 export const mapLinkedCode = (
 	card: ArkhamCardsInvestigator,

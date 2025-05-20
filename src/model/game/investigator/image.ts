@@ -1,4 +1,4 @@
-import type { Box } from "../dimensions";
+import type { Box } from "../../dimensions";
 
 export type InvestigatorImageBox = Box & {
 	top: number;

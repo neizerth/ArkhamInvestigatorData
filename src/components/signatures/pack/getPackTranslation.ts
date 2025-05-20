@@ -1,9 +1,9 @@
-import type { ArkhamCardsPack } from "@/api/arkhamCards";
+import type { ArkhamCardsFullPack } from "@/api/arkhamCards";
 import { propEq } from "ramda";
 import { getPackIcon } from "./getPackIcon";
 
 type Options = {
-	item: ArkhamCardsPack;
+	item: ArkhamCardsFullPack;
 	locale: string;
 };
 

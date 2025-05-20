@@ -1,4 +1,5 @@
 import type { InvestigatorFaction } from "@/model";
+import type { ArkhamCardsFullPack, ArkhamCardsTabooSet } from "./common";
 
 export type ArkhamCardsInvestigator = {
 	id: string;
@@ -21,35 +22,8 @@ export type ArkhamCardsInvestigator = {
 	skill_willpower: number;
 	translations: ArkhamCardsInvestigatorTranslation[];
 	taboo_set: ArkhamCardsTabooSet | null;
-	pack: ArkhamCardsPack;
+	pack: ArkhamCardsFullPack;
 	spoiler: boolean;
-};
-
-export type ArkhamCardsPack = {
-	code: string;
-	position: number;
-	real_name: string;
-	official: boolean;
-	translations: ArkhamCardsPackTranslation[];
-	cycle: ArkhamCardsCycle;
-};
-
-export type ArkhamCardsCycle = {
-	code: string;
-	position: number;
-	real_name: string;
-	official: boolean;
-	translations: ArkhamCardsPackTranslation[];
-};
-
-export type ArkhamCardsPackTranslation = {
-	locale: string;
-	name: string;
-};
-
-export type ArkhamCardsCycleTranslation = {
-	locale: string;
-	name: string;
 };
 
 export type ArkhamCardsInvestigatorTranslation = {
@@ -62,11 +36,4 @@ export type ArkhamCardsInvestigatorTranslation = {
 
 	taboo_original_text: string;
 	taboo_text_change: string;
-};
-
-export type ArkhamCardsTabooSet = {
-	id: number;
-	date: string;
-	code: string;
-	name: string;
 };

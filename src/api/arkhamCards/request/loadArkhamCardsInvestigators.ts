@@ -1,7 +1,7 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
-import type { ArkhamCardsInvestigator } from "./arkhamCards.types";
-import { keepLastTabooSignature, mapLinkedCode } from "./format";
+import { mapLinkedCode } from "../format";
+import type { ArkhamCardsInvestigator } from "../model";
 
 export const loadArkhamCardsInvestigators = async () => {
 	const document = gql`

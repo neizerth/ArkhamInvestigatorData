@@ -1,5 +1,5 @@
 import { createImageCache, createInvestigatorsCache } from "./tasks";
-import { createSignatureCache } from "./tasks/createSignatureCache";
+import { createDataCache } from "./tasks/createSignatureCache";
 import { loadMetadata } from "./tasks/loadMetadata";
 import { prepareDirectories } from "./tasks/prepareDirectories";
 
@@ -14,8 +14,8 @@ export class App {
 				return await createImageCache();
 			case "cache":
 				return await createInvestigatorsCache();
-			case "signature":
-				return await createSignatureCache();
+			case "data":
+				return await createDataCache();
 			default:
 				return await this.start();
 		}
@@ -23,7 +23,7 @@ export class App {
 	async start() {
 		await loadMetadata();
 		await createImageCache();
-		const languages = await createSignatureCache();
+		const languages = await createDataCache();
 		await createInvestigatorsCache(languages);
 	}
 }

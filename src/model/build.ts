@@ -1,5 +1,6 @@
 import type { ArkhamDivider } from "arkham-divider-data";
 import type { Investigator, SignatureCollection } from "./game";
+import type { Story } from "./game/story";
 
 export type Build = {
 	version: string;
@@ -9,4 +10,6 @@ export type Build = {
 	languages: string[];
 };
 
-export type SignatureBuild = SignatureCollection;
+export type SignatureBuild = SignatureCollection & {
+	stories: Story[];
+};

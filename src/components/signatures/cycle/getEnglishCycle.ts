@@ -1,4 +1,4 @@
-import type { ArkhamCardsCycle, ArkhamCardsPack } from "@/api/arkhamCards";
+import type { ArkhamCardsCycle, ArkhamCardsFullPack } from "@/api/arkhamCards";
 import type { InvestigatorSignatureCycle } from "@/model";
 import { getCycleIcon } from "./getCycleIcon";
 

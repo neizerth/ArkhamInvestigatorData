@@ -7,3 +7,5 @@ export type WithCode = {
 export type WithId = {
 	id: string;
 };
+
+export type Platform = "ios" | "android" | "web";
