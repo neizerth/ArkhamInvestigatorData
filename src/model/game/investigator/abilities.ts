@@ -1,4 +1,4 @@
-import type { ChaosBagToken } from "./chaosBag";
+import type { ChaosBagToken } from "../chaosBag";
 import type { Stat } from "./entities";
 
 export type LimitType =

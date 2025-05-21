@@ -1,6 +1,6 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { Investigator, InvestigatorFaction } from "./common";
-import type { InvestigatorSkin } from "./investigator/options";
+import type { InvestigatorSkin } from "./options";
 
 export type InvestigatorSignature = Omit<
 	ArkhamCardsInvestigator,
