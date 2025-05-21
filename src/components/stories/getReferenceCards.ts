@@ -2,6 +2,7 @@ import { getArkhamCardsReferenceCards } from "@/components/meta";
 import type { ReferenceCard } from "@/model";
 import type { ArkhamDivider } from "arkham-divider-data";
 import { ascend, isNotNil, prop } from "ramda";
+import { getEncounterSetIcon } from "../icons";
 
 type Story = ArkhamDivider.Core["stories"][number];
 
@@ -21,6 +22,7 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
         name: card.real_name,
         text: card.real_text,
         back_text: card.real_back_text,
+        icon: getEncounterSetIcon(card.encounter_code),
       };
     })
     .filter((ref) => {
