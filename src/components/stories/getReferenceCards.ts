@@ -22,6 +22,7 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
         name: card.real_name,
         text: card.real_text,
         back_text: card.real_back_text,
+        locale: "en",
         icon: getEncounterSetIcon(card.encounter_code),
       };
     })
