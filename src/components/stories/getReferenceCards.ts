@@ -28,8 +28,8 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
         return false;
       }
       const { text, back_text } = ref;
-      const [title] = ref.text.split("\n");
-      const [back_title] = ref.back_text.split("\n");
+      const [title] = text.split("\n");
+      const [back_title] = back_text.split("\n");
 
       const includeMode = (text: string) =>
         ["Easy", "Standard", "Hard", "Expert"].some((mode) =>
