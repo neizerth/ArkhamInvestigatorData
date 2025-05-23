@@ -8,7 +8,7 @@ export const FatherMateo: Investigator = {
     face: {
       width: 394,
       height: 445,
-      left: 912 + 350,
+      left: 912 + 300,
       top: 1405,
     },
   },
