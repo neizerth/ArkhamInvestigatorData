@@ -23,7 +23,7 @@ export const TonyMorgan: Investigator = {
         face: {
           width: 204,
           height: 215,
-          left: 858 - 200,
+          left: 858 - 150,
           top: 879,
         },
       },
