@@ -16,7 +16,7 @@ export const TonyMorgan: Investigator = {
   skins: [
     {
       id: "06003_colt",
-      name: ".38 Long Colt",
+      name: "Tony's .38 Long Colt",
       image: {
         width: 1745,
         height: 2109,
