@@ -70,6 +70,7 @@ export type InvestigatorSignatureGroup = {
   official: boolean;
   canonical: boolean;
   spoiler: boolean;
+  custom: boolean;
   faction_code: InvestigatorFaction;
   multiselect: boolean;
 };
