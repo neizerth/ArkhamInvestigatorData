@@ -1,6 +1,6 @@
 import type { Investigator } from "@/model";
 
-export const YithianA: Investigator = {
+export const Yithian: Investigator = {
   code: "zhm_000001",
   image: {
     id: "04244",
