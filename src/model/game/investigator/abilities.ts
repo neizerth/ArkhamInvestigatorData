@@ -23,7 +23,7 @@ export type InvestigatorAbilityType =
   | {
       type: "counter";
       icon?: string;
-      intitalValue?: number;
+      defaultValue?: number;
       min?: number;
       max?: number;
     };

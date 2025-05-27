@@ -16,7 +16,7 @@ export const PrestonFairmont: Investigator = {
     {
       id: "family-inheritance",
       type: "counter",
-      intitalValue: 4,
+      defaultValue: 4,
     },
   ],
 };
