@@ -13,6 +13,8 @@ export type InvestigatorAbilityType =
   | {
       type: "reaction" | "fast" | "permanent";
       icon?: string;
+      effectType?: "permanent" | "instant";
+      effect?: string;
     }
   | {
       type: "action" | "special-action";
@@ -24,15 +26,7 @@ export type InvestigatorAbilityType =
       intitalValue?: number;
       min?: number;
       max?: number;
-    }
-  | {
-      type: "effect";
-      disabled?: boolean;
-      icon: string;
-      effectType: "permanent" | "instant";
-      effect: string;
     };
-
 export type InvestigatorAbility = InvestigatorAbilityType & {
   id: string;
   limitPer?: LimitType | LimitType[];
@@ -42,6 +36,7 @@ export type InvestigatorAbility = InvestigatorAbilityType & {
   limitCount?: number;
   enabledIf?: string;
   onUse?: InvestigatorAbilityUse[];
+  disabled?: boolean;
 };
 export type InvestigatorAbilityUse = {
   phase?: "upkeep";
