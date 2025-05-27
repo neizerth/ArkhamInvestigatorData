@@ -29,4 +29,12 @@ export const TonyMorgan: Investigator = {
       },
     },
   ],
+  abilities: [
+    {
+      id: "bounty-contracts",
+      type: "counter",
+      intitalValue: 6,
+      max: 6,
+    },
+  ],
 };
