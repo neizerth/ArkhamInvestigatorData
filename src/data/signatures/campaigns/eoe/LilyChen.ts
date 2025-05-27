@@ -19,6 +19,7 @@ export const LilyChen: Investigator = {
       effectType: "permanent",
       type: "effect",
       effect: "willpower + 1",
+      disabled: true,
     },
     {
       id: "quiescence-of-thought",
@@ -26,6 +27,7 @@ export const LilyChen: Investigator = {
       effectType: "permanent",
       type: "effect",
       effect: "intellect + 1",
+      disabled: true,
     },
     {
       id: "prescience-of-fate",
@@ -33,6 +35,7 @@ export const LilyChen: Investigator = {
       effectType: "permanent",
       type: "effect",
       effect: "combat + 1",
+      disabled: true,
     },
     {
       id: "balance-of-body",
@@ -40,6 +43,7 @@ export const LilyChen: Investigator = {
       effectType: "permanent",
       type: "effect",
       effect: "agility + 1",
+      disabled: true,
     },
   ],
 };

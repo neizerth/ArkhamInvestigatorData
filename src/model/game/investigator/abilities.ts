@@ -27,6 +27,7 @@ export type InvestigatorAbilityType =
     }
   | {
       type: "effect";
+      disabled?: boolean;
       icon: string;
       effectType: "permanent" | "instant";
       effect: string;
