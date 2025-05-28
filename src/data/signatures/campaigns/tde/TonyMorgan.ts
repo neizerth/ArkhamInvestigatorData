@@ -32,6 +32,7 @@ export const TonyMorgan: Investigator = {
   abilities: [
     {
       id: "bounty-contracts",
+      name: "Bounty Contracts",
       type: "counter",
       defaultValue: 6,
       max: 6,
