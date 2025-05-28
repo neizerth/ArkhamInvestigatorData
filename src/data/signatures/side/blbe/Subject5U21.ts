@@ -20,6 +20,7 @@ export const Subject5U21: Investigator = {
     },
     {
       id: "ravenous",
+      name: "Ravenous Tracker",
       type: "counter",
     },
   ],
