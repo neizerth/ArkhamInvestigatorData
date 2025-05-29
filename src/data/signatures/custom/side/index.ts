@@ -4,4 +4,4 @@ import zhm from "./zhm";
 import zinv from "./zinv";
 import zjc from "./zjc";
 
-export default [...zez, ...zjc, ...zinv, ...zcu, ...zhm];
+export default [...zez, ...zjc, ...zinv, ...zcu];
