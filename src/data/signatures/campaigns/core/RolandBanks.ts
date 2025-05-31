@@ -7,10 +7,10 @@ export const RolandBanks: Investigator = {
 		width: 2730,
 		height: 3412,
 		face: {
-			width: 414,
-			height: 429,
-			left: 1252 + 250,
-			top: 1866,
+			width: 358,
+			height: 379,
+			left: 1286,
+			top: 1881,
 		},
 	},
 	variants: [
