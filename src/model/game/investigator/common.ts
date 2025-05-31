@@ -2,7 +2,7 @@ import type { InvestigatorAbility } from "./abilities";
 import type { InvestigatorImage } from "./image";
 import type { InvestigatorSkin, InvestigatorVariant } from "./options";
 
-export type Investigator = {
+export type Investigator = InvestigatorStats & {
 	code: string;
 	previewId?: string;
 	variantName?: string;
@@ -15,6 +15,15 @@ export type Investigator = {
 	roles?: InvestigatorFaction[];
 	spoiler?: boolean;
 };
+
+export type InvestigatorStats = {
+	health?: number
+	sanity?: number
+	skill_agility?: number
+	skill_combat?: number
+	skill_intellect?: number
+	skill_willpower?: number
+}
 
 export type InvestigatorFaction =
 	| "guardian"

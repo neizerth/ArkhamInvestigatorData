@@ -14,6 +14,10 @@ export const ShatteredSelf: Investigator = {
 			top: 465,
 		},
 	},
+	skill_agility: 0,
+	skill_combat: 0,
+	skill_intellect: 0,
+	skill_willpower: 0,
 	abilities: [
 		{
 			id: "reaction",
