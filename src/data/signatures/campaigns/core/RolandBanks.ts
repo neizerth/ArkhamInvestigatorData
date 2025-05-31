@@ -7,9 +7,9 @@ export const RolandBanks: Investigator = {
 		width: 2730,
 		height: 3412,
 		face: {
-			width: 374,
-			height: 423,
-			left: 1252,
+			width: 414,
+			height: 429,
+			left: 1252 + 250,
 			top: 1866,
 		},
 	},
