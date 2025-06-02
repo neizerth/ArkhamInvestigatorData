@@ -2,11 +2,11 @@ import type {
 	ArkhamCardsInvestigator,
 	ArkhamCardsInvestigatorGender,
 } from "@/api/arkhamCards";
-import type { InvestigatorGender } from "@/model";
 import { omit } from "ramda";
 import { getCardSpecial } from "./special";
+import { InvestigatorSignatureGender } from "@/model";
 
-const genderMapping: Record<ArkhamCardsInvestigatorGender, InvestigatorGender> =
+const genderMapping: Record<ArkhamCardsInvestigatorGender, InvestigatorSignatureGender> =
 	{
 		f: "female",
 		m: "male",
