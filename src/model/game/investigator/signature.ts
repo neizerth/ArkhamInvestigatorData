@@ -38,6 +38,7 @@ export type InvestigatorSignature = Omit<
 		canonical: boolean;
 		pack: InvestigatorSignaturePack;
 		cycle: InvestigatorSignatureCycle;
+		gender: InvestigatorSignatureGender;
 	};
 
 export type InvestigatorSignatureType =
