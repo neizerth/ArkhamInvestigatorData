@@ -9,13 +9,13 @@ let stories: ArkhamDivider.Core["stories"];
 let icons: ArkhamDivider.Core["icons"];
 
 export const getStories = getCachedMetadata<ArkhamDivider.Core["stories"]>(
-  "stories",
-  []
+	"stories",
+	[],
 );
 export const getIcons = getCachedMetadata<ArkhamDivider.Core["icons"]>(
-  "icons",
-  []
+	"icons",
+	[],
 );
 export const getEncounterSets = getCachedMetadata<
-  ArkhamDivider.Core["encounterSets"]
+	ArkhamDivider.Core["encounterSets"]
 >("encounters", []);

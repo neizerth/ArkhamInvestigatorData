@@ -1,10 +1,13 @@
 import type { InvestigatorFaction } from "@/model";
 import type { ArkhamCardsFullPack, ArkhamCardsTabooSet } from "./common";
 
+export type ArkhamCardsInvestigatorGender = "m" | "f" | "nb";
+
 export type ArkhamCardsInvestigator = {
 	id: string;
 	alternate_of_code: string | null;
 	linked_code: string | null;
+	gender: ArkhamCardsInvestigatorGender;
 	code: string;
 	real_text: string;
 	real_name: string;

@@ -2,6 +2,8 @@ import type { InvestigatorAbility } from "./abilities";
 import type { InvestigatorImage } from "./image";
 import type { InvestigatorSkin, InvestigatorVariant } from "./options";
 
+export type InvestigatorGender = "male" | "female" | "non-binary";
+
 export type Investigator = InvestigatorStats & {
 	code: string;
 	previewId?: string;
@@ -14,16 +16,17 @@ export type Investigator = InvestigatorStats & {
 	abilities?: InvestigatorAbility[];
 	roles?: InvestigatorFaction[];
 	spoiler?: boolean;
+	gender: InvestigatorGender;
 };
 
 export type InvestigatorStats = {
-	health?: number
-	sanity?: number
-	skill_agility?: number
-	skill_combat?: number
-	skill_intellect?: number
-	skill_willpower?: number
-}
+	health?: number;
+	sanity?: number;
+	skill_agility?: number;
+	skill_combat?: number;
+	skill_intellect?: number;
+	skill_willpower?: number;
+};
 
 export type InvestigatorFaction =
 	| "guardian"

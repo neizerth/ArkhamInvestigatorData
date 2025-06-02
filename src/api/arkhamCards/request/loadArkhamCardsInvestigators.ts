@@ -23,6 +23,7 @@ export const loadArkhamCardsInvestigators = async () => {
         id
         alternate_of_code
         real_text
+        gender
         code
         real_name
         real_subname
