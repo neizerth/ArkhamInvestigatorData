@@ -1,3 +1,4 @@
+import type { ChaosBagToken } from "../chaosBag";
 import type { ReferenceCard } from "./reference";
 
 export type Story = {
@@ -8,4 +9,11 @@ export type Story = {
 	type: string;
 	official: boolean;
 	referenceCards: ReferenceCard[];
+	difficultyLevels: StoryDifficulty[];
+};
+
+export type StoryDifficulty = {
+	id: string;
+	text: string;
+	tokens: ChaosBagToken[];
 };

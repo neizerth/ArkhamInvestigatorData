@@ -2,16 +2,18 @@ import type {
 	ArkhamCardsInvestigator,
 	ArkhamCardsInvestigatorGender,
 } from "@/api/arkhamCards";
+import type { InvestigatorSignatureGender } from "@/model";
 import { omit } from "ramda";
 import { getCardSpecial } from "./special";
-import { InvestigatorSignatureGender } from "@/model";
 
-const genderMapping: Record<ArkhamCardsInvestigatorGender, InvestigatorSignatureGender> =
-	{
-		f: "female",
-		m: "male",
-		nb: "non-binary",
-	};
+const genderMapping: Record<
+	ArkhamCardsInvestigatorGender,
+	InvestigatorSignatureGender
+> = {
+	f: "female",
+	m: "male",
+	nb: "non-binary",
+};
 
 export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 	const base = omit(

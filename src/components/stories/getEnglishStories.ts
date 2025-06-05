@@ -2,6 +2,7 @@ import type { Story } from "@/model/game/story";
 import { isNotNil, pick } from "ramda";
 import { getStories } from "../meta";
 import { getReferenceCards } from "./getReferenceCards";
+import { getStoryDifficultyLevels } from "./getStoryDifficultyLevels";
 
 export const getEnglishStories = () => {
 	const data = getStories();
@@ -24,11 +25,14 @@ export const getEnglishStories = () => {
 				return null;
 			}
 
+			const difficultyLevels = getStoryDifficultyLevels(story);
+
 			return {
 				...props,
 				locale: "en",
 				official: story.is_official,
 				referenceCards,
+				difficultyLevels,
 			};
 		})
 		.filter(isNotNil);

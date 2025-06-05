@@ -20,5 +20,5 @@ export const BeastWithin: Investigator = {
 			name: "Henry Bigby",
 		},
 	],
-	nameless: true
+	nameless: true,
 };

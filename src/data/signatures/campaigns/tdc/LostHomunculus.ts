@@ -12,5 +12,5 @@ export const LostHomunculus: Investigator = {
 			top: 1670,
 		},
 	},
-	nameless: true
+	nameless: true,
 };

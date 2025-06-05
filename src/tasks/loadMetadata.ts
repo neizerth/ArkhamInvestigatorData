@@ -1,4 +1,5 @@
 import {
+	loadArkhamCardsCampaigns,
 	loadArkhamCardsCycles,
 	loadArkhamCardsPacks,
 	loadArkhamCardsReferenceCards,
@@ -16,6 +17,7 @@ export const loadMetadata = async () => {
 	const arkhamCardsCycles = await loadArkhamCardsCycles();
 	const arkhamCardsPacks = await loadArkhamCardsPacks();
 	const referenceCards = await loadArkhamCardsReferenceCards();
+	const campaigns = await loadArkhamCardsCampaigns();
 
 	const write = createJSONWriter(CACHE_DIR);
 
@@ -28,4 +30,5 @@ export const loadMetadata = async () => {
 	write("arkhamCards.packs", arkhamCardsPacks);
 	write("arkhamCards.cycles", arkhamCardsCycles);
 	write("arkhamCards.referenceCards", referenceCards);
+	write("arkhamCards.campaigns", campaigns);
 };

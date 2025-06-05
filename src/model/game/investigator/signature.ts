@@ -2,7 +2,6 @@ import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { Investigator, InvestigatorFaction } from "./common";
 import type { InvestigatorSkin } from "./options";
 
-
 export type InvestigatorSignatureGender = "male" | "female" | "non-binary";
 
 export type InvestigatorSignature = Omit<
