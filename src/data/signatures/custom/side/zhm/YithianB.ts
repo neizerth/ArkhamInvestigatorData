@@ -14,4 +14,5 @@ export const YithianB: Investigator = {
 		},
 	},
 	spoiler: true,
+	nameless: true
 };
