@@ -3,14 +3,14 @@ import type { Investigator } from "@/model";
 export const RolandBanks: Investigator = {
 	code: "01001",
 	image: {
-		version: 2,
-		width: 2730,
-		height: 3412,
+		version: 3,
+		width: 3000,
+		height: 2500,
 		face: {
-			width: 358,
-			height: 379,
-			left: 1386,
-			top: 1881,
+			width: 282,
+			height: 329,
+			left: 1190,
+			top: 1149,
 		},
 	},
 	variants: [
