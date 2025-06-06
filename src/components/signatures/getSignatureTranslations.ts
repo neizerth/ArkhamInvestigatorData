@@ -3,6 +3,7 @@ import type { InvestigatorSignature } from "@/model";
 import { getCycleTranslation } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getPackTranslation } from "./pack";
+import { getChaosBagTokenReference } from "../chaos-bag";
 
 const textAttributes = ["traits", "name", "subname", "text"] as const;
 
@@ -47,6 +48,7 @@ export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
 				pack,
 				cycle,
 				icon,
+				tokens_reference: getChaosBagTokenReference([cardTranslation.text]),
 			};
 
 			translations.get(locale).push(translatedCard);

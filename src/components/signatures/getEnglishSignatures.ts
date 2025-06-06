@@ -4,6 +4,7 @@ import { isNotNil } from "ramda";
 import { getEnglishCycle } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getEnglishPack } from "./pack";
+import { getChaosBagTokenReference } from "../chaos-bag";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 	data
@@ -35,6 +36,7 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 				pack,
 				cycle,
 				icon,
+				tokens_reference: getChaosBagTokenReference([card.real_text]),
 			};
 		})
 		.filter(isNotNil);

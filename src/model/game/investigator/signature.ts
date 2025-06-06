@@ -1,6 +1,7 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { Investigator, InvestigatorFaction } from "./common";
 import type { InvestigatorSkin } from "./options";
+import { ReferencePart } from "../story";
 
 export type InvestigatorSignatureGender = "male" | "female" | "non-binary";
 
@@ -38,6 +39,7 @@ export type InvestigatorSignature = Omit<
 		pack: InvestigatorSignaturePack;
 		cycle: InvestigatorSignatureCycle;
 		gender: InvestigatorSignatureGender;
+		tokens_reference: ReferencePart[];
 	};
 
 export type InvestigatorSignatureType =

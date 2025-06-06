@@ -1,3 +1,4 @@
+import { chaosBagSymbolTokens } from "@/config";
 import { underscore2CamelCase } from "@/features";
 import { ReferencePart } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
@@ -27,10 +28,12 @@ const parseLine = (line: string): ReferencePart | null => {
 
 	const icons = iconMatches.map((icon) => icon.replace(/[\[\]]/g, ""));
 
-	const items = icons.map((icon) => ({
-		icon,
-		token: underscore2CamelCase(icon) as ChaosBagToken,
-	}));
+	const items = icons
+		.map((icon) => ({
+			icon,
+			token: underscore2CamelCase(icon) as ChaosBagToken,
+		}))
+		.filter((item) => chaosBagSymbolTokens.includes(item.token));
 
 	const lastItem = last(items);
 
