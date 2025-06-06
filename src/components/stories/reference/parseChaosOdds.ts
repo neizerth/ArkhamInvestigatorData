@@ -1,6 +1,8 @@
 import type {
+	ArkhamCardsChaosOddConditionOption,
 	ArkhamCardsChaosOddToken,
 	ArkhamCardsChaosOddTokenValue,
+	ArkhamCardsChaosOddTokenValueType,
 } from "@/api/arkhamCards";
 import { underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken, ReferenceCardTokenResolve } from "@/model";
@@ -47,13 +49,23 @@ const getTokenData = (
 	if (item.type === "condition") {
 		const { condition } = item;
 
-		const value = condition.default_value.modifier;
+		const value = getOptionValue(condition.default_value.modifier);
 
-		const optionValues = condition.options.map(
-			({ modified_value }) => modified_value.modifier,
+		const optionValues = condition.options.map((item) =>
+			getOptionValue(item.modified_value.modifier),
 		);
 
-		const values = [value, ...optionValues];
+		const values = [value, ...optionValues].filter(isNotNil);
+
+		if (values.length === 1) {
+			const [value] = values;
+
+			return {
+				type: "value",
+				token,
+				value,
+			};
+		}
 
 		return {
 			type: "select",
@@ -73,5 +85,12 @@ const getTokenValue = (item: ArkhamCardsChaosOddTokenValue) => {
 			? modifier
 			: (underscore2CamelCase(modifier) as ReferenceCardTokenResolve);
 
+	return value;
+};
+
+const getOptionValue = (value: ArkhamCardsChaosOddTokenValueType) => {
+	if (value === "auto_fail" || value === "auto_succeed") {
+		return;
+	}
 	return value;
 };

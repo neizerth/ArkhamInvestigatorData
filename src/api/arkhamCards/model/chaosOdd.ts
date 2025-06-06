@@ -43,20 +43,21 @@ export type ArkhamCardsChaosOddToken = {
 	| {
 			type: "condition";
 			condition: {
-				default_value: {
-					modifier: number;
-				};
+				default_value: ArkhamCardsChaosOddTokenValue;
 				options: ArkhamCardsChaosOddConditionOption[];
 			};
 	  }
 );
 
 export type ArkhamCardsChaosOddTokenValue = {
-	modifier: number | "auto_fail" | "auto_succeed";
+	modifier: ArkhamCardsChaosOddTokenValueType;
 };
 
+export type ArkhamCardsChaosOddTokenValueType =
+	| number
+	| "auto_fail"
+	| "auto_succeed";
+
 export type ArkhamCardsChaosOddConditionOption = {
-	modified_value: {
-		modifier: number;
-	};
+	modified_value: ArkhamCardsChaosOddTokenValue;
 };
