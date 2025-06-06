@@ -1,7 +1,7 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
-import { mapLinkedCode } from "../format";
-import type { ArkhamCardsInvestigator } from "../model";
+import { mapLinkedCode } from "../../format";
+import type { ArkhamCardsInvestigator } from "../../model";
 
 export const loadArkhamCardsInvestigators = async () => {
 	const document = gql`

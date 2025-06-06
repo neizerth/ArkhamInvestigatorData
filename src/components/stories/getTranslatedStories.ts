@@ -5,6 +5,7 @@ import {
 	getArkhamCardsPacks,
 	getArkhamCardsReferenceCards,
 } from "../meta";
+import { getChaosBagTokenReference } from "../chaos-bag";
 
 type Options = {
 	locale: string;
@@ -48,10 +49,15 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 				return ref;
 			}
 
+			if (translation.name === ref.name) {
+				return ref;
+			}
+
 			return {
 				...ref,
 				...translation,
-				locale: translation.name === ref.name ? "en" : locale,
+				reference: getChaosBagTokenReference([translation.text]),
+				back_reference: getChaosBagTokenReference([translation.back_text]),
 			};
 		});
 	};

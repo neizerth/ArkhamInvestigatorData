@@ -1,8 +1,8 @@
 import type { Story } from "@/model/game/story";
 import { isNotNil, pick } from "ramda";
 import { getStories } from "../meta";
-import { getReferenceCards } from "./getReferenceCards";
 import { getStoryDifficultyLevels } from "./getStoryDifficultyLevels";
+import { getReferenceCards } from "./reference/getReferenceCards";
 
 export const getEnglishStories = () => {
 	const data = getStories();

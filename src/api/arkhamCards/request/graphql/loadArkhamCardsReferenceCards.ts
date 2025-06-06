@@ -1,6 +1,6 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
-import type { ArkhamCardsReference } from "../model";
+import type { ArkhamCardsReference } from "../../model";
 
 export const loadArkhamCardsReferenceCards = async () => {
 	const document = gql`

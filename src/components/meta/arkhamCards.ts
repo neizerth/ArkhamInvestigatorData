@@ -1,5 +1,6 @@
 import type {
 	ArkhamCardsCampaign,
+	ArkhamCardsChaosOdd,
 	ArkhamCardsCycle,
 	ArkhamCardsPack,
 	ArkhamCardsReference,
@@ -22,5 +23,10 @@ export const getArkhamCardsReferenceCards = getCachedMetadata<
 
 export const getArkhamCardsCampaigns = getCachedMetadata<ArkhamCardsCampaign[]>(
 	"arkhamCards.campaigns",
+	[],
+);
+
+export const getArkhamCardsOdds = getCachedMetadata<ArkhamCardsChaosOdd[]>(
+	"arkhamCards.chaosOdds",
 	[],
 );

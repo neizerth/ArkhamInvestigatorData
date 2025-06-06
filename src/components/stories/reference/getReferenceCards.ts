@@ -2,7 +2,10 @@ import { getArkhamCardsReferenceCards } from "@/components/meta";
 import type { ReferenceCard } from "@/model";
 import type { ArkhamDivider } from "arkham-divider-data";
 import { ascend, isNotNil, prop } from "ramda";
-import { getEncounterSetIcon } from "../icons";
+import { getEncounterSetIcon } from "../../icons";
+import { getReferenceCardChaosTokens } from "./getReferenceCardChaosTokens";
+import { getReferenceCardDifficulty } from "./getReferenceCardDifficulty";
+import { getChaosBagTokenReference } from "@/components/chaos-bag";
 
 type Story = ArkhamDivider.Core["stories"][number];
 
@@ -15,15 +18,22 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
 	return cards
 		.filter(({ pack_code }) => packCodes.includes(pack_code))
 		.map((card): ReferenceCard => {
+			const realText = card.real_text || "";
+			const realBackText = card.real_back_text || "";
 			return {
 				code: card.code,
 				encounter_code: card.encounter_code,
 				position: card.position,
 				name: card.real_name,
-				text: card.real_text,
-				back_text: card.real_back_text,
+				text: realText,
+				back_text: realBackText,
 				locale: "en",
+				reference: getChaosBagTokenReference([realText]),
+				back_reference: getChaosBagTokenReference([realBackText]),
 				icon: getEncounterSetIcon(card.encounter_code),
+				difficulty: getReferenceCardDifficulty(realText),
+				back_difficulty: getReferenceCardDifficulty(realBackText),
+				...getReferenceCardChaosTokens(card),
 			};
 		})
 		.filter((ref) => {

@@ -4,6 +4,7 @@ import {
 	loadArkhamCardsPacks,
 	loadArkhamCardsReferenceCards,
 } from "@/api/arkhamCards";
+import { loadArkhamCardsChaosOdds } from "@/api/arkhamCards/request/raw/loadArkhamCardsChaosOdds";
 import { ARKHAM_DIVIDER_CORE_URL, CACHE_DIR, DIST_DIR } from "@/config";
 import { createJSONWriter } from "@/features";
 import type { ArkhamDivider } from "arkham-divider-data";
@@ -18,6 +19,7 @@ export const loadMetadata = async () => {
 	const arkhamCardsPacks = await loadArkhamCardsPacks();
 	const referenceCards = await loadArkhamCardsReferenceCards();
 	const campaigns = await loadArkhamCardsCampaigns();
+	const chaosOdds = await loadArkhamCardsChaosOdds();
 
 	const write = createJSONWriter(CACHE_DIR);
 
@@ -31,4 +33,5 @@ export const loadMetadata = async () => {
 	write("arkhamCards.cycles", arkhamCardsCycles);
 	write("arkhamCards.referenceCards", referenceCards);
 	write("arkhamCards.campaigns", campaigns);
+	write("arkhamCards.chaosOdds", chaosOdds);
 };

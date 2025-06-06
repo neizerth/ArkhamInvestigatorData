@@ -1,15 +1,24 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
-import type { ArkhamCardsFullPack } from "../model";
+import type { ArkhamCardsCycle } from "../../model";
 
-export const loadArkhamCardsPacks = async () => {
+export const loadArkhamCardsCycles = async () => {
 	const document = gql`
     {
-      pack {
+      cycle {
         code
         official
         position
         real_name
+        packs {
+          code
+          real_name
+          position
+          translations {
+            locale
+            name
+          }
+        }
         translations {
           locale
           name
@@ -19,10 +28,10 @@ export const loadArkhamCardsPacks = async () => {
   `;
 
 	type Response = {
-		pack: ArkhamCardsFullPack[];
+		cycle: ArkhamCardsCycle[];
 	};
 
 	const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
 
-	return data.pack;
+	return data.cycle;
 };

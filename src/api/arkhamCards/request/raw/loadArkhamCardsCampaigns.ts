@@ -1,5 +1,5 @@
 import { ARKHAM_CARDS_REPO_RAW_URL as baseUri } from "@/config";
-import type { ArkhamCardsCampaign } from "../model";
+import type { ArkhamCardsCampaign } from "../../model";
 
 export const loadArkhamCardsCampaigns = async () => {
 	const url = `${baseUri}/assets/generated/allCampaigns.json`;

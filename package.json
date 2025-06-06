@@ -1,6 +1,6 @@
 {
   "name": "arkham-investigator-data",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "main": "index.js",
   "types": "build/src/types.d.ts",
   "scripts": {
@@ -10,8 +10,8 @@
     "serve": "http-server ./dist --cors",
     "build:clean": "rimraf ./build",
     "build": "npm run build:clean && tsc && tsc-alias",
+    "format": "npx @biomejs/biome check --write ./src",
     "biome:lint": "npx @biomejs/biome check ./src",
-    "biome:format": "npx @biomejs/biome check --write ./src",
     "biome:fix": "npx @biomejs/biome lint --write ./src"
   },
   "repository": {
