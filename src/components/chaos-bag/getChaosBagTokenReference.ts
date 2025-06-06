@@ -20,7 +20,7 @@ const parseLine = (line: string): ReferencePart | null => {
 		return null;
 	}
 
-	const iconMatches = iconString.match(/(^|\n)\s*\[([^\]]+)\]/g);
+	const iconMatches = iconString.match(/\[([^\]]+)\]/g);
 
 	if (!iconMatches) {
 		return null;
