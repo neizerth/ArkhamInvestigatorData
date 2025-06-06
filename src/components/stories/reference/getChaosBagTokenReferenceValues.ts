@@ -7,27 +7,29 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 	}
 	const reference = getChaosBagTokenReference([text]);
 
-	return reference.flatMap((item): ReferenceCardToken[] => {
-		const value = parseEffectValue(item.effect);
-		if (item.type === "single") {
-			return [
-				{
-					type: "value",
-					token: item.token,
-					value,
-				},
-			];
-		}
-		return item.tokens.map((token) => ({
-			type: "value",
-			token,
-			value,
-		}));
-	});
+	return reference
+		.flatMap((item): ReferenceCardToken[] => {
+			const value = parseEffectValue(item.effect);
+			if (item.type === "single") {
+				return [
+					{
+						type: "value",
+						token: item.token,
+						value,
+					},
+				];
+			}
+			return item.tokens.map((token) => ({
+				type: "value",
+				token,
+				value,
+			}));
+		})
+		.filter(({ value }) => Boolean(value));
 };
 
 export const parseEffectValue = (text: string): number => {
-	const pattern = /^\D*([-+\d]+)\D/;
+	const pattern = /^\D*([-+\d]+)\./;
 
 	const matches = text.match(pattern);
 
