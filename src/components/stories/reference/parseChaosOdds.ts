@@ -1,11 +1,10 @@
 import type {
-	ArkhamCardsChaosOddConditionOption,
 	ArkhamCardsChaosOddToken,
 	ArkhamCardsChaosOddTokenValue,
 	ArkhamCardsChaosOddTokenValueType,
 } from "@/api/arkhamCards";
 import { underscore2CamelCase } from "@/features";
-import type { ReferenceCardToken, ReferenceCardTokenResolve } from "@/model";
+import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { isNotNil } from "ramda";
 
@@ -80,12 +79,9 @@ const getTokenData = (
 
 const getTokenValue = (item: ArkhamCardsChaosOddTokenValue) => {
 	const { modifier } = item;
-	const value =
-		typeof modifier === "number"
-			? modifier
-			: (underscore2CamelCase(modifier) as ReferenceCardTokenResolve);
-
-	return value;
+	if (typeof modifier === "number") {
+		return modifier;
+	}
 };
 
 const getOptionValue = (value: ArkhamCardsChaosOddTokenValueType) => {

@@ -27,11 +27,9 @@ export type ReferencePart = { id: string } & (
 	  }
 );
 
-export type ReferenceCardTokenResolve = number | "fail" | "success";
-
 export type ReferenceCardToken = {
 	token: ChaosBagToken;
-	value?: ReferenceCardTokenResolve;
+	value?: number;
 } & (
 	| {
 			type: "value";
