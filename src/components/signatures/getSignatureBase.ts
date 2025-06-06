@@ -5,6 +5,7 @@ import type {
 import type { InvestigatorSignatureGender } from "@/model";
 import { omit } from "ramda";
 import { getCardSpecial } from "./special";
+import { getChaosBagTokenReferenceValues } from "../stories/reference/getChaosBagTokenReferenceValues";
 
 const genderMapping: Record<
 	ArkhamCardsInvestigatorGender,
@@ -50,5 +51,6 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 		custom,
 		canonical,
 		official,
+		tokens: getChaosBagTokenReferenceValues(card.real_text),
 	};
 };

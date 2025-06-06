@@ -27,7 +27,7 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 };
 
 export const parseEffectValue = (text: string): number => {
-	const pattern = /^([-\d]+)\D/;
+	const pattern = /^\D*([-+\d]+)\D/;
 
 	const matches = text.match(pattern);
 
@@ -36,7 +36,7 @@ export const parseEffectValue = (text: string): number => {
 		return;
 	}
 
-	const value = +matches[0];
+	const value = +matches[1];
 
 	return value;
 };
