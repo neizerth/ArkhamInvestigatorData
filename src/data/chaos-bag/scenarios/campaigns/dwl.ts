@@ -1,6 +1,5 @@
 import { ScenarioChaosBag } from "@/model/game/chaosBag";
 
-const cycle_code = "dwl";
 export const dwl: ScenarioChaosBag[] = [
 	{
 		scenario_id: "the_miskatonic_museum",

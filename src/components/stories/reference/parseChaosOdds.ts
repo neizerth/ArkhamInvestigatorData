@@ -6,7 +6,7 @@ import type {
 import { underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
-import { isNotNil } from "ramda";
+import { ascend, identity, isNotNil, sort } from "ramda";
 
 export const parseChaosOdds = (tokens: ArkhamCardsChaosOddToken[] = []) => {
 	return tokens.map(getTokenData).filter(isNotNil);
@@ -54,7 +54,9 @@ const getTokenData = (
 			getOptionValue(item.modified_value.modifier),
 		);
 
-		const values = [value, ...optionValues].filter(isNotNil);
+		const rawValues = [value, ...optionValues].filter(isNotNil);
+
+		const values = sort(ascend(identity), rawValues);
 
 		if (values.length === 0) {
 			return null;
