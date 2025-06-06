@@ -56,6 +56,10 @@ const getTokenData = (
 
 		const values = [value, ...optionValues].filter(isNotNil);
 
+		if (values.length === 0) {
+			return null;
+		}
+
 		if (values.length === 1) {
 			const [value] = values;
 
