@@ -28,7 +28,37 @@ const getTokenData = (
 	}
 
 	if (item.type === "counter") {
-		return null;
+		const { counter } = item;
+		const { adjustment } = item.counter;
+
+		if (!counter.min && !counter.max) {
+			return null;
+		}
+
+		if (!adjustment) {
+			const { min, max } = counter;
+			const value = max || 0;
+			return {
+				type: "counter",
+				token,
+				value,
+				step: 1,
+				min: max && max * -1,
+				max: min && min * -1,
+			};
+		}
+		// const { min = 0, max } = counter;
+		const min = (counter.max || 0) * adjustment * -1;
+		const max = counter.min && counter.min * adjustment * 1;
+
+		return {
+			type: "counter",
+			token,
+			value: min,
+			step: adjustment,
+			min,
+			max,
+		};
 	}
 
 	if (item.type === "condition") {
