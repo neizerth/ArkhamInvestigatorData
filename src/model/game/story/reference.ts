@@ -38,6 +38,7 @@ export type ReferenceCardToken = {
 			type: "counter";
 			min?: number;
 			max?: number;
+			step: number;
 	  }
 	| {
 			type: "select";

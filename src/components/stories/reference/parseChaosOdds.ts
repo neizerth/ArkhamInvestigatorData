@@ -28,18 +28,34 @@ const getTokenData = (
 	}
 
 	if (item.type === "counter") {
-		const { min, max, adjustment = 0 } = item.counter;
+		const { counter } = item;
+		const { adjustment } = item.counter;
 
-		if (!min && !max) {
+		if (!counter.min && !counter.max) {
 			return null;
 		}
 
-		const value = (min || 0) + adjustment;
+		if (!adjustment) {
+			const { min, max } = counter;
+			const value = min || 0;
+			return {
+				type: "counter",
+				token,
+				value,
+				step: 1,
+				min,
+				max,
+			};
+		}
+		// const { min = 0, max } = counter;
+		const min = (counter.min || 0) * adjustment;
+		const max = counter.max && counter.max * adjustment;
 
 		return {
 			type: "counter",
 			token,
-			value,
+			value: min,
+			step: adjustment,
 			min,
 			max,
 		};
