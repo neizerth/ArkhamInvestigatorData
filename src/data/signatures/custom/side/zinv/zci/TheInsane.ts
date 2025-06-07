@@ -19,5 +19,4 @@ export const TheInsane: Investigator = {
 			limitPer: "round",
 		},
 	],
-	nameless: true,
 };

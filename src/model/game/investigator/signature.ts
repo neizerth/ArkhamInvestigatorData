@@ -41,6 +41,7 @@ export type InvestigatorSignature = Omit<
 		gender: InvestigatorSignatureGender;
 		tokens_reference: ReferencePart[];
 		tokens: ReferenceCardToken[];
+		dative_name?: string;
 	};
 
 export type InvestigatorSignatureType =

@@ -4,7 +4,6 @@ export const YithianBody: Investigator = {
 	code: "04244",
 	multiselect: true,
 	spoiler: true,
-	nameless: true,
 	image: {
 		width: 1650,
 		height: 1517,
