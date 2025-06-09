@@ -33,6 +33,7 @@ export const GloriaGoldberg: Investigator = {
 		{
 			id: "gloria-cards",
 			type: "counter",
+			direction: "decrease",
 			name: "Cards beneath Gloria",
 			max: 3,
 		},

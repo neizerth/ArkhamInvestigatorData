@@ -16,6 +16,7 @@ export const GeorgeBarnaby: Investigator = {
 		{
 			id: "george-cards",
 			type: "counter",
+			direction: "increase",
 			name: "Cards beneath George",
 			max: 5,
 		},

@@ -21,6 +21,7 @@ export const DianaStanley: Investigator = {
 		{
 			id: "diana-cards",
 			type: "counter",
+			direction: "decrease",
 			name: "Cards beneath Diana",
 			max: 5,
 		},

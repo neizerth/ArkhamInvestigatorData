@@ -22,6 +22,7 @@ export type InvestigatorAbilityType =
 	  }
 	| {
 			type: "counter";
+			direction: "increase" | "decrease";
 			name: string;
 			icon?: string;
 			defaultValue?: number;

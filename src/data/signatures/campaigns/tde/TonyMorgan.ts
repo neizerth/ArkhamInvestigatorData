@@ -34,8 +34,8 @@ export const TonyMorgan: Investigator = {
 			id: "bounty-contracts",
 			name: "Bounty Contracts",
 			type: "counter",
+			direction: "decrease",
 			defaultValue: 6,
-			max: 6,
 		},
 	],
 };
