@@ -14,15 +14,8 @@ export const ZoeySamaras: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-resource",
 			type: "reaction",
-			onUse: [
-				{
-					script: {
-						resources: "resources + 1",
-					},
-				},
-			],
 		},
 	],
 	variants: [
@@ -32,33 +25,14 @@ export const ZoeySamaras: Investigator = {
 			name: "Path of the Righteous",
 			abilities: [
 				{
-					id: "reaction",
+					id: "add-bless",
 					type: "reaction",
 					limitPer: "round",
-					onUse: [
-						{
-							script: {
-								chaosBag: {
-									bless: "bless + 1",
-								},
-							},
-						},
-					],
 				},
 				{
-					id: "fast",
+					id: "remove-2-curse",
 					type: "fast",
 					limitPer: "round",
-					enabledIf: "bless > 2",
-					onUse: [
-						{
-							script: {
-								chaosBag: {
-									bless: "bless - 3",
-								},
-							},
-						},
-					],
 				},
 			],
 		},
