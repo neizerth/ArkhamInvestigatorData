@@ -15,7 +15,8 @@ const parseText = (text: string) =>
 
 const parseLine = (text: string): ReferencePart | null => {
 	const lines = text.split("\n");
-	const line = last(lines);
+	const line = lines.find((line) => line.startsWith("[")) || last(lines);
+
 	const [iconString] = line.split(/[:：]/);
 
 	if (!iconString) {
