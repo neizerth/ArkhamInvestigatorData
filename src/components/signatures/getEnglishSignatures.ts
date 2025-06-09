@@ -5,6 +5,7 @@ import { getEnglishCycle } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getEnglishPack } from "./pack";
 import { getChaosBagTokenReference } from "../chaos-bag";
+import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 	data
@@ -36,7 +37,10 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 				pack,
 				cycle,
 				icon,
-				tokens_reference: getChaosBagTokenReference([card.real_text]),
+				tokens_reference: getSignatureTokenReference({
+					text: card.real_text,
+					code: card.code,
+				}),
 			};
 		})
 		.filter(isNotNil);
