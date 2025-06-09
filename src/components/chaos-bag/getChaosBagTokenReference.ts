@@ -8,7 +8,7 @@ export const getChaosBagTokenReference = (sources: string[]) => {
 	return sources.flatMap(parseText);
 };
 
-const tokenLinePattern = /\n(?=.*\[[^\[\]]+\]:)/;
+const tokenLinePattern = /\n(?=.*\[[^\[\]]+\])/;
 
 const parseText = (text: string) =>
 	text.split(tokenLinePattern).map(parseLine).filter(isNotNil);
@@ -46,7 +46,7 @@ const parseLine = (text: string): ReferencePart | null => {
 	const lasstIcon = `[${lastItem.icon}]`;
 	const index = line.indexOf(lasstIcon);
 
-	const effectIndex = index + lasstIcon.length;
+	const effectIndex = index > 15 ? 0 : index + lasstIcon.length;
 	const nonTokenText = line.slice(effectIndex);
 
 	const effect = nonTokenText
