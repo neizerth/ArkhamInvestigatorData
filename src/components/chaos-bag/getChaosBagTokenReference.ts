@@ -49,7 +49,10 @@ const parseLine = (text: string): ReferencePart | null => {
 	const effectIndex = index + lasstIcon.length;
 	const nonTokenText = line.slice(effectIndex);
 
-	const effect = nonTokenText.trim().replace(/^(: )|(：)/, "");
+	const effect = nonTokenText
+		.trim()
+		.replace(/^(: )|(：)/, "")
+		.replace(/^-(?!\d)/, "");
 
 	const tokens = uniq(items.map(prop("token")));
 
