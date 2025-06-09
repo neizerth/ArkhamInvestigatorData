@@ -1,7 +1,7 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
+import type { ReferenceCardToken, ReferencePart } from "../story";
 import type { Investigator, InvestigatorFaction } from "./common";
 import type { InvestigatorSkin } from "./options";
-import { ReferenceCardToken, ReferencePart } from "../story";
 
 export type InvestigatorSignatureGender = "male" | "female" | "non-binary";
 

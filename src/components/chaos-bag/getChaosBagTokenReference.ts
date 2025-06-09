@@ -1,6 +1,6 @@
 import { chaosBagSymbolTokens } from "@/config";
 import { underscore2CamelCase } from "@/features";
-import { ReferencePart } from "@/model";
+import type { ReferencePart } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { isNotNil, last, prop, uniq } from "ramda";
 

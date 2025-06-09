@@ -1,8 +1,8 @@
 import type { ArkhamCardsReference } from "@/api/arkhamCards";
 import { getArkhamCardsOdds } from "@/components/meta";
 import { propEq } from "ramda";
-import { parseChaosOdds } from "./parseChaosOdds";
 import { getChaosBagTokenReferenceValues as getValues } from "./getChaosBagTokenReferenceValues";
+import { parseChaosOdds } from "./parseChaosOdds";
 
 export const getReferenceCardChaosTokens = ({
 	code,

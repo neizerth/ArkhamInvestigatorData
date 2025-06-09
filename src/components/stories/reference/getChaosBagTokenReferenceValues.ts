@@ -1,5 +1,5 @@
 import { getChaosBagTokenReference } from "@/components/chaos-bag";
-import { ReferenceCardToken } from "@/model";
+import type { ReferenceCardToken } from "@/model";
 
 export const getChaosBagTokenReferenceValues = (text: string) => {
 	if (!text) {

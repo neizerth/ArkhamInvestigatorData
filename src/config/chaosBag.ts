@@ -1,4 +1,4 @@
-import { ChaosBagToken } from "@/model/game/chaosBag";
+import type { ChaosBagToken } from "@/model/game/chaosBag";
 
 export const chaosBagSymbolTokens: ChaosBagToken[] = [
 	"bless",

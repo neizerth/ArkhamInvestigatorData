@@ -1,3 +1,4 @@
+import { getChaosBagTokenReference } from "@/components/chaos-bag";
 import { getArkhamCardsReferenceCards } from "@/components/meta";
 import type { ReferenceCard } from "@/model";
 import type { ArkhamDivider } from "arkham-divider-data";
@@ -5,7 +6,6 @@ import { ascend, isNotNil, prop } from "ramda";
 import { getEncounterSetIcon } from "../../icons";
 import { getReferenceCardChaosTokens } from "./getReferenceCardChaosTokens";
 import { getReferenceCardDifficulty } from "./getReferenceCardDifficulty";
-import { getChaosBagTokenReference } from "@/components/chaos-bag";
 
 type Story = ArkhamDivider.Core["stories"][number];
 

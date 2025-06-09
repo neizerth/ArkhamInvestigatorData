@@ -1,11 +1,11 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
 import type { InvestigatorSignature } from "@/model";
 import { isNotNil } from "ramda";
+import { getChaosBagTokenReference } from "../chaos-bag";
+import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
 import { getEnglishCycle } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getEnglishPack } from "./pack";
-import { getChaosBagTokenReference } from "../chaos-bag";
-import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
 
 export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 	data

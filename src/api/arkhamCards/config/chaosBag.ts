@@ -1,4 +1,4 @@
-import { ArkhamCardsChaosToken } from "../model";
+import type { ArkhamCardsChaosToken } from "../model";
 
 export const arkhamCardsSymbolTokens: ArkhamCardsChaosToken[] = [
 	"bless",

@@ -4,8 +4,8 @@ import type {
 } from "@/api/arkhamCards";
 import type { InvestigatorSignatureGender } from "@/model";
 import { omit } from "ramda";
-import { getCardSpecial } from "./special";
 import { getChaosBagTokenReferenceValues } from "../stories/reference/getChaosBagTokenReferenceValues";
+import { getCardSpecial } from "./special";
 
 const genderMapping: Record<
 	ArkhamCardsInvestigatorGender,

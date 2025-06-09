@@ -1,7 +1,7 @@
 import { InvestigatorCode } from "@/config/codes";
-import { getChaosBagTokenReference } from "./getChaosBagTokenReference";
-import { appendTokenEffect } from "./effects";
 import { propEq, reject } from "ramda";
+import { appendTokenEffect } from "./effects";
+import { getChaosBagTokenReference } from "./getChaosBagTokenReference";
 
 type Options = {
 	code: string;

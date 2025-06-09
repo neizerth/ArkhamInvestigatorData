@@ -1,5 +1,5 @@
-import { ReferencePart } from "@/model";
-import { ChaosBagToken } from "@/model/game/chaosBag";
+import type { ReferencePart } from "@/model";
+import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { getReferencePartTokens } from "../getReferencePartTokens";
 
 type Item = {

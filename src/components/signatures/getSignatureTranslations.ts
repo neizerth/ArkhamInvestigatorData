@@ -1,11 +1,11 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
+import { dativeNameDeclension } from "@/data/i18n";
 import type { InvestigatorSignature } from "@/model";
+import { getChaosBagTokenReference } from "../chaos-bag";
+import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
 import { getCycleTranslation } from "./cycle";
 import { getSignatureBase } from "./getSignatureBase";
 import { getPackTranslation } from "./pack";
-import { getChaosBagTokenReference } from "../chaos-bag";
-import { dativeNameDeclension } from "@/data/i18n";
-import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
 
 const textAttributes = ["traits", "name", "subname", "text"] as const;
 

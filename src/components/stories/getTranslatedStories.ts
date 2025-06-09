@@ -1,11 +1,11 @@
 import type { Story } from "@/model/game/story";
 import { propEq } from "ramda";
+import { getChaosBagTokenReference } from "../chaos-bag";
 import {
 	getArkhamCardsCycles,
 	getArkhamCardsPacks,
 	getArkhamCardsReferenceCards,
 } from "../meta";
-import { getChaosBagTokenReference } from "../chaos-bag";
 import { getReferenceCardDifficulty } from "./reference/getReferenceCardDifficulty";
 
 type Options = {
