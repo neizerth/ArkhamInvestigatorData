@@ -2,7 +2,7 @@ import { chaosBagSymbolTokens } from "@/config";
 import { underscore2CamelCase } from "@/features";
 import { ReferencePart } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
-import { isNotNil, last, prop } from "ramda";
+import { isNotNil, last, prop, uniq } from "ramda";
 
 export const getChaosBagTokenReference = (sources: string[]) => {
 	return sources.flatMap(parseText);
@@ -14,6 +14,9 @@ const parseText = (text: string) =>
 	text.split(tokenLinePattern).map(parseLine).filter(isNotNil);
 
 const parseLine = (line: string): ReferencePart | null => {
+	if (!line.startsWith("[")) {
+		return;
+	}
 	const [iconString] = line.split(/[:：]/);
 
 	if (!iconString) {
@@ -49,7 +52,7 @@ const parseLine = (line: string): ReferencePart | null => {
 
 	const effect = nonTokenText.trim().replace(/^(: )|(：)/, "");
 
-	const tokens = items.map(prop("token"));
+	const tokens = uniq(items.map(prop("token")));
 
 	if (tokens.length > 1) {
 		return {
