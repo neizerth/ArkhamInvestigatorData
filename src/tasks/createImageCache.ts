@@ -9,6 +9,8 @@ import decompress from "decompress";
 export const createImageCache = async () => {
 	mkDir(CACHED_IMAGES_DIR);
 
+	console.log("download url", IMAGES_ASSETS_URL);
+
 	const { body } = await fetch(IMAGES_ASSETS_URL);
 
 	const filePath = `${CACHED_IMAGES_DIR}/images.zip`;
