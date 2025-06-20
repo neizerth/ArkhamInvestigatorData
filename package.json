@@ -27,7 +27,6 @@
   "description": "",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@googleapis/drive": "^8.14.0",
     "@types/decompress": "^4.2.7",
     "@types/node": "^22.13.1",
     "@types/ramda": "^0.30.2",
