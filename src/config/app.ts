@@ -13,3 +13,5 @@ export const DEVELOPMENT_MODE = process.env.NODE_ENV === "development";
 export const APP_VERSION = pkg.version;
 
 export const MIN_CLIENT_VERSION = "1.4.0";
+
+export const IMAGES_ASSETS_URL = process.env.IMAGES_ASSETS_URL;
