@@ -14,7 +14,7 @@ export const SisterMary: Investigator = {
 	},
 	abilities: [
 		{
-			id: "add-bless",
+			id: "add-2-bless",
 			type: "reaction",
 			// works when turn end
 			limitPer: "turn",
