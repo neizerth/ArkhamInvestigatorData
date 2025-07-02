@@ -30,7 +30,7 @@ export const ZoeySamaras: Investigator = {
 					limitPer: "round",
 				},
 				{
-					id: "remove-2-curse",
+					id: "remove-3-bless",
 					type: "fast",
 					limitPer: "round",
 				},
