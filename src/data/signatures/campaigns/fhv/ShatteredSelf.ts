@@ -29,6 +29,7 @@ export const ShatteredSelf: Investigator = {
 			type: "counter",
 			direction: "decrease",
 			name: "Cards in your hand",
+			defaultValue: 5,
 			max: 5,
 		},
 	],
