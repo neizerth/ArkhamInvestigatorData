@@ -24,5 +24,12 @@ export const ShatteredSelf: Investigator = {
 			type: "reaction",
 			limitPer: "test",
 		},
+		{
+			id: "shattered-self-cards",
+			type: "counter",
+			direction: "decrease",
+			name: "Cards in your hand",
+			max: 5,
+		},
 	],
 };
