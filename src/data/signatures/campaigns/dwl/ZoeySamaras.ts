@@ -16,7 +16,7 @@ export const ZoeySamaras: Investigator = {
 		{
 			id: "get-resource",
 			type: "permanent",
-			icon: "reacion",
+			icon: "reaction",
 		},
 	],
 	variants: [
