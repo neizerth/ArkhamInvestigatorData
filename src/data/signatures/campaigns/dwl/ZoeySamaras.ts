@@ -15,7 +15,8 @@ export const ZoeySamaras: Investigator = {
 	abilities: [
 		{
 			id: "get-resource",
-			type: "reaction",
+			type: "permanent",
+			icon: "reacion",
 		},
 	],
 	variants: [
