@@ -17,6 +17,7 @@ export const ZoeySamaras: Investigator = {
 			id: "get-resource",
 			type: "special-action",
 			icon: "reaction",
+			toggle: false,
 		},
 	],
 	variants: [

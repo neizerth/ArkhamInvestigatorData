@@ -19,6 +19,8 @@ export type InvestigatorAbilityType =
 	| {
 			type: "action" | "special-action";
 			icon: string;
+			effectType?: "permanent" | "instant";
+			effect?: string;
 	  }
 	| {
 			type: "counter";
@@ -31,6 +33,7 @@ export type InvestigatorAbilityType =
 	  };
 export type InvestigatorAbility = InvestigatorAbilityType & {
 	id: string;
+	toggle?: boolean;
 	limitPer?: LimitType | LimitType[];
 	perInvestigator?: boolean;
 	additionalAction?: boolean;
