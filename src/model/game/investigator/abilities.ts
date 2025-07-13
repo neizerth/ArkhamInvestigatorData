@@ -33,6 +33,7 @@ export type InvestigatorAbilityType =
 	  };
 export type InvestigatorAbility = InvestigatorAbilityType & {
 	id: string;
+	visible?: boolean;
 	toggle?: boolean;
 	limitPer?: LimitType | LimitType[];
 	perInvestigator?: boolean;
