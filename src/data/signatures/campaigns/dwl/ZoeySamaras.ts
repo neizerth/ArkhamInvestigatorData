@@ -12,14 +12,14 @@ export const ZoeySamaras: Investigator = {
 			top: 1095,
 		},
 	},
-	abilities: [
-		{
-			id: "get-resource",
-			type: "special-action",
-			icon: "reaction",
-			toggle: false,
-		},
-	],
+	// abilities: [
+	// 	{
+	// 		id: "get-resource",
+	// 		type: "special-action",
+	// 		icon: "reaction",
+	// 		toggle: false,
+	// 	},
+	// ],
 	variants: [
 		{
 			type: "parallel",
