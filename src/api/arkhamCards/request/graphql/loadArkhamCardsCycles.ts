@@ -3,6 +3,7 @@ import { gql, request } from "graphql-request";
 import type { ArkhamCardsCycle } from "../../model";
 
 export const loadArkhamCardsCycles = async () => {
+	console.log("loading Arkham Cards Cycles");
 	const document = gql`
     {
       cycle {

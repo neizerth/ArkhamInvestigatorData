@@ -1,5 +1,6 @@
 import { loadArkhamCardsRules } from "@/api/arkhamCards";
 import { getSignatures } from "@/components";
+import { getArkhamCardsRulesCollection } from "@/components/meta";
 import { getStories } from "@/components/stories";
 import { DIST_DIR } from "@/config";
 import { createJSONWriter } from "@/features";
@@ -9,15 +10,13 @@ export const createDataCache = async () => {
 	const writeJSON = createJSONWriter(DIST_DIR);
 
 	const signatures = await getSignatures();
-	const enRules = await loadArkhamCardsRules();
+	const rulesCollection = getArkhamCardsRulesCollection();
+	const enRules = rulesCollection.en;
 
 	const stories = getStories();
 
 	for (const [locale, data] of signatures) {
-		const rules =
-			locale === "en"
-				? enRules
-				: ((await loadArkhamCardsRules(locale)) ?? enRules);
+		const rules = rulesCollection[locale] ?? enRules;
 
 		const item = {
 			...data,

@@ -16,3 +16,5 @@ export type ArkhamCardsRulesItemTableCell = {
 	text: string;
 	color?: string;
 };
+
+export type ArkhamCardsRulesCollection = Record<string, ArkhamCardsRulesItem[]>;

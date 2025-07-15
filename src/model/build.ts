@@ -1,14 +1,22 @@
-import type { ArkhamCardsRulesItem } from "@/api/arkhamCards";
+import type {
+	ArkhamCardsRulesItem,
+	ArkhamCardsUpdate,
+} from "@/api/arkhamCards";
 import type { ArkhamDivider } from "arkham-divider-data";
-import type { Investigator, SignatureCollection } from "./game";
+import type { SignatureCollection } from "./game";
 import type { Story } from "./game/story";
 
-export type Build = {
+export type BuildInfo = {
 	version: string;
 	minClientVersion: string;
-	data: Investigator[];
-	icons: ArkhamDivider.Core["icons"];
+
 	languages: string[];
+	iconsCount: number;
+	arkhamCardsUpdates: ArkhamCardsUpdate[];
+};
+
+export type Build = BuildInfo & {
+	icons: ArkhamDivider.Core["icons"];
 };
 
 export type LocaleBuild = SignatureCollection & {

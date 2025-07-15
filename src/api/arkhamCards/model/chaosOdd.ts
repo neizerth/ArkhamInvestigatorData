@@ -30,11 +30,12 @@ export type ArkhamCardsChaosOddToken = {
 	token: ArkhamCardsChaosToken;
 } & (
 	| {
-			value: ArkhamCardsChaosOddTokenValue;
+			value: ArkhamCardsChaosOddTokenDefaultValue;
 	  }
 	| {
 			type: "counter";
 			counter: {
+				prompt: string;
 				min?: number;
 				adjustment?: number;
 				max?: number;
@@ -43,15 +44,21 @@ export type ArkhamCardsChaosOddToken = {
 	| {
 			type: "condition";
 			condition: {
-				default_value: ArkhamCardsChaosOddTokenValue;
+				default_value: ArkhamCardsChaosOddTokenDefaultValue;
 				options: ArkhamCardsChaosOddConditionOption[];
 			};
 	  }
 );
 
-export type ArkhamCardsChaosOddTokenValue = {
+export type ArkhamCardsChaosOddTokenDefaultValue = {
 	modifier: ArkhamCardsChaosOddTokenValueType;
+	reveal_another?: number;
 };
+
+export type ArkhamCardsChaosOddTokenValue =
+	ArkhamCardsChaosOddTokenDefaultValue & {
+		prompt: string;
+	};
 
 export type ArkhamCardsChaosOddTokenValueType =
 	| number

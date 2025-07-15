@@ -1,4 +1,8 @@
-import type { ArkhamCardsReferenceTranslation } from "@/api/arkhamCards";
+import type {
+	ArkhamCardsChaosOddConditionOption,
+	ArkhamCardsChaosOddTokenDefaultValue,
+	ArkhamCardsReferenceTranslation,
+} from "@/api/arkhamCards";
 import type { ChaosBagToken } from "../chaosBag";
 
 export type ReferenceCard = ArkhamCardsReferenceTranslation & {
@@ -30,9 +34,12 @@ export type ReferencePart = { id: string } & (
 export type ReferenceCardToken = {
 	token: ChaosBagToken;
 	value?: number;
+	prompt?: string;
+	options?: ArkhamCardsChaosOddConditionOption[];
 } & (
 	| {
 			type: "value";
+			config: ArkhamCardsChaosOddTokenDefaultValue;
 	  }
 	| {
 			type: "counter";
@@ -42,6 +49,7 @@ export type ReferenceCardToken = {
 	  }
 	| {
 			type: "select";
+			config: ArkhamCardsChaosOddTokenDefaultValue;
 			values?: number[];
 	  }
 );

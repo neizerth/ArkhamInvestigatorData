@@ -16,6 +16,9 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 						type: "value",
 						token: item.token,
 						value,
+						config: {
+							modifier: value,
+						},
 					},
 				];
 			}
@@ -23,6 +26,9 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 				type: "value",
 				token,
 				value,
+				config: {
+					modifier: value,
+				},
 			}));
 		})
 		.filter(({ value }) => Boolean(value));

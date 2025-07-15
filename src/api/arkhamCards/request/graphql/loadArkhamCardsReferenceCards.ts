@@ -3,6 +3,7 @@ import { gql, request } from "graphql-request";
 import type { ArkhamCardsReference } from "../../model";
 
 export const loadArkhamCardsReferenceCards = async () => {
+	console.log("loading Arkham Cards Reference Cards");
 	const document = gql`
     {
       all_card(where: { type_code: { _eq: scenario } }) {

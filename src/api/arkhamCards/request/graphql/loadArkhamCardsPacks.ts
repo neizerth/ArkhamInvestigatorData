@@ -3,6 +3,7 @@ import { gql, request } from "graphql-request";
 import type { ArkhamCardsFullPack } from "../../model";
 
 export const loadArkhamCardsPacks = async () => {
+	console.log("loading Arkham Cards Packs");
 	const document = gql`
     {
       pack {

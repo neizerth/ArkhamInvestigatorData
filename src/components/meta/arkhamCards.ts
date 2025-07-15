@@ -4,6 +4,8 @@ import type {
 	ArkhamCardsCycle,
 	ArkhamCardsPack,
 	ArkhamCardsReference,
+	ArkhamCardsRulesCollection,
+	ArkhamCardsUpdate,
 } from "@/api/arkhamCards";
 import { getCachedMetadata } from "./getCachedMetadata";
 
@@ -28,5 +30,13 @@ export const getArkhamCardsCampaigns = getCachedMetadata<ArkhamCardsCampaign[]>(
 
 export const getArkhamCardsOdds = getCachedMetadata<ArkhamCardsChaosOdd[]>(
 	"arkhamCards.chaosOdds",
+	[],
+);
+
+export const getArkhamCardsRulesCollection =
+	getCachedMetadata<ArkhamCardsRulesCollection>("arkhamCards.rules", {});
+
+export const getArkhamCardsUpdates = getCachedMetadata<ArkhamCardsUpdate[]>(
+	"arkhamCards.updates",
 	[],
 );
