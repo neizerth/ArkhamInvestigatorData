@@ -31,25 +31,32 @@ export type ReferencePart = { id: string } & (
 	  }
 );
 
-export type ReferenceCardToken = {
+export type ReferenceCardTokenBase = {
 	token: ChaosBagToken;
 	value?: number;
 	prompt?: string;
 	options?: ArkhamCardsChaosOddConditionOption[];
-} & (
-	| {
-			type: "value";
-			config: ArkhamCardsChaosOddTokenDefaultValue;
-	  }
-	| {
-			type: "counter";
-			min?: number;
-			max?: number;
-			step: number;
-	  }
-	| {
-			type: "select";
-			config: ArkhamCardsChaosOddTokenDefaultValue;
-			values?: number[];
-	  }
-);
+};
+
+export type ReferenceCardToken =
+	| ReferenceCardTokenValue
+	| ReferenceCardTokenCounter
+	| ReferenceCardTokenSelect;
+
+export type ReferenceCardTokenValue = ReferenceCardTokenBase & {
+	type: "value";
+	config: ArkhamCardsChaosOddTokenDefaultValue;
+};
+
+export type ReferenceCardTokenCounter = ReferenceCardTokenBase & {
+	type: "counter";
+	min?: number;
+	max?: number;
+	step: number;
+};
+
+export type ReferenceCardTokenSelect = ReferenceCardTokenBase & {
+	type: "select";
+	config: ArkhamCardsChaosOddTokenDefaultValue;
+	values?: number[];
+};

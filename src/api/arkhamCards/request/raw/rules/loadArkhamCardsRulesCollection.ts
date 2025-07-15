@@ -1,4 +1,4 @@
-import { ArkhamCardsRulesCollection } from "../../model";
+import type { ArkhamCardsRulesCollection } from "@/api/arkhamCards/model";
 import { loadArkhamCardsRules } from "./loadArkhamCardsRules";
 
 export const loadArkhamCardsRulesCollection = async (languages: string[]) => {

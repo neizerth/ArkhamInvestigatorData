@@ -26,29 +26,37 @@ export type ArkhamCardsChaosToken =
 	| "frost"
 	| "elder_thing";
 
-export type ArkhamCardsChaosOddToken = {
+export type ArkhamCardsChaosOddTokenBase = {
 	token: ArkhamCardsChaosToken;
-} & (
-	| {
-			value: ArkhamCardsChaosOddTokenDefaultValue;
-	  }
-	| {
-			type: "counter";
-			counter: {
-				prompt: string;
-				min?: number;
-				adjustment?: number;
-				max?: number;
-			};
-	  }
-	| {
-			type: "condition";
-			condition: {
-				default_value: ArkhamCardsChaosOddTokenDefaultValue;
-				options: ArkhamCardsChaosOddConditionOption[];
-			};
-	  }
-);
+};
+
+export type ArkhamCardsChaosOddToken =
+	| ArkhamCardsChaosOddTokenSingleValue
+	| ArkhamCardsChaosOddTokenCounter
+	| ArkhamCardsChaosOddTokenCondition;
+
+export type ArkhamCardsChaosOddTokenSingleValue =
+	ArkhamCardsChaosOddTokenBase & {
+		value: ArkhamCardsChaosOddTokenDefaultValue;
+	};
+
+export type ArkhamCardsChaosOddTokenCounter = ArkhamCardsChaosOddTokenBase & {
+	type: "counter";
+	counter: {
+		prompt: string;
+		min?: number;
+		adjustment?: number;
+		max?: number;
+	};
+};
+
+export type ArkhamCardsChaosOddTokenCondition = ArkhamCardsChaosOddTokenBase & {
+	type: "condition";
+	condition: {
+		default_value: ArkhamCardsChaosOddTokenDefaultValue;
+		options: ArkhamCardsChaosOddConditionOption[];
+	};
+};
 
 export type ArkhamCardsChaosOddTokenDefaultValue = {
 	modifier: ArkhamCardsChaosOddTokenValueType;
@@ -68,3 +76,8 @@ export type ArkhamCardsChaosOddTokenValueType =
 export type ArkhamCardsChaosOddConditionOption = {
 	modified_value: ArkhamCardsChaosOddTokenValue;
 };
+
+export type ArkhamCardsChaosOddCollection = Record<
+	string,
+	ArkhamCardsChaosOdd[]
+>;

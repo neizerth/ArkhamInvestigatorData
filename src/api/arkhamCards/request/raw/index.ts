@@ -1,2 +1,3 @@
 export * from "./loadArkhamCardsCampaigns";
-export * from "./loadArkhamCardsRules";
+export * from "./rules";
+export * from "./odds";

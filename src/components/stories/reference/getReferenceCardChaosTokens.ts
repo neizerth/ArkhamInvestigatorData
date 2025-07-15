@@ -2,15 +2,26 @@ import type { ArkhamCardsReference } from "@/api/arkhamCards";
 import { getArkhamCardsOdds } from "@/components/meta";
 import { propEq } from "ramda";
 import { getChaosBagTokenReferenceValues as getValues } from "./getChaosBagTokenReferenceValues";
-import { parseChaosOdds } from "./parseChaosOdds";
+import { parseChaosOdds } from "./odds";
+
+type Options = {
+	code: string;
+	encounter_code: string;
+	text: string;
+	back_text: string;
+	locale: string;
+};
 
 export const getReferenceCardChaosTokens = ({
 	code,
 	encounter_code,
-	real_text,
-	real_back_text,
-}: ArkhamCardsReference) => {
-	const odds = getArkhamCardsOdds();
+	text,
+	back_text,
+	locale,
+}: Options) => {
+	const collection = getArkhamCardsOdds();
+	const odds = locale in collection ? collection[locale] : collection.en;
+
 	let item = odds.find(propEq(code, "code"));
 
 	if (!item) {
@@ -21,8 +32,8 @@ export const getReferenceCardChaosTokens = ({
 		console.log(`chaos odds not found for ${code}`);
 
 		return {
-			tokens: getValues(real_text),
-			back_tokens: getValues(real_back_text),
+			tokens: getValues(text),
+			back_tokens: getValues(back_text),
 		};
 	}
 

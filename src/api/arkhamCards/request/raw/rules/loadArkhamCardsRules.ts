@@ -1,5 +1,5 @@
 import { ARKHAM_CARDS_REPO_RAW_URL as baseUri } from "@/config";
-import type { ArkhamCardsRulesItem } from "../../model";
+import type { ArkhamCardsRulesItem } from "../../../model";
 
 export const loadArkhamCardsRules = async (language = "en") => {
 	console.log(`loading rules for language: ${language}`);

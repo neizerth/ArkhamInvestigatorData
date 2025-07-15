@@ -6,6 +6,7 @@ import {
 	getArkhamCardsPacks,
 	getArkhamCardsReferenceCards,
 } from "../meta";
+import { getReferenceCardChaosTokens } from "./reference";
 import { getReferenceCardDifficulty } from "./reference/getReferenceCardDifficulty";
 
 type Options = {
@@ -61,6 +62,13 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 				back_difficulty: getReferenceCardDifficulty(translation.back_text),
 				reference: getChaosBagTokenReference([translation.text]),
 				back_reference: getChaosBagTokenReference([translation.back_text]),
+				...getReferenceCardChaosTokens({
+					code: ref.code,
+					encounter_code: ref.encounter_code,
+					text: translation.text,
+					back_text: translation.back_text,
+					locale,
+				}),
 			};
 		});
 	};

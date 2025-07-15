@@ -5,8 +5,8 @@ import {
 	loadArkhamCardsReferenceCards,
 } from "@/api/arkhamCards";
 import { loadArkhamCardsUpdates } from "@/api/arkhamCards/request/graphql/loadArkhamCardsUpdates";
-import { loadArkhamCardsChaosOdds } from "@/api/arkhamCards/request/raw/loadArkhamCardsChaosOdds";
-import { loadArkhamCardsRulesCollection } from "@/api/arkhamCards/request/raw/loadArkhamCardsRulesCollection";
+import { loadArkhamCardsRulesCollection } from "@/api/arkhamCards/request/raw";
+import { loadArkhamCardsChaosOddsCollection } from "@/api/arkhamCards/request/raw/odds/loadArkhamCardsChaosOddsCollection";
 import { ARKHAM_DIVIDER_CORE_URL, CACHE_DIR, DIST_DIR } from "@/config";
 import { createJSONWriter } from "@/features";
 import type { ArkhamDivider } from "arkham-divider-data";
@@ -21,7 +21,7 @@ export const loadMetadata = async () => {
 	const arkhamCardsPacks = await loadArkhamCardsPacks();
 	const referenceCards = await loadArkhamCardsReferenceCards();
 	const campaigns = await loadArkhamCardsCampaigns();
-	const chaosOdds = await loadArkhamCardsChaosOdds();
+	const chaosOdds = await loadArkhamCardsChaosOddsCollection(languages);
 	const rules = await loadArkhamCardsRulesCollection(languages);
 	const updates = await loadArkhamCardsUpdates();
 
