@@ -31,11 +31,19 @@ export type ReferencePart = { id: string } & (
 	  }
 );
 
+export type ReferenceCardTokenOption = ArkhamCardsChaosOddConditionOption &
+	ReferenceCardTokenEffectInfo;
+
 export type ReferenceCardTokenBase = {
 	token: ChaosBagToken;
 	value?: number;
 	prompt?: string;
-	options?: ArkhamCardsChaosOddConditionOption[];
+	options?: ReferenceCardTokenOption[];
+};
+
+export type ReferenceCardTokenEffectInfo = {
+	personal?: boolean;
+	expression?: string;
 };
 
 export type ReferenceCardToken =
@@ -48,15 +56,16 @@ export type ReferenceCardTokenValue = ReferenceCardTokenBase & {
 	config: ArkhamCardsChaosOddTokenDefaultValue;
 };
 
-export type ReferenceCardTokenCounter = ReferenceCardTokenBase & {
-	type: "counter";
-	min?: number;
-	max?: number;
-	step: number;
-};
+export type ReferenceCardTokenCounter = ReferenceCardTokenBase &
+	ReferenceCardTokenEffectInfo & {
+		type: "counter";
+		min?: number;
+		max?: number;
+		step: number;
+	};
 
 export type ReferenceCardTokenSelect = ReferenceCardTokenBase & {
 	type: "select";
-	config: ArkhamCardsChaosOddTokenDefaultValue;
 	values?: number[];
+	config: ArkhamCardsChaosOddTokenDefaultValue;
 };

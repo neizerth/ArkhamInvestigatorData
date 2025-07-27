@@ -74,6 +74,7 @@ export type ArkhamCardsChaosOddTokenValueType =
 	| "auto_succeed";
 
 export type ArkhamCardsChaosOddConditionOption = {
+	prompt: string;
 	modified_value: ArkhamCardsChaosOddTokenValue;
 };
 

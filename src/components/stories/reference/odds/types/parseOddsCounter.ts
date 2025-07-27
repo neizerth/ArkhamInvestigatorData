@@ -2,6 +2,7 @@ import type { ArkhamCardsChaosOddTokenCounter } from "@/api/arkhamCards";
 import { isNumber, underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
+import { isChaosOddEffectPersonal, parseChaosOddsEffects } from "../effects";
 
 export const parseOddsCounter = (
 	item: ArkhamCardsChaosOddTokenCounter,
@@ -14,13 +15,20 @@ export const parseOddsCounter = (
 		return null;
 	}
 
+	const effects = parseChaosOddsEffects(prompt);
+
+	const base = {
+		type: "counter" as const,
+		prompt,
+		token,
+		...effects,
+	};
+
 	if (!adjustment) {
 		const { min, max } = counter;
 		const value = max || 0;
 		return {
-			type: "counter",
-			prompt,
-			token,
+			...base,
 			value,
 			step: 1,
 			min: max && max * -1,
@@ -31,9 +39,7 @@ export const parseOddsCounter = (
 	const max = counter.min && counter.min * adjustment * 1;
 
 	return {
-		type: "counter",
-		prompt,
-		token,
+		...base,
 		value: min,
 		step: adjustment,
 		min,

@@ -6,12 +6,14 @@ import { underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { ascend, identity, isNotNil, sort, uniq } from "ramda";
+import { parseChaosOddsEffects } from "../effects";
 
 export const parseOddsCondition = (
 	item: ArkhamCardsChaosOddTokenCondition,
 ): ReferenceCardToken | null => {
 	const { condition } = item;
-	const { options, default_value } = condition;
+
+	const config = condition.default_value;
 
 	const token = underscore2CamelCase(item.token) as ChaosBagToken;
 	const value = getOptionValue(condition.default_value.modifier);
@@ -24,6 +26,13 @@ export const parseOddsCondition = (
 
 	const values = sort(ascend(identity), rawValues);
 
+	const options = condition.options.map((option) => {
+		return {
+			...option,
+			...parseChaosOddsEffects(option.prompt),
+		};
+	});
+
 	if (values.length === 0) {
 		return null;
 	}
@@ -33,7 +42,7 @@ export const parseOddsCondition = (
 
 		return {
 			type: "value",
-			config: default_value,
+			config,
 			options,
 			token,
 			value,
@@ -42,7 +51,7 @@ export const parseOddsCondition = (
 
 	return {
 		type: "select",
-		config: default_value,
+		config,
 		options,
 		token,
 		value,

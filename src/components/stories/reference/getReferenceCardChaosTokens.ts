@@ -1,10 +1,13 @@
 import type { ArkhamCardsReference } from "@/api/arkhamCards";
 import { getArkhamCardsOdds } from "@/components/meta";
+import type { ReferenceCard } from "@/model";
 import { propEq } from "ramda";
 import { getChaosBagTokenReferenceValues as getValues } from "./getChaosBagTokenReferenceValues";
 import { parseChaosOdds } from "./odds";
+import { mergeOddsEffects } from "./odds/mergeOddsEffects";
 
 type Options = {
+	source?: ReferenceCard;
 	code: string;
 	encounter_code: string;
 	text: string;
@@ -13,6 +16,22 @@ type Options = {
 };
 
 export const getReferenceCardChaosTokens = ({
+	source,
+	...options
+}: Options) => {
+	const data = geCardChaosTokens(options);
+
+	if (!source) {
+		return data;
+	}
+
+	return {
+		tokens: mergeOddsEffects(data.tokens, source.tokens),
+		back_tokens: mergeOddsEffects(data.back_tokens, source.back_tokens),
+	};
+};
+
+const geCardChaosTokens = ({
 	code,
 	encounter_code,
 	text,
