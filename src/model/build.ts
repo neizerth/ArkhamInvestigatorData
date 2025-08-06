@@ -2,6 +2,9 @@ import type {
 	ArkhamCardsRulesItem,
 	ArkhamCardsUpdate,
 } from "@/api/arkhamCards";
+
+export * from "@/components";
+
 import type { ArkhamDivider } from "arkham-divider-data";
 import type { SignatureCollection } from "./game";
 import type { Story } from "./game/story";

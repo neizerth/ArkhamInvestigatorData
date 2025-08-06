@@ -8,9 +8,15 @@ import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { ascend, identity, isNotNil, sort, uniq } from "ramda";
 import { parseChaosOddsEffects } from "../effects";
 
-export const parseOddsCondition = (
-	item: ArkhamCardsChaosOddTokenCondition,
-): ReferenceCardToken | null => {
+type Options = {
+	item: ArkhamCardsChaosOddTokenCondition;
+	effect: string;
+};
+
+export const parseOddsCondition = ({
+	item,
+	effect,
+}: Options): ReferenceCardToken | null => {
 	const { condition } = item;
 
 	const config = condition.default_value;
@@ -27,9 +33,13 @@ export const parseOddsCondition = (
 	const values = sort(ascend(identity), rawValues);
 
 	const options = condition.options.map((option) => {
+		const { prompt } = option;
 		return {
 			...option,
-			...parseChaosOddsEffects(option.prompt),
+			...parseChaosOddsEffects({
+				prompt,
+				effect,
+			}),
 		};
 	});
 

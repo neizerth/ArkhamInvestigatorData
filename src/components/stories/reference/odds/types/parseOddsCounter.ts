@@ -2,11 +2,17 @@ import type { ArkhamCardsChaosOddTokenCounter } from "@/api/arkhamCards";
 import { isNumber, underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
-import { isChaosOddEffectPersonal, parseChaosOddsEffects } from "../effects";
+import { parseChaosOddsEffects } from "../effects";
 
-export const parseOddsCounter = (
-	item: ArkhamCardsChaosOddTokenCounter,
-): ReferenceCardToken => {
+type Options = {
+	item: ArkhamCardsChaosOddTokenCounter;
+	effect: string;
+};
+
+export const parseOddsCounter = ({
+	item,
+	effect,
+}: Options): ReferenceCardToken => {
 	const token = underscore2CamelCase(item.token) as ChaosBagToken;
 	const { counter } = item;
 	const { adjustment, prompt } = item.counter;
@@ -15,7 +21,10 @@ export const parseOddsCounter = (
 		return null;
 	}
 
-	const effects = parseChaosOddsEffects(prompt);
+	const effects = parseChaosOddsEffects({
+		prompt,
+		effect,
+	});
 
 	const base = {
 		type: "counter" as const,

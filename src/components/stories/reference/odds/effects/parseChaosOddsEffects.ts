@@ -1,9 +1,14 @@
-import { isChaosOddEffectPersonal } from "./isChaosOddEffectPersonal";
-import { parseChaosOddsExpression } from "./parseChaosOddsExpression";
+import { isChaosOddEffectPersonal as isPersonal } from "./isChaosOddEffectPersonal";
+import { parseChaosOddsExpression as getExpression } from "./parseChaosOddsExpression";
 
-export const parseChaosOddsEffects = (effect: string) => {
+type Options = {
+	prompt: string;
+	effect: string;
+};
+
+export const parseChaosOddsEffects = ({ prompt, effect }: Options) => {
 	return {
-		personal: isChaosOddEffectPersonal(effect),
-		expression: parseChaosOddsExpression(effect),
+		personal: isPersonal(prompt) || isPersonal(effect),
+		expression: getExpression(prompt),
 	};
 };

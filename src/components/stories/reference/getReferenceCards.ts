@@ -23,6 +23,9 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
 
 			const locale = "en";
 
+			const reference = getChaosBagTokenReference([realText]);
+			const backReference = getChaosBagTokenReference([realBackText]);
+
 			return {
 				code: card.code,
 				encounter_code: card.encounter_code,
@@ -31,15 +34,17 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
 				text: realText,
 				back_text: realBackText,
 				locale,
-				reference: getChaosBagTokenReference([realText]),
-				back_reference: getChaosBagTokenReference([realBackText]),
+				reference,
+				back_reference: backReference,
 				icon: getEncounterSetIcon(card.encounter_code),
 				difficulty: getReferenceCardDifficulty(realText),
 				back_difficulty: getReferenceCardDifficulty(realBackText),
 				...getReferenceCardChaosTokens({
 					...card,
-					text: card.real_text,
-					back_text: card.real_back_text,
+					reference,
+					back_reference: backReference,
+					text: realText,
+					back_text: realBackText,
 					locale,
 				}),
 			};

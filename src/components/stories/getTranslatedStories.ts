@@ -55,15 +55,20 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 				return ref;
 			}
 
+			const reference = getChaosBagTokenReference([translation.text]);
+			const backReference = getChaosBagTokenReference([translation.back_text]);
+
 			return {
 				...ref,
 				...translation,
 				difficulty: getReferenceCardDifficulty(translation.text),
 				back_difficulty: getReferenceCardDifficulty(translation.back_text),
-				reference: getChaosBagTokenReference([translation.text]),
-				back_reference: getChaosBagTokenReference([translation.back_text]),
+				reference,
+				back_reference: backReference,
 				...getReferenceCardChaosTokens({
 					source: ref,
+					reference,
+					back_reference: backReference,
 					code: ref.code,
 					encounter_code: ref.encounter_code,
 					text: translation.text,

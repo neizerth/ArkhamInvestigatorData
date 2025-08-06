@@ -1,6 +1,6 @@
 import type { ArkhamCardsReference } from "@/api/arkhamCards";
 import { getArkhamCardsOdds } from "@/components/meta";
-import type { ReferenceCard } from "@/model";
+import type { ReferenceCard, ReferencePart } from "@/model";
 import { propEq } from "ramda";
 import { getChaosBagTokenReferenceValues as getValues } from "./getChaosBagTokenReferenceValues";
 import { parseChaosOdds } from "./odds";
@@ -13,6 +13,8 @@ type Options = {
 	text: string;
 	back_text: string;
 	locale: string;
+	reference: ReferencePart[];
+	back_reference: ReferencePart[];
 };
 
 export const getReferenceCardChaosTokens = ({
@@ -37,6 +39,8 @@ const geCardChaosTokens = ({
 	text,
 	back_text,
 	locale,
+	reference,
+	back_reference,
 }: Options) => {
 	const collection = getArkhamCardsOdds();
 	const odds = locale in collection ? collection[locale] : collection.en;
@@ -56,8 +60,14 @@ const geCardChaosTokens = ({
 		};
 	}
 
-	const tokens = parseChaosOdds(item.standard);
-	const backTokens = parseChaosOdds(item.hard);
+	const tokens = parseChaosOdds({
+		reference,
+		tokens: item.standard,
+	});
+	const backTokens = parseChaosOdds({
+		reference: back_reference,
+		tokens: item.hard,
+	});
 
 	if (!item.standard) {
 		console.log("WOW!", item);
