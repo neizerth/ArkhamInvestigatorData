@@ -71,7 +71,7 @@ export const parseOddsCondition = ({
 
 const getOptionValue = (value: ArkhamCardsChaosOddTokenValueType) => {
 	if (value === "auto_fail" || value === "auto_succeed") {
-		return;
+		return 0;
 	}
 	return value;
 };

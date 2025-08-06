@@ -68,4 +68,5 @@ export type ReferenceCardTokenSelect = ReferenceCardTokenBase & {
 	type: "select";
 	values?: number[];
 	config: ArkhamCardsChaosOddTokenDefaultValue;
+	options?: ReferenceCardTokenOption[];
 };
