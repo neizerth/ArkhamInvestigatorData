@@ -28,7 +28,7 @@ export const FatherMateo: Investigator = {
 	],
 	abilities: [
 		{
-			id: "reaction",
+			id: "mateo-auto-fail-reveal",
 			type: "reaction",
 			limitPer: "game",
 		},
