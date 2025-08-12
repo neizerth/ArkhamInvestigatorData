@@ -44,13 +44,16 @@ const parseLine = (text: string): ReferencePart | null => {
 		return null;
 	}
 
-	const lasstIcon = `[${lastItem.icon}]`;
-	const index = line.indexOf(lasstIcon);
+	const lastIcon = `[${lastItem.icon}]`;
+	const index = line.indexOf(lastIcon);
 
-	const effectIndex = index > 15 ? 0 : index + lasstIcon.length;
-	const nonTokenText = line.slice(effectIndex);
-
-	const effect = nonTokenText
+	const startIdx = lines.findIndex((line) => line.startsWith("["));
+	const effectLines = [
+		line.slice(index + lastIcon.length),
+		...lines.slice(startIdx + 1),
+	];
+	const effect = effectLines
+		.join("\n")
 		.trim()
 		.replace(/^(: )|(：)/, "")
 		.replace(/^-(?!\d)/, "");
