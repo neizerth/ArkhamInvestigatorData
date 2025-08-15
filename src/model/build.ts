@@ -9,6 +9,11 @@ import type { ArkhamDivider } from "arkham-divider-data";
 import type { SignatureCollection } from "./game";
 import type { Story } from "./game/story";
 
+export type AssetInfo = {
+	filename: string;
+	size: number;
+};
+
 export type BuildInfo = {
 	version: string;
 	minClientVersion: string;
@@ -16,6 +21,7 @@ export type BuildInfo = {
 	languages: string[];
 	iconsCount: number;
 	arkhamCardsUpdates: ArkhamCardsUpdate[];
+	assets: AssetInfo[];
 };
 
 export type Build = BuildInfo & {

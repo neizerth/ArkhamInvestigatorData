@@ -4,6 +4,7 @@ import { signatures as data } from "@/data";
 import { createJSONReader, createJSONWriter } from "@/features";
 import type { Build, BuildInfo } from "@/model";
 import type { ArkhamDivider } from "arkham-divider-data";
+import assets from "@/data/assets.json";
 
 const readCache = createJSONReader(CACHE_DIR);
 
@@ -21,6 +22,7 @@ export const createInvestigatorsCache = async (languages: string[] = []) => {
 		languages,
 		iconsCount,
 		arkhamCardsUpdates,
+		assets,
 	};
 
 	const build: Build = {
