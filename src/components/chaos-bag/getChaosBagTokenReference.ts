@@ -53,7 +53,7 @@ const parseLine = (text: string): ReferencePart | null => {
 		line,
 		...lines.slice(startIdx + 1),
 	];
-	const effect = effectLines
+	const effect = uniq(effectLines)
 		.join("\n")
 		.trim()
 		.replace(/^(: )|(：)/, "")
