@@ -49,7 +49,8 @@ const parseLine = (text: string): ReferencePart | null => {
 
 	const startIdx = lines.findIndex((line) => line.startsWith("["));
 	const effectLines = [
-		line.slice(index + lastIcon.length),
+		// line.slice(index + lastIcon.length),
+		line,
 		...lines.slice(startIdx + 1),
 	];
 	const effect = effectLines
