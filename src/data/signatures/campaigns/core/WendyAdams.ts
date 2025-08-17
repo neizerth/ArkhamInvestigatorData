@@ -18,6 +18,11 @@ export const WendyAdams: Investigator = {
 			type: "reaction",
 			limitPer: ["ability", "test"],
 		},
+		{
+			id: "wendys-amulet",
+			type: "special-action",
+			icon: "accessory_inverted",
+		},
 	],
 	variants: [
 		{
