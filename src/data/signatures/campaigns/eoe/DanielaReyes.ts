@@ -12,4 +12,12 @@ export const DanielaReyes: Investigator = {
 			top: 855,
 		},
 	},
+	abilities: [
+		{
+			id: "been-attcked",
+			type: "special-action",
+			icon: "skill_combat_inverted",
+			limitPer: "turn",
+		},
+	],
 };
