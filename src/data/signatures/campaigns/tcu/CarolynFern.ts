@@ -1,5 +1,4 @@
 import type { Investigator } from "@/model";
-import { image } from "../tdc/AgathaCrane";
 
 export const CarolynFern: Investigator = {
 	code: "05001",
