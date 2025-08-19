@@ -12,20 +12,6 @@ export const JennyBarnes: Investigator = {
 			top: 1864,
 		},
 	},
-	abilities: [
-		{
-			id: "permanent",
-			type: "permanent",
-			onUse: [
-				{
-					phase: "upkeep",
-					script: {
-						resources: "resources + 1",
-					},
-				},
-			],
-		},
-	],
 	variants: [
 		{
 			type: "parallel",
