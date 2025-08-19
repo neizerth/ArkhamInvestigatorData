@@ -14,6 +14,7 @@ set +o allexport
 
 # Local base directory to scan
 BASE_DIR="./dist/images"
+REMOTE_DIR="$FTP_REMOTE_DIR/images"
 
 # Build include/exclude rules:
 # - include files whose basename matches *PATTERN*
@@ -27,6 +28,6 @@ mirror -R --verbose \
   --exclude-glob "$BASE_DIR/**" \
   --include "$BASE_DIR" \
   --include-glob "$BASE_DIR/**/" \
-  "$BASE_DIR" "$FTP_REMOTE_DIR"
+  "$BASE_DIR" "$REMOTE_DIR"
 bye
 EOF

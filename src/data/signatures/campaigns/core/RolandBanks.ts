@@ -19,13 +19,13 @@ export const RolandBanks: Investigator = {
 			code: "98004",
 			name: "The Dirge of Reason",
 			image: {
-				width: 2792,
-				height: 3866,
+				width: 3626,
+				height: 3800,
 				face: {
-					width: 354,
-					height: 345,
-					left: 1152,
-					top: 1819,
+					width: 359,
+					height: 349,
+					left: 1680,
+					top: 1814,
 				},
 			},
 			abilities: [
