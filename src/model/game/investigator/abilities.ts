@@ -1,6 +1,3 @@
-import type { ChaosBagToken } from "../chaosBag";
-import type { Stat } from "./entities";
-
 export type LimitType =
 	| "round"
 	| "turn"
@@ -35,22 +32,11 @@ export type InvestigatorAbility = InvestigatorAbilityType & {
 	id: string;
 	visible?: boolean;
 	toggle?: boolean;
+	inverted?: boolean;
 	limitPer?: LimitType | LimitType[];
 	perInvestigator?: boolean;
 	additionalAction?: boolean;
 	personalUse?: boolean;
 	limitCount?: number;
-	enabledIf?: string;
-	onUse?: InvestigatorAbilityUse[];
 	disabled?: boolean;
 };
-export type InvestigatorAbilityUse = {
-	phase?: "upkeep";
-	script: InvestigatorAbilityScript;
-};
-
-export type InvestigatorAbilityScript = Partial<Record<Stat, string>> & {
-	chaosBag?: ChaosBagScript;
-};
-
-export type ChaosBagScript = Partial<Record<ChaosBagToken, string>>;
