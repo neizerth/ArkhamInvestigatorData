@@ -24,6 +24,7 @@ export const PrestonFairmont: Investigator = {
 			id: "pay-to-auto-success",
 			type: "special-action",
 			icon: "resource",
+			limitPer: "test",
 		},
 	],
 };
