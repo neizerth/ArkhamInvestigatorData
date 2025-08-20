@@ -20,7 +20,13 @@ export const RexMurphy: Investigator = {
 			code: "90078",
 			name: "Hunting for Answers",
 			// Rex hasn't abilities those can be scripted
-			abilities: [],
+			abilities: [
+				{
+					id: "auto-fail-for-3-cards",
+					type: "permanent",
+					limitPer: "test",
+				},
+			],
 		},
 		{
 			type: "taboo",
