@@ -12,21 +12,20 @@ export const RexMurphy: Investigator = {
 			top: 1173,
 		},
 	},
-	// Rex hasn't abilities those can be scripted
-	abilities: [],
+	abilities: [
+		{
+			id: "auto-fail-for-3-cards",
+			type: "permanent",
+			limitPer: "test",
+		},
+	],
 	variants: [
 		{
 			type: "parallel",
 			code: "90078",
 			name: "Hunting for Answers",
 			// Rex hasn't abilities those can be scripted
-			abilities: [
-				{
-					id: "auto-fail-for-3-cards",
-					type: "permanent",
-					limitPer: "test",
-				},
-			],
+			abilities: [],
 		},
 		{
 			type: "taboo",
