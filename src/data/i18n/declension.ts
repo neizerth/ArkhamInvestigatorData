@@ -4,6 +4,7 @@ export const dativeNameDeclension: Record<string, NameDeclension> = {
 		"04244": "Телу йитианина",
 		"04004": "Отцу Матео",
 		"90081": "Отцу Матео",
+		"07001": "Сестре Мэри",
 		"10661": "Расколотому Я",
 	},
 };
