@@ -20,5 +20,10 @@ export const PrestonFairmont: Investigator = {
 			name: "Family Inheritance",
 			defaultValue: 4,
 		},
+		{
+			id: "pay-to-auto-success",
+			type: "special-action",
+			icon: "resource",
+		},
 	],
 };
