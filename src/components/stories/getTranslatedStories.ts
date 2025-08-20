@@ -8,6 +8,7 @@ import {
 } from "../meta";
 import { getReferenceCardChaosTokens } from "./reference";
 import { getReferenceCardDifficulty } from "./reference/getReferenceCardDifficulty";
+import { capitalize } from "@/features";
 
 type Options = {
 	locale: string;
@@ -61,6 +62,8 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 			return {
 				...ref,
 				...translation,
+				text: capitalize(translation.text),
+				back_text: capitalize(translation.back_text),
 				difficulty: getReferenceCardDifficulty(translation.text),
 				back_difficulty: getReferenceCardDifficulty(translation.back_text),
 				reference,
