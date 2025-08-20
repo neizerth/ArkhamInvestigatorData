@@ -62,8 +62,6 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 			return {
 				...ref,
 				...translation,
-				text: capitalize(translation.text),
-				back_text: capitalize(translation.back_text),
 				difficulty: getReferenceCardDifficulty(translation.text),
 				back_difficulty: getReferenceCardDifficulty(translation.back_text),
 				reference,
