@@ -23,7 +23,7 @@ export const KymaniJones: Investigator = {
 	abilities: [
 		{
 			id: "exhausted-enemy",
-			type: "special-action",
+			type: "permanent",
 			icon: "exhaust",
 			limitPer: "round",
 		},

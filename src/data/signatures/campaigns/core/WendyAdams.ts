@@ -20,7 +20,7 @@ export const WendyAdams: Investigator = {
 		},
 		{
 			id: "wendys-amulet",
-			type: "special-action",
+			type: "permanent",
 			icon: "accessory_inverted",
 		},
 	],

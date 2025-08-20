@@ -15,7 +15,7 @@ export const DanielaReyes: Investigator = {
 	abilities: [
 		{
 			id: "been-attacked",
-			type: "special-action",
+			type: "permanent",
 			icon: "claws",
 			limitPer: "round",
 		},
