@@ -16,7 +16,7 @@ export const DanielaReyes: Investigator = {
 		{
 			id: "been-attacked",
 			type: "special-action",
-			icon: "skill_combat_inverted",
+			icon: "claws",
 			limitPer: "round",
 		},
 	],
