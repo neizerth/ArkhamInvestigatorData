@@ -30,7 +30,7 @@ export const SisterMary: Investigator = {
 				face: {
 					width: 159,
 					height: 214,
-					left: 1641 + 100,
+					left: 1641 + 30,
 					top: 1757,
 				},
 			},
