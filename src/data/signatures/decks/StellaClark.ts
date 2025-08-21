@@ -21,6 +21,7 @@ export const StellaClark: Investigator = {
 		{
 			type: "permanent",
 			id: "autofail-to-heal-horror-and-damage",
+			limitPer: "test",
 		},
 	],
 };
