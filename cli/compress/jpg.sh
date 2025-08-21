@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-cd ./dist/images
+cd ./dist/images/jpg
 
-zip -r images.zip jpg/
+zip -r ../images.zip . -x "*/"
