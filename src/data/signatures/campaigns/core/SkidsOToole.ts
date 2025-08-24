@@ -14,7 +14,7 @@ export const SkidsOToole: Investigator = {
 	},
 	abilities: [
 		{
-			id: "fast",
+			id: "two-resources-for-action",
 			type: "fast",
 			limitPer: "turn",
 		},
