@@ -3,6 +3,7 @@ import type { Investigator } from "@/model";
 export const WendyAdams: Investigator = {
 	code: "01005",
 	image: {
+		light: true,
 		width: 3656,
 		height: 3435,
 		face: {

@@ -2,6 +2,7 @@ import type { Investigator, InvestigatorImage } from "@/model";
 
 const image: InvestigatorImage = {
 	id: "zaw_02228",
+	light: true,
 	width: 2223,
 	height: 2500,
 	face: {

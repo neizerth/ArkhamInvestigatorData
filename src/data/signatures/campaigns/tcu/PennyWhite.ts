@@ -5,6 +5,7 @@ export const PennyWhite: Investigator = {
 	additionalAction: true,
 	spoiler: true,
 	image: {
+		light: true,
 		width: 1470,
 		height: 1690,
 		face: {

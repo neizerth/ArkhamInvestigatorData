@@ -3,6 +3,7 @@ import type { Investigator } from "@/model";
 export const MakotoMiyazaki: Investigator = {
 	code: "zgoo_00004",
 	image: {
+		light: true,
 		width: 4320,
 		height: 2880,
 		face: {

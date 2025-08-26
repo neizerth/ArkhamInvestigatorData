@@ -4,6 +4,7 @@ export const ValentinoRivas: Investigator = {
 	code: "05048",
 	spoiler: true,
 	image: {
+		light: true,
 		width: 4103,
 		height: 3464,
 		face: {
