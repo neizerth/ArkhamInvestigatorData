@@ -1,5 +1,6 @@
 export type LimitType =
 	| "round"
+	| "action"
 	| "turn"
 	| "phase"
 	| "ability"
