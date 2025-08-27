@@ -3,13 +3,14 @@ import type { Investigator } from "@/model";
 export const TheInsane: Investigator = {
 	code: "zci_00001",
 	image: {
-		width: 2000,
-		height: 1800,
+		version: 2,
+		width: 1824,
+		height: 2000,
 		face: {
-			width: 540,
-			height: 604,
-			left: 297,
-			top: 518,
+			width: 376,
+			height: 400,
+			left: 708,
+			top: 828,
 		},
 	},
 	abilities: [
