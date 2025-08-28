@@ -3,6 +3,7 @@ import type { Investigator } from "@/model";
 export const YukiYagami: Investigator = {
 	code: "zgoo_00001",
 	image: {
+		version: 2,
 		width: 2845,
 		height: 3000,
 		face: {
