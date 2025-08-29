@@ -18,6 +18,7 @@ export const TonyMorgan: Investigator = {
 			id: "06003_colt",
 			name: "Tony's .38 Long Colt",
 			image: {
+				light: true,
 				width: 1745,
 				height: 2109,
 				face: {

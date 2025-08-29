@@ -5,7 +5,6 @@ export const ValentinoRivas: Investigator = {
 	spoiler: true,
 	image: {
 		version: 2,
-		light: true,
 		width: 2965,
 		height: 2500,
 		face: {
