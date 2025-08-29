@@ -3,13 +3,14 @@ import type { Investigator } from "@/model";
 export const DianaStanley: Investigator = {
 	code: "05004",
 	image: {
-		width: 2000,
-		height: 1627,
+		version: 2,
+		width: 3535,
+		height: 2875,
 		face: {
-			width: 202,
-			height: 319,
-			left: 760,
-			top: 553,
+			width: 510,
+			height: 579,
+			left: 1236,
+			top: 960,
 		},
 	},
 	abilities: [

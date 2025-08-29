@@ -6,13 +6,14 @@ if [ "$1" = "-f" ]; then
   shift
 fi
 
-BASENAME="$1"
+BASENAME="${1:-*}"
 ROOT="./dist/images/jpg"
 
 find "$ROOT" -type f -name "$BASENAME.jpg" ! -path "*/grayscale/*" | while IFS= read -r src_file; do
   src_dir=$(dirname "$src_file")
+  src_name=$(basename "$src_file")
   dst_dir="$src_dir/grayscale"
-  dst_file="$dst_dir/$BASENAME.jpg"
+  dst_file="$dst_dir/$src_name"
 
   mkdir -p "$dst_dir"
 

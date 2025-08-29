@@ -3,14 +3,14 @@ import type { Investigator } from "@/model";
 export const PrestonFairmont: Investigator = {
 	code: "05003",
 	image: {
-		version: 2,
-		width: 1263,
-		height: 2200,
+		version: 3,
+		width: 1791,
+		height: 3120,
 		face: {
-			width: 221,
-			height: 262,
-			left: 596,
-			top: 859,
+			width: 364,
+			height: 424,
+			left: 816,
+			top: 1164,
 		},
 	},
 	abilities: [

@@ -4,14 +4,15 @@ export const ValentinoRivas: Investigator = {
 	code: "05048",
 	spoiler: true,
 	image: {
+		version: 2,
 		light: true,
-		width: 4103,
-		height: 3464,
+		width: 2965,
+		height: 2500,
 		face: {
-			width: 563,
-			height: 809,
-			left: 1488,
-			top: 1411,
+			width: 381,
+			height: 541,
+			left: 1062,
+			top: 1045,
 		},
 	},
 	abilities: [

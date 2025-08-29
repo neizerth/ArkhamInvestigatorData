@@ -4,14 +4,14 @@ export const RichardCarlisle: Investigator = {
 	code: "zoc_31014",
 	image: {
 		light: true,
-		version: 2,
-		width: 1528,
-		height: 2500,
+		version: 3,
+		width: 4200,
+		height: 6872,
 		face: {
-			width: 290,
-			height: 332,
-			left: 329,
-			top: 1299,
+			width: 921,
+			height: 938,
+			left: 844,
+			top: 3494,
 		},
 	},
 	abilities: [

@@ -10,7 +10,7 @@ fi
 ID="$1"
 
 echo "=== Converting image to grayscale ==="
-sh cli/convert/image/grayscale.sh "$ID"
+sh cli/image/grayscale.sh -f "$ID"
 
 echo "=== Converting to AVIF ==="
 sh cli/convert/avif/convert.sh "$ID"
