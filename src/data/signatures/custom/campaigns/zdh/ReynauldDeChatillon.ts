@@ -3,7 +3,7 @@ import type { Investigator } from "@/model";
 export const ReynauldDeChatillon: Investigator = {
 	code: "zdh_00001",
 	image: {
-		version: 3,
+		version: 4,
 		width: 1436,
 		height: 1723,
 		face: {
