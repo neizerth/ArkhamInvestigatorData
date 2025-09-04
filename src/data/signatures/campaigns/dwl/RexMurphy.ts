@@ -33,7 +33,7 @@ export const RexMurphy: Investigator = {
 			name: "Taboo",
 			abilities: [
 				{
-					id: "reaction",
+					id: "auto-fail-for-3-cards",
 					type: "reaction",
 					limitPer: "round",
 				},
