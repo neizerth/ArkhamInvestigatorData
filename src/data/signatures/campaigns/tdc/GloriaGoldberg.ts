@@ -27,6 +27,15 @@ export const GloriaGoldberg: Investigator = {
 					top: 1986,
 				},
 			},
+			abilities: [
+				{
+					id: "gloria-cards",
+					type: "counter",
+					direction: "decrease",
+					name: "Cards beneath Gloria",
+					max: 3,
+				},
+			],
 		},
 	],
 	abilities: [
