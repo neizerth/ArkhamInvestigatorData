@@ -27,8 +27,8 @@ export const AshcanPete: Investigator = {
 			name: "On the Road Again",
 			abilities: [
 				{
-					id: "fast",
-					type: "fast",
+					id: "reaction",
+					type: "reaction",
 					limitPer: "round",
 				},
 			],

@@ -1,4 +1,8 @@
-import type { Investigator, InvestigatorImage } from "@/model";
+import type {
+	Investigator,
+	InvestigatorAbility,
+	InvestigatorImage,
+} from "@/model";
 
 const image: InvestigatorImage = {
 	id: "zaw_02228",
@@ -13,14 +17,27 @@ const image: InvestigatorImage = {
 	},
 };
 
+const abilities: InvestigatorAbility[] = [
+	{
+		id: "use-base-intellect",
+		icon: "reaction",
+		type: "special-action",
+		limitPer: "round",
+		perInvestigator: true,
+		personalUse: true,
+	},
+];
+
 const Neutral: Investigator = {
 	code: "zaw_02228",
 	image,
+	abilities,
 };
 
 const Seeker: Investigator = {
 	code: "zaw_00304",
 	image,
+	abilities,
 };
 
 export const AliceLiddell = {
