@@ -15,7 +15,7 @@ export const ReynauldDeChatillon: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "reynauld-reaction",
 			type: "reaction",
 			limitPer: "round",
 			perInvestigator: true,
