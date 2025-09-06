@@ -15,7 +15,7 @@ export const DianaStanley: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "diana-reaction",
 			type: "reaction",
 			limitPer: "phase",
 		},
