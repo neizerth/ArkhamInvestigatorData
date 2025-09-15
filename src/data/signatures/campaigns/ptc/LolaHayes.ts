@@ -1,4 +1,13 @@
-import type { Investigator } from "@/model";
+import type { Investigator, InvestigatorFaction } from "@/model";
+
+const roles: InvestigatorFaction[] = [
+	"guardian",
+	"seeker",
+	"rogue",
+	"mystic",
+	"survivor",
+	"neutral",
+];
 
 export const LolaHayes: Investigator = {
 	code: "03006",
@@ -12,7 +21,7 @@ export const LolaHayes: Investigator = {
 			top: 1150,
 		},
 	},
-	roles: ["guardian", "seeker", "rogue", "mystic", "survivor", "neutral"],
+	roles,
 	skins: [
 		{
 			id: "03006_improvisation",
@@ -48,7 +57,13 @@ export const LolaHayes: Investigator = {
 					limitPer: "round",
 				},
 			],
-			roles: ["guardian", "seeker", "rogue", "mystic", "survivor", "neutral"],
+			roles,
+		},
+		{
+			type: "parallel",
+			code: "90087",
+			name: "Parallel",
+			roles,
 		},
 	],
 };
