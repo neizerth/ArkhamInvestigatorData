@@ -19,20 +19,23 @@ export const getEnglishStories = () => {
 
 			const props = pick(["code", "name", "type", "icon"], story);
 
+			const difficultyLevels = getStoryDifficultyLevels(story);
 			const referenceCards = getReferenceCards(story);
+
+			const base = {
+				...props,
+				locale: "en",
+				official: story.is_official,
+				difficultyLevels,
+			};
 
 			if (referenceCards.length === 0) {
 				return null;
 			}
 
-			const difficultyLevels = getStoryDifficultyLevels(story);
-
 			return {
-				...props,
-				locale: "en",
-				official: story.is_official,
+				...base,
 				referenceCards,
-				difficultyLevels,
 			};
 		})
 		.filter(isNotNil);
