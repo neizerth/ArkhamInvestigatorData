@@ -3,7 +3,7 @@ import type { Investigator } from "@/model";
 export const LilyChen: Investigator = {
 	code: "08010",
 	image: {
-		version: 2,
+		version: 3,
 		width: 2985,
 		height: 2156,
 		face: {
