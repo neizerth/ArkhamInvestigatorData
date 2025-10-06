@@ -15,7 +15,7 @@ export const KohakuNarukami: Investigator = {
 	abilities: [
 		{
 			id: "bless-curse",
-			type: "action",
+			type: "special-action",
 			icon: "seal",
 			limitPer: "round",
 		},
