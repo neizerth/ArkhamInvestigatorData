@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
 
-cd ./dist/images
+DIST_DIR="$(cd ./dist/images && pwd)"
 
-zip -r -9 avif.zip avif/ -x "*/mini/*"
-zip -r -9 avif.color.zip avif/ -x "*/grayscale/*" -x "*/mini/*"
+cd ./images
+
+zip -r -9 $DIST_DIR/avif.zip avif/ -x "*/mini/*"
+zip -r -9 $DIST_DIR/avif.color.zip avif/ -x "*/grayscale/*" -x "*/mini/*"
