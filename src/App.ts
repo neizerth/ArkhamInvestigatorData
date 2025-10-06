@@ -14,8 +14,6 @@ export class App {
 		switch (command) {
 			case "meta":
 				return await loadMetadata();
-			case "images":
-				// return await createImageCache();
 			case "cache":
 				return await createInvestigatorsCache();
 			case "data":
@@ -26,7 +24,6 @@ export class App {
 	}
 	async start() {
 		await loadMetadata();
-		// await createImageCache();
 		const languages = await createDataCache();
 		await createInvestigatorsCache(languages);
 	}
