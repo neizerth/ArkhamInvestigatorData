@@ -39,6 +39,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: Run system deploy script
+        run: bash ./cli/deploy/start.sh
       - name: Build
         run: npm run start
       - name: Setup Pages

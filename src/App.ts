@@ -1,4 +1,4 @@
-import { createImageCache, createInvestigatorsCache } from "./tasks";
+import { createInvestigatorsCache } from "./tasks";
 import { createDataCache } from "./tasks/createDataCache";
 import { loadMetadata } from "./tasks/loadMetadata";
 import { prepareDirectories } from "./tasks/prepareDirectories";
