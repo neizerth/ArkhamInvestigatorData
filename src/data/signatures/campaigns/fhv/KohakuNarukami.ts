@@ -18,6 +18,7 @@ export const KohakuNarukami: Investigator = {
 			type: "special-action",
 			icon: "seal",
 			limitPer: "round",
+			toggle: false,
 		},
 	],
 	skins: [
