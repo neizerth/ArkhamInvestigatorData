@@ -3,10 +3,10 @@ set -e
 
 name="${1:-*}"
 
-src_dir="./dist/images/jpg"
+src_dir="./images/jpg"
 worker_path="$(cd "$(dirname "$0")" && pwd)/worker.sh"
 
-cd ./dist/images/jpg
+cd ./images/jpg
 mkdir -p ../avif
 
 find ./ -type f -iname "${name}.jpg" | parallel "$worker_path" {}

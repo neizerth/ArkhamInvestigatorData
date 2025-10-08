@@ -3,14 +3,14 @@ import type { Investigator } from "@/model";
 export const RichardCarlisle: Investigator = {
 	code: "zoc_31014",
 	image: {
-		version: 3,
-		width: 4200,
-		height: 6872,
+		version: 4,
+		width: 1612,
+		height: 1723,
 		face: {
-			width: 921,
-			height: 938,
-			left: 844,
-			top: 3494,
+			width: 292,
+			height: 323,
+			left: 643,
+			top: 699,
 		},
 	},
 	abilities: [

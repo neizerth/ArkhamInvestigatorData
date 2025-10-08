@@ -7,12 +7,13 @@ if [ "$1" = "-f" ]; then
 fi
 
 BASENAME="${1:-*}"
-ROOT="./dist/images/jpg"
+ROOT="./images/jpg/color"
 
-find "$ROOT" -type f -name "$BASENAME.jpg" ! -path "*/grayscale/*" | while IFS= read -r src_file; do
-  src_dir=$(dirname "$src_file")
+find "$ROOT" -type f -name "$BASENAME.jpg" | while IFS= read -r src_file; do
   src_name=$(basename "$src_file")
-  dst_dir="$src_dir/grayscale"
+  # Extract the subdirectory path (full, mini, square, etc.)
+  subdir=$(echo "$src_file" | sed "s|$ROOT/||" | xargs dirname)
+  dst_dir="./images/jpg/grayscale/$subdir"
   dst_file="$dst_dir/$src_name"
 
   mkdir -p "$dst_dir"

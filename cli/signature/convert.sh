@@ -15,13 +15,7 @@ sh cli/image/grayscale.sh -f "$ID"
 echo "=== Converting to AVIF ==="
 sh cli/convert/avif/convert.sh "$ID"
 
-echo "=== Compressing AVIF ==="
-sh cli/compress/avif.sh
-
 echo "=== Converting to WEBP ==="
 sh cli/convert/webp/convert.sh "$ID"
-
-echo "=== Compressing WEBP ==="
-sh cli/compress/webp.sh
 
 echo "✅ All conversions completed for ID: $ID"

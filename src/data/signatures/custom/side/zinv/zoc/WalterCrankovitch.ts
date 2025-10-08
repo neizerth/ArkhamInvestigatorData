@@ -4,14 +4,14 @@ export const WalterCrankovitch: Investigator = {
 	code: "zoc_31020",
 	image: {
 		light: true,
-		version: 1,
-		width: 2160,
-		height: 2160,
+		version: 2,
+		width: 2925,
+		height: 3310,
 		face: {
-			width: 436,
-			height: 593,
-			left: 564,
-			top: 715,
+			width: 366,
+			height: 469,
+			left: 1340,
+			top: 1186,
 		},
 	},
 	abilities: [
