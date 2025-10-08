@@ -13,10 +13,6 @@ export const getEnglishStories = () => {
 
 			const storyScenarios = [...scenarios, scenario].filter(isNotNil);
 
-			if (storyScenarios.length === 0) {
-				return null;
-			}
-
 			const props = pick(["code", "name", "type", "icon"], story);
 
 			const difficultyLevels = getStoryDifficultyLevels(story);
