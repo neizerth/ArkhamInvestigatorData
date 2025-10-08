@@ -2,6 +2,7 @@ import type { ChaosBagToken } from "@/model/game/chaosBag";
 import type { ArkhamDivider } from "arkham-divider-data";
 import { propEq } from "ramda";
 import { getArkhamCardsCampaigns } from "../meta";
+import { ArkhamCardsCampaign } from "@/api/arkhamCards";
 
 type ArkhamDividerStory = ArkhamDivider.Core["stories"][number];
 
@@ -70,16 +71,21 @@ const getSteps = (story: ArkhamDividerStory) => {
 	const [firstCampaign] = story.campaigns || [];
 	const campaignId = story.campaign_id || firstCampaign?.id;
 
-	if (!campaignId) {
-		console.log("no campaign id", story.code);
-		return [];
+	let item: ArkhamCardsCampaign | undefined;
+
+	if (campaignId) {
+		item = campaigns.find(({ campaign }) => campaign.id === campaignId);
 	}
 
-	const item = campaigns.find(({ campaign }) => campaign.id === campaignId);
+	if (!item) {
+		item = campaigns.find(({ campaign }) => campaign.name === story.name);
+	}
 
 	if (item) {
 		return item.campaign.steps;
 	}
+
+	console.log("no campaign id", story.code);
 
 	return [];
 };
