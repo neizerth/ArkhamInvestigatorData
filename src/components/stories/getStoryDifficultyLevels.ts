@@ -53,7 +53,9 @@ const getSteps = (story: ArkhamDividerStory) => {
 		story.cycle_code === "side_stories" ||
 		["side_story", "challenge"].includes(story.type);
 
-	if (isSide && story.scenario) {
+	// if (isSide && story.scenario) {
+
+	if (story.scenario) {
 		const scenario = sideCampaign.scenarios.find(
 			propEq(story.scenario.id, "id"),
 		);
