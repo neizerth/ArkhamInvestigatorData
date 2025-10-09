@@ -5,7 +5,8 @@
   "types": "build/src/types.d.ts",
   "scripts": {
     "start": "tsx ./src/index.ts",
-    "prebuild": "bash ./cli/build/media.sh",
+    "build:media": "bash ./cli/build/media.sh",
+    "prebuild": "npm run build:media",
     "build": "npm start",
     "build:r2": "npm run build",
     "postbuild:r2": "npm run r2:upload",
