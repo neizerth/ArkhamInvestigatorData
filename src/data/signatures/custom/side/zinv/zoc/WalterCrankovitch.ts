@@ -4,7 +4,7 @@ export const WalterCrankovitch: Investigator = {
 	code: "zoc_31020",
 	image: {
 		light: true,
-		version: 2,
+		version: 3,
 		width: 2925,
 		height: 3310,
 		face: {

@@ -1,13 +1,7 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for deploying static content to R2
+name: Deploy static content to R2
 
 on:
-  schedule:
-    - cron: "0 0,12 * * *"
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ['master']
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -39,17 +33,14 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Build media
-        run: npm run build:media
       - name: Build
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Cloudflare R2
+        uses: ryand56/r2-upload-action@latest # Can be any release
         with:
-          # Upload dist repository
-          path: './dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          r2-account-id: ${{ secrets.R2_ACCOUNT_ID }}
+          r2-access-key-id: ${{ secrets.R2_ACCESS_KEY_ID }}
+          r2-secret-access-key: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          r2-bucket: ${{ secrets.R2_BUCKET }}
+          source-dir: dist
+          keep-file-fresh: true

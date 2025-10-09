@@ -23,7 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
-cache
-dist
-build
-images/jpg
+/cache
+/dist
+/build
+/images/jpg
+
+.aws/*
