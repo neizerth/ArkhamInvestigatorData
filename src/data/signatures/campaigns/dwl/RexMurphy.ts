@@ -34,6 +34,11 @@ export const RexMurphy: Investigator = {
 			abilities: [
 				{
 					id: "auto-fail-for-3-cards",
+					type: "permanent",
+					limitPer: "test",
+				},
+				{
+					id: "reaction",
 					type: "reaction",
 					limitPer: "round",
 				},
