@@ -45,7 +45,7 @@ const parseLine = (text: string): ReferencePart | null => {
 	}
 
 	const startIdx = lines.findIndex((line) => line.startsWith("["));
-	const cleanedLine = line.replace(/^\[[^\]]+\]\s*/, "");
+	const cleanedLine = line.replace(/^(\[[^\]]+\]\s*)+[:：]?\s*/, "");
 	const effectLines = [
 		cleanedLine,
 		// line.slice(index + lastIcon.length),
