@@ -34,10 +34,14 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 		.filter(({ value }) => Boolean(value));
 };
 
-export const parseEffectValue = (text: string): number => {
-	const pattern = /^([-—−\+]\d+)\./;
 
-	const matches = text.match(pattern);
+
+export const parseEffectValue = (text: string): number => {
+	const pattern = /([-—−\+]\d+)\./;
+
+	const maxSearchLength = 20;
+
+	const matches = text.slice(0, maxSearchLength).match(pattern);
 
 	if (!matches) {
 		console.log("no matches for", text);
