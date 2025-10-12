@@ -1,50 +1,50 @@
 {
-  "name": "arkham-investigator-data",
-  "version": "2.18.4",
-  "main": "index.js",
-  "types": "build/src/types.d.ts",
-  "scripts": {
-    "start": "tsx ./src/index.ts",
-    "build:media": "bash ./cli/build/media.sh",
-    "prebuild": "npm run build:media",
-    "build": "npm start",
-    "build:r2": "npm run build",
-    "postbuild:r2": "npm run r2:upload",
-    "r2:upload": "bash ./cli/deploy/r2.sh",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx @biomejs/biome format --write ./src",
-    "serve": "http-server ./dist --cors",
-    "package:clean": "rimraf ./build",
-    "package": "npm run package:clean && tsc && tsc-alias",
-    "format": "npx @biomejs/biome check --write ./src",
-    "biome:lint": "npx @biomejs/biome check ./src",
-    "biome:fix": "npx @biomejs/biome lint --write ./src"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neizerth/ArkhamInvestigatorData.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/neizerth/ArkhamInvestigatorData/issues"
-  },
-  "homepage": "https://github.com/neizerth/ArkhamInvestigatorData#readme",
-  "description": "",
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/decompress": "^4.2.7",
-    "@types/node": "^22.13.1",
-    "@types/ramda": "^0.30.2",
-    "arkham-divider-data": "^1.2.0",
-    "decompress": "^4.2.1",
-    "dotenv": "^16.4.7",
-    "graphql-request": "^7.1.2",
-    "http-server": "^14.1.1",
-    "prettier": "^3.6.2",
-    "ramda": "^0.30.1",
-    "rimraf": "^6.0.1",
-    "tsc-alias": "^1.8.10",
-    "tsx": "^4.19.2"
-  }
+	"name": "arkham-investigator-data",
+	"version": "2.18.5",
+	"main": "index.js",
+	"types": "build/src/types.d.ts",
+	"scripts": {
+		"start": "tsx ./src/index.ts",
+		"build:media": "bash ./cli/build/media.sh",
+		"prebuild": "npm run build:media",
+		"build": "npm start",
+		"build:r2": "npm run build",
+		"postbuild:r2": "npm run r2:upload",
+		"r2:upload": "bash ./cli/deploy/r2.sh",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "npx @biomejs/biome format --write ./src",
+		"serve": "http-server ./dist --cors",
+		"package:clean": "rimraf ./build",
+		"package": "npm run package:clean && tsc && tsc-alias",
+		"format": "npx @biomejs/biome check --write ./src",
+		"biome:lint": "npx @biomejs/biome check ./src",
+		"biome:fix": "npx @biomejs/biome lint --write ./src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/neizerth/ArkhamInvestigatorData.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/neizerth/ArkhamInvestigatorData/issues"
+	},
+	"homepage": "https://github.com/neizerth/ArkhamInvestigatorData#readme",
+	"description": "",
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/decompress": "^4.2.7",
+		"@types/node": "^22.13.1",
+		"@types/ramda": "^0.30.2",
+		"arkham-divider-data": "^1.2.0",
+		"decompress": "^4.2.1",
+		"dotenv": "^16.4.7",
+		"graphql-request": "^7.1.2",
+		"http-server": "^14.1.1",
+		"prettier": "^3.6.2",
+		"ramda": "^0.30.1",
+		"rimraf": "^6.0.1",
+		"tsc-alias": "^1.8.10",
+		"tsx": "^4.19.2"
+	}
 }

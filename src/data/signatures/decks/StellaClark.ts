@@ -14,7 +14,7 @@ export const StellaClark: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "stella-fail-test-reaction",
 			type: "reaction",
 			limitPer: "round",
 		},
