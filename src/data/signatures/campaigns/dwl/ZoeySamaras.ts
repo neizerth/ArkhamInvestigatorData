@@ -49,8 +49,8 @@ export const ZoeySamaras: Investigator = {
 				face: {
 					width: 459,
 					height: 472,
-					left: 1788 - 150,
-					top: 1400 + 100,
+					left: 1788 - 50,
+					top: 1400 + 50,
 				},
 			},
 		},
