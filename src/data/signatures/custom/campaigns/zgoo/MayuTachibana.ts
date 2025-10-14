@@ -3,6 +3,7 @@ import type { Investigator } from "@/model";
 export const MayuTachibana: Investigator = {
 	code: "zgoo_00098",
 	image: {
+		version: 2,
 		width: 2958,
 		height: 4125,
 		face: {
