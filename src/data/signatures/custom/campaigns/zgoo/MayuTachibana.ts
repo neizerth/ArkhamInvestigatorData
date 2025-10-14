@@ -16,7 +16,7 @@ export const MayuTachibana: Investigator = {
 	abilities: [
 		{
 			id: "reaction",
-			type: "reaction",
+			type: "fast",
 			limitPer: "round",
 		},
 	],
