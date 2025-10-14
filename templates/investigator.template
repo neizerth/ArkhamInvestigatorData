@@ -1,5 +1,0 @@
-import type { Investigator } from "@/model";
-
-export const #{filename}: Investigator = {
-  code: ''
-}
