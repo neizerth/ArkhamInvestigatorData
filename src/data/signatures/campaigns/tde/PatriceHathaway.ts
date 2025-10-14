@@ -24,7 +24,7 @@ export const PatriceHathaway: Investigator = {
 					width: 1133,
 					height: 1133,
 					left: 1458,
-					top: 1203,
+					top: 1003,
 				},
 			},
 		},
