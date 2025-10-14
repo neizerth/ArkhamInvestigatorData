@@ -9,7 +9,7 @@ export const MayuTachibana: Investigator = {
 		face: {
 			width: 825,
 			height: 825,
-			left: 1154,
+			left: 1054,
 			top: 1489,
 		},
 	},
