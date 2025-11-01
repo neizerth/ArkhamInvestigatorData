@@ -12,6 +12,13 @@ export const CarolynFern: Investigator = {
 			top: 1547,
 		},
 	},
+	abilities: [
+		{
+			id: "get-resource-after-heal",
+			type: "reaction",
+			limitPer: "round",
+		},
+	],
 	variants: [
 		{
 			code: "98010",
@@ -27,6 +34,13 @@ export const CarolynFern: Investigator = {
 					top: 1779,
 				},
 			},
+			abilities: [
+				{
+					id: "get-resource-after-heal",
+					type: "reaction",
+					limitPer: "round",
+				},
+			],
 		},
 	],
 	skins: [
