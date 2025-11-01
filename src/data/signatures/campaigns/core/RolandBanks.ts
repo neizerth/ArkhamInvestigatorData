@@ -68,7 +68,7 @@ export const RolandBanks: Investigator = {
 	],
 	abilities: [
 		{
-			id: "reaction",
+			id: "clue-after-enemy-defeat",
 			type: "reaction",
 			limitPer: "round",
 		},
