@@ -29,7 +29,7 @@ export const DaisyWalker: Investigator = {
 					id: "daisy-books",
 					type: "counter",
 					direction: "increase",
-					name: "Books assets",
+					name: "Books counter",
 					defaultValue: 0,
 					min: 0,
 					max: 9,
