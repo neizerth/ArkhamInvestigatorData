@@ -32,6 +32,7 @@ export const DaisyWalker: Investigator = {
 					name: "Books assets",
 					defaultValue: 0,
 					min: 0,
+					max: 9,
 				},
 			],
 		},
