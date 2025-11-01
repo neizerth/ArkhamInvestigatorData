@@ -16,6 +16,7 @@ export const CarolynFern: Investigator = {
 		{
 			id: "get-resource-after-heal",
 			type: "reaction",
+			toggle: false,
 		},
 	],
 	variants: [
@@ -37,6 +38,7 @@ export const CarolynFern: Investigator = {
 				{
 					id: "get-resource-after-heal",
 					type: "reaction",
+					toggle: false,
 				},
 			],
 		},
