@@ -14,7 +14,7 @@ export const AudreyBourassa: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-2-clues-after-relic-play",
 			type: "reaction",
 			limitPer: "round",
 		},
