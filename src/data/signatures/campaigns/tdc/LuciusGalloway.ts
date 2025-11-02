@@ -14,7 +14,7 @@ export const LuciusGalloway: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-clue-after-evade",
 			type: "reaction",
 			limitPer: "round",
 		},
