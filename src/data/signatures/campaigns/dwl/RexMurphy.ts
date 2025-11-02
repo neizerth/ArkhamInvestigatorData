@@ -14,6 +14,11 @@ export const RexMurphy: Investigator = {
 	},
 	abilities: [
 		{
+			id: "get-clues-after-succeed-investigation",
+			type: "reaction",
+			toggle: false,
+		},
+		{
 			id: "auto-fail-for-3-cards",
 			type: "permanent",
 			limitPer: "test",
@@ -38,7 +43,7 @@ export const RexMurphy: Investigator = {
 					limitPer: "test",
 				},
 				{
-					id: "reaction",
+					id: "get-clues-after-succeed-investigation",
 					type: "reaction",
 					limitPer: "round",
 				},
