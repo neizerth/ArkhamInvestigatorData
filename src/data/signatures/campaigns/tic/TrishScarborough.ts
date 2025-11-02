@@ -14,7 +14,7 @@ export const TrishScarborough: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-clue-in-enemy-location",
 			type: "reaction",
 			limitPer: "round",
 		},
@@ -26,7 +26,7 @@ export const TrishScarborough: Investigator = {
 			name: "Taboo",
 			abilities: [
 				{
-					id: "reaction",
+					id: "get-clue-in-enemy-location",
 					type: "reaction",
 					limitPer: "round",
 				},
