@@ -15,7 +15,7 @@ export const EdmundMoore: Investigator = {
 	},
 	abilities: [
 		{
-			id: "fast",
+			id: "two-resources-for-exaust",
 			type: "fast",
 			limitPer: "round",
 		},
