@@ -15,28 +15,38 @@ export const RichardCarlisle: Investigator = {
 	},
 	abilities: [
 		{
+			id: "two-points-spell-succeeded",
+			type: "reaction",
+			limitPer: "round",
+			toggle: false,
+		},
+		{
 			id: "reaction-1",
 			type: "reaction",
 			limitPer: "round",
 			icon: "card-outline",
+			visible: false,
 		},
 		{
 			id: "reaction-2",
 			type: "reaction",
 			limitPer: "round",
 			icon: "resource",
+			visible: false,
 		},
 		{
 			id: "reaction-3",
 			type: "reaction",
 			limitPer: "round",
 			icon: "health",
+			visible: false,
 		},
 		{
 			id: "reaction-4",
 			type: "reaction",
 			limitPer: "round",
 			icon: "clue",
+			visible: false,
 		},
 	],
 };
