@@ -12,4 +12,14 @@ export const LukeRobinson: Investigator = {
 			top: 1023,
 		},
 	},
+	abilities: [
+		{
+			id: "gate-box",
+			type: "counter",
+			direction: "decrease",
+			name: "Gate Box",
+			defaultValue: 3,
+			min: 0,
+		},
+	],
 };
