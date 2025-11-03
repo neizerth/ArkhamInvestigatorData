@@ -20,6 +20,7 @@ const abilities: InvestigatorAbility[] = [
 	{
 		id: "play-event-from-discard-pile-after-turn-ends",
 		type: "reaction",
+		toggle: false,
 	},
 ];
 
