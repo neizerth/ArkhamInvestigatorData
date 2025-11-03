@@ -1,4 +1,8 @@
-import type { Investigator, InvestigatorImage } from "@/model";
+import type {
+	Investigator,
+	InvestigatorAbility,
+	InvestigatorImage,
+} from "@/model";
 
 export const image: InvestigatorImage = {
 	id: "11007",
@@ -12,14 +16,23 @@ export const image: InvestigatorImage = {
 	},
 };
 
+const abilities: InvestigatorAbility[] = [
+	{
+		id: "play-event-from-discard-pile-after-turn-ends",
+		type: "reaction",
+	},
+];
+
 export const AgathaCraneSeeker: Investigator = {
 	code: "11007",
 	image,
+	abilities,
 };
 
 export const AgathaCraneMystic: Investigator = {
 	code: "11008",
 	image,
+	abilities,
 };
 
 export const AgathaCrane = {
