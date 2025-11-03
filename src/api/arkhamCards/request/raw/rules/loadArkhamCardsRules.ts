@@ -4,9 +4,9 @@ import type { ArkhamCardsRulesItem } from "../../../model";
 export const loadArkhamCardsRules = async (language = "en") => {
 	console.log(`loading rules for language: ${language}`);
 
-	const locale = language === "en" ? "" : `_${language}`;
+	const locale = language === "en" ? "" : `_${language.replace("-", "_")}`;
 
-	const url = `${baseUri}/assets/generated/rules${locale}.json`;
+	const url = `${baseUri}/assets/generated/rules${locale}.txt`;
 
 	try {
 		const response = await fetch(url);
