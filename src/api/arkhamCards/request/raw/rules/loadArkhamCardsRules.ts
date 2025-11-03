@@ -12,6 +12,7 @@ export const loadArkhamCardsRules = async (language = "en") => {
 		const response = await fetch(url);
 		return (await response.json()) as ArkhamCardsRulesItem[];
 	} catch (e) {
+		console.error(`error loading rules for language: ${language}`, e);
 		return;
 	}
 };
