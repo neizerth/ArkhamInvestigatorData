@@ -34,6 +34,7 @@ export const WendyAdams: Investigator = {
 				{
 					id: "seal-token-after-evade-enemy",
 					type: "reaction",
+					toggle: false,
 				},
 			],
 		},
