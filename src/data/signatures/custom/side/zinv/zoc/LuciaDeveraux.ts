@@ -16,7 +16,7 @@ export const LuciaDeveraux: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "gain-resource-after-healing-card-use",
 			type: "reaction",
 			limitPer: "round",
 		},
