@@ -16,7 +16,7 @@ export const GavriellaMizrah: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-clue-after-enemy-attack",
 			type: "reaction",
 			limitPer: "round",
 		},

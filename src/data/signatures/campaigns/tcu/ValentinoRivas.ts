@@ -16,7 +16,7 @@ export const ValentinoRivas: Investigator = {
 	},
 	abilities: [
 		{
-			id: "fast",
+			id: "pay-to-reduce-difficulty",
 			type: "fast",
 			limitPer: "round",
 		},

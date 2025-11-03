@@ -17,7 +17,7 @@ export const PennyWhite: Investigator = {
 	},
 	abilities: [
 		{
-			id: "reaction",
+			id: "get-clue-effect-revealing",
 			type: "reaction",
 			limitPer: "round",
 		},
