@@ -30,6 +30,12 @@ export const WendyAdams: Investigator = {
 			type: "parallel",
 			code: "90037",
 			name: "Red Tide Rising",
+			abilities: [
+				{
+					id: "seal-token-after-evade-enemy",
+					type: "reaction",
+				},
+			],
 		},
 	],
 	skins: [
