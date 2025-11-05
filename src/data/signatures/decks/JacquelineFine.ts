@@ -33,7 +33,6 @@ export const JacquelineFine: Investigator = {
 			id: "choose-between-3-tokens",
 			type: "reaction",
 			limitPer: "round",
-			toggle: false,
 		},
 	],
 };
