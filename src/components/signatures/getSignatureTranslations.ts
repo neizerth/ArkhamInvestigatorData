@@ -1,5 +1,5 @@
 import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
-import { dativeNameDeclension } from "@/data/i18n";
+import { dativeNameDeclension, genitiveNameDeclension } from "@/data/i18n";
 import type { InvestigatorSignature } from "@/model";
 import { getChaosBagTokenReference } from "../chaos-bag";
 import { getSignatureTokenReference } from "../chaos-bag/getSignatureTokenReference";
@@ -55,6 +55,7 @@ export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
 					code: card.code,
 				}),
 				dative_name: dativeNameDeclension?.[locale]?.[base.code],
+				genitive_name: genitiveNameDeclension?.[locale]?.[base.code],
 			};
 
 			translations.get(locale).push(translatedCard);
