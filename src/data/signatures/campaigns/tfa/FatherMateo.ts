@@ -22,6 +22,7 @@ export const FatherMateo: Investigator = {
 					id: "seal-bless-on-investigator",
 					type: "fast",
 					limitPer: "round",
+					toggle: false,
 				},
 			],
 		},
