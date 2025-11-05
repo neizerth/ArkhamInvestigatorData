@@ -42,7 +42,7 @@ export type InvestigatorSignature = Omit<
 		tokens_reference: ReferencePart[];
 		tokens: ReferenceCardToken[];
 		dative_name?: string;
-		genitive_name?: string;
+		prepositional_name?: string;
 	};
 
 export type InvestigatorSignatureType =
