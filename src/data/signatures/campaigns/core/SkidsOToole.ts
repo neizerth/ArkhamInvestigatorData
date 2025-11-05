@@ -26,7 +26,7 @@ export const SkidsOToole: Investigator = {
 			name: "All or Nothing",
 			abilities: [
 				{
-					id: "fast",
+					id: "skids-resources-casino",
 					type: "fast",
 					limitPer: "round",
 				},
