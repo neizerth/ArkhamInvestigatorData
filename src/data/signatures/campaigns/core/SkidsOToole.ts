@@ -29,6 +29,7 @@ export const SkidsOToole: Investigator = {
 					id: "skids-resources-casino",
 					type: "fast",
 					limitPer: "round",
+					toggle: false,
 				},
 			],
 		},
