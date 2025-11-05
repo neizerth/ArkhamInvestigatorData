@@ -30,7 +30,7 @@ export const JacquelineFine: Investigator = {
 	],
 	abilities: [
 		{
-			id: "reaction",
+			id: "choose-between-3-tokens",
 			type: "reaction",
 			limitPer: "round",
 		},

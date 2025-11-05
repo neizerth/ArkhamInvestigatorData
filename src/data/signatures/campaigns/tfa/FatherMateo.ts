@@ -19,7 +19,7 @@ export const FatherMateo: Investigator = {
 			name: "Aura of Faith",
 			abilities: [
 				{
-					id: "fast",
+					id: "seal-bless-on-investigator",
 					type: "fast",
 					limitPer: "round",
 				},
