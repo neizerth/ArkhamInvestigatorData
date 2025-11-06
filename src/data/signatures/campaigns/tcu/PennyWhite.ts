@@ -2,7 +2,6 @@ import type { Investigator } from "@/model";
 
 export const PennyWhite: Investigator = {
 	code: "05049",
-	additionalAction: true,
 	spoiler: true,
 	image: {
 		light: true,
