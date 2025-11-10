@@ -10,6 +10,11 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 	return reference
 		.flatMap((item): ReferenceCardToken[] => {
 			const value = parseEffectValue(item.effect);
+
+			if (value === undefined) {
+				return [];
+			}
+
 			if (item.type === "single") {
 				return [
 					{
@@ -31,12 +36,12 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 				},
 			}));
 		})
-		.filter(({ value }) => Boolean(value));
+		.filter(({ value }) => value !== undefined);
 };
 
 
 
-export const parseEffectValue = (text: string): number => {
+export const parseEffectValue = (text: string): number | undefined => {
 	const pattern = /([-—−\+]\d+)\./;
 
 	const maxSearchLength = 20;
