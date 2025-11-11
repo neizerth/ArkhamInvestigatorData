@@ -17,7 +17,8 @@ export type ChaosBagToken =
 	| "autoFail"
 	| "tablet"
 	| "frost"
-	| "elderThing";
+	| "elderThing"
+	| "moon";
 
 export type ScenarioChaosBag = {
 	scenario_id: string;

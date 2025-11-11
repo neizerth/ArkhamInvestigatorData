@@ -10,4 +10,5 @@ export const chaosBagSymbolTokens: ChaosBagToken[] = [
 	"tablet",
 	"frost",
 	"elderThing",
+	"moon",
 ];
