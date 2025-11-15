@@ -11,6 +11,7 @@ export type ArkhamCardsFullPack = ArkhamCardsPack & {
 };
 
 export type ArkhamCardsCycle = {
+	id?: string;
 	code: string;
 	position: number;
 	real_name: string;
