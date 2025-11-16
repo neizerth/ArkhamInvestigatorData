@@ -7,7 +7,7 @@ export type Investigator = InvestigatorStats & {
 	previewId?: string;
 	variantName?: string;
 	additionalAction?: boolean;
-	image?: InvestigatorImage;
+	image: InvestigatorImage;
 	variants?: InvestigatorVariant[];
 	skins?: InvestigatorSkin[];
 	multiselect?: boolean;

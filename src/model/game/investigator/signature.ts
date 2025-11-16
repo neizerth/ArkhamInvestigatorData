@@ -21,7 +21,7 @@ export type InvestigatorSignature = Omit<
 	Omit<Investigator, "variants" | "skins" | "image"> & {
 		icon: string;
 		type: InvestigatorSignatureType;
-		image?: Omit<Investigator["image"], "id"> & {
+		image: Partial<Omit<Investigator["image"], "id">> & {
 			id: string;
 		};
 		locale: string;
@@ -43,6 +43,7 @@ export type InvestigatorSignature = Omit<
 		tokens: ReferenceCardToken[];
 		dative_name?: string;
 		prepositional_name?: string;
+		has_full_image?: boolean;
 	};
 
 export type InvestigatorSignatureType =

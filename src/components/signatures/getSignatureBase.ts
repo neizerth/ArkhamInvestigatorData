@@ -49,5 +49,9 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 		canonical,
 		official,
 		tokens: getChaosBagTokenReferenceValues(card.real_text),
+		has_full_image: Boolean(special),
+		image: special?.image || {
+			id: card.code,
+		},
 	};
 };
