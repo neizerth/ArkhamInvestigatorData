@@ -14,6 +14,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 	const special = signatures.find(propEq(code, "code"));
 
 	if (!special) {
+		console.error(`Special not found for card ${card.code}`);
 		return;
 	}
 
@@ -29,7 +30,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 		id: image.id || code,
 	};
 
-	if (card.code === code && !isTaboo) {
+	if ((card.code === code && !isTaboo) || !special.variants) {
 		return {
 			...base,
 			image: defaultImage,

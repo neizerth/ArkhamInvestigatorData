@@ -5,6 +5,8 @@ export type ArkhamCardsInvestigatorGender = "m" | "f" | "nb";
 
 export type ArkhamCardsInvestigator = {
 	id: string;
+	min_version?: string;
+	max_version?: string;
 	alternate_of_code: string | null;
 	linked_code: string | null;
 	gender: ArkhamCardsInvestigatorGender;
