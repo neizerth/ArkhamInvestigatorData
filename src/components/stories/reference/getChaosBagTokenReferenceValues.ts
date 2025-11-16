@@ -39,8 +39,6 @@ export const getChaosBagTokenReferenceValues = (text: string) => {
 		.filter(({ value }) => value !== undefined);
 };
 
-
-
 export const parseEffectValue = (text: string): number | undefined => {
 	const pattern = /([-—−\+]\d+)\./;
 

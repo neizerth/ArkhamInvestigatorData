@@ -1,5 +1,5 @@
-import { ArkhamCardsInvestigator } from "@/api/arkhamCards";
-import { isNotNil, pick, prop } from "ramda";
+import type { ArkhamCardsInvestigator } from "@/api/arkhamCards";
+import { isNotNil, pick } from "ramda";
 import { getArkhamBuildProjects } from "../lib/getArkhamBuildProjects";
 import { loadArkhamBuildPacks } from "./loadArkhamBuildPacks";
 

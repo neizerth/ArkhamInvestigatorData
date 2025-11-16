@@ -1,11 +1,22 @@
-import { ArkhamCardsCycle } from "@/api/arkhamCards";
+import type { ArkhamCardsCycle } from "@/api/arkhamCards";
+import { ignoreCyclesIds, supportedCyclesIds } from "../config";
 import { getArkhamBuildProjects } from "../lib/getArkhamBuildProjects";
-import { ignoreCyclesIds } from "../config";
+
+let cachedCycles: ArkhamCardsCycle[] = [];
 
 export const loadArkhamBuildCycles = () => {
+	if (cachedCycles.length > 0) {
+		return cachedCycles;
+	}
+
 	const projects = getArkhamBuildProjects();
-	return projects
-		.filter((project) => !ignoreCyclesIds.includes(project.id))
+	cachedCycles = projects
+		.filter(
+			(project) =>
+				!ignoreCyclesIds.includes(project.id) &&
+				// TODO: remove this once the app supports signatures without images
+				supportedCyclesIds.includes(project.id),
+		)
 		.map((project, index): ArkhamCardsCycle => {
 			return {
 				id: project.id,
@@ -16,4 +27,5 @@ export const loadArkhamBuildCycles = () => {
 				translations: [],
 			};
 		});
+	return cachedCycles;
 };

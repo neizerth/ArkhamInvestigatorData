@@ -21,7 +21,7 @@ export type InvestigatorSignature = Omit<
 	Omit<Investigator, "variants" | "skins" | "image"> & {
 		icon: string;
 		type: InvestigatorSignatureType;
-		image: Omit<Investigator["image"], "id"> & {
+		image?: Omit<Investigator["image"], "id"> & {
 			id: string;
 		};
 		locale: string;

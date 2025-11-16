@@ -12,9 +12,6 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 		.map((card): InvestigatorSignature => {
 			const base = getSignatureBase(card);
 
-			if (!base) {
-				return;
-			}
 			const pack = getEnglishPack(card.pack);
 			const cycle = getEnglishCycle(card.pack.cycle);
 

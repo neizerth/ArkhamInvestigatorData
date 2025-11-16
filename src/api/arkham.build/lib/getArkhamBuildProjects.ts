@@ -1,12 +1,18 @@
-import { projectsPath } from "../config";
 import fs from "node:fs";
 import path from "node:path";
-import { ArkhamBuildProject } from "../model/project";
 import { isNotNil } from "ramda";
+import { projectsPath } from "../config";
+import type { ArkhamBuildProject } from "../model/project";
+
+let cachedProjects: ArkhamBuildProject[] = [];
 
 export const getArkhamBuildProjects = () => {
+	if (cachedProjects.length > 0) {
+		return cachedProjects;
+	}
+
 	const contents = fs.readdirSync(projectsPath);
-	return contents
+	cachedProjects = contents
 		.filter((file) => file.endsWith(".json"))
 		.map((file) => {
 			const id = file.replace(".json", "");
@@ -24,4 +30,5 @@ export const getArkhamBuildProjects = () => {
 			};
 		})
 		.filter(isNotNil);
+	return cachedProjects;
 };

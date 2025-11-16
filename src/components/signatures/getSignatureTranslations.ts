@@ -15,10 +15,6 @@ export const getSignatureTranslations = (data: ArkhamCardsInvestigator[]) => {
 	for (const card of data) {
 		const base = getSignatureBase(card);
 
-		if (!base) {
-			continue;
-		}
-
 		for (const cardTranslation of card.translations) {
 			const { locale } = cardTranslation;
 			if (!translations.has(locale)) {

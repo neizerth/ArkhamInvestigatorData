@@ -1,9 +1,9 @@
+import { unlink } from "node:fs/promises";
+import path from "node:path";
 import { downloadFile } from "@/api/downloadFile";
 import { DOWNLOADS_DIR } from "@/config";
 import { ARKHAM_BUILD_FAN_REPO_ARCHIVE_URL as url } from "@/config/api";
 import decompress from "decompress";
-import { unlink } from "node:fs/promises";
-import path from "node:path";
 
 const fileName = "arkham-build-repo.zip";
 

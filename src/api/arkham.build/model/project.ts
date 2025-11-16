@@ -1,4 +1,4 @@
-import { InvestigatorFaction } from "@/model";
+import type { InvestigatorFaction } from "@/model";
 
 export type ArkhamBuildProject = {
 	id?: string;
@@ -61,7 +61,7 @@ export type ArkhamBuildProjectCard = {
 	thumbnail_url: string;
 	back_image_url: string;
 	back_thumbnail_url: string;
-	type_code?: string;
+	type_code: string;
 	skill_agility: number;
 	skill_combat: number;
 	skill_intellect: number;

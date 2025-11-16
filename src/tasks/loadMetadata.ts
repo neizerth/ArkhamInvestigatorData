@@ -1,4 +1,10 @@
 import {
+	loadArkhamBuildCycles,
+	loadArkhamBuildInvestigators,
+	loadArkhamBuildPacks,
+} from "@/api/arkham.build/data";
+import { downloadArkhamBuildRepo } from "@/api/arkham.build/lib/downloadArkhamBuildRepo";
+import {
 	loadArkhamCardsCampaigns,
 	loadArkhamCardsCycles,
 	loadArkhamCardsPacks,
@@ -7,15 +13,9 @@ import {
 import { loadArkhamCardsUpdates } from "@/api/arkhamCards/request/graphql/loadArkhamCardsUpdates";
 import { loadArkhamCardsRulesCollection } from "@/api/arkhamCards/request/raw";
 import { loadArkhamCardsChaosOddsCollection } from "@/api/arkhamCards/request/raw/odds/loadArkhamCardsChaosOddsCollection";
-import { downloadArkhamBuildRepo } from "@/api/arkham.build/lib/downloadArkhamBuildRepo";
 import { ARKHAM_DIVIDER_CORE_URL, CACHE_DIR } from "@/config";
 import { createJSONWriter } from "@/features";
 import type { ArkhamDivider } from "arkham-divider-data";
-import {
-	loadArkhamBuildCycles,
-	loadArkhamBuildInvestigators,
-	loadArkhamBuildPacks,
-} from "@/api/arkham.build/data";
 
 export const loadMetadata = async () => {
 	console.log("creating metadata");

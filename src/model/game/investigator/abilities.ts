@@ -31,6 +31,8 @@ export type InvestigatorAbilityType =
 	  };
 export type InvestigatorAbility = InvestigatorAbilityType & {
 	id: string;
+	minVersion?: string;
+	maxVersion?: string;
 	visible?: boolean;
 	toggle?: boolean;
 	limitPer?: LimitType | LimitType[];

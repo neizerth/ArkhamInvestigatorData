@@ -1,3 +1,4 @@
+import { capitalize } from "@/features";
 import type { Story } from "@/model/game/story";
 import { propEq } from "ramda";
 import { getChaosBagTokenReference } from "../chaos-bag";
@@ -8,7 +9,6 @@ import {
 } from "../meta";
 import { getReferenceCardChaosTokens } from "./reference";
 import { getReferenceCardDifficulty } from "./reference/getReferenceCardDifficulty";
-import { capitalize } from "@/features";
 
 type Options = {
 	locale: string;

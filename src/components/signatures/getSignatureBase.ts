@@ -35,9 +35,6 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 
 	const special = getCardSpecial(card);
 
-	if (!special) {
-		return;
-	}
 	const canonical = card.pack.official;
 	const custom = card.pack.code === "zcu";
 	const official = (!custom && card.pack.cycle.code === "zffg") || canonical;

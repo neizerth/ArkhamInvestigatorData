@@ -1,12 +1,12 @@
-import { loadArkhamCardsInvestigators } from "@/api/arkhamCards";
 import type { SignatureCollection } from "@/model";
 import { propEq } from "ramda";
 import { getSignatureCollection } from "./collection";
 import { getEnglishSignatures } from "./getEnglishSignatures";
 import { getSignatureTranslations } from "./getSignatureTranslations";
+import { loadSignatures } from "@/api";
 
 export const getSignatures = async () => {
-	const data = await loadArkhamCardsInvestigators();
+	const data = await loadSignatures();
 
 	const en = getEnglishSignatures(data);
 	const signatures = getSignatureTranslations(data);
