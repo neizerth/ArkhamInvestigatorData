@@ -11,12 +11,14 @@ export const loadArkhamBuildCycles = () => {
 
 	const projects = getArkhamBuildProjects();
 	cachedCycles = projects
-		.filter(
-			(project) =>
-				!ignoreCyclesIds.includes(project.id) &&
-				// TODO: remove this once the app supports signatures without images
-				supportedCyclesIds.includes(project.id),
-		)
+		.filter((project) => {
+			// TODO: remove this once the app supports signatures without images
+			const isSupported =
+				supportedCyclesIds.includes(project.id) ||
+				supportedCyclesIds.length === 0;
+
+			return !ignoreCyclesIds.includes(project.id) && isSupported;
+		})
 		.map((project, index): ArkhamCardsCycle => {
 			return {
 				id: project.id,
