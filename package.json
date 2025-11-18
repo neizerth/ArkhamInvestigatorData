@@ -1,6 +1,6 @@
 {
 	"name": "arkham-investigator-data",
-	"version": "2.38.11",
+	"version": "2.38.12",
 	"main": "index.js",
 	"types": "build/src/types.d.ts",
 	"scripts": {
