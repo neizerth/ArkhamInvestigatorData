@@ -3,6 +3,11 @@ import { loadArkhamBuildInvestigators } from "./loadArkhamBuildInvestigators";
 
 export const getArkhamBuildThumbnails = () => {
 	return loadArkhamBuildInvestigators()
-		.map(prop("square_image_url"))
+		.map((row) => {
+			if (!row.square_image_url) {
+				return;
+			}
+			return [row.code, row.square_image_url];
+		})
 		.filter(isNotNil);
 };

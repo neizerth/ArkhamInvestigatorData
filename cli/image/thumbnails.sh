@@ -1,7 +1,7 @@
 #!/bin/bash
 
-URL_LIST="./cache/urls.square.txt"     # file containing list of URLs (one per line)
-OUT_DIR="./cache/downloads/square"     # output directory
+URL_LIST="./cache/thumbnails.csv"     # TSV (code<TAB>url) containing download targets
+OUT_DIR="./cache/downloads/thumbnails"     # output directory
 MAX_THREADS=32          # maximum parallel downloads
 MIN_THREADS=8           # minimum parallel downloads
 RETRY_COUNT=3           # how many times to retry each file
@@ -10,9 +10,25 @@ SLEEP_BASE=2            # base sleep time before retries
 mkdir -p "$OUT_DIR"
 
 download_file() {
-    url="$1"
-    filename=$(basename "$url")
-    out="$OUT_DIR/$filename"
+    record="$1"
+
+    IFS=$'\t' read -r code url <<< "$record"
+
+    if [ -z "$code" ] || [ -z "$url" ]; then
+        echo "[WARN] Skipping malformed record: $record"
+        return 0
+    fi
+
+    # Strip potential carriage returns and extract extension from URL (before query params)
+    url="${url%$'\r'}"
+    url_no_query="${url%%\?*}"
+    extension="${url_no_query##*.}"
+
+    if [ -z "$extension" ] || [ "$extension" = "$url_no_query" ]; then
+        extension="bin"
+    fi
+
+    out="$OUT_DIR/$code.$extension"
 
     for ((i=1; i<=RETRY_COUNT; i++)); do
         # -f: fail on HTTP errors
@@ -36,6 +52,8 @@ download_file() {
     return 1
 }
 
+export -f download_file
+
 adaptive_parallel() {
     threads=$MAX_THREADS
 
@@ -43,8 +61,10 @@ adaptive_parallel() {
         echo "→ Trying with $threads threads..."
 
         # Run downloads in parallel and count failures
-        failures=$(cat "$URL_LIST" | \
-            xargs -n1 -P"$threads" -I {} bash -c "download_file '{}'" 2>&1 | \
+        failures=$(while IFS= read -r line; do
+                [ -n "$line" ] && printf '%s\0' "$line"
+            done < "$URL_LIST" | \
+            xargs -0 -n1 -P"$threads" -I {} bash -c 'download_file "$1"' _ "{}" 2>&1 | \
             tee /dev/stderr | grep -c '\[FAIL\]')
 
         if [ "$failures" -eq 0 ]; then

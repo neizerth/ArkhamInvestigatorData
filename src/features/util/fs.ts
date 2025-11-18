@@ -51,6 +51,13 @@ export const createTextWriter = (dir: string) =>
 		serialize: (data) => data,
 	});
 
+export const createCSVWriter = (dir: string) =>
+	createWriter<string, string[]>({
+		dir,
+		extension: "csv",
+		serialize: (data) => data.join("\n"),
+	});
+
 export const createReader = <T = string, D = string>({
 	dir,
 	extension = "",

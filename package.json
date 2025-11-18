@@ -8,7 +8,7 @@
 		"build:media": "bash ./cli/build/media.sh",
 		"prebuild": "npm run build:media",
 		"build": "npm start",
-		"download:square": "bash ./cli/api/thumbnails.sh",
+		"download:square": "bash ./cli/image/thumbnails.sh",
 		"build:r2": "npm run build",
 		"postbuild:r2": "npm run r2:upload",
 		"r2:upload": "bash ./cli/deploy/r2.sh",
