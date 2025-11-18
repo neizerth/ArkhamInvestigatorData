@@ -35,51 +35,96 @@ download_file() {
     CURL_TIMEOUT=30  # timeout in seconds
 
     for ((i=1; i<=RETRY_COUNT; i++)); do
-        # -f: fail on HTTP errors
         # -L: follow redirects
         # -s: silent
         # -S: show errors
-        # -w: print HTTP status code
+        # -w: print HTTP status code and additional info
         # --max-time: timeout
         # --connect-timeout: connection timeout
+        # -H: add headers to mimic browser
+        # Note: removed -f flag to see actual HTTP codes even on errors
         # Redirect stderr to capture error messages
-        curl_output=$(curl -w "\n%{http_code}" -fSL "$url" -o "$out" -s -S --retry 0 --max-time "$CURL_TIMEOUT" --connect-timeout 10 2>&1)
+        curl_output=$(curl -w "\n%{http_code}" -SL "$url" -o "$out" -s -S --retry 0 --max-time "$CURL_TIMEOUT" --connect-timeout 15 --compressed \
+            --ipv4 \
+            -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -H "Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8" \
+            -H "Accept-Language: en-US,en;q=0.9" \
+            -H "Referer: https://arkham.build/" \
+            -H "Sec-Fetch-Dest: image" \
+            -H "Sec-Fetch-Mode: no-cors" \
+            -H "Sec-Fetch-Site: cross-site" \
+            2>&1)
         exit_code=$?
         
         # Extract HTTP code (last line)
         last_http_code=$(echo "$curl_output" | tail -n1 | tr -d '\n\r')
         # Extract error message (everything except last line)
-        error_output=$(echo "$curl_output" | head -n-1)
+        error_output=$(echo "$curl_output" | sed '$d')
         
-        if [ -n "$error_output" ]; then
+        # Validate HTTP code is numeric
+        if ! [[ "$last_http_code" =~ ^[0-9]{3}$ ]]; then
+            # If HTTP code is not valid, it might be empty or contain error message
+            if [ -z "$last_http_code" ] || [ "$last_http_code" = "" ]; then
+                last_http_code="000"
+                # If we have error output, use it as the error message
+                if [ -n "$error_output" ]; then
+                    last_error="$error_output"
+                fi
+            else
+                # HTTP code contains non-numeric data, treat as error
+                last_http_code="000"
+                if [ -n "$error_output" ]; then
+                    last_error="$error_output"
+                else
+                    last_error="$last_http_code"
+                fi
+            fi
+        elif [ -n "$error_output" ]; then
+            # Valid HTTP code, but we have error output (might be warnings)
             last_error="$error_output"
         fi
 
-        # Validate HTTP code is numeric
-        if ! [[ "$last_http_code" =~ ^[0-9]{3}$ ]]; then
-            last_http_code="000"
+        # Map curl exit codes to readable errors when HTTP code is 000 or request failed
+        if [ "$last_http_code" = "000" ]; then
+            # Always set error message when HTTP code is 000
+            if [ -z "$last_error" ]; then
+                case "$exit_code" in
+                    6)  last_error="Could not resolve host" ;;
+                    7)  last_error="Failed to connect to host" ;;
+                    28) last_error="Operation timeout" ;;
+                    35) last_error="SSL connect error" ;;
+                    52) last_error="Empty reply from server" ;;
+                    56) last_error="Failure in receiving network data" ;;
+                    *)  last_error="Connection failed (curl exit: $exit_code)" ;;
+                esac
+            fi
+            # Ensure we always have an error message
+            if [ -z "$last_error" ]; then
+                last_error="Connection failed"
+            fi
+        elif [ "$exit_code" -ne 0 ]; then
+            # For non-zero exit codes with valid HTTP codes, set error if not already set
+            if [ -z "$last_error" ]; then
+                case "$exit_code" in
+                    6)  last_error="Could not resolve host" ;;
+                    7)  last_error="Failed to connect to host" ;;
+                    28) last_error="Operation timeout" ;;
+                    35) last_error="SSL connect error" ;;
+                    52) last_error="Empty reply from server" ;;
+                    56) last_error="Failure in receiving network data" ;;
+                    *)  last_error="Network error (curl exit: $exit_code)" ;;
+                esac
+            fi
         fi
 
-        # Map curl exit codes to readable errors
-        if [ "$last_http_code" = "000" ] || [ "$exit_code" -ne 0 ]; then
-            case "$exit_code" in
-                6)  last_error="Could not resolve host" ;;
-                7)  last_error="Failed to connect to host" ;;
-                28) last_error="Operation timeout" ;;
-                35) last_error="SSL connect error" ;;
-                52) last_error="Empty reply from server" ;;
-                56) last_error="Failure in receiving network data" ;;
-                *)  if [ -z "$last_error" ]; then
-                        last_error="Network error (curl exit: $exit_code)"
-                    fi ;;
-            esac
-        fi
-
-        if [ "$exit_code" -eq 0 ] && [[ "$last_http_code" =~ ^2 ]]; then
+        # Check if successful (HTTP 2xx)
+        # Use numeric comparison only if last_http_code is numeric
+        if [ "$exit_code" -eq 0 ] && [ "$last_http_code" != "000" ] && [ "$last_http_code" -ge 200 ] && [ "$last_http_code" -lt 300 ] 2>/dev/null; then
             echo "[OK] $url"
             return 0
         fi
 
+        # Build error message for warning
         error_msg=""
         if [ -n "$last_error" ]; then
             error_msg=" - $last_error"
@@ -88,10 +133,12 @@ download_file() {
         sleep $((SLEEP_BASE * i))  # exponential backoff
     done
 
-    error_msg=""
-    if [ -n "$last_error" ]; then
-        error_msg=" - $last_error"
+    # Build error message for final failure
+    # Ensure we have an error message
+    if [ -z "$last_error" ]; then
+        last_error="Connection failed"
     fi
+    error_msg=" - $last_error"
     echo "[FAIL] $url (HTTP $last_http_code$error_msg)"
     # Clean error message: replace tabs and newlines with spaces, limit length
     clean_error=$(echo "$last_error" | tr '\n\t' ' ' | sed 's/  */ /g' | cut -c1-200)
