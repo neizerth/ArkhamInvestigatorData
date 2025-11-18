@@ -12,4 +12,12 @@ export const KateWinthrop: Investigator = {
 			top: 1237,
 		},
 	},
+	variants: [
+		{
+			type: "custom",
+			code: "zdms_00001",
+			name: "Dark Matter",
+			additionalAction: true,
+		},
+	],
 };
