@@ -3,7 +3,7 @@ import { loadArkhamCardsInvestigators } from "./arkhamCards/request/graphql/load
 
 export const loadSignatures = async () => {
 	const arkhamCards = await loadArkhamCardsInvestigators();
-	const arkhamBuild = await loadArkhamBuildInvestigators();
+	const arkhamBuild = loadArkhamBuildInvestigators();
 
 	return [...arkhamCards, ...arkhamBuild];
 };

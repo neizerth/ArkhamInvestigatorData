@@ -1,4 +1,5 @@
 import {
+	getArkhamBuildThumbnails,
 	loadArkhamBuildCycles,
 	loadArkhamBuildInvestigators,
 	loadArkhamBuildPacks,
@@ -14,7 +15,7 @@ import { loadArkhamCardsUpdates } from "@/api/arkhamCards/request/graphql/loadAr
 import { loadArkhamCardsRulesCollection } from "@/api/arkhamCards/request/raw";
 import { loadArkhamCardsChaosOddsCollection } from "@/api/arkhamCards/request/raw/odds/loadArkhamCardsChaosOddsCollection";
 import { ARKHAM_DIVIDER_CORE_URL, CACHE_DIR } from "@/config";
-import { createJSONWriter } from "@/features";
+import { createJSONWriter, createTextWriter } from "@/features";
 import type { ArkhamDivider } from "arkham-divider-data";
 
 export const loadMetadata = async () => {
@@ -37,7 +38,10 @@ export const loadMetadata = async () => {
 	const arkhamBuildCycles = loadArkhamBuildCycles();
 	const arkhamBuildPacks = loadArkhamBuildPacks();
 	const arkhamBuildInvestigators = loadArkhamBuildInvestigators();
+
+	const arkhamBuildThumbnails = getArkhamBuildThumbnails();
 	const write = createJSONWriter(CACHE_DIR);
+	const writeText = createTextWriter(CACHE_DIR);
 
 	write("packs", packs);
 	write("stories", stories);
@@ -56,4 +60,6 @@ export const loadMetadata = async () => {
 	write("arkhamBuild.cycles", arkhamBuildCycles);
 	write("arkhamBuild.packs", arkhamBuildPacks);
 	write("arkhamBuild.investigators", arkhamBuildInvestigators);
+
+	writeText("thumbnails", arkhamBuildThumbnails.join("\n"));
 };

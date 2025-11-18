@@ -44,6 +44,13 @@ export const createJSONWriter = (dir: string) =>
 		serialize: (data) => JSON.stringify(data, null, DEVELOPMENT_MODE ? 2 : 0),
 	});
 
+export const createTextWriter = (dir: string) =>
+	createWriter<string, string>({
+		dir,
+		extension: "txt",
+		serialize: (data) => data,
+	});
+
 export const createReader = <T = string, D = string>({
 	dir,
 	extension = "",

@@ -29,6 +29,7 @@ export type ArkhamCardsInvestigator = {
 	taboo_set: ArkhamCardsTabooSet | null;
 	pack: ArkhamCardsFullPack;
 	spoiler: boolean;
+	square_image_url?: string;
 };
 
 export type ArkhamCardsInvestigatorTranslation = {
