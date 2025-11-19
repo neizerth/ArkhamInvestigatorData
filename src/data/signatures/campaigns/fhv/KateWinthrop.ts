@@ -18,6 +18,16 @@ export const KateWinthrop: Investigator = {
 			code: "zdms_00001",
 			name: "Dark Matter",
 			additionalAction: true,
+			abilities: [
+				{
+					id: "zdms-flux-stabilizer",
+					type: "counter",
+					name: "Flux Stabilizer",
+					defaultValue: 2,
+					min: 0,
+					direction: "decrease",
+				},
+			],
 		},
 	],
 };
