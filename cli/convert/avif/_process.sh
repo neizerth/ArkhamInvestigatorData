@@ -4,4 +4,4 @@ set -e
 infile="$1"
 out_file="$2"
 
-avifenc "$infile" "$out_file"
+avifenc --depth 8 --yuv 420 "$infile" "$out_file"
