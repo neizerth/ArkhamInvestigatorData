@@ -3,7 +3,7 @@ import type { Investigator } from "@/model";
 export const LaiJie: Investigator = {
 	code: "zcem_00003",
 	image: {
-		version: 1,
+		version: 2,
 		width: 1854,
 		height: 2000,
 		face: {
