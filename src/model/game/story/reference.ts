@@ -62,6 +62,8 @@ export type ReferenceCardTokenCounter = ReferenceCardTokenBase &
 		min?: number;
 		max?: number;
 		step: number;
+		scale?: number;
+		reveal_another?: number;
 	};
 
 export type ReferenceCardTokenSelect = ReferenceCardTokenBase & {

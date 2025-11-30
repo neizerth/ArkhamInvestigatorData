@@ -6,6 +6,7 @@ import { loadArkhamBuildPacks } from "./loadArkhamBuildPacks";
 export const loadArkhamBuildInvestigators = () => {
 	const projects = getArkhamBuildProjects();
 	const packs = loadArkhamBuildPacks();
+
 	return projects
 		.flatMap((project) =>
 			project.data.cards.filter((card) => card.type_code === "investigator"),
@@ -50,6 +51,7 @@ export const loadArkhamBuildInvestigators = () => {
 				translations: [],
 				spoiler: false,
 				pack,
+				square_image_url: card.thumbnail_url,
 			};
 		})
 		.filter(isNotNil);

@@ -1,13 +1,14 @@
 {
 	"name": "arkham-investigator-data",
-	"version": "2.39.2",
+	"version": "2.40.0",
 	"main": "index.js",
 	"types": "build/src/types.d.ts",
 	"scripts": {
 		"start": "tsx ./src/index.ts",
-		"build:media": "bash ./cli/build/media.sh",
-		"prebuild": "npm run build:media",
+		"build:finalize": "bash ./cli/build/finalize.sh",
 		"build": "npm start",
+		"postbuild": "npm run build:finalize",
+		"download:square": "bash ./cli/image/thumbnails.sh",
 		"build:r2": "npm run build",
 		"postbuild:r2": "npm run r2:upload",
 		"r2:upload": "bash ./cli/deploy/r2.sh",

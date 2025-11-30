@@ -46,7 +46,9 @@ export type ArkhamCardsChaosOddTokenCounter = ArkhamCardsChaosOddTokenBase & {
 		prompt: string;
 		min?: number;
 		adjustment?: number;
+		scale?: number;
 		max?: number;
+		reveal_another?: number;
 	};
 };
 

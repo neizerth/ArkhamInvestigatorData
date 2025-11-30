@@ -15,7 +15,7 @@ export const parseOddsCounter = ({
 }: Options): ReferenceCardToken => {
 	const token = underscore2CamelCase(item.token) as ChaosBagToken;
 	const { counter } = item;
-	const { adjustment, prompt } = item.counter;
+	const { scale, adjustment, prompt, reveal_another } = item.counter;
 
 	if (!isNumber(counter.min) && !isNumber(counter.max)) {
 		return null;
@@ -30,6 +30,8 @@ export const parseOddsCounter = ({
 		type: "counter" as const,
 		prompt,
 		token,
+		scale,
+		reveal_another,
 		...effects,
 	};
 
