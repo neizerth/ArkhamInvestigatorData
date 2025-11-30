@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const EffieDunlap: Investigator = {
-	code: "74774218-0085-41de-bf49-bded1325e0db",
+	code: "zcem_00005",
 	image: {
 		version: 1,
 		width: 3345,

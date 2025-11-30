@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const TarunChandavarkar: Investigator = {
-	code: "695e7898-3519-44a1-857f-1d039ad3ebe1",
+	code: "zcem_00001",
 	image: {
 		version: 1,
 		width: 2200,

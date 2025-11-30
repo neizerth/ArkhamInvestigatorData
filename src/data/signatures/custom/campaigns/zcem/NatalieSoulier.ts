@@ -1,7 +1,7 @@
 import type { Investigator } from "@/model";
 
 export const NatalieSoulier: Investigator = {
-	code: "3d184908-5def-492e-8cf0-d54b95307b67",
+	code: "zcem_00002",
 	image: {
 		version: 1,
 		width: 2000,
