@@ -46,7 +46,7 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 	const official = (!custom && card.pack.cycle.code === "zffg") || canonical;
 	const gender = genderMapping[card.gender];
 
-	const minNoFullImageClientVersion = "2.12.0";
+	const minNoFullImageClientVersion = "2.11.0";
 	const min_version = !hasSpecial
 		? minNoFullImageClientVersion
 		: card.min_version;
