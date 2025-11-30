@@ -36,13 +36,21 @@ for infile in "$CACHE_DIR"/*; do
     mkdir -p "${out_dir}/avif/square"
     mkdir -p "${out_dir}/webp/square"
     
-    # Convert to AVIF
-    echo "Converting to AVIF: $(basename "$infile") -> $(basename "$avif_out")"
-    bash "$AVIF_PROCESS" "$infile" "$avif_out"
+    # Convert to AVIF (skip if already exists)
+    if [[ ! -f "$avif_out" ]]; then
+        echo "Converting to AVIF: $(basename "$infile") -> $(basename "$avif_out")"
+        bash "$AVIF_PROCESS" "$infile" "$avif_out"
+    else
+        echo "Skipping AVIF conversion (already exists): $(basename "$avif_out")"
+    fi
     
-    # Convert to WebP
-    echo "Converting to WebP: $(basename "$infile") -> $(basename "$webp_out")"
-    bash "$WEBP_PROCESS" "$infile" "$webp_out"
+    # Convert to WebP (skip if already exists)
+    if [[ ! -f "$webp_out" ]]; then
+        echo "Converting to WebP: $(basename "$infile") -> $(basename "$webp_out")"
+        bash "$WEBP_PROCESS" "$infile" "$webp_out"
+    else
+        echo "Skipping WebP conversion (already exists): $(basename "$webp_out")"
+    fi
 done
 
 echo "Conversion completed!"
