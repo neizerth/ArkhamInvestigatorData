@@ -32,6 +32,7 @@ export const getSignatureCollection = (
 			[
 				ascend(({ cycle }) => cycle.position),
 				ascend(({ taboo }) => Number(taboo)),
+				ascend(({ id }) => id.length),
 			],
 			values,
 		);
