@@ -7,4 +7,4 @@ out_file="${out_file%.*}.webp"
 out_dir=$(dirname "$out_file")
 
 mkdir -p "$out_dir"
-cwebp q 80 -m 6 -mt "$infile" -o "$out_file"
+bash ./_process.sh "$infile" "$out_file"

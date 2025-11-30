@@ -7,4 +7,4 @@ out_file="${out_file%.*}.avif"
 out_dir=$(dirname "$out_file")
 
 mkdir -p "$out_dir"
-avifenc "$infile" "$out_file"
+bash ./_process.sh "$infile" "$out_file"
