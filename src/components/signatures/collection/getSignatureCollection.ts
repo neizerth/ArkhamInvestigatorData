@@ -3,7 +3,15 @@ import type {
 	InvestigatorSignature,
 	SignatureCollection,
 } from "@/model";
-import { ascend, groupBy, prop, sortBy, sortWith, toPairs } from "ramda";
+import {
+	ascend,
+	groupBy,
+	prop,
+	sortBy,
+	sortWith,
+	toPairs,
+	uniqBy,
+} from "ramda";
 import { getCollectionSkins } from "./getCollectionSkins";
 
 const hasTaboo = ({ taboo_set }: InvestigatorSignature) =>
@@ -28,7 +36,7 @@ export const getSignatureCollection = (
 
 	const groupPairs = toPairs(groupBy(getGroupProp, data));
 	const unsortedGroups = groupPairs.map(([_, values]) => {
-		const signatures = sortWith(
+		const data = sortWith(
 			[
 				ascend(({ cycle }) => cycle.position),
 				ascend(({ taboo }) => Number(taboo)),
@@ -36,6 +44,7 @@ export const getSignatureCollection = (
 			],
 			values,
 		);
+		const signatures = uniqBy(prop("id"), data);
 		const [firstSignature] = signatures;
 		const {
 			id,
