@@ -36,14 +36,16 @@ export const parseOddsCounter = ({
 	};
 
 	if (!adjustment) {
-		const { min, max } = counter;
-		const value = max || 0;
+		// const { min, max } = counter;
+		const max = counter.min && counter.min * -1;
+		const min = counter.max && counter.max * -1;
+		const value = max ?? 0;
 		return {
 			...base,
 			value,
 			step: 1,
-			min: max && max * -1,
-			max: min && min * -1,
+			min,
+			max,
 		};
 	}
 	const min = counter.max && counter.max * adjustment * -1;
@@ -52,7 +54,7 @@ export const parseOddsCounter = ({
 
 	return {
 		...base,
-		value: min,
+		value: max ?? 0,
 		step,
 		min,
 		max,
