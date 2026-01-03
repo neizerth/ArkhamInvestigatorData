@@ -9,6 +9,7 @@ import {
 } from "../meta";
 import { getReferenceCardChaosTokens } from "./reference";
 import { getReferenceCardDifficulty } from "./reference/getReferenceCardDifficulty";
+import { fixBrokenText } from "./reference/text";
 
 type Options = {
 	locale: string;
@@ -72,8 +73,8 @@ export const getTranslatedStories = ({ stories, locale }: Options): Story[] => {
 					back_reference: backReference,
 					code: ref.code,
 					encounter_code: ref.encounter_code,
-					text: translation.text,
-					back_text: translation.back_text,
+					text: fixBrokenText(translation.text),
+					back_text: fixBrokenText(translation.back_text),
 					locale,
 				}),
 			};

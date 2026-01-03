@@ -65,11 +65,16 @@ const parseLine = (text: string): ReferencePart | null => {
 	}
 
 	if (tokens.length > 1) {
+		// Remove "или [token]:" patterns from the beginning of effect for groups
+		const cleanedEffect = effect.replace(
+			/^(или\s+\[[^\]]+\]\s*[:：]?\s*)+/i,
+			"",
+		);
 		return {
 			id: tokens[0],
 			type: "group",
 			tokens,
-			effect,
+			effect: cleanedEffect,
 		};
 	}
 

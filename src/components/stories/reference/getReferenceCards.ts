@@ -6,6 +6,7 @@ import { ascend, isNotNil, prop } from "ramda";
 import { getEncounterSetIcon } from "../../icons";
 import { getReferenceCardChaosTokens } from "./getReferenceCardChaosTokens";
 import { getReferenceCardDifficulty } from "./getReferenceCardDifficulty";
+import { fixBrokenText } from "./text";
 
 type Story = ArkhamDivider.Core["stories"][number];
 
@@ -18,8 +19,8 @@ export const getReferenceCards = (story: Story): ReferenceCard[] => {
 	return cards
 		.filter(({ pack_code }) => packCodes.includes(pack_code))
 		.map((card): ReferenceCard => {
-			const realText = card.real_text || "";
-			const realBackText = card.real_back_text || "";
+			const realText = fixBrokenText(card.real_text || "");
+			const realBackText = fixBrokenText(card.real_back_text || "");
 
 			const locale = "en";
 

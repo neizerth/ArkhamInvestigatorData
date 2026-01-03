@@ -1,5 +1,6 @@
 import type { ReferenceCardToken, ReferenceCardTokenEffectInfo } from "@/model";
 import { pick } from "ramda";
+import { fixBrokenText } from "../text";
 
 export const mergeOddsEffects = (
 	tokens: ReferenceCardToken[],
@@ -28,7 +29,13 @@ export const mergeOddsEffects = (
 			return {
 				...item,
 				options: item.options.map((option, index) =>
-					mergeEffects(option, sourceItem.options[index]),
+					mergeEffects(
+						{
+							...option,
+							prompt: fixBrokenText(option.prompt),
+						},
+						sourceItem.options[index],
+					),
 				),
 			};
 		}
@@ -41,10 +48,10 @@ function mergeEffects<T extends ReferenceCardTokenEffectInfo>(
 	target: T,
 	source: T,
 ) {
-	const options = pick(["expression", "personal"], source);
+	const params = pick(["expression", "personal"], source);
 
 	return {
 		...target,
-		...options,
+		...params,
 	};
 }

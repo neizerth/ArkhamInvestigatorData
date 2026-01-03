@@ -7,6 +7,7 @@ import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { ascend, identity, isNotNil, sort, uniq } from "ramda";
 import { parseChaosOddsEffects } from "../effects";
+import { fixBrokenText } from "../../text";
 
 type Options = {
 	item: ArkhamCardsChaosOddTokenCondition;
@@ -33,9 +34,11 @@ export const parseOddsCondition = ({
 	const values = sort(ascend(identity), rawValues);
 
 	const options = condition.options.map((option) => {
-		const { prompt } = option;
+		const prompt = fixBrokenText(option.prompt);
+
 		return {
 			...option,
+			prompt,
 			...parseChaosOddsEffects({
 				prompt,
 				effect,
