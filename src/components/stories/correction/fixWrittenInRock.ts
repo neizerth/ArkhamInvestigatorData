@@ -23,7 +23,7 @@ export const fixWrittenInRock = (stories: Story[]) => {
         referenceCards: story.referenceCards.map((card) => {
           if (card.code === ref1.code) {
             const title = getReferenceCardDifficulty(ref1.text);
-            const scene = title.split(/ - /)[1];
+            const scene = title.split(/ [-—] /)[1];
             return {
               ...ref1,
               name: `${ref1.name} - ${scene}`,
