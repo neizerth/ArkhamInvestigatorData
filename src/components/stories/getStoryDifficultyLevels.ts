@@ -1,7 +1,7 @@
 import type { ArkhamCardsCampaign } from "@/api/arkhamCards";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import type { ArkhamDivider } from "arkham-divider-data";
-import { isNotNil, propEq } from "ramda";
+import { isNotNil } from "ramda";
 import { getArkhamCardsCampaigns } from "../meta";
 
 type ArkhamDividerStory = ArkhamDivider.Core["stories"][number];
@@ -50,11 +50,11 @@ const getSteps = (story: ArkhamDividerStory) => {
 	const campaigns = getArkhamCardsCampaigns();
 	const sideCampaign = campaigns.find((item) => item.campaign.id === "side");
 
-	const isSide =
-		story.cycle_code === "side_stories" ||
-		["side_story", "challenge"].includes(story.type);
+	// const isSide =
+	// 	story.cycle_code === "side_stories" ||
+	// 	["side_story", "challenge"].includes(story.type);
 
-	const scenarios = [...(sideCampaign.scenarios ?? []), story.scenario].filter(
+	const scenarios = [...(story.scenarios ?? []), story.scenario].filter(
 		isNotNil,
 	);
 
@@ -82,7 +82,7 @@ const getSteps = (story: ArkhamDividerStory) => {
 	}
 
 	if (!item) {
-		item = campaigns.find(({ campaign }) => campaign.name === story.name);
+		item = campaigns.find(({ campaign }) => campaign.id === story.code);
 	}
 
 	if (!item) {

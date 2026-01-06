@@ -9,6 +9,7 @@ export const downloadFile = async (
 		url,
 		directory,
 		fileName,
+		timeout: 10000,
 	});
 
 	await downloader.download();

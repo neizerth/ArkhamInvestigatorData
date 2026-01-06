@@ -9,10 +9,6 @@ export const getEnglishStories = () => {
 
 	return data
 		.map((story): Story | null => {
-			const { scenarios = [], scenario } = story;
-
-			const storyScenarios = [...scenarios, scenario].filter(isNotNil);
-
 			const props = pick(["code", "name", "type", "icon"], story);
 
 			const difficultyLevels = getStoryDifficultyLevels(story);
@@ -24,6 +20,10 @@ export const getEnglishStories = () => {
 				official: story.is_official,
 				difficultyLevels,
 			};
+
+			if (story.code === 'zce') {
+				console.log("ZCE Difficulty Levels", difficultyLevels);
+			}
 
 			if (referenceCards.length === 0) {
 				return null;
