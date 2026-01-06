@@ -29,7 +29,7 @@ export const fixWrittenInRock = (stories: Story[]) => {
               name: `${ref1.name} - ${scene}`,
               back_reference: ref2.reference,
               back_difficulty: ref2.difficulty,
-              back_tokens: ref2.tokens,
+              back_tokens: ref1.back_tokens,
               back_text: ref2.text
             };
           }
@@ -41,7 +41,7 @@ export const fixWrittenInRock = (stories: Story[]) => {
               name: `${ref2.name} - ${scene}`,
               reference: ref1.back_reference,
               difficulty: ref1.back_difficulty,
-              tokens: ref1.back_tokens,
+              tokens: ref2.tokens,
               text: ref1.back_text,
               back_reference: ref2.back_reference,
               back_difficulty: ref2.back_difficulty,
