@@ -2,7 +2,7 @@ export const fixBrokenIcons = (text: string) => {
 	return (
 		text
 			// text] -> [text] (add opening bracket if missing, but not if already inside [])
-			.replace(/(?<!\[)([^\s\[\]]+)\](?!\])/g, "[$1]")
+			.replace(/(?<!\[[^\]]*)([^\s\[\]]+)\](?!\])/g, "[$1]")
 			// [text ] -> [text] (remove spaces before closing bracket)
 			.replace(/\[([^\s\[\]]+)\s+\]/g, "[$1]")
 			// [ text] -> [text] (remove spaces after opening bracket)
