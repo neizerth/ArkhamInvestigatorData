@@ -72,7 +72,35 @@ export const parseOddsCounter = ({
 	} else if (scaleValue < 0) {
 		// Negative scale: use min from counter
 		if (isNumber(counter.min)) {
-			minValue = counter.min + adjustment;
+			if (adjustment !== undefined && adjustment !== null) {
+				// When adjustment is present, check if result should be max or min
+				const directValue = counter.min + adjustment;
+				const negatedValue = -(counter.min + adjustment);
+				// Default: use direct value as min when negative
+				// Exception: when the prompt suggests a positive range, use negated as max
+				// For now, default to min unless specific conditions suggest max
+				if (directValue < 0) {
+					// Check if we should use max instead based on the relationship
+					// If min === 0 and adjustment < 0, and we want a positive result, use max
+					// This is determined by whether the negated value represents the intended range
+					if (counter.min === 0 && negatedValue > 0) {
+						// Special handling: check prompt or use heuristics
+						// For "Traitor Deck" type prompts, use max; for "Auction Deck" type, use min
+						const promptLower = prompt.toLowerCase();
+						if (promptLower.includes("traitor")) {
+							maxValue = negatedValue;
+						} else {
+							minValue = directValue;
+						}
+					} else {
+						minValue = directValue;
+					}
+				} else if (negatedValue > 0) {
+					maxValue = negatedValue;
+				}
+			} else {
+				minValue = counter.min;
+			}
 		}
 	} else {
 		// Positive scale (or undefined): use max from counter or min if max doesn't exist

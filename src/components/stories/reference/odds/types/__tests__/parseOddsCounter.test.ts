@@ -233,4 +233,22 @@ describe("parseOddsCounter", () => {
 		expect(result.min).toBe(-8);
 		expect(result.step).toBe(2);
 	});
+
+	it("crumbling_masonry", () => {
+		const item: ArkhamCardsChaosOddTokenCounter = {
+			"token": "skull",
+			"type": "counter",
+			"counter": {
+				"prompt": "Number of cards in the Traitor Deck",
+				"min": 0,
+				"adjustment": -4,
+				"scale": -1
+			}
+		};
+
+		const result = getResult(item);
+		expect(result.min).toBeUndefined();
+		expect(result.max).toBe(4);
+		expect(result.step).toBe(1);
+	});
 });
