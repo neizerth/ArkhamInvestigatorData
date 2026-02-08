@@ -1,9 +1,9 @@
+import { loadSignatures } from "@/api";
 import type { SignatureCollection } from "@/model";
 import { propEq } from "ramda";
 import { getSignatureCollection } from "./collection";
 import { getEnglishSignatures } from "./getEnglishSignatures";
 import { getSignatureTranslations } from "./getSignatureTranslations";
-import { loadSignatures } from "@/api";
 
 export const getSignatures = async () => {
 	const data = await loadSignatures();

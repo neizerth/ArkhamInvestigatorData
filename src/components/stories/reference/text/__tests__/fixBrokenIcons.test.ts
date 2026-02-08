@@ -22,6 +22,8 @@ describe("fixBrokenIcons", () => {
 		);
 	});
 	it("should be the same text", () => {
-		expect(fixBrokenIcons("X. X is the number of [cultist] in the chaos bag +1.")).toBe("X. X is the number of [cultist] in the chaos bag +1.");
+		expect(
+			fixBrokenIcons("X. X is the number of [cultist] in the chaos bag +1."),
+		).toBe("X. X is the number of [cultist] in the chaos bag +1.");
 	});
 });

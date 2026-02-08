@@ -6,8 +6,8 @@ import { underscore2CamelCase } from "@/features";
 import type { ReferenceCardToken } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
 import { ascend, identity, isNotNil, sort, uniq } from "ramda";
-import { parseChaosOddsEffects } from "../effects";
 import { fixBrokenText } from "../../text";
+import { parseChaosOddsEffects } from "../effects";
 
 type Options = {
 	item: ArkhamCardsChaosOddTokenCondition;

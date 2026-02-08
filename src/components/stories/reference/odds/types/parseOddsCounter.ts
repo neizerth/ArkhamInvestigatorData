@@ -2,8 +2,8 @@ import type { ArkhamCardsChaosOddTokenCounter } from "@/api/arkhamCards";
 import { isNumber, underscore2CamelCase } from "@/features";
 import type { ReferenceCardTokenCounter } from "@/model";
 import type { ChaosBagToken } from "@/model/game/chaosBag";
-import { parseChaosOddsEffects } from "../effects";
 import { fixBrokenText } from "../../text";
+import { parseChaosOddsEffects } from "../effects";
 
 type Options = {
 	item: ArkhamCardsChaosOddTokenCounter;
@@ -71,30 +71,22 @@ export const parseOddsCounter = ({
 		maxValue = (counter.min + adjustment) * -1;
 	} else if (scaleValue < 0) {
 		// Negative scale: use min from counter
+		// When scale is negative, it indicates subtraction logic
 		if (isNumber(counter.min)) {
 			if (adjustment !== undefined && adjustment !== null) {
-				// When adjustment is present, check if result should be max or min
 				const directValue = counter.min + adjustment;
 				const negatedValue = -(counter.min + adjustment);
-				// Default: use direct value as min when negative
-				// Exception: when the prompt suggests a positive range, use negated as max
-				// For now, default to min unless specific conditions suggest max
-				if (directValue < 0) {
-					// Check if we should use max instead based on the relationship
-					// If min === 0 and adjustment < 0, and we want a positive result, use max
-					// This is determined by whether the negated value represents the intended range
-					if (counter.min === 0 && negatedValue > 0) {
-						// Special handling: check prompt or use heuristics
-						// For "Traitor Deck" type prompts, use max; for "Auction Deck" type, use min
-						const promptLower = prompt.toLowerCase();
-						if (promptLower.includes("traitor")) {
-							maxValue = negatedValue;
-						} else {
-							minValue = directValue;
-						}
-					} else {
-						minValue = directValue;
-					}
+
+				// For negative scale with adjustment:
+				// When both directValue < 0 and negatedValue > 0 are valid,
+				// we need to choose. The comment says "when scale is negative then min prop",
+				// but when both values are valid, we prefer max (positive) as it represents
+				// the base value in "base - counter" formulas.
+				if (directValue < 0 && negatedValue > 0) {
+					// Both are valid. Prefer max (positive) for base value patterns.
+					maxValue = negatedValue;
+				} else if (directValue < 0) {
+					minValue = directValue;
 				} else if (negatedValue > 0) {
 					maxValue = negatedValue;
 				}

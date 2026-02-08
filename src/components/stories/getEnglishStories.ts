@@ -21,7 +21,7 @@ export const getEnglishStories = () => {
 				difficultyLevels,
 			};
 
-			if (story.code === 'zce') {
+			if (story.code === "zce") {
 				console.log("ZCE Difficulty Levels", difficultyLevels);
 			}
 
