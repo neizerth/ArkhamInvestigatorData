@@ -242,4 +242,22 @@ describe("parseOddsCounter", () => {
 		expect(result.max).toBe(4);
 		expect(result.step).toBe(1);
 	});
+
+	it('the_crown', () => {
+		const item: ArkhamCardsChaosOddTokenCounter = {
+			"token": "skull",
+			"type": "counter",
+			"counter": {
+				"prompt": "The number of the current agenda",
+				"min": 1,
+				"max": 3,
+				"scale": 2
+			}
+		};
+
+		const result = getResult(item);
+		expect(result.max).toBe(-2);
+		expect(result.min).toBe(-6);
+		expect(result.step).toBe(2);
+	});
 });
