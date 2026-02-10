@@ -243,16 +243,16 @@ describe("parseOddsCounter", () => {
 		expect(result.step).toBe(1);
 	});
 
-	it('the_crown', () => {
+	it("the_crown", () => {
 		const item: ArkhamCardsChaosOddTokenCounter = {
-			"token": "skull",
-			"type": "counter",
-			"counter": {
-				"prompt": "The number of the current agenda",
-				"min": 1,
-				"max": 3,
-				"scale": 2
-			}
+			token: "skull",
+			type: "counter",
+			counter: {
+				prompt: "The number of the current agenda",
+				min: 1,
+				max: 3,
+				scale: 2,
+			},
 		};
 
 		const result = getResult(item);
