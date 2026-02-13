@@ -38,6 +38,8 @@ export const getSignatureCollection = (
 	const unsortedGroups = groupPairs.map(([_, values]) => {
 		const data = sortWith(
 			[
+				ascend(({ locale }) => locale === "en"),
+				ascend(prop("code")),
 				ascend(({ cycle }) => cycle.position),
 				ascend(({ taboo }) => Number(taboo)),
 				ascend(({ id }) => id.length),

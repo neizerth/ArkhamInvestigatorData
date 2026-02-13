@@ -21,10 +21,6 @@ export const getEnglishStories = () => {
 				difficultyLevels,
 			};
 
-			if (story.code === "zce") {
-				console.log("ZCE Difficulty Levels", difficultyLevels);
-			}
-
 			if (referenceCards.length === 0) {
 				return null;
 			}

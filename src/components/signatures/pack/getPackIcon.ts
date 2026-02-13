@@ -1,7 +1,12 @@
 import { getIcons, getStories } from "@/components/meta";
+import { core2026Id } from "@/config";
 import { propEq } from "ramda";
 
 export const getPackIcon = (code: string) => {
+	if (code === core2026Id) {
+		return code;
+	}
+
 	const fromStory = getStories().find(
 		({ pack_code, pack_codes = [] }) =>
 			pack_code === code || pack_codes.includes(code),
