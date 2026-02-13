@@ -30,9 +30,7 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 		id: image.id || code,
 	};
 
-	const isCorePack = card.pack.code === "core";
-
-	if ((card.code === code && !isTaboo && isCorePack) || !special.variants) {
+	if ((card.code === code && !isTaboo) || !special.variants) {
 		return {
 			...base,
 			image: defaultImage,
