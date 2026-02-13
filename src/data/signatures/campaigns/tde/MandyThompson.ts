@@ -13,6 +13,7 @@ export const MandyThompson: Investigator = {
 			top: 1141,
 		},
 	},
+	haveTaboo: false,
 	abilities: [
 		{
 			id: "reaction",

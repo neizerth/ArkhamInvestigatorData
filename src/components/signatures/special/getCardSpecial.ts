@@ -18,6 +18,10 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 		return;
 	}
 
+	if (special.haveTaboo === false && card.taboo_set?.id === 0) {
+		return;
+	}
+
 	const isTaboo = Boolean(card.taboo_set) && card.taboo_set.id !== 0;
 
 	const base = omit(["skins", "variants"], special);
