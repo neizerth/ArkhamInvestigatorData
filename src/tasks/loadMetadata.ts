@@ -13,7 +13,7 @@ import {
 } from "@/api/arkhamCards";
 import { loadArkhamCardsUpdates } from "@/api/arkhamCards/request/graphql/loadArkhamCardsUpdates";
 import { loadArkhamCardsRulesCollection } from "@/api/arkhamCards/request/raw";
-import { loadArkhamCardsChaosOddsCollection } from "@/api/arkhamCards/request/raw/odds/loadArkhamCardsChaosOddsCollection";
+import { loadArkhamCardsChaosOddsCollection } from "@/api/arkhamCards/request/raw/odds/loadArkhamCardsChaosOddsCollection/loadArkhamCardsChaosOddsCollection";
 import { ARKHAM_DIVIDER_CORE_URL, CACHE_DIR } from "@/config";
 import {
 	createCSVWriter,
