@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arkham Investigator — Data URL</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="page">
+		<header class="header">
+			<div class="announce">
+				<a href="https://boardgamegeek.com/thread/3516636/arkham-investigator-a-digital-investigator-board" class="announce-link" target="_blank" rel="noopener noreferrer" data-i18n="announceBgg">Like on BGG</a>
+				<span class="announce-sep">·</span>
+				<a href="https://www.patreon.com/c/arkhamdivider" class="announce-link" target="_blank" rel="noopener noreferrer" data-i18n="announcePatreon">Support on Patreon</a>
+			</div>
+			<h1 class="title" data-i18n="title">Arkham Investigator</h1>
+			<p class="tagline" data-i18n="tagline">Digital investigator board for Arkham Horror: The Card Game</p>
+			<div class="lang-select">
+				<label for="lang" class="lang-label" data-i18n="language">Language</label>
+				<select id="lang" class="lang-select-input" aria-label="Language">
+					<option value="en">English</option>
+					<option value="de">Deutsch</option>
+					<option value="es">Español</option>
+					<option value="fr">Français</option>
+					<option value="it">Italiano</option>
+					<option value="pl">Polski</option>
+					<option value="pt">Português</option>
+					<option value="ru">Русский</option>
+					<option value="uk">Українська</option>
+					<option value="cs">Čeština</option>
+					<option value="ko">한국어</option>
+					<option value="vi">Tiếng Việt</option>
+					<option value="zh">中文</option>
+					<option value="zh-cn">简体中文</option>
+				</select>
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="intro card">
+				<h2 data-i18n="introTitle">About the app</h2>
+				<p data-i18n="introText">Arkham Investigator is a fan-made companion app for Arkham Horror: The Card Game. It helps you track progress, manage chaos bag and campaign resources, and keep your investigator sheet digital — so you can play without shuffling physical tokens and cards. This site hosts the <strong>data</strong> (cards, investigators, chaos odds) that the app can load.</p>
+			</section>
+
+			<section class="notice card highlight">
+				<h2 data-i18n="noticeTitle">Don’t open this address in the browser</h2>
+				<p data-i18n="noticeText">If you came here by tapping a link, you’re in the right place — but the app needs the address as <strong>text</strong>, not as a page you opened. Go back to the app, tap the yellow icon in the top-right corner, and <strong>paste</strong> the URL below into the text field, then confirm.</p>
+			</section>
+
+			<section class="url-block card">
+				<label for="data-url" class="url-label" data-i18n="urlLabel">Data URL (paste this in the app)</label>
+				<div class="url-row">
+					<input type="text" id="data-url" class="url-input" readonly value="https://neizerth.github.io/ArkhamInvestigatorData" aria-label="Data URL">
+					<button type="button" id="copy-btn" class="btn btn-primary" data-i18n="copyBtn">Copy</button>
+				</div>
+				<p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+			</section>
+
+			<section class="steps card">
+				<h2 data-i18n="stepsTitle">How to add data in the app</h2>
+				<ol class="steps-list">
+					<li data-i18n="step1">Go to the first screen</li>
+					<li data-i18n="step2">Tap the yellow icon in the top-right corner</li>
+					<li data-i18n="step3">Paste the URL above into the text field (do not open it in the browser)</li>
+					<li data-i18n="step4">Tap the confirmation button</li>
+					<li data-i18n="step5">Enjoy!</li>
+				</ol>
+			</section>
+
+			<section class="ios-note card">
+				<p data-i18n="iosOnly">This instruction is intended for <strong>iOS</strong>. On Android, the flow may differ slightly.</p>
+			</section>
+
+			<section class="apps card">
+				<h2 data-i18n="appsTitle">Get the app</h2>
+				<div class="app-links">
+					<a href="https://apps.apple.com/us/app/ah-investigator/id6753330970" class="app-badge" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Download_on_the_App_Store_Badge_US-UK_RGB_blk.svg" alt="Download on the App Store" width="120" height="40">
+					</a>
+					<a href="https://play.google.com/store/apps/details?id=com.arkhaminvestigator" class="app-badge" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+						<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="135" height="40">
+					</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p data-i18n="disclaimer">Arkham Horror: The Card Game™ and related content © Fantasy Flight Games. This app and site are not produced, endorsed, or affiliated with FFG.</p>
+		</footer>
+	</div>
+
+	<script src="translations.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
