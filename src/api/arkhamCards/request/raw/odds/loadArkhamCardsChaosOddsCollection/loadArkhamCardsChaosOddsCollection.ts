@@ -14,11 +14,20 @@ export const loadArkhamCardsChaosOddsCollection = async (
 
 	const base = data.en;
 	for (const language of languages) {
-		if (language === "en") continue;
+		if (language === "en") {
+			continue;
+		}
 		const odds = data[language];
+		if (odds.length === 0) {
+			data[language] = base;
+			continue;
+		}
 		for (let i = 0; i < odds.length; i++) {
 			const baseOdd = base.find(propEq(odds[i].code, "code"));
-			if (!baseOdd) continue;
+			if (!baseOdd) {
+				data[language][i] = odds[i];
+				continue;
+			}
 			data[language][i] = mergeOdd(baseOdd, odds[i]);
 		}
 	}
