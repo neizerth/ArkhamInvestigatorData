@@ -12,4 +12,11 @@ export const IsabelleBarnes: Investigator = {
 			top: 490,
 		},
 	},
+	abilities: [
+		{
+			id: "isabelle-takes-horror",
+			type: "fast",
+			limitPer: "round",
+		},
+	],
 };
