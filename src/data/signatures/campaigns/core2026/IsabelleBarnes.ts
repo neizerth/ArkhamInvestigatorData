@@ -8,7 +8,7 @@ export const IsabelleBarnes: Investigator = {
 		face: {
 			width: 172,
 			height: 239,
-			left: 733,
+			left: 733 + 150,
 			top: 490,
 		},
 	},
