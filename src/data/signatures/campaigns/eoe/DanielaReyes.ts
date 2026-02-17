@@ -26,6 +26,13 @@ export const DanielaReyes: Investigator = {
 			type: "default",
 			code: "12001",
 			name: "Core 2026",
+			abilities: [
+				{
+					id: "investigator-been-attacked",
+					type: "reaction",
+					limitPer: "round",
+				},
+			],
 		},
 	],
 };

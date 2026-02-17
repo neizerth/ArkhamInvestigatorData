@@ -17,6 +17,13 @@ export const JoeDiamond: Investigator = {
 			type: "default",
 			code: "12004",
 			name: "Core 2026",
+			abilities: [
+				{
+					id: "joe-succeed-investigation",
+					type: "reaction",
+					limitPer: "round",
+				},
+			],
 		},
 	],
 };
