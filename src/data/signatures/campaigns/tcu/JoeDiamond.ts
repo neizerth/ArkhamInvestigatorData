@@ -12,4 +12,11 @@ export const JoeDiamond: Investigator = {
 			top: 1121,
 		},
 	},
+	variants: [
+		{
+			type: "default",
+			code: "12004",
+			name: "Core 2026",
+		},
+	],
 };

@@ -28,6 +28,11 @@ export const DexterDrake: Investigator = {
 				},
 			},
 		},
+		{
+			type: "default",
+			code: "12010",
+			name: "Core 2026",
+		},
 	],
 	abilities: [
 		{

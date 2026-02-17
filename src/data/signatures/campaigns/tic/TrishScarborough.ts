@@ -32,6 +32,11 @@ export const TrishScarborough: Investigator = {
 				},
 			],
 		},
+		{
+			type: "default",
+			code: "12007",
+			name: "Core 2026",
+		},
 	],
 	skins: [
 		{

@@ -36,7 +36,7 @@ export type InvestigatorVariantWithPack = {
 	code: string;
 } & (
 	| {
-			type: "parallel";
+			type: "parallel" | "default";
 			image?: InvestigatorImage;
 	  }
 	| {

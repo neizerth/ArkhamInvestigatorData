@@ -2,6 +2,8 @@ import type { Investigator, InvestigatorImageSource } from "@/model";
 
 export const MarieLambeau: Investigator = {
 	code: "05006",
+	ignoreCodes: ["99001"],
+	ignoreIds: ["99001"],
 	additionalAction: true,
 	image: {
 		width: 3227,

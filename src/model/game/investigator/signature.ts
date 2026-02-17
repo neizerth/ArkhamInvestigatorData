@@ -18,7 +18,10 @@ export type InvestigatorSignature = Omit<
 	| "pack"
 	| "gender"
 > &
-	Omit<Investigator, "variants" | "skins" | "image"> & {
+	Omit<
+		Investigator,
+		"variants" | "skins" | "image" | "ignoreCodes" | "ignoreIds" | "haveTaboo"
+	> & {
 		icon: string;
 		type: InvestigatorSignatureType;
 		image: Partial<Omit<Investigator["image"], "id">> & {

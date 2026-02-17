@@ -15,6 +15,8 @@ export type Investigator = InvestigatorStats & {
 	roles?: InvestigatorFaction[];
 	spoiler?: boolean;
 	haveTaboo?: boolean;
+	ignoreCodes?: string[];
+	ignoreIds?: string[];
 };
 
 export type InvestigatorStats = {

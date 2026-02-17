@@ -22,9 +22,20 @@ export const getCardSpecial = (card: ArkhamCardsInvestigator) => {
 		return;
 	}
 
+	if (special.ignoreCodes?.includes(code)) {
+		return;
+	}
+
+	if (special.ignoreIds?.includes(card.id)) {
+		return;
+	}
+
 	const isTaboo = Boolean(card.taboo_set) && card.taboo_set.id !== 0;
 
-	const base = omit(["skins", "variants"], special);
+	const base = omit(
+		["skins", "variants", "ignoreCodes", "haveTaboo", "ignoreIds"],
+		special,
+	);
 	const { image } = base;
 
 	const type: InvestigatorSignatureType = "default";

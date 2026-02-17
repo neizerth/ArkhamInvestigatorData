@@ -21,4 +21,11 @@ export const DanielaReyes: Investigator = {
 			limitPer: "round",
 		},
 	],
+	variants: [
+		{
+			type: "default",
+			code: "12001",
+			name: "Core 2026",
+		},
+	],
 };
