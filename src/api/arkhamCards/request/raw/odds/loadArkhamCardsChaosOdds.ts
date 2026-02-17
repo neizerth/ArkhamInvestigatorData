@@ -4,7 +4,9 @@ import {
 } from "@/config";
 import type { ArkhamCardsChaosOdd } from "../../../model";
 
-export const loadArkhamCardsChaosOdds = async (language = "en") => {
+export const loadArkhamCardsChaosOdds = async (
+	language = "en",
+): Promise<ArkhamCardsChaosOdd[]> => {
 	console.log(`loading Arkham Cards Chaos Odds for language: ${language}`);
 
 	let url = `${dataBaseUri}/chaos_tokens.json`;
@@ -13,6 +15,15 @@ export const loadArkhamCardsChaosOdds = async (language = "en") => {
 
 		url = `${baseUri}/assets/generated/chaos_odds${locale}.txt`;
 	}
-	const response = await fetch(url);
-	return (await response.json()) as ArkhamCardsChaosOdd[];
+	try {
+		const response = await fetch(url);
+
+		return await response.json();
+	} catch (e) {
+		console.error(
+			`error loading Arkham Cards Chaos Odds for language: ${language}`,
+			e,
+		);
+		return [];
+	}
 };
