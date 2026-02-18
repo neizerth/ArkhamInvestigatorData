@@ -19,8 +19,8 @@ export type InvestigatorImageMedia = InvestigatorImageBox & {
 
 export type InvestigatorImage = Box & {
 	id?: string;
-	light?: boolean;
-	version?: number;
 	face: InvestigatorImageBox;
 	media?: InvestigatorImageMedia[];
+	light?: boolean;
+	version?: number;
 };

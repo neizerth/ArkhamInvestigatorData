@@ -193,11 +193,70 @@ const TRANSLATIONS = {
 		disclaimer:
 			"Arkham Horror: The Card Game™ e conteúdo relacionado © Fantasy Flight Games. Este app e site não são produzidos, endossados ou afiliados à FFG.",
 	},
+	zh: {
+		announceBgg: "在 BGG 上点赞",
+		announcePatreon: "在 Patreon 支持",
+		title: "Arkham Investigator",
+		tagline: "《诡镇奇谈：卡牌游戏》数字调查员面板",
+		language: "语言",
+		introTitle: "关于本应用",
+		introText:
+			"Arkham Investigator 是《诡镇奇谈：卡牌游戏》的爱好者自制配套应用。它帮助您追踪进度、管理混沌袋和战役资源，并将调查员表格数字化——让您无需实体标记和卡牌即可游戏。本网站托管应用可加载的<strong>数据</strong>（卡牌、调查员、混沌概率）。",
+		noticeTitle: "请不要在浏览器中打开此地址",
+		noticeText:
+			"如果您是通过链接来到这里的，说明您找对地方了——但应用需要的是<strong>文本</strong>形式的地址，而不是在浏览器中打开的页面。请返回应用，点击右上角的黄色图标，将下方的 URL <strong>粘贴</strong>到文本框中，然后确认。",
+		urlLabel: "数据 URL（在应用中粘贴）",
+		copyBtn: "复制",
+		copySuccess: "已复制！",
+		copyFail: "复制失败",
+		stepsTitle: "如何在应用中添加数据",
+		step1: "进入第一个界面",
+		step2: "点击右上角的黄色图标",
+		step3: "将上方的 URL 粘贴到文本框（不要在浏览器中打开）",
+		step4: "点击确认按钮",
+		step5: "完成！",
+		iosOnly:
+			"此说明仅适用于 <strong>iOS</strong>。在 Android 上，数据已内置在应用中，无需任何操作。",
+		appsTitle: "获取应用",
+		disclaimer:
+			"《诡镇奇谈：卡牌游戏》™ 及相关内容 © Fantasy Flight Games。本应用与网站非 FFG 制作、认可或关联。",
+	},
+	ko: {
+		announceBgg: "BGG에서 좋아요",
+		announcePatreon: "Patreon에서 후원하기",
+		title: "Arkham Investigator",
+		tagline: "아컴 호러: 카드 게임용 디지털 조사자 보드",
+		language: "언어",
+		introTitle: "앱 소개",
+		introText:
+			"Arkham Investigator는 아컴 호러: 카드 게임을 위한 팬 제작 동반 앱입니다. 진행 상황 추적, 카오스 백 및 캠페인 자원 관리, 조사자 시트를 디지털로 유지하는 데 도움을 줍니다. 이 사이트는 앱이 로드할 수 있는 <strong>데이터</strong>(카드, 조사자, 카오스 확률)를 호스팅합니다.",
+		noticeTitle: "브라우저에서 이 주소를 열지 마세요",
+		noticeText:
+			"링크를 통해 여기로 오셨다면 올바른 곳입니다 — 하지만 앱에는 열린 페이지가 아니라 <strong>텍스트</strong> 형태의 주소가 필요합니다. 앱으로 돌아가 오른쪽 상단의 노란색 아이콘을 탭하고 아래 URL을 텍스트 필드에 <strong>붙여넣은</strong> 다음 확인하세요.",
+		urlLabel: "데이터 URL (앱에 붙여넣기)",
+		copyBtn: "복사",
+		copySuccess: "복사됨!",
+		copyFail: "복사 실패",
+		stepsTitle: "앱에서 데이터 추가 방법",
+		step1: "첫 화면으로 이동",
+		step2: "오른쪽 상단의 노란색 아이콘 탭",
+		step3: "위 URL을 텍스트 필드에 붙여넣기 (브라우저에서 열지 마세요)",
+		step4: "확인 버튼 탭",
+		step5: "완료!",
+		iosOnly:
+			"이 안내는 <strong>iOS</strong> 전용입니다. Android에서는 데이터가 이미 앱에 포함되어 있어 별도 조치가 필요 없습니다.",
+		appsTitle: "앱 다운로드",
+		disclaimer:
+			"아컴 호러: 카드 게임™ 및 관련 콘텐츠 © Fantasy Flight Games. 이 앱과 사이트는 FFG에서 제작·승인·제휴한 것이 아닙니다.",
+	},
 };
 
 // Fallback for locales without full translation without full translation
 const FALLBACK_LOCALE = "en";
 const LOCALES = ["en", "de", "es", "fr", "it", "pl", "pt", "ru", "uk", "cs", "ko", "vi", "zh", "zh-cn"];
-LOCALES.forEach((code) => {
-	if (!TRANSLATIONS[code]) TRANSLATIONS[code] = TRANSLATIONS[FALLBACK_LOCALE];
-});
+
+for (const code of LOCALES) {
+	if (!TRANSLATIONS[code]) {
+		TRANSLATIONS[code] = TRANSLATIONS[FALLBACK_LOCALE];
+	}
+}
