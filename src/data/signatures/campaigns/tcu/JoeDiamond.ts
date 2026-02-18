@@ -25,6 +25,7 @@ export const JoeDiamond: Investigator = {
 				},
 			],
 			image: {
+				version: 2,
 				width: 2324,
 				height: 2268,
 				face: {
