@@ -24,6 +24,16 @@ export const JoeDiamond: Investigator = {
 					limitPer: "round",
 				},
 			],
+			image: {
+				width: 2324,
+				height: 2268,
+				face: {
+					width: 317,
+					height: 300,
+					left: 919,
+					top: 974,
+				},
+			},
 		},
 	],
 };
