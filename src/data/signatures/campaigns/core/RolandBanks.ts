@@ -3,7 +3,7 @@ import type { Investigator } from "@/model";
 export const RolandBanks: Investigator = {
 	code: "01001",
 	image: {
-		version: 3,
+		version: 4,
 		width: 3000,
 		height: 2500,
 		face: {
