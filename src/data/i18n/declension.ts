@@ -6,6 +6,7 @@ export const dativeNameDeclension: Record<string, NameDeclension> = {
 		"90081": "Отцу Матео",
 		"07001": "Сестре Мэри",
 		"10661": "Расколотому Я",
+		"11068b": "Заблудшему Гомункулу",
 	},
 };
 
@@ -16,5 +17,6 @@ export const prepositionalNameDeclension: Record<string, NameDeclension> = {
 		"90081": "Отце Матео",
 		"07001": "Сестре Мэри",
 		"10661": "Расколотом Я",
+		"11068b": "Заблудшем Гомункуле",
 	},
 };
