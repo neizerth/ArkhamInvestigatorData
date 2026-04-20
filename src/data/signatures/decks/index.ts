@@ -1,4 +1,5 @@
 import { AndrePatel } from "./AndrePatel";
+import { CarolynFern } from "./CarolynFern";
 import { HarveyWalters } from "./HarveyWalters";
 import { JacquelineFine } from "./JacquelineFine";
 import { MiguelDeLaCruz } from "./MiguelDeLaCruz";
@@ -14,4 +15,5 @@ export default [
 	StellaClark,
 	AndrePatel,
 	MiguelDeLaCruz,
+	CarolynFern,
 ];

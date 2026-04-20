@@ -1,4 +1,3 @@
-import { splashImage } from "@/config";
 import type { Investigator } from "@/model";
 
 export const CarolynFern: Investigator = {
@@ -42,13 +41,6 @@ export const CarolynFern: Investigator = {
 					toggle: false,
 				},
 			],
-		},
-		{
-			code: "60251",
-			type: "default",
-			name: "Chapter 2",
-			chapter2: true,
-			image: splashImage,
 		},
 	],
 	skins: [
