@@ -31,6 +31,13 @@ export const MarieLambeau: Investigator = {
 			name: "Chapter 2",
 			chapter2: true,
 			image: splashImage,
+			abilities: [
+				{
+					id: "draw-cards-after-damage",
+					type: "reaction",
+					limitPer: "phase",
+				},
+			],
 		},
 	],
 };

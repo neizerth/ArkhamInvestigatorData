@@ -4,4 +4,11 @@ import { splashImage } from "../../../config/image";
 export const AndrePatel: Investigator = {
 	code: "60351",
 	image: splashImage,
+	abilities: [
+		{
+			id: "get-action-after-succeed",
+			type: "reaction",
+			limitPer: "round",
+		},
+	],
 };
