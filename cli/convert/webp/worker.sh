@@ -16,7 +16,7 @@ else
 fi
 
 # Generate output path
-out_file="$WORKSPACE_ROOT/images/webp/${infile_abs#$WORKSPACE_ROOT/images/jpg/}"
+out_file="$WORKSPACE_ROOT/images/webp/${infile_abs#$WORKSPACE_ROOT/images/source/}"
 out_file="${out_file%.*}.webp"
 out_dir=$(dirname "$out_file")
 

@@ -3,11 +3,9 @@ set -e
 
 name="${1:-*}"
 
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
-src_dir="${2:-$WORKSPACE_ROOT/images/jpg}"
+src_dir="${2:-./images/source}"
 
-worker_path="$SCRIPT_DIR/worker.sh"
+worker_path="$(cd "$(dirname "$0")" && pwd)/worker.sh"
 
 cd "$src_dir"
 

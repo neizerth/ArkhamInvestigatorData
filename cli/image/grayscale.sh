@@ -7,13 +7,18 @@ if [ "$1" = "-f" ]; then
 fi
 
 BASENAME="${1:-*}"
-ROOT="./images/jpg/color"
+ROOT="./images/source"
 
-find "$ROOT" -type f -name "$BASENAME.jpg" | while IFS= read -r src_file; do
+IM_CMD="convert"
+if command -v magick >/dev/null 2>&1; then
+  IM_CMD="magick"
+fi
+
+find "$ROOT" -path "$ROOT/grayscale" -prune -o -type f -name "$BASENAME.*" -print | while IFS= read -r src_file; do
   src_name=$(basename "$src_file")
   # Extract the subdirectory path (full, mini, square, etc.)
   subdir=$(echo "$src_file" | sed "s|$ROOT/||" | xargs dirname)
-  dst_dir="./images/jpg/grayscale/$subdir"
+  dst_dir="./images/source/grayscale/$subdir"
   dst_file="$dst_dir/$src_name"
 
   mkdir -p "$dst_dir"
@@ -23,6 +28,6 @@ find "$ROOT" -type f -name "$BASENAME.jpg" | while IFS= read -r src_file; do
     continue
   fi
 
-  convert "$src_file" -colorspace Gray -strip "$dst_file"
+  "$IM_CMD" "$src_file" -colorspace Gray -strip "$dst_file"
   echo "Created: $dst_file"
 done
