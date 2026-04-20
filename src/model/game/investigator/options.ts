@@ -10,6 +10,7 @@ export type InvestigatorSkin = {
 
 export type InvestigatorVariant = InvestigatorVariantIdentity & {
 	name: string;
+	icon?: string;
 	additionalAction?: boolean;
 	abilities?: InvestigatorAbility[];
 	roles?: InvestigatorFaction[];

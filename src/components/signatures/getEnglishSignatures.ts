@@ -20,7 +20,9 @@ export const getEnglishSignatures = (data: ArkhamCardsInvestigator[]) =>
 
 			const isTaboo = base.type === "taboo";
 
-			const icon = isTaboo ? "taboo" : pack.icon;
+			const defaultIcon = isTaboo ? "taboo" : pack.icon;
+
+			const icon = base.icon ?? defaultIcon;
 
 			const name = card.real_name;
 

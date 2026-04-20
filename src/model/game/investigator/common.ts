@@ -4,6 +4,7 @@ import type { InvestigatorSkin, InvestigatorVariant } from "./options";
 
 export type Investigator = InvestigatorStats & {
 	code: string;
+	icon?: string;
 	variantName?: string;
 	additionalAction?: boolean;
 	image: InvestigatorImage;
