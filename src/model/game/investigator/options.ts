@@ -13,6 +13,7 @@ export type InvestigatorVariant = InvestigatorVariantIdentity & {
 	additionalAction?: boolean;
 	abilities?: InvestigatorAbility[];
 	roles?: InvestigatorFaction[];
+	chapter2?: boolean;
 };
 
 export type InvestigatorVariantIdentity =

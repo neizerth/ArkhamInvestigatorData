@@ -1,3 +1,4 @@
+import { splashImage } from "@/config";
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
 export const MarieLambeau: Investigator = {
@@ -23,4 +24,13 @@ export const MarieLambeau: Investigator = {
 			},
 		],
 	},
+	variants: [
+		{
+			code: "60451",
+			type: "default",
+			name: "Chapter 2",
+			chapter2: true,
+			image: splashImage,
+		},
+	],
 };

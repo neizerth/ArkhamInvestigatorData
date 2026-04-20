@@ -25,7 +25,8 @@ export const DanielaReyes: Investigator = {
 		{
 			type: "default",
 			code: "12001",
-			name: "Core 2026",
+			name: "Chapter 2",
+			chapter2: true,
 			abilities: [
 				{
 					id: "investigator-been-attacked",

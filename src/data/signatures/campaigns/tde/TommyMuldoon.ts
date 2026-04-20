@@ -1,3 +1,4 @@
+import { splashImage } from "@/config";
 import type { Investigator } from "@/model";
 
 export const TommyMuldoon: Investigator = {
@@ -12,4 +13,13 @@ export const TommyMuldoon: Investigator = {
 			top: 1145,
 		},
 	},
+	variants: [
+		{
+			code: "60151",
+			type: "default",
+			name: "Chapter 2",
+			chapter2: true,
+			image: splashImage,
+		},
+	],
 };

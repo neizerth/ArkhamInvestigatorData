@@ -1,6 +1,6 @@
 import type { InvestigatorImage } from "@/model";
 
-const faceSize = 400;
+const faceSize = 500;
 const center = 650;
 
 const offset = center - faceSize / 2;
