@@ -16,12 +16,19 @@ download_file() {
     local url="$3"
     local output_file="$OUT_DIR/$uuid"
     
-    # Extract extension from URL (remove query string first, then get extension)
+    # Extension must come from the last path segment only. Using ${url##*.} on the full URL
+    # uses the last dot in the host (e.g. akamaihd.net/ugc/.../ → extension "net/ugc/...",
+    # which injects path separators and breaks the output file path for curl).
     local url_without_query="${url%%\?*}"
-    local extension="${url_without_query##*.}"
-    
-    # If no extension found, try to detect from Content-Type or default to png
-    if [[ -z "$extension" ]] || [[ "$extension" == "$url_without_query" ]]; then
+    local x="${url_without_query#*://}"
+    local path="/"
+    if [[ "$x" == */* ]]; then
+        path="/${x#*/}"
+    fi
+    path="${path%/}"
+    local last_seg="${path##*/}"
+    local extension="${last_seg##*.}"
+    if [[ -z "$last_seg" ]] || [[ "$extension" == "$last_seg" ]]; then
         extension="png"
     fi
     
