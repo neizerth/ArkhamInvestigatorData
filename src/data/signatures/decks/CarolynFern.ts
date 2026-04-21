@@ -4,6 +4,7 @@ import { splashImage } from "@/config";
 export const CarolynFern: Investigator = {
 	code: "60251",
 	image: splashImage,
+	icon: "carolyn",
 	abilities: [
 		{
 			id: "get-clue-after-heal-horror",

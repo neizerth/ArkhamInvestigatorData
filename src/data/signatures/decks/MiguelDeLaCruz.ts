@@ -5,4 +5,5 @@ export const MiguelDeLaCruz: Investigator = {
 	code: "60551",
 	image: splashImage,
 	additionalAction: true,
+	icon: "miguel",
 };

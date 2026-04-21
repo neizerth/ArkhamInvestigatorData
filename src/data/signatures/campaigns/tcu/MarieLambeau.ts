@@ -31,6 +31,7 @@ export const MarieLambeau: Investigator = {
 			name: "Chapter 2",
 			chapter2: true,
 			image: splashImage,
+			icon: "marie",
 			abilities: [
 				{
 					id: "draw-cards-after-damage",

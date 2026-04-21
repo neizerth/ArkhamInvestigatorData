@@ -18,6 +18,7 @@ export const TommyMuldoon: Investigator = {
 			code: "60151",
 			type: "default",
 			name: "Chapter 2",
+			icon: "tommy",
 			chapter2: true,
 			image: splashImage,
 		},
