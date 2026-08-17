@@ -1,9 +1,18 @@
 import type { Investigator } from "@/model";
-import { splashImage } from "@/config";
 
 export const CarolynFern: Investigator = {
 	code: "60251",
-	image: splashImage,
+	image: {
+		version: 2,
+		width: 2482,
+		height: 2200,
+		face: {
+			width: 262,
+			height: 291,
+			left: 1226,
+			top: 950,
+		},
+	},
 	icon: "carolyn",
 	abilities: [
 		{

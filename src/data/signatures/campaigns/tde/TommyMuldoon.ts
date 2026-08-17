@@ -1,4 +1,3 @@
-import { splashImage } from "@/config";
 import type { Investigator } from "@/model";
 
 export const TommyMuldoon: Investigator = {
@@ -20,7 +19,17 @@ export const TommyMuldoon: Investigator = {
 			name: "Chapter 2",
 			icon: "tommy",
 			chapter2: true,
-			image: splashImage,
+			image: {
+				version: 2,
+				width: 2836,
+				height: 2101,
+				face: {
+					width: 269,
+					height: 352,
+					left: 1359,
+					top: 920,
+				},
+			},
 		},
 	],
 };

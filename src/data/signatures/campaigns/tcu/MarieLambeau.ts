@@ -1,4 +1,3 @@
-import { splashImage } from "@/config";
 import type { Investigator, InvestigatorImageSource } from "@/model";
 
 export const MarieLambeau: Investigator = {
@@ -30,7 +29,17 @@ export const MarieLambeau: Investigator = {
 			type: "default",
 			name: "Chapter 2",
 			chapter2: true,
-			image: splashImage,
+			image: {
+				version: 2,
+				width: 4012,
+				height: 2988,
+				face: {
+					width: 269,
+					height: 352,
+					left: 1995,
+					top: 782,
+				},
+			},
 			icon: "marie",
 			abilities: [
 				{
