@@ -18,7 +18,8 @@ export type ChaosBagToken =
 	| "tablet"
 	| "frost"
 	| "elderThing"
-	| "moon";
+	| "moon"
+	| "blood";
 
 export type ScenarioChaosBag = {
 	scenario_id: string;
