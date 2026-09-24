@@ -29,6 +29,7 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 			"real_taboo_text_change",
 			"pack",
 			"gender",
+			"chapter",
 		],
 		card,
 	);
@@ -57,6 +58,7 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 		...special,
 		min_version,
 		max_version,
+		...(card.chapter != null && { chapter: card.chapter }),
 		gender,
 		taboo: card.taboo_set?.id !== 0 && card.taboo_set !== null,
 		custom,

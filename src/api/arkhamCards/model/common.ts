@@ -16,6 +16,7 @@ export type ArkhamCardsCycle = {
 	position: number;
 	real_name: string;
 	official: boolean;
+	chapter?: number | null;
 	translations: ArkhamCardsPackTranslation[];
 };
 

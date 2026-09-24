@@ -1,0 +1,11 @@
+declare namespace NodeJS {
+	interface ProcessEnv {
+		ARKHAM_CARDS_GRAPHQL_URL: string;
+		ARKHAM_DIVIDER_CORE_URL: string;
+		ARKHAM_CARDS_REPO_RAW_URL: string;
+		ARKHAM_CARDS_DATA_REPO_RAW_URL: string;
+		ARKHAM_BUILD_FAN_REPO_ARCHIVE_URL: string;
+		ARKHAM_BUILD_FAN_REPO_FOLDER_NAME: string;
+		IMAGES_ASSETS_URL: string;
+	}
+}

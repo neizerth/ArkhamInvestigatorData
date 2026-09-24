@@ -17,11 +17,13 @@ export type InvestigatorSignature = Omit<
 	| "translations"
 	| "pack"
 	| "gender"
+	| "chapter"
 > &
 	Omit<
 		Investigator,
 		"variants" | "skins" | "image" | "ignoreCodes" | "ignoreIds" | "haveTaboo"
 	> & {
+		chapter?: number;
 		icon: string;
 		type: InvestigatorSignatureType;
 		image: Partial<Omit<Investigator["image"], "id">> & {

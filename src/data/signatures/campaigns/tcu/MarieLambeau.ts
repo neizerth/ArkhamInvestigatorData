@@ -28,7 +28,6 @@ export const MarieLambeau: Investigator = {
 			code: "60451",
 			type: "default",
 			name: "Chapter 2",
-			chapter2: true,
 			image: {
 				version: 4,
 				width: 7239,

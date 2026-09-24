@@ -18,7 +18,6 @@ export const TommyMuldoon: Investigator = {
 			type: "default",
 			name: "Chapter 2",
 			icon: "tommy",
-			chapter2: true,
 			image: {
 				version: 2,
 				width: 2836,

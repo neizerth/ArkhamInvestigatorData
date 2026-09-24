@@ -1,6 +1,6 @@
 import { ARKHAM_CARDS_GRAPHQL_URL } from "@/config/api";
 import { gql, request } from "graphql-request";
-import { mapLinkedCode } from "../../format";
+import { mapChapter, mapLinkedCode } from "../../format";
 import type { ArkhamCardsInvestigator } from "../../model";
 
 export const loadArkhamCardsInvestigators = async () => {
@@ -69,6 +69,7 @@ export const loadArkhamCardsInvestigators = async () => {
             real_name
             code
             position
+            chapter
             translations {
               locale
               name
@@ -80,12 +81,10 @@ export const loadArkhamCardsInvestigators = async () => {
   `;
 
 	type Response = {
-		all_card: ArkhamCardsInvestigator[];
+		all_card: Array<Omit<ArkhamCardsInvestigator, "chapter">>;
 	};
 
 	const data = await request<Response>(ARKHAM_CARDS_GRAPHQL_URL, document);
 
-	const linked = data.all_card.map(mapLinkedCode);
-
-	return linked;
+	return data.all_card.map(mapChapter).map(mapLinkedCode);
 };

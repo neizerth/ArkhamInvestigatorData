@@ -42,6 +42,7 @@ export const loadArkhamBuildInvestigators = () => {
 				real_flavor: card.flavor,
 				real_traits: card.traits,
 				real_text: card.text,
+				chapter: null,
 				alternate_of_code: null,
 				linked_code: null,
 				taboo_set: null,
