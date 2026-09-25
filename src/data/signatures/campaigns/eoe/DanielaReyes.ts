@@ -26,6 +26,16 @@ export const DanielaReyes: Investigator = {
 			type: "default",
 			code: "12001",
 			name: "Chapter 2",
+			image: {
+				width: 2508,
+				height: 2508,
+				face: {
+					width: 300,
+					height: 366,
+					left: 1084,
+					top: 793,
+				},
+			},
 			abilities: [
 				{
 					id: "investigator-been-attacked",

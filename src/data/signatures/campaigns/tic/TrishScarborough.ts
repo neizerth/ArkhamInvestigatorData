@@ -37,6 +37,16 @@ export const TrishScarborough: Investigator = {
 			code: "12007",
 			name: "Core 2026",
 			additionalAction: true,
+			image: {
+				width: 2702,
+				height: 2328,
+				face: {
+					width: 187,
+					height: 206,
+					left: 1214,
+					top: 914,
+				},
+			},
 		},
 	],
 	skins: [

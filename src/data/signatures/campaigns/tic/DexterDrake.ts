@@ -32,6 +32,16 @@ export const DexterDrake: Investigator = {
 			type: "default",
 			code: "12010",
 			name: "Core 2026",
+			image: {
+				width: 1972,
+				height: 2179,
+				face: {
+					width: 251,
+					height: 239,
+					left: 844,
+					top: 975,
+				},
+			},
 		},
 	],
 	abilities: [
