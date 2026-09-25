@@ -53,12 +53,14 @@ export const getSignatureBase = (card: ArkhamCardsInvestigator) => {
 		: card.min_version;
 	const max_version = card.max_version;
 
+	const chapter = !card.chapter && official ? 1 : card.chapter;
+
 	return {
 		...base,
 		...special,
 		min_version,
 		max_version,
-		...(card.chapter != null && { chapter: card.chapter }),
+		chapter,
 		gender,
 		taboo: card.taboo_set?.id !== 0 && card.taboo_set !== null,
 		custom,
