@@ -27,6 +27,7 @@ export const DanielaReyes: Investigator = {
 			code: "12001",
 			name: "Chapter 2",
 			image: {
+				version: 2,
 				width: 2508,
 				height: 2508,
 				face: {

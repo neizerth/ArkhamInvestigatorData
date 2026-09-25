@@ -38,6 +38,7 @@ export const TrishScarborough: Investigator = {
 			name: "Core 2026",
 			additionalAction: true,
 			image: {
+				version: 2,
 				width: 2702,
 				height: 2328,
 				face: {

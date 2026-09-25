@@ -33,6 +33,7 @@ export const DexterDrake: Investigator = {
 			code: "12010",
 			name: "Core 2026",
 			image: {
+				version: 2,
 				width: 1972,
 				height: 2179,
 				face: {
