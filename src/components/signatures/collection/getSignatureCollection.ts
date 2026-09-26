@@ -10,10 +10,9 @@ import {
 	prop,
 	sortWith,
 	toPairs,
-	uniq,
 	uniqBy,
 } from "ramda";
-import { getCollectionSkins } from "./getCollectionSkins";
+import { getSignatureSkins } from "./getSignatureSkins";
 
 const hasTaboo = ({ taboo_set }: InvestigatorSignature) =>
 	taboo_set !== null && taboo_set.id !== 0;
@@ -40,10 +39,6 @@ export const getSignatureCollection = (
 
 	const familyPairs = toPairs(groupBy(getInvestigatorKey, data));
 	const unsortedGroups = familyPairs.flatMap(([_, family = []]) => {
-		const skins = uniqBy(
-			prop("id"),
-			uniq(family.map(({ code }) => code)).flatMap(getCollectionSkins),
-		);
 		const chapterPairs = toPairs(groupBy(getChapterKey, family));
 
 		return chapterPairs.map(([_, values = []]) => {
@@ -82,7 +77,7 @@ export const getSignatureCollection = (
 				subname,
 				signatures,
 				canonical,
-				skins,
+				skins: getSignatureSkins(family, signatures),
 				official,
 				spoiler,
 				faction_code,
